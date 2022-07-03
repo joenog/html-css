@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            background-color: beige;
+            font:bolder 1.5em Arial, Helvetica, sans-serif;
+           /* Pseudo Clsses definem estado de elemntos dentro da HTML */ 
+           /* SELETORES PERSONALIZADOS
+              #  = id 
+              .  = class
+              :  = pseudoClass - Está relacionada ao estado dos elementos em si
+              :: = pseudoElemento - Esse :: permite que vocÊ formate um local especifico do elemento
+              >  = children - filho, o que atribuirá algo (dentro de uma DIV)
+           */
+        }
+        a {   /* A-  ancora que é links */ 
+            color: red;
+            text-decoration: none;
+            list-style: none;
+            background-color: rgb(190, 189, 189);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        a:visited {
+            color: darkred;
+        }
+        a:hover {
+            color: darkblue;
+            text-decoration: underline 1px;
+        }
+        .especial:active {   /* Para pseudo classe uso : */
+            color: black;
+        }
+        .especial::after {   /*  Para pseudo elementos uso ::*/
+            content: '  [link]';  /* contente - adicionar conteudo no ''after''- depois do item */
+            font: normal 0.7em 'Arial, serif';
+            text-decoration: none;
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://www.hbomax.com/br/pt" target="_blank" class="especial">Hbo Max</a></li>
+        <li><a href="https://www.netflix.com">Netflix</a></li>
+        <li><a href="https://www.primevideo.com">Prime Video</a></li>
+    </ul>
+</body>
+</html>

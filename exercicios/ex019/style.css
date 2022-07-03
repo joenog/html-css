@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*  
+    EM HTML id   ---> Em CSS é # - Aqui só posso ter 1 elemento
+    Em HTML claass --> Em css é . -Aqui posso ter varios elementos
+*/
+main {
+    background-color: white;
+    border-radius: 3px, 3px, 15px, #bac9c2;
+    width: 90%;
+    padding: 3%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+body {
+    background-color: rgb(197, 196, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+h1 {
+    color: rgb(30, 54, 100);
+}
+h1#principal {
+    color: rgb(16, 16, 56);
+    text-align: center;
+}
+h2 {
+    color: rgb(139, 108, 70);
+}
+.basico {
+    color: rgb(70, 138, 68);
+    font-weight: lighter;
+}
+.intermediario {
+    color: rgb(138, 125, 68);
+    font-weight: lighter;
+}
+.avançado {
+    color: rgb(138, 68, 68);
+    font-weight: lighter;
+}
+.destaque {
+    background-color: rgba(0, 26, 255, 0.459);
+}
+#logo {
+    background-color: white;
+    border-radius: 3px, 3px, 15px, #bac9c2;
+    width: 97%;
+    padding: 1%;
+    margin: auto;
+    border-radius: 8px;
+}

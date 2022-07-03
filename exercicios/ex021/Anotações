@@ -1,0 +1,22 @@
+/// MODELOS DE CAIXAS ///
+https://www.youtube.com/watch?v=3ZFYXkzXhqE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=27
+
+- O controle das caixas é chamado de aninhamento
+- A caixa é aquilo que delimita o conteudo apresentado na HTML
+- Podemos modificas as caixas usando comandos como [HEIGHT - WIDTH, Altura e largura respectivamente.]
+- Nas caixas de qualquer conteudo temos a BORDER- que pode ser almenta ou diminuida
+- Temos também o PADDING [preenchimento] que é o espaço entre o conteudo e a borda, esse pode ser redmencionado
+em varias direções cima baixo esquerda e direita
+- Temos também o MARGIN, esse é a margem de fora do conteudo da borda, podendo controlar o que ficar proximo ou longe
+- Temos também o OUTLINE, uma linha que está ao redor do MARGIN
+
+/// HÁ DOIS TIPOS DE CAIXAS ///
+
+- box-level = Esta caixa quando criada, quebra uma linha e é exibida abaixa, como um ponto paragrafo e ocupa todo espaço de largura do navegador  
+EX: <div>
+
+- inline-level = Esta caixar quando criada não quebra linha, ela continua no mesmo paragrafo e o espaço ocupado por 
+ela é do tamanho do conteudo a ser exibido, conteudo pequeno caixa pequena. EX: <span>
+
+/ conteudo - PADDING é o espaçamento ao redor do conteudo > BORDER é o contorno do padding > MARGIN é o espaço 
+fora do Border que conta também com o OUTLINE, umc contorno dentro do Margin /

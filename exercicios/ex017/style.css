@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2? família=Sriracha&família=Trabalho+Sans:ital,wght@0,100;0.200;0.300;0.400;0.500;0.600;0.700;0,80 0,900;1.100;1.200;1.300;1.500;1.600;1.700;1.800;1.900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Sriracha&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Sriracha&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    width: 80%;
+    height: auto;
+    padding: auto;
+    /* Medidas relativas: 
+    - cm, mm, im, px, pt, pc
+
+    Medidas Absolutas:
+    - em, ex, rem, vw, vh, %
+    RECOMENDAÇÃO OFICIAL - USE PX E EM
+    */
+    font-size: 1.1em;
+    text-align: center;
+}
+h1 {
+    /*Varios comando em uma  linha - shortHand */
+    font: italic bolder 3em 'Sriracha', cursive; 
+}
+h2 {
+    font: italic bolder 2.5em serif;
+}
+

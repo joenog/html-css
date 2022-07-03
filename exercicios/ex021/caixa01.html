@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <style>
+        body {
+            background-color: lightcyan; font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 { /* TIPO BOX-LEVEL */
+            background-color: lightgoldenrodyellow;
+            height: 100px; width: 300px; 
+            border: 10px solid darkblue;
+            padding: 5px 20px 50px 100px;  /* A ordem dos comando funciona no sentido horário cima esquer baixo direit */
+            margin: auto; margin-bottom: 40px;
+            outline: 10px dashed green;
+            /* Os comando podem ser simplificados se colocados na ordem correta*/
+        }
+        a { /* TIPO INLINE-LEVEL [aparece na mesma linha sem quebra] */
+            border: 5px double darkorange;
+            padding: 15px;  /* Comando do Padding simplicado - Especificando apenas um valor, valerá pra todos os lados*/
+        }
+        h2 { /* TIPO BOX-LEVEL[ QUEBRA  UMA LINHA E APARECE NA  LINHA  ABAIXO] */
+            background-color: aquamarine; width: 600px; height: 140px;
+            margin: 10px auto 10px auto;
+            padding: 10px; 
+            outline: 5px dashed salmon;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Paragrafos também são exemplos de box-level, mas  o <a href="#">links são  exemplos de caixas inline-level</a> vamos ver como tudo isso funciona</p>
+    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, atque quas! Sit quasi esse veniam, pariatur adipisci vero sunt, et dolorum quidem cumque culpa cupiditate voluptatibus, distinctio inventore maxime ipsa.</h2>
+</body>
+</html>

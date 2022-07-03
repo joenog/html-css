@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* regra charset caso haja problema de acentuação*/
+
+body {
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+h1 {
+    color: darkslategray;
+    background-color: aliceblue;
+}
+h2 {
+    color: lightskyblue;
+}
+p {
+    text-align: justify;
+}
