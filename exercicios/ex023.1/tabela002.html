@@ -32,6 +32,10 @@
         thead, tfoot {
             background-color: gray;
         }
+                    /* nth-child(odd) or even - par e impar */
+        tbody > tr:nth-child(2n) { /* efeito zebrado alicado na TR[LINHA] com a pseudo classe nthchild  */ 
+            background-color: lightgray;
+        }
 
         td, th {
             border: 1px solid black;
