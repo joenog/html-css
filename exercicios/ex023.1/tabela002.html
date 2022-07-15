@@ -21,6 +21,14 @@
         table {
             width: 500px;
             margin: auto;
+            position: relative;
+        }
+            /* MENU/titulo DA TABLEA FIXO NO TOPO */
+        thead > tr > th { /* o TH que está dentro do TR que está dentro do THEAD */
+            position: sticky;  /*  stiky = colavél grudavel   */
+            top: 0px;          /* fixa no topo com 0px  */
+            background-color: gray;  /*  deve ser inserido a cor de background */
+
         }
 
         caption {
