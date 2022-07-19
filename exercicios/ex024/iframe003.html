@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Faça uma Escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque ex optio hic architecto doloribus, cum, expedita molestias commodi, ut voluptatum rem odio assumenda dolorem porro numquam quos? Aut, cumque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae reiciendis blanditiis. Atque rerum totam quisquam ratione sapiente soluta reiciendis facere quam beatae! Odit maiores pariatur delectus temporibus optio atque.</p>
+
+    <ul style="list-style: none;">           <!--NAME DO IFRAME AQUI PARA DIRECIONAR A PAGINA PARA O IFRAME-->
+        <li><a href="paginas-extras/page001.html" target="frame">Primeira Página</a></li>
+        <li><a href="paginas-extras/page002.html" target="frame">Segunda Página</a></li>
+        <li><a href="paginas-extras/page003.html" target="frame">Terceira Página</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quos eius alias accusantium, fuga id ad porro, temporibus modi sit a labore libero quam vel unde exercitationem quod molestias deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quaerat qui quam explicabo iusto doloribus nisi? Omnis voluptates autem tempore voluptate excepturi. Minima veritatis totam cupiditate, voluptatibus sapiente quo porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit. Exercitationem provident voluptates maiores rem tempore, natus suscipit vero a maxime, officiis, dolor minus ad nesciunt. Explicabo qui facere dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi molestias nisi deleniti in amet obcaecati fuga ullam rerum doloribus pariatur cumque ipsa suscipit optio, aspernatur, quaerat vero! Corporis, in!</p>
+
+    <!--O IFRAME PREICSA DE UM NAME PARA SER VINGULADOR A UM LINK EXTERNO-->
+    <iframe id="tela" name="frame" srcdoc=" <h1> Escolha umas das opções acima</h1> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quos eius alias accusantium, fuga id ad porro, temporibus modi sit a labore libero quam vel unde exercitationem quod molestias deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quaerat qui quam explicabo iusto doloribus nisi? Omnis voluptates autem tempore voluptate excepturi. Minima veritatis totam cupiditate, voluptatibus sapiente quo porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit. Exercitationem provident voluptates maiores rem tempore, natus suscipit vero a maxime, officiis, dolor minus ad nesciunt. Explicabo qui facere dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi molestias nisi deleniti in amet obcaecati fuga ullam rerum doloribus pariatur cumque ipsa suscipit optio, aspernatur, quaerat vero! Corporis, in!</p> "> <p>Infelizmente seu navegador não suporta iframes.</p></iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, vel! Esse nihil nemo quo placeat? Illo rem repellendus nostrum accusantium ea deleniti non, obcaecati atque velit fuga molestias, odio asperiores? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta. Debitis ea quibusdam harum error nostrum ad sapiente non ut laudantium nam temporibus impedit sit, itaque reiciendis, tenetur exercitationem eligendi?</p>
+</body>
+</html>
