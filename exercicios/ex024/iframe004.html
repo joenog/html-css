@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site principal</title>
+    <style>
+        body {
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        iframe {
+            width: 400px; border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu site Principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque veniam iure aliquid laboriosam magni numquam, ex a architecto exercitationem officiis quae illum! Est expedita impedit voluptatem voluptatum soluta consequuntur?</p>
+           <!--Com a tag sandbox será bloqueado o envi ode informações para iframes >> [sandbox="sandbox"]            abaixo colocarei mais tags de configuroes em sanbox-->
+                                                    
+    <iframe src="paginas-extras/page004.html" sandbox="allow-same-origin allow-forms allow-scripts"
+    referrerpolicy="no-referrer">  <!--O [NO-REFERRER] ajuda bloquando o envio dos dados da sua pesquisa -- ex disso é a coleta de dados para a promoção de anuncios aos usuarios, com essa tag os dados não são coletados -->
+        Seu navegador não é compativel com iframes.
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis facilis dolores ducimus amet impedit, fugit, libero dolorem esse, minus corporis nobis illo inventore saepe laborum accusantium recusandae distinctio cumque nulla?</p>
+</body>
+</html>
