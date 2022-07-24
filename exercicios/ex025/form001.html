@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: bisque;
+        }
+    </style>
+<body>
+    <h1>Meu primairo formulário</h1>
+    <form autocomplete="off" action="cadastro.php">  <!--ACTION- local para onde os dados serão enviados-->
+
+        <p><label for="inome">Nome:</label> <!--O "label" serve para fazer a ligação do texto escrito com a caixa À sua frente [no parametro for - sempre devo colocar o ID ]-->
+            <!--O label serve para fazer uma ligação -->
+             <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label>
+             <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="ENVIAR"></p> <!--SUBMIT - botão para enviar os dados-->
+    </form>
+</body>
+</html>
