@@ -11,10 +11,11 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: bisque;
         }
+
     </style>
 <body>
     <h1>Meu primairo formulário</h1>
-    <form autocomplete="off" action="cadastro.php">  <!--ACTION- local para onde os dados serão enviados-->
+    <form autocomplete="off" method="post" action="cadastro.php">  <!--ACTION- local para onde os dados serão enviados-->
 
         <p><label for="inome">Nome:</label> <!--O "label" serve para fazer a ligação do texto escrito com a caixa À sua frente [no parametro for - sempre devo colocar o ID ]-->
             <!--O label serve para fazer uma ligação -->
@@ -22,6 +23,13 @@
         <p><label for="isobrenome">Sobrenome:</label>
              <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="ENVIAR"></p> <!--SUBMIT - botão para enviar os dados-->
+    </form>
+    <form action="cadastrop.php" method="post" autocomplete="off">
+        <p><label for="iname">Nome:</label>
+            <input type="text" name="name" id="iname"></p>
+        <p><label for="isobrename">Sobrenome: </label>
+            <input type="text" name="sobrename" id="isobrename"></p>
+        <p><input type="submit" value="ENVIAR"></p>
     </form>
 </body>
 </html>
