@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais sobre formulários</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: lightcyan;
+        text-align: center;
+    }
+
+    fieldset {
+        background-color: lightgrey;
+        width: 300px;
+        margin: auto;
+        border: 2px solid lightcyan;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <h1>Exemplo de formulário</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        
+        <fieldset> <!--Agrupa as caixas num quadro-->
+            <legend>Dados pessoais</legend> <!--Adiciona legenda ao quadro-->
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20" placeholder="Seu nome">
+            </p>
+            <p>
+                <label for="iemail">Email: </label>
+                <input type="email" name="email" id="iemail" required minlength="10" autocomplete="email" placeholder="Seu email">
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>                    <!--Padrão para ser enviado numeros telefonicos-->
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx) xxxx-xxxx">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+<!--Estudar mais sorbre ReGex - expressoes regulares-->
+<!--As validações telefonicas são feitas em javaScript e PHP-->
+    </form>
+</body>
+</html>
