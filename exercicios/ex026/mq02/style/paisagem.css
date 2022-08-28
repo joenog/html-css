@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* APARELHO DEITADO */
+
+body {
+    background-image: url(../images/cev-landscape.jpg);
+    background-color: #233eff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
