@@ -6,11 +6,6 @@
     padding: 0px;
 }
 
-@media screen and (min-width: 600px) {
-    
-    
-}
-
 body, html {
     background-color: lightblue;
 }
@@ -24,7 +19,7 @@ header > h1 {
     padding: 10px;
 }
 
-#menu {
+#burger {
     background-color: rgb(54, 54, 54);
     display: block;
     color: white;
@@ -33,7 +28,7 @@ header > h1 {
     text-align: center;
 }
 
-#menu:hover {
+#burger:hover {
     background-color: white;
     color: black;
 }

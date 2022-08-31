@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* TODAS AS MIDIAS */
+
+/* Typical device breakpoint 
+
+pequenas telas: até 600px
+celular: de 600 até 768px
+tablet: de 768px até 992px
+desktop: de 992px até 1200px
+drandes telas: acima de 1200px
+*/
+@media screen and (min-width: 768px) {   /* tamanho minimo para es */
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li { /* é bom colocar todo o caminho pois pode haver mais 'li' no codigo e este acabar atribuindo o que não deve*/
+        display: inline-block; /* itens em linha */
+    }
+
+    #itens {
+        text-align: center;
+    }
+
+    main {
+        width: 768px;
+    }
+}
