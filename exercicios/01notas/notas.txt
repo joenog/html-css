@@ -1,0 +1,146 @@
+}} MODULO 1
+
+- Aprenderemos conceitos bacisos, preparação do ambiente, semantica da HTML5,
+textos titulos, ligações, multimidia e estilos
+
+[HTML E CSS - Livros para estudo!]
+1. Material de apoio(gitHub Gustavo Guanabara)  2. Referencias  Online (video 5)
+
+-HTML BASICO 
+Linguagem de Marcação de Hypertexto (HTML - Hypertext Markup Language) é o código que você
+usa para estruturar seu conteúdo web, dando significado e propósito. Por exemplo, meu conteúdo
+é organizado em parágrafos, ou em uma lista de pontos? Eu tenho imagens na minha página? 
+Eu tenho uma tabela de dados? Sem pressionar você, o HTML básico provê informação suficiente 
+para você se familiarizar com HTML.
+
+-CSS básico
+Folhas de Estilo em Cascata (CSS - Cascading Stylesheets) é o código que você usa para dar
+estilo ao seu site. Por exemplo, você quer que seu texto seja preto ou vermelho? Onde o conteúdo
+deve aparecer na tela? Quais imagens ou cores de fundo devem ser usadas para decorar seu site? 
+CSS básico provê o necessário para você começar.
+
+-JavaScript básico
+JavaScript é a linguagem de programação que você usa para adicionar recursos interativos
+ao seu site. Alguns exemplos podem ser jogos, coisas que acontecem quando botões são 
+pressionados ou dados que são inseridos em formulários, efeitos dinâmicos de estilo, 
+animação e muito mais. JavaScript básico vai te dar uma ideia do que é possível com essa
+excitante linguagem de programação e como começar a usá-la.
+__________________________________________________________________________
+
+}} Como a internet chaga na minha casa?
+
+    A internet nasceu durante o periodo de guerra fria, depois da segunda guerra mundial,
+duas potencias sairam dos conflitos com muito pdoer, sendo elas, A união sovietica
+e os Estados unidos. Estas duas potencias travaram um disputa mental uma tentando
+ser melhor que a outra. Nisso um dos presidentes do exercitos dos USA inicia uma agencia
+de inteligencia militar a (DARPA) . Com a intenção de manter dados de inteligencia do
+país seguros, os USA criaram uma pequena rede a (ARPANET) inicialmente com pontos
+interligados com todos mantendo uma backup dos dados obtidos naquela época.
+Para a comunicação entre os computadores foi criado o protocolo (NCP) uma linguagem
+unica para diferente computadores. O protocolo (NCP) depois de um tempo se tornou
+obsoleto, então Bob Kahn criou o (TCP) com a função de tornar a comunicação melhor mas
+havia outro problema em relção a identificação do ip das maquinas que estava espalhadas por 
+todos os USA, então outro pesquisado Vint Cerf criou otro protocolo de identificação de
+maquinas o (IP) e à partir da descoberta desses dois pesquisadores foi unificada as ideias 
+então nasceu o (TCP-IP) o protocolo que usamos até hoje, [hoje esse protocolo está bem atualizado]
+    Depois de anos de evolução essa rede se tornou gigantesca em todo o pais, então o GOV 
+decidiu separa uma rede menor para os militares, universidades, e outra rede para o comercio
+mas o ideal era que todas a redes se comunicassem então a rede militar se manteve isolada, 
+e todas as outras redes continuaram se comunicando, assim nasceu a (internet)
+[internet] um conjuto varias rede - (www.submarinecablemap.com)
+__________________________________________________________________________
+
+}} Como a internet Funciona ?
+
+    Representação de dados um BIT é  0 || 1, mas apenas esse dois numeros não conseguem representar 
+muita coisa, então é reunido 8 bits [0100 0001] A quantidade minima para a representação de 
+dados chamado byte (então 1 byte é a sequencia de 8 bits)  [0100 0001] == A  
+mais info procure (codigo multibyte - UTF-8) 
+    Esse codigo multibyte usa de 1 à 4 byte para representar coisas como letras maiusculas e minus,
+numeros, letras acentuadas e até amojis (o computador entederá tudo como 0=zeroz e uns)
+o computador entende ondas binarias (quadradas) tendo dois estados _┌┐_┌┐_┌┐_┌┐_ 
+    
+       8 bite == 1byte
+    1024 byte == 1KB _ kilobyte           ((0 1) 2 elevado a 10 == 1024)
+    1024 KB   == 1Mb _ megabyte
+    1024 MB   == 1GB _ gigabyte
+    1024 GB   == 1TB _ terabyte
+    1024 TB   == 1PB _ petabyte           e assim sucessivamente
+
+Representação - 1MB maisculo refere-se á Megabytes || 1Mb minusculo refere-se a megabits
+    Quando folo de armazenamento uso o termo Megabyte
+    ex: PenDrive de 8 Giga (gigabyte) um HD de 1 Tera (terabyte)
+
+    Quando falo de transmição uso o termo Megabits
+    ex: Placa de rede de 100Megas (megabits)  Minha internet é de 60Megas (megabits)
+---------------------------------
+
+}} Como conectamos a INTERNET
+
+    Quando voc acessa a internet seu dispositvo é chamado de CLIENTE, isso porq voc está fazendo 
+o uso de um serviço, voc quer ter acesso a um produto e tudo que voc requere está na internet
+uma rede mundial de servidores. Temos então os computadores que recebem e entendem apenas ondas
+binarias (quadradas), enquanto isso temos as antenas responsaveis de transmitir os dados dos
+servidores localizados no mundo e essas só transmitem atravezs de ondas SENOIDAL.
+    Então para que haja a comunicação entre servidor e cliente precisamos de um MODEM, esse 
+é responsavel de fazer a converção das condas. Transformando as ondas  quadradas na SENOIDAL
+processo chamado de (MOdulação), e também faz o contrario transformando a onda senoidal em 
+ondas quadradas, quando os dados chegam das antenas ao modemrecebendo o nome de (DEModulação)
+por isso o nome MODEM. (para fazer o processo de MODULAÇÃO e DEMODULAÇÃO) assim conseguimos
+acessar os servidores espalhados no mundo. (img001)
+
+}} DNS - Domain Name Sistem
+
+    É o DNS que permite que você digite o nome de um domínio, como tecnoblog.net na barra de 
+endereços, em vez de uma longa sequência de números difícil de decorar.
+Em termos simples, o Sistema de Nomes de Domínio (DNS) é uma coleção de bancos de dados que
+ traduz nomes de host para endereços únicos de IP.
+    Fazemos a requisição pelo endereço nome do site, que é enviado ao DNS, então o DNS contém
+em seu banco de dados o numero do IP atual do destino requerido, e nos devolver o ip com isso
+conseguimos acesar os sites.
+------------------------------
+
+}} OQ É DOMINIO E HOSPEDAGEM
+
+    Como as outrs pessoas veem os sites que eu crio ?
+    Você como cliente requere ao DNS um site pela URL, o DNS te retorna o enderço de IP
+e você consegue ter acesso ao servidor e aos arquivos HTML e CSS que estão armazenados 
+nessa URLS. Isso pdoe ser feitos por varios cliete mundo a fora
+    Quando vocÊ cria arquivos HTML e CSS no seu pc, consegue ter acesso total a esse 
+arquivos, e para que outros consigam ter a cesso a esse arquivos você precisa ospeda-lo
+preciso ter um dominio e ospedar o site num servidor(local onde ficará armazenado os 
+arquivos HTMLCSS..)
+    DOMINIO     - nome que identifica o seu site
+    HOSPEDAGEM  - local onde fica armazenados os aruivos
+Os dominios são unicos e pagos anumalmente (há dominios gratuitos)
+A hospedagem é paga mensalmente (há hospedagem gratuita ex: github, blogger..)
+Na hospedagem atente a (quantidade de memoria fornecida, resusos entre outros..)
+
+--------------------------
+}} dissecando URL   (URL - Localizador de recurso Unico)
+EX:    [https://www.github.com/gustavoguanabara]
+    www.    [sub-dominio]
+    .github [dominio]
+    .com    [TLD - top level domain]  (gTLD) generic domain como .com .org .net
+    Temos os (ccTLD) coutry code - codigo de pais .br  .us .ru
+    /guanab [caminho] um caminho dentro do site (tudo isso está dentro de uma URL)
+__________________________________________________________________________
+
+}} A difereça entre HTML E CSS
+
+[HTML] HYPERTEXT MARKUP LANGUAGE - A Linguagem de marcação para hipertexto (marcas para titulos
+paragrafos, listas etc..) hypertexo são texto textos como links que te levam para outro local
+HTML - Linguagem para Marcação de texto, onde semanticamente defino posição e categorias
+de determinados textos para que tudo fico organizado.
+ - A HTML é uma linguagem focada em conteudo como: (textos, imagens, videos, tabelas etc..)
+os atrativos visuais são dados pelas CSS focada em desgin: (cor, sobra, tamanhos, psoicionamento)
+As css se faz muito necessaria para que o site seja atrativo aos olhos dos clientes
+
+[CSS] As css são CASCADING STYLE SHEETS - Folhas de estilo em cascata
+(em cascata pooq uma vai mudadando a caracteristica padrao da outra) adicionadas nos seletores
+
+[JavaScript] Linguagem de PROGRAMAÇÃO resposanvel pela interatividade dos sites
+como: (menus interativos, animações, popUp, aletas etc...)
+Essa é a triade de desenvolvimento WEB
+__________________________________________________________________________
+
