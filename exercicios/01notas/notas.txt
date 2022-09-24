@@ -144,3 +144,40 @@ como: (menus interativos, animações, popUp, aletas etc...)
 Essa é a triade de desenvolvimento WEB
 __________________________________________________________________________
 
+}} [Primeiros Passo HTML]
+
+    Para a formatação do texto usaremos as tags <>, a maiorias das tags tem abertura e fechamento
+temos tags de textos, paragrafos, fotos etc..
+    No inicio do head temos a tag lang = devemos inserir nosso idioma, para que haja o uso correto
+de caracteres na hora de carregar a pagina (pt-br)
+    <head> A areda da cabeça, parte de configuração do site
+    <body> A area do corpo do site, area de conteudo onde podemos inserir outras tags
+    <charset> defidino como UTF-8 padrão de condificação de caracteres que suporta letras acentuadas
+    viewPort = Escala de visualização do conteudo, 1.0 signf. 100% da tela
+    
+__________________________________________________________________________
+
+}} [SEMANTICA DO HTML 5]
+ 
+    O que é semantica ? :num sistema linguístico, o componente do sentido das palavras e da
+interpretação das sentenças e dos enunciados. (tem mais valor o significado que a forma)
+    No html mais antigo algumas tagas se focaba mais na forma na parencia do texto, hoje
+com a lingua mais atualizada o HTML 5 foca mais na semanatica. Ante a tag b> deixava o texto
+com uma forma mais grossa, essa foi substiuido por strong> que semanticamente não apenas
+deixa a tag mais grossa  mas tmb semanticamente traz um significado maior para o texrt que está
+dentro dessa  tag, fazendo com que os mecanimos de buscar a identifique como algo importante.
+-- ATENTE-SE (Usando tags antigas num site, faz com que esse site seja desvalorizado pelo google)
+
+TAGS SEMANTICAS  EX:
+<address> Para endereços </address>
+<strong> Para dar enfase a um texto
+<sup> para adicionar potencias
+<sub> para adionar potencias abaixo 
+Posso digitar um comando em JavaScript e melhor sua demonstração usando a tag <code>
+    <code> getElementById('#num') </code>
+    Isso trara uma  melhor demosntração ao codigo, facilitando a leitura
+- Ja para organizar com identação uso a tag <code> dentro da  tag <pre>
+
+CITAÇÃO envelopo a citação na tag <q>
+<q>Como diria um pai de um maigo, o computador é um burro muito rapido</q>
+
