@@ -173,6 +173,7 @@ TAGS SEMANTICAS  EX:
 <strong> Para dar enfase a um texto
 <sup> para adicionar potencias
 <sub> para adionar potencias abaixo 
+<abbr> Para dar descrição a determinados termos
 Posso digitar um comando em JavaScript e melhor sua demonstração usando a tag <code>
     <code> getElementById('#num') </code>
     Isso trara uma  melhor demosntração ao codigo, facilitando a leitura
@@ -235,6 +236,26 @@ LINKS PARA DOWNLOAS
 mescanismos de buscas como Google, Encontrar seu site
 __________________________________________________________________________
 
+[IMAGENS ADAPTAVEIS]
+
+    Para a criação de um site o tamanho das imagens são importantes, precisamos priorizar imagens
+mais leves e com qualidade. Tambem devemos ocnsiderar que varios tamanhos de telas podem acessar
+nosso site com isso precisamos adaptar essas imagens a tamanhos diferentes de telas, criando um 
+conteudo responsivo. Veja a seguir a tag que envolve varios tamanhos de imagens
+    <picture> envolvo varias tags img dentro da tag picture + tag <source type, para que seja
+    mostrado a imagens corrspondente ao tamanho da tela. Veja o codigo a seguir!
+
+    <picture>
+    // se a resolução maxima da tela for menor 600px carregará imagem-p
+        <source media="(max-width: 600px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1090px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+
+Quanto melhor for seu codigo pensando no cliente, melhor será sua taxa de aprovação dada pelos
+mecanismos de buscas, fazendo com que seu site seja cada vez mais recomendado.
+__________________________________________________________________________
+
 [TABELAS ]
 
     Usamos as tabelas na internet para tabular dados, para cria-las devemo usar as tags (table, tr, td)
@@ -248,7 +269,7 @@ uso o atributo colspan="2" para unir duas colunas   (colspan / col= coluna > spa
 uso o atributo rowspan="2" para unir duas linhas    (rowspan / row= linhas > span = expandir)
 
 
-[FORMULARIOS ]------------------
+[FORMULARIOS ]
 
     Dentro de um formulário você pode preencher alguns dados para que os mesmos sejam processados
 por uma linguagem de programção nomalmente em php, para que esse formularios sejam processados
