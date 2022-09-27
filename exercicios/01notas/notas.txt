@@ -211,12 +211,29 @@ e carrega-la primeiramente,
 Usamos os links para direcionarmos os clientes da pagina index/indice para outras partes do site
 como contato, noticias, ou até mesmo nas materias escritas direcionando outras fontes/sites.
 ]<a href=""> VOLTAR </a>   =  a: anchor  href: hiperlink e reference
+    Sempre que redirecionarmos um usuario para um site de terceiro, é bom que usemos o atributo
+    - target="_black"  Pra que seja aberta uma nova pagina e o user continue no seu site, adicione tmb
+    - rel="_external"  Pra indicar que o conteudo estará fora do site
+
+    Caso use um link que leve o usuario para outras praginas do seu proprio site use os atributos
+    - target="_self"  /  - rel="next" para proxima magina
+    - rel="prev"  para paginas anteriores
+    - rel="autor" para levar o cliente ao site do autor do texto mencionado
+    - rel="nofollow  para levar o cliente a um link de site não endoçado, como link pago
+    }} Atente-se aos caminhos onde os arquivos das paginas estejam
+
+LINKS PARA DOWNLOAS
+    Para baixar um arquivo decolo adicionar o atributo a tag <a download="livro.pdf"
+    donwload + nome do aquivo - ou type="application/pdf"
+    com o nome application/ formato do arquivo. Com isso farei o download do arquiv, infelizmente
+    alguns navegadores acabam abrindo o arquivo diretamente sem fazer o download
+
 
 (SEO - Otmização para mecanismo de busca) VocÊ de organizar seu codigo HTML, justamente para os
 mescanismos de buscas como Google, Encontrar seu site
+__________________________________________________________________________
 
-
-[TABELAS ]------------
+[TABELAS ]
 
     Usamos as tabelas na internet para tabular dados, para cria-las devemo usar as tags (table, tr, td)
 (table, tr: linhas/ vertical - td: colunas/ horizontal) As tags que compoem uma tabela são:
