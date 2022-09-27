@@ -220,6 +220,8 @@ como contato, noticias, ou até mesmo nas materias escritas direcionando outras 
     - rel="prev"  para paginas anteriores
     - rel="autor" para levar o cliente ao site do autor do texto mencionado
     - rel="nofollow  para levar o cliente a um link de site não endoçado, como link pago
+    - rel="noopener"  atualmente usa-se a tag nopner para não dar acessoa ao link externo a seu 
+    site deixando-o mais protegido (no opner / não opor)
     }} Atente-se aos caminhos onde os arquivos das paginas estejam
 
 LINKS PARA DOWNLOAS
