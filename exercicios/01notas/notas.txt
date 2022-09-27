@@ -100,7 +100,7 @@ em seu banco de dados o numero do IP atual do destino requerido, e nos devolver 
 conseguimos acesar os sites.
 ------------------------------
 
-}} OQ É DOMINIO E HOSPEDAGEM
+}} Oq É DOMINIO E HOSPEDAGEM
 
     Como as outrs pessoas veem os sites que eu crio ?
     Você como cliente requere ao DNS um site pela URL, o DNS te retorna o enderço de IP
@@ -180,4 +180,82 @@ Posso digitar um comando em JavaScript e melhor sua demonstração usando a tag 
 
 CITAÇÃO envelopo a citação na tag <q>
 <q>Como diria um pai de um maigo, o computador é um burro muito rapido</q>
+__________________________________________________________________________
 
+}} [LISTA ORDENADAS, NÃO ORDERADAS e LISTA DE DEFINIÇÃO]
+
+    As listas são usadas principalmente para criação de menus visualmente, não se comportam
+como menu, então devemos usar as css e o JavaScript, para termos o resultado esperado.
+na tag ul - ol (podemos adicionar o atributo type=" ") que nos permitirá editar o indicador 
+das lista aqui alguns EX: (disc, circle, square, ex003.html)
+}Na lista ordenada terei apenas marcadores, nas ordenas terei marcador de
+numeração, por isso o noem ordenada. EX: ol (type="A, a, I i, 1"). 
+Posso iniciar uma lista ordanenda  ol a partir de outro numero com a Atribuição (start="4")
+    Posso mesclar duas listas seja ela OL - UL fazendo o aninhamento, colocando OL dentro
+da lista UL, e o inverso tambem, organinzando uma dentro da outra. (ex009/pratica002)
+e mescando-as posso organiza-las alfabeticamento com atributos Type e Start.
+
+--Lista de definição tags
+<dl Lista de definição             <dl
+<dt Termo da definição                <dt> Chave <dt>
+<dd Descrição                           <dd> Objeto usado para abrir portas
+__________________________________________________________________________
+
+}} [LINKS ]
+
+    Usamos os links para redirecionarmos os nosso visitantes a outras partes do site algo muito
+importante quanto a organização do codigo e paginas e a nomenclatura, devemos usar o nome INDEX.html
+para nossa pagina principal para que o servidor onde o site esteja ospedado possa indetifica-la 
+e carrega-la primeiramente, 
+    Para links usamos a tag  (a  <a href=""> VOLTAR </a>) anchor = ancora. Essa é a estrutura da tag.
+Usamos os links para direcionarmos os clientes da pagina index/indice para outras partes do site
+como contato, noticias, ou até mesmo nas materias escritas direcionando outras fontes/sites.
+]<a href=""> VOLTAR </a>   =  a: anchor  href: hiperlink e reference
+
+(SEO - Otmização para mecanismo de busca) VocÊ de organizar seu codigo HTML, justamente para os
+mescanismos de buscas como Google, Encontrar seu site
+
+
+[TABELAS ]------------
+
+    Usamos as tabelas na internet para tabular dados, para cria-las devemo usar as tags (table, tr, td)
+(table, tr: linhas/ vertical - td: colunas/ horizontal) As tags que compoem uma tabela são:
+<table  <thead  <tbody   <th  <td   <tfooter. Nalgumas delas posso color atributos como: 
+border="2"  /  width="100%" (atributos objetivos sobrepoem as CSS)
+} width 100% faz comq o objeto se redimensione junto a página, tornando responsivo
+
+}ATRIBUTOS EXTRAS [colspan - rowspan]
+uso o atributo colspan="2" para unir duas colunas   (colspan / col= coluna > span = expandir)
+uso o atributo rowspan="2" para unir duas linhas    (rowspan / row= linhas > span = expandir)
+
+
+[FORMULARIOS ]------------------
+
+    Dentro de um formulário você pode preencher alguns dados para que os mesmos sejam processados
+por uma linguagem de programção nomalmente em php, para que esse formularios sejam processados
+as tags dos formularios são varias como : (radio (circulos selecionavesi) input text, number etc..)
+    Os formularios são usados para capturarmos dados dos usuarios
+
+<form   Iniciamos o formulário com a tag form, nela colocarei tudo que pertence ao formulário
+<input  A tag input e a principal, a partir dela fazemos as caixas do formulario, nela posso ter
+input text, number, radio, password, submit, entre outros ... (input = entrada)
+}+ATRIBUTOS
+<radio     Para selção de uma opção dentre varios itens                      Sexo M[x] F[ ]
+<chechbox  Para seleção de varios itens dentre varios intens                 Robie [x] [x] [x]
+<textarea  Para que o usuario possa enviar grande mensagem ao formulario
+<selec     Paraq o usuario selecione 1 item dentre uma lista muito grande    Estado(BA)(SP)(MG)(AM)
+<selec>
+   <option> BAHIA <option>
+</selec>
+
+Na tag input temos o valor id e name, o atributo name serv para tratarmos os dados do formulário
+usando uma linguagem de programção, normalmente PHP, usando a linguagem de programção podemos
+recuperar os dados enviados pelo usuario, usando o atributo [action="processa.php"] action, para
+receber os dados e assim podermos trata-los.
+
+[CARCTERES ESPECIAIS - entities]-------
+
+    Alguns caractes nõa podem ser exibidos pois fazem parttes de tags, pra isso existem as entities
+<	less than	    &lt;	&#60;	
+>	greater than	&gt;	&#62;	
+&	ampersand	    &amp;	&#38;
