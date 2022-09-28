@@ -221,9 +221,9 @@ como contato, noticias, ou até mesmo nas materias escritas direcionando outras 
     - rel="prev"  para paginas anteriores
     - rel="autor" para levar o cliente ao site do autor do texto mencionado
     - rel="nofollow  para levar o cliente a um link de site não endoçado, como link pago
-    - rel="noopener"  atualmente usa-se a tag nopner para não dar acessoa ao link externo a seu 
-    site deixando-o mais protegido (no opner / não opor)
-    }} Atente-se aos caminhos onde os arquivos das paginas estejam
+    - rel="noopener"  atualmente usa-se a tag noopener para não dar acessoa ao link externo 
+    a seu site deixando-o mais protegido (no opner / não opor)
+    }} Atente-se aos caminhos onde os arquivos das paginas estão
 
 LINKS PARA DOWNLOAS
     Para baixar um arquivo decolo adicionar o atributo a tag <a download="livro.pdf"
@@ -254,6 +254,39 @@ conteudo responsivo. Veja a seguir a tag que envolve varios tamanhos de imagens
 
 Quanto melhor for seu codigo pensando no cliente, melhor será sua taxa de aprovação dada pelos
 mecanismos de buscas, fazendo com que seu site seja cada vez mais recomendado.
+__________________________________________________________________________
+
+[MIDIAS - AUDIOS E VIDEOS]
+
+Hoje em dia é mais comum usarmos videos em nosso sites, vejamso algumas tags
+
+    <audio - usamos a tag audio mais os atributos (controls autoplay) para que seja mostrado
+    e consigamso execultar o audio inserido.
+    Caso eu queira adicionar varios fomatos de audio como (wav, mp3 ogg) devo fazer como imagens
+adaptaveis crio tag <audio </audio e dentro delas como a tag source:src, semre adicionado a 
+atenção do arquivo no atributo type="", veja o exemplo.
+
+    <audio controls autoplay>
+        <source src="midia/Summer.mp3" type="audio/mpeg">
+        <source src="midia/Enough - NEFFEX.mp3" type="audio/ogg">
+        <p> Mensagem caso navegador não reproduza, coloco um paragrafo no fim com aviso </p>
+    </audio>
+A ordem de carregamento será considerada pela psoição do audio 1º, 2º ...
+
+ATRIBUTOS DA TAG
+controls (mostra player)  autoplay(inicia reproduzindo)   loop(reproduz continuamente)
+preload="metadata" (carrega informações do audio)
+preload="none"     (não carrega nada apenas o player)
+----------------------------------
+Para inserir videos hospedados localmente é bem parecido, type src, esoclho e video e pronto.
+
+        <video controls preload="none" width="500px">
+            <source src="midia/meuvideo (video-converter.com).webm" type="video/webm">
+            <source src="midia/meuvideo.mp4" type="video/mp4">
+            <p>Seu navegador não reconheceu nenhum formato de video :/</p>
+        </video>
+
+
 __________________________________________________________________________
 
 [TABELAS ]

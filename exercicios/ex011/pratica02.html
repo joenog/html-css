@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens responsivas</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Imagens responsivas</h1>
+    </header>
+
+    <main>
+        <h2>Minha lista </h2>
+
+        <ul>
+            <li>Acordar</li>
+            <li>comprar Pão</li>
+            <li>DORMIR</li>
+            <li>Linguagens de programação</li>
+        </ul>
+        <ul>
+            <li><abbr title="Lingua criada">Python</abbr></li>
+            <li><abbr title="Linguagem criada ">Javascript</abbr></li>
+        </ul>
+        <div>
+            <h2>Imagens</h2>
+
+            <picture>
+                <source media="(max-width: 650px)" srcset="imagens/foto-p.png" type="image/png">
+                <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+                <img src="imagens/foto-g.png" alt="">
+            </picture>
+            
+        </div>
+    </main>
+
+</body>
+</html>
