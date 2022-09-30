@@ -28,6 +28,8 @@ menu {
 }
 
 main {
+    display: flex;
+    direction: ltr;
     padding-top: 20px;
     width: 700px;
     margin: auto;

@@ -33,14 +33,15 @@ menu {
 }
 
 main {
-    display: inline;
+    display: flexbox;
     padding: 20px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.719);
 }
 
 picture {
-    display: inline;
+    display: flex;
+    direction: ltr;
 }
 
 img {
@@ -70,8 +71,13 @@ a:hover {
     text-decoration: underline 3px ;
 }
 
-#vid {
-    display: none;
+script {
+    display: flexbox;
 }
+
+#vid {
+    display: block;
+}
+
 
 /* CONFIGURAR MAS MOSTRAR VIDEO QUANDO LICADO IFRAME#VID
