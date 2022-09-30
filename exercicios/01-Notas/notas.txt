@@ -252,6 +252,8 @@ conteudo responsivo. Veja a seguir a tag que envolve varios tamanhos de imagens
         <img src="imagens/foto-g.png" alt="imagem flexivel">
     </picture>
 
+    } PARA definir um agrupamente do imagens em linhas defino em CSS (display: inline)
+
 Quanto melhor for seu codigo pensando no cliente, melhor será sua taxa de aprovação dada pelos
 mecanismos de buscas, fazendo com que seu site seja cada vez mais recomendado.
 __________________________________________________________________________
@@ -286,6 +288,9 @@ Para inserir videos hospedados localmente é bem parecido, type src, esoclho e v
             <p>Seu navegador não reconheceu nenhum formato de video :/</p>
         </video>
 
+}IMPORTANTE - Se precisar colocar videos num site, considere a possiblidade de hospedalo no
+youtube e incorporalo no seu site, assim você consumirá menos dados do servidor que tem
+contratado.
 
 __________________________________________________________________________
 
@@ -332,3 +337,35 @@ receber os dados e assim podermos trata-los.
 <	less than	    &lt;	&#60;	
 >	greater than	&gt;	&#62;	
 &	ampersand	    &amp;	&#38;
+
+__________________________________________________________________________
+
+[CSS - INLINE] (AS FOLHAS DE ESTILHO EM CASCATA - CASCADING SHEETS)
+
+    As CSS permite uqe vocÊ dê estilo Às paginas do seu site,
+ATUALMENTE NÃO SE USA MUITTO CSS INLINE, COM ATRIBUTOS NA MESMA LINHA DA TAG, É DADA PREFERENCIA
+EM COLOCAR AS FOLHAS DE ESTILO NA TAG STYLE (ccs - local/interno) OU NUM ARQUIVO EXTERNO EX:
+    <body style="backgound-color: green>
+
+Os estilos internos/locais são usados quando tenho pequenas modificações no estilo e eles se
+limitam a apenas uma página, o estilo é aplicado com seletores e se aplica a todas a pagina
+onde o este está escrito.
+    <style>  < uma tag
+        body {
+            background-color: blue;   < uma declaração e valor
+        }
+    
+    Vendos isso até agora a melhor forma de adicionar CSS ao site é usando a forma _external
+criando um arquivo.css fazendo todos estilo nele e o aplicando via link nas paginas que queira
+personalizar, as alterações feita nesse arquivo conseguirá modificar todas as paginas de uma 
+vez fazendo comq economizemos tempo. Nas personalizações pontuais posso usar id e class
+limitando a personalização a apenas 1 item.
+    Para iniciar uma CSS externa uso a regra @charset "UTF-8" no inicio da folha, e então 
+preencho cons parametros de estilo (tudo que começa com @ são regras - @font-face)
+    Também posso adicionar varios links de css na mesma paginas, da mesma forma que uso um
+estilo pra varias páginas. (Num mesmo arquivo posso usar CSS  interno, externo e inline)
+    HIERARQUIA DE POSSO DAS FOLHAS
+    De forma geral o CSS externo personalizará todas a folhas, sobreposta pelo CSS interno que
+tambem e sobreposto pelo CSS inline. No fim o Inline tem mais poder
+__________________________________________________________________________
+

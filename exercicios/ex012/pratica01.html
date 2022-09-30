@@ -25,7 +25,7 @@
 
         main {
             background-color: lightcyan;
-            width: 500px;
+            width: 560px;
             margin: auto;
             padding: 30px;
             border-radius: 0px 0px 10px 10px;
@@ -45,22 +45,28 @@
         <h2>Trabalhando com videos </h2>
         <p>Este video está hopedado no meu proprio servido, localmente.</p>
 
-        <video controls preload="none" width="500px">
+        <video controls loop preload="metadata" width="560px" poster="imagens/carrothumb.jpg">
             <source src="midia/meuvideo (video-converter.com).webm" type="video/webm">
             <source src="midia/meuvideo.mp4" type="video/mp4">
             <source src="midia/meuvideo.ogv" type="video/ogv">
             <p>Seu navegador não reconheceu nenhum formato de video :/</p>
         </video>
-
+        <p><abbr title="O video roi retirado de uma biblioteca de videos gratuitos">Sobre o video</abbr></p>
 
         <div>
             <h3>Trabalhando com audio</h3>
 
-            <audio controls autoplay preload="none">
+            <audio controls autoplay preload="metadata">
                 <source src="../ex011/midia/Enough - NEFFEX.mp3" type="audio/mpeg">
                 <source src="../ex011/midia/Enough - NEFFEX - Copia.ogg" type="audio/ogg">
             </audio>
         </div>
+
+        <h2>Inserindo video do Youtube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ADPCOxkyrzA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h2>Inserindo video do Vimeo</h2>
+        <iframe src="https://player.vimeo.com/video/647354655?h=6cf43e0914&byline=0&portrait=0" width="560" height="239" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </main>
 
 </body>
