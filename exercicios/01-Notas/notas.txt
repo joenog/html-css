@@ -183,6 +183,48 @@ CITAÇÃO envelopo a citação na tag <q>
 <q>Como diria um pai de um maigo, o computador é um burro muito rapido</q>
 __________________________________________________________________________
 
+
+}} [DIV - SEMANTICAS]
+
+A tag [<header> representa um cabeçalho que pode conter informações introdutórias contextualizadas.
+“Contextualizadas” no sentido de que o significado desse cabeçalho depende do contexto em que ele
+se encontra: se é filho imediato de <body>, por exemplo, trata-se do cabeçalho geral da página; 
+se está em uma <section> (que será vista mais abaixo), é o cabeçalho dela e; assim por diante.
+
+A tag [<main> indica qual parte do documento contém o conteúdo principal.
+Entende-se como conteúdo principal aquele relacionado diretamente com o tópico central da página
+ou com a funcionalidade central da aplicação. Algo importa é que só pode haver 1 tag <main>
+por documento. A porção do conteúdo principal deve ser única e individual.
+
+A tag [<footer> indica qual é o rodapé daquele contexto em que a tag se encontra.
+Por exemplo, se for geral da página, pode conter informações de contato, copyright, navegação etc; 
+se estiver dentro de uma <article>, é um rodapé daquele elemento, então, semanticamente
+está vinculada a esta seção.
+
+A tag [<nav>, como indica o próprio nome, representa uma navegação do site.
+“Ahh, mas se eu colocar uma lista não-ordenada com links, isso já não é uma navegação?”
+Sim, mas, semanticamente, ela pode não ser uma navegação principal ou muito importante da página
+em questão. Nem todos os links de um documento devem estar dentro de um elemento <nav>, 
+que é destinado apenas para grupos importantes de links de navegação.
+
+A tag [<section> existe para agrupar conteúdos por temas ou assuntos, representando uma seção
+daquela página do site ou tela do aplicativo.
+Pode haver múltiplos elementos <section> por página (afinal, é possível ter várias seções)
+e eles podem ter seus próprios <header>, <footer> e <aside>.
+O interessante é que, por atribuir significado de seção dentro de uma página, o elemento pode
+conter títulos e subtítulos sem ferir a semântica.
+
+A tag [<aside> se destina a receber conteúdo relacionado ao contexto em que a tag se encontra.
+O importante a notar é que se trata de um conteúdo secundário: uma espécie de observação ou 
+complemento; algo tangencialmente relacionado.
+Se estiver dentro de uma <section> ou <article>, é relacionado a ela; se for filho imediato 
+de <body>, é um conteúdo relacionado geral e; assim por diante.
+Evidentemente, pode haver vários <aside> por página, já que é o conteúdo que vai ditar o uso
+semântico correto do elemento e, a depender do tópico, vários podem ser necessários.
+
+__________________________________________________________________________
+
+
 }} [LISTA ORDENADAS, NÃO ORDERADAS e LISTA DE DEFINIÇÃO]
 
     As listas são usadas principalmente para criação de menus visualmente, não se comportam
@@ -236,7 +278,7 @@ LINKS PARA DOWNLOAS
 mescanismos de buscas como Google, Encontrar seu site
 __________________________________________________________________________
 
-[IMAGENS ADAPTAVEIS]
+}} [IMAGENS ADAPTAVEIS]
 
     Para a criação de um site o tamanho das imagens são importantes, precisamos priorizar imagens
 mais leves e com qualidade. Tambem devemos ocnsiderar que varios tamanhos de telas podem acessar
@@ -258,7 +300,7 @@ Quanto melhor for seu codigo pensando no cliente, melhor será sua taxa de aprov
 mecanismos de buscas, fazendo com que seu site seja cada vez mais recomendado.
 __________________________________________________________________________
 
-[MIDIAS - AUDIOS E VIDEOS]
+}} [MIDIAS - AUDIOS E VIDEOS]
 
 Hoje em dia é mais comum usarmos videos em nosso sites, vejamso algumas tags
 
@@ -294,9 +336,9 @@ contratado.
 
 __________________________________________________________________________
 
-[TABELAS ]
+}} [TABELAS ]
 
-    Usamos as tabelas na internet para tabular dados, para cria-las devemo usar as tags (table, tr, td)
+    Usamos as tabelas na internet para tabular dados, para criar usamos as tags (table, tr, td)
 (table, tr: linhas/ vertical - td: colunas/ horizontal) As tags que compoem uma tabela são:
 <table  <thead  <tbody   <th  <td   <tfooter. Nalgumas delas posso color atributos como: 
 border="2"  /  width="100%" (atributos objetivos sobrepoem as CSS)
@@ -307,7 +349,7 @@ uso o atributo colspan="2" para unir duas colunas   (colspan / col= coluna > spa
 uso o atributo rowspan="2" para unir duas linhas    (rowspan / row= linhas > span = expandir)
 
 
-[FORMULARIOS ]
+}} [FORMULARIOS ]
 
     Dentro de um formulário você pode preencher alguns dados para que os mesmos sejam processados
 por uma linguagem de programção nomalmente em php, para que esse formularios sejam processados
@@ -340,7 +382,7 @@ receber os dados e assim podermos trata-los.
 
 __________________________________________________________________________
 
-[CSS - INLINE] (AS FOLHAS DE ESTILHO EM CASCATA - CASCADING SHEETS)
+}} [CSS - INLINE] (AS FOLHAS DE ESTILHO EM CASCATA - CASCADING SHEETS)
 
     As CSS permite uqe vocÊ dê estilo Às paginas do seu site,
 ATUALMENTE NÃO SE USA MUITTO CSS INLINE, COM ATRIBUTOS NA MESMA LINHA DA TAG, É DADA PREFERENCIA
@@ -369,7 +411,7 @@ estilo pra varias páginas. (Num mesmo arquivo posso usar CSS  interno, externo 
 tambem e sobreposto pelo CSS inline. No fim o Inline tem mais poder
 __________________________________________________________________________
 
-[REPRESENTAÇÃO DE CORES - CSS]
+}} [REPRESENTAÇÃO DE CORES - CSS]
 
 PARA REPRESENTAR AS CORES USAMOS O PADRÃO RGB,COD HEXADECIAL OU HSL, (RED, GREEN, BLUE)
 
@@ -381,3 +423,41 @@ PARA REPRESENTAR AS CORES USAMOS O PADRÃO RGB,COD HEXADECIAL OU HSL, (RED, GREE
 
     }PARAMETRO RGB NUMERICO rgb(0, 0, 255) força de red green e maxima de blue
 
+[ARMONIA DE CORES]
+
+CIRCULO CROMATICO SERVE PARA CONSEGUIRMOS ARMONIZAR AS CORES
+    
+    CORES PRIARIAS    (AMARELO, VERMELHO, AZUL)
+    CORES SECUNDARIAS (LARANJA, VIOLETA, VERDE)
+    CORRES TERCIARIAS  - São as misturas de todas as outras cores primarias e sec.
+    As terciarias são nomeadas com primeiro com nome da cor primaria seguida da cor segundaria
+    EX: (amarelo-esverdeado, amarelo-alaranjado, vermelho-alaranjado) tons pasteis
+
+DIVIDO UMA PALETA DE CORES TAMBÉM EM CORES FRIAS E CORES QUENTES, DEVEMOS CONSIDERAR ESSE FATOR,
+AO ESCOLHER UMA PALETA PARA UM DETERMINADO SITE E CONTEUDO
+    + A cor da logo do produto/site pode ajudar a formar a paleta de cores
+
+    [CORES COMPLEMENTARES] São as cores que mais contrastam entre si, é encontrada escolhendo, 
+inicialmente uma cor depois se escolhe a cor oposta a ela, assim criando um otimo contraste
+    [CORES ANALOGAS]       São as corres imediatamente ao lado da cor escolhida, ai eu tenho
+    uma similaridade entre elas, não haverá  constrate mas haverá armonia
+
+PALETA DE CORES (#07338C - #4465A6 - #BFAF5E - #F27B50 - #F25757)
+
+    [GRADIENTE EM  CSS]
+* { /* Configurações globais das CSS*/
+            height: 100%;
+        }
+    background-image: linear-gradient(30deg, blue, white, gree 20%);
+__________________________________________________________________________
+
+
+}} [TIPOGRAFIA]
+
+    A TIPOGRAFIA surgiu para melhorar a legibilidade das letras, a TIPOGRAFI é o estudo dos tipos,
+estudo de como denhar as letras seja em papael ou eletronicos. (o designer grafico foca em unir
+três coisas boa imagens, boas corer e boas letrar, uma triade armonica que traza sentimos a quem 
+vê o conteudo exposto). Sabendo disso depedendo de que conteudo vocÊ queira expor, uma fonte
+idela deve ser escolhida para que haja sentido com o conteudo exposto.
+
+}ANATOMIA DO TIPO
