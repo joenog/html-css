@@ -36,8 +36,9 @@ main {
     display: flexbox;
     padding: 20px;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.719);
+    background-color: rgba(116, 112, 112, 0.719);
 }
+
 
 picture {
     display: flex;

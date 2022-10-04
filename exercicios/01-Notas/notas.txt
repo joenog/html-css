@@ -460,4 +460,20 @@ três coisas boa imagens, boas corer e boas letrar, uma triade armonica que traz
 vê o conteudo exposto). Sabendo disso depedendo de que conteudo vocÊ queira expor, uma fonte
 idela deve ser escolhida para que haja sentido com o conteudo exposto.
 
-}ANATOMIA DO TIPO
+FAMILIA DE FONTES (SAFE COMBINATION - COMBINAÇÃO SEGURA)
+    Um parametro que une varias fontes para que ao menos uma seja identificada pelos navegador 
+    EX: body {font-family: 'Courier New', Courier, monospace;}
+
+-TAMANHO DE FONTES RECOMENDAÇÕES W3C
+    (MEDIDAS ABSOLUTAS)
+    TEMOS - cm centimetros / mm milimetro / in polegada / px pixel / pt ponto / pc paica
+
+    (MEDIDAS RELATIVAS)
+    TEMOS - [em]medida relativa ao tamanho atual da font / [ex] relativo a  altura x de uma fonte
+    [rem] taamnhp relativo a fonte configurada no body / [vw] largura da viewPort em %
+    [wh] altura da viewPort em  % /  [%] tamanho representado em porcentagem
+    - A medida pt / pontos é usado em editor de textos para impressão
+    - 16px é igual a 1em, o tamanho padrão da fonte na web
+    - o [rem] terá como base o tamanho configurado no padrao do body
+    
+    }A recomendação da W3C é que usemos [px e em]
