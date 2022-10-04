@@ -475,5 +475,21 @@ FAMILIA DE FONTES (SAFE COMBINATION - COMBINAÇÃO SEGURA)
     - A medida pt / pontos é usado em editor de textos para impressão
     - 16px é igual a 1em, o tamanho padrão da fonte na web
     - o [rem] terá como base o tamanho configurado no padrao do body
-    
+
     }A recomendação da W3C é que usemos [px e em]
+--------------
+- PESO, ESTILO E SHORTHAND FONT
+
+font-weight : lighter , normal , bold, bolder
+font-weigth : (tamanho numerico, 100,200,300,400 ...900)
+font-style  : normal, italic
+text-decoration : underline, overline ...
+
+-shorthand (condensar todas as configurações em uma linha, siga a ordem)
+[font-style, font-weigth, font-size, font-family]
+font: normal lighter 3em 'work sams, sans-serif'
+
+- para que a fonte se adapte às configurações devemos ter uma fonte que aceite essas configs
+nem todas as fontes tem essas possibilidades
+
+- Você pode @importar fontes do Google fontes, não use muitas variações de fontes em seu site
