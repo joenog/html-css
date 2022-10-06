@@ -568,3 +568,40 @@ a::after {
 __________________________________________________________________________
 
 
+} [BOX MODEL   -  Modelo de caixa]
+
+No CSS, o termo "modelo de caixa" é usado quando se fala em design e layout.
+
+O modelo de caixa CSS é essencialmente uma caixa que envolve cada elemento HTML. Consiste em:
+margens, bordas, preenchimento e o conteúdo real. A imagem abaixo ilustra o modelo da caixa.
+
+--Explicação das diferentes partes:
+
+]Conteúdo - O conteúdo da caixa, onde texto e imagens aparecem
+]Preenchimento [padding] - Limpa uma área em torno do conteúdo. O preenchimento é transparente
+]Fronteira [border] - Uma fronteira que gira em torno do estofamento e conteúdo
+]Margem [margin - Limpa uma área fora da fronteira. A margem é transparente, veja o EX:
+
+div {
+  width: 300px; [conteudo] 
+  padding: 50px; [padding] - O espaçamento ao redor do conteudo
+  border: 15px solid green; [border] - A borda  que envolve o espaçamento
+  margin: 20px; [margin] - O espaçamento invisivel que fora da borda
+
+  [(outline) - é uma linha de contorno do 'border']
+
+!! ENTENDA - O body é uma  caixa o main e outra caixa a div e a section são caixas,
+uma dentro da  outra e podem ser configuradas livremente.
+
+- Podemos colocar um elemento dentro do outro, 'caixas dentro de caixas' isso e´chamado de
+aninhamento, nas caixas que envolvem os conteudos tenho medidas de (height= altura e 
+width = largura)
+
+} Tipos de ciaxas [box-level / inline-level]
+[box-level] O box level sempre oculpa a largura total da tela, de uma ponta a outra
+e sempre se iniciara em outra linha, EX: [<div] oculpa toda pagina, veja mais ex de box level
+(<h1,h2.. p, main, header, nav, article, aside, footer, form, video)
+
+[inline-block] A caixa inline-block é exibida na mesma linha que o conteúdo sem quebra
+EX: [<span] oculpa uma pequna parte, só para mostrar o conteudo, veja mais ex: de inline-block
+(<span, a, code, small, strong, em, sup, sub, label, button, input, select)

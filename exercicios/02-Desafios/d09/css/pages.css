@@ -73,11 +73,12 @@ a:hover {
 }
 
 script {
-    display: flexbox;
+    display: inline-block;
+    margin: auto;
 }
 
 #vid {
-    display: block;
+    display: inline-block;
 }
 
 
