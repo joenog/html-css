@@ -493,3 +493,78 @@ font: normal lighter 3em 'work sams, sans-serif'
 nem todas as fontes tem essas possibilidades
 
 - Você pode @importar fontes do Google fontes, não use muitas variações de fontes em seu site
+
+    }USANDO FONTES EXTENAS 
+Para usar fontes extenas devemos criar uma regra @font-face, então inserir a URL da fonte para
+que ela seja lida pelo navegador. nessa regra tmb devemos incluir o (format) da fonte veja:
+tipso de format()
+- open type(otf)   - truetype(ttf)   - embedded-opentype()   veja EX:
+
+  @font-face {
+            font-family: 'story';
+            src: url('fonts/HandwrittenStory.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+com tudo que vimos sobre fontes, você pode tmb pegar fontes deum site ou extrai-las de imagens
+
+__________________________________________________________________________
+
+}} [#ID e .CLASS ] video yt = diferenças entre id e class 
+
+Quando precisamos estilizar ou inserir scripts em determinados elementos na página da nossa
+aplicação, precisamos nomeá-los através de class ou id.
+
+-Não posso usar usar o mesmo id em carios elementos, o ID identifica apenas 1 item
+-Para criar um grupos de itens onde posso pesonalizar todos uso o .class 
+- Sempre importante nomearmos os classes e IDs pela funcionalidadeq ele execultara
+e não com o nome da personalização/forma que ele adiquira   EX:
+
+<h1 [id="titulo"]>Seletores em HTML</h1>
+    <main>
+        <h2 [class="subtitulo"]>Testando Seletores</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <h2 [class="subtitulo]">Noticias do Brasil</h2>
+        <p>Lorem sit amet dolor sit amet }<span class="sub"> CONCECTETUR </span> adipisicing.
+
+- PARA aumentar o alcance de um class, envolvo partes do texto com span e class EX acima
+- TAMBEM posso colocar duas class na mesma tag veja o exemplo EX:
+<h2 [class="subtitulo marcado"]>Testando Seletores</h2>
+
+O codigo acima receba as configurações do .subtitulo e .marcado ( quando uso dois .class na
+mesma tag, ambos serão confugrados juntos. Mas se uso .class e um #id, esse id sobrepora
+a configuração do class.)
+-----------------------
+
+} :Pseudo-classes em CSS 
+Uma :pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado
+especial do elemento selecionado. Por exemplo, [:hover] pode ser usado para alterar a cor
+de um botão quando o usuário passar o cursor sobre ele.
+
+Usando divs e :hover posso alteraar a função das divs dando efeitos simples a elas, tambem nas CSS
+posso lecionar filhos das divs com o seguinte comando[ div > p   /   div > h1], selecionado assim
+posso personalizar itens que estão dentro de tags veja os exemplo EX:
+
+ div:hover {
+            color: red;
+        }
+        div > p {
+            display: none;
+            background-color: grey;
+        }
+        div:hover > p {
+            display: block;
++PSEUDO CLASSES
+a:visited  (para modificar os links que foram visitados)
+a:active   (para modificar a cor do link quando clicado)
+
+]PSEUDO CLASSES SÃO PALAVRAS QUE DEFINEM ESTADOS DE ELEMENTOS EM HTML, TEMOS TMB >>
+]PSEUDO ELEMENTOS:: ELES PODEM AGIR, NAS CLASSES NOS ELEMENTOS NOS IDs, (diretamente
+no conteudo periferico do elemento) EX:: pseudoElementos uso dois pontos
+a::after {
+            content: '  &#x1F517';
+__________________________________________________________________________
+
+
