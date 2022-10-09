@@ -621,4 +621,23 @@ containers de forma dinâmica. Ou seja, independente das suas dimensões eles se
 layout flexível dentro do seu elemento pai, reorganizando-se e acordo com a necessidade.
     Quando criamos uma div por ser diplsya block ela fica orgadinazada uma abaixo da outra,
 quando aplicamos o display flex, mesmo sendo uma display box level ela ficara uma ao lado da outra,
-de acordo com tamanho do display.
+de acordo com tamanho do display. [aqui alguns atritubutos do flexbox]
+}
+display: flex;   = tora os itens flexiveis
+[flex-direction;  = direciona a ordem dos itens / row, column (linha e coluna)
+[flex-wrap: wrap; = define se os itens flexíveis são forçados a ficar na mesma 
+linha ou se pode serquebrados em varias linhas
+[flex-wrap: nowrap;
+[flex-wrap: wrap-reverse; = Organiza os itens na forma reversa
+__________________________________________________________________________
+
+} [GROUPING TAGS]  Agrupamento de tags
+
+    No HTML anterior não havia tanta semantica e o agrupamento de tags era feito apenas com <div
+Hoje com a semantica mais há varias tags que podem agrupar outras, semanticamente veja ! EX:
+
+<header - No header e o cabeçalho nele agrupo o titulo do site <H1 e o <NAV a area de menu
+<main   - O main correponde ao corpo do site, posso ter tags como <section = id assuntos
+dentro dessa section posso ter <articles e dentro do artigo posso ter um aside, sobre um assunto
+periferico ao artigo
+<footer - No footer coloco os detalhes do rodapé do site
