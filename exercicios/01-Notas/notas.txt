@@ -641,3 +641,11 @@ Hoje com a semantica mais há varias tags que podem agrupar outras, semanticamen
 dentro dessa section posso ter <articles e dentro do artigo posso ter um aside, sobre um assunto
 periferico ao artigo
 <footer - No footer coloco os detalhes do rodapé do site
+
+__________________________________________________________________________
+
+} [CRIANDO UM PROJETO] Passos para criação
+
+Primeiro defina a modelo que fará e escolha a paleta de cores
+Depois crie e organize os arquivos dos projetos
+Depois estruture e forkmate todos aquivo HTML, depois aplique os estilos
