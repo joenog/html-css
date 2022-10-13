@@ -619,16 +619,19 @@ Para que serve o Flexbox?
     O Flexbox é um conceito do CSS3 que visa organizar os elementos de uma página HTML dentro de seus
 containers de forma dinâmica. Ou seja, independente das suas dimensões eles sempre manterão um 
 layout flexível dentro do seu elemento pai, reorganizando-se e acordo com a necessidade.
-    Quando criamos uma div por ser diplsya block ela fica orgadinazada uma abaixo da outra,
+    Quando criamos uma div por ser display block ela fica orgadinazada uma abaixo da outra,
 quando aplicamos o display flex, mesmo sendo uma display box level ela ficara uma ao lado da outra,
 de acordo com tamanho do display. [aqui alguns atritubutos do flexbox]
 }
 display: flex;   = tora os itens flexiveis
 [flex-direction;  = direciona a ordem dos itens / row, column (linha e coluna)
-[flex-wrap: wrap; = define se os itens flexíveis são forçados a ficar na mesma 
+[flex-wrap: wrap; = define se os itens flexíveis são forçados a ficar na mesma (envoltura flexivel)
 linha ou se pode serquebrados em varias linhas
 [flex-wrap: nowrap;
 [flex-wrap: wrap-reverse; = Organiza os itens na forma reversa
+[justify-content: center;
+[align-items: center;
+[justify-content: space-around; 
 __________________________________________________________________________
 
 } [GROUPING TAGS]  Agrupamento de tags
@@ -649,3 +652,4 @@ __________________________________________________________________________
 Primeiro defina a modelo que fará e escolha a paleta de cores
 Depois crie e organize os arquivos dos projetos
 Depois estruture e forkmate todos aquivo HTML, depois aplique os estilos
+
