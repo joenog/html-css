@@ -582,13 +582,16 @@ margens, bordas, preenchimento e o conteúdo real. A imagem abaixo ilustra o mod
 ]Fronteira [border] - Uma fronteira que gira em torno do estofamento e conteúdo
 ]Margem [margin - Limpa uma área fora da fronteira. A margem é transparente, veja o EX:
 
+}colapse-Margin = Quando houver dois elementos, ambos com margin elas se colapsarão, mas será
+predominante a margem maior no fim
+
 div {
   width: 300px; [conteudo] 
   padding: 50px; [padding] - O espaçamento ao redor do conteudo
   border: 15px solid green; [border] - A borda  que envolve o espaçamento
   margin: 20px; [margin] - O espaçamento invisivel que fora da borda
 
-  [(outline) - é uma linha de contorno do 'border']
+[(outline) - é uma linha de contorno do 'border']
 
 !! ENTENDA - O body é uma  caixa o main e outra caixa a div e a section são caixas,
 uma dentro da  outra e podem ser configuradas livremente.
@@ -644,6 +647,11 @@ Hoje com a semantica mais há varias tags que podem agrupar outras, semanticamen
 dentro dessa section posso ter <articles e dentro do artigo posso ter um aside, sobre um assunto
 periferico ao artigo
 <footer - No footer coloco os detalhes do rodapé do site
+
+----CSS position (RELATIVE - ABSOLUTE)
+Em position: relative , o elemento é posicionado em relação a si mesmo. Por outro lado, um elemento
+com position: absolute tem sua posição relacionada a de seu elemento pai. Um elemento com position:
+absolute é removido do fluxo normal do documento.
 
 __________________________________________________________________________
 
