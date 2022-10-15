@@ -660,4 +660,26 @@ __________________________________________________________________________
 Primeiro defina a modelo que fará e escolha a paleta de cores
 Depois crie e organize os arquivos dos projetos
 Depois estruture e forkmate todos aquivo HTML, depois aplique os estilos
+__________________________________________________________________________
 
+[ELEMENTOS FLUTUANTES ]------
+
+A propriedade flutua do CSS determina que um elemento deve ser retirado do seu fluxo normal
+e colocadoao longo do lado direito ou esquerdo do seu containêr, onde textos e elementos em
+linha irão se posicionar ao seu redor. (As caixas deixarão seu fluxo normal e responderao
+aos seguintes comandos EX:)
+
+]float right: Os cotenudos são jogados à direia da tela
+]float left: Os conteudo ja a direita agora ficarã ona orizontal um à esquerda do outro
+
+.conteudo1 {
+            background-color: rgb(173, 217, 230);
+            width: 350px; height: 150px;
+            border-radius: 10px;
+            margin: 5px;
+            float: left;
+
+        .clear {
+            clear: both;   [Com clear posso limpar os espaços ao lado dos itens, fazendo com que
+        }                   o texto ou outros itens passe para a proxima linha abaixo]
+__________________________________________________________________________
