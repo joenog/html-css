@@ -683,3 +683,13 @@ aos seguintes comandos EX:)
             clear: both;   [Com clear posso limpar os espaços ao lado dos itens, fazendo com que
         }                   o texto ou outros itens passe para a proxima linha abaixo]
 __________________________________________________________________________
+
+[IMAGEM DE FUNDO ]
+
+    Coloca-se imagem ao fundo com um unico proposito visual esse é o parametro
+background-image: url('imagens/pattern003.png');
+background-image: linear-gradient(to bottom, #9050ff, orange);  (fundo gradient)
+
+-Rpetindo as imagens 
+
+background-repeat: repeat-y;
