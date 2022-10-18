@@ -511,6 +511,7 @@ com tudo que vimos sobre fontes, você pode tmb pegar fontes deum site ou extrai
 
 __________________________________________________________________________
 
+
 }} [#ID e .CLASS ] video yt = diferenças entre id e class 
 
 Quando precisamos estilizar ou inserir scripts em determinados elementos na página da nossa
@@ -637,6 +638,7 @@ linha ou se pode serquebrados em varias linhas
 [justify-content: space-around; 
 __________________________________________________________________________
 
+
 } [GROUPING TAGS]  Agrupamento de tags
 
     No HTML anterior não havia tanta semantica e o agrupamento de tags era feito apenas com <div
@@ -655,12 +657,14 @@ absolute é removido do fluxo normal do documento.
 
 __________________________________________________________________________
 
+
 } [CRIANDO UM PROJETO] Passos para criação
 
 Primeiro defina a modelo que fará e escolha a paleta de cores
 Depois crie e organize os arquivos dos projetos
 Depois estruture e forkmate todos aquivo HTML, depois aplique os estilos
 __________________________________________________________________________
+
 
 [ELEMENTOS FLUTUANTES ]------
 
@@ -684,12 +688,48 @@ aos seguintes comandos EX:)
         }                   o texto ou outros itens passe para a proxima linha abaixo]
 __________________________________________________________________________
 
+
 [IMAGEM DE FUNDO ]
 
     Coloca-se imagem ao fundo com um unico proposito visual esse é o parametro
 background-image: url('imagens/pattern003.png');
 background-image: linear-gradient(to bottom, #9050ff, orange);  (fundo gradient)
 
--Rpetindo as imagens 
+}Parametros Imagens e ShortHand
 
-background-repeat: repeat-y;
+body {
+            height: 97vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;   ( scroll, fundo rola com a imagem, fixed pra fixo)
+
+/* SHORTHAND - BACKGROUND */
+        Nessa ordem = color > image > position > repeat > atachment    
+         > size (size se coloca separadament) */
+__________________________________________________________________________
+
+
+[RELATIVE - ABSOLUTE]
+
+Em position: relative , o elemento é posicionado em relação a si mesmo. Por outro lado, um elemento
+com position: absolute tem sua posição relacionada a de seu elemento pai. Um elemento com position:
+absolute é removido do fluxo normal do documento. 
+(Quando atribuo o paramento absolute a um elemento posso configurar dois parametro nele) EX:
+
+ #conteudo { /*article*/             [Este conteudo sendo child de outro posso move-lo sobre o pai]
+            position: absolute;
+            height: 200px;
+            width: 300px;
+            background-color: yellow;
+          - left: 200px; (posicionamento da esqueda para direita)
+          - top: 200px;  (posicionamento do top ao bottom)
+
+Usando o  [transform: translate]] posso movimentar com mais liberdade o iten child sobre o pai EX:
+ transform: translate(-50px, -50px);     //  transform: translate(30px, 30px);
+
+O movimento ocorrerá com o mesmo padrao do left e top, posso usar valores positivos e negativos
+Com isso terei um objeto posicionado num lugar fixo.     [ex022 - fundo006]
+__________________________________________________________________________
