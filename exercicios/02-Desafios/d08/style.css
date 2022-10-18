@@ -3,13 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: lightblue;
+    padding: 0px; margin: 0px; box-sizing: border-box;
 }
 
 header { /*cabeçalho*/ 
@@ -32,25 +26,29 @@ header { /*cabeçalho*/
 section {
     background-color: white;
     font-family: 'Kalam', cursive;
-    padding: 15px;
+    padding: 6vh;
 } section > p {
-    max-width: 600px;
+    max-width: 500px;
+    padding-bottom: 10px;
     font-size: 3vmax;
     padding: 10px;
-    margin: 10px 0px;
+    text-shadow: 2px 3px 10px #0000001f;
 }
 
 #joaninha {
     background: #202020 url('imagens/background001.jpg') center center no-repeat fixed;
+    background-size: cover;
     width: 100vw;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.384);
 } #joaninha > p {
     background-color: #2020204d;
     color: white;
-    margin: 10px;
 }
 
 #folhas {
     background: #202020 url('imagens/background002.jpg') center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.384);
 } #folhas > p {
     background-color: #2020204d;
     color: white;
