@@ -348,6 +348,28 @@ border="2"  /  width="100%" (atributos objetivos sobrepoem as CSS)
 uso o atributo colspan="2" para unir duas colunas   (colspan / col= coluna > span = expandir)
 uso o atributo rowspan="2" para unir duas linhas    (rowspan / row= linhas > span = expandir)
 
+    <!--Hierarquia de tabelas simples
+    1 Tabble = tabela                        (table)
+        2 table row = linha de tabela           (tr)
+            3 table Header = cabeçalho de tabla (th)
+                4 table data = dados de tabela  (td)
+    -->
+    <table>
+        <tr>   <!-- primeira linha-->
+            <td>A1</td>  <!--Primeiro dado da primeira linha-->
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>   <!--Segunda linha-->
+            <td>A2</td>
+            <td>B2</td>
+            <td class="numero">C2</td> <!--Terceiro dado da segunda linha-->
+        </tr>
+[No estilo posso mudar a posição dos dados na tabal com:
+text-align: center;
+vertical-align: top;] middle, bottom, top
+__________________________________________________________________________
+
 
 }} [FORMULARIOS ]
 

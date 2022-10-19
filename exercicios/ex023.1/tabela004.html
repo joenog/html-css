@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas em HTML + CSS</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            width: 800px;
+            margin: auto;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 400px;
+            height: 400px;
+        }
+
+        td { /*borda em todos os dados */
+            border: 1px solid black;
+            /* espaçamento entre os dados*/
+            padding: 5px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .numero {
+            vertical-align: bottom;
+            background-color: gray;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h2>Minha primeira Tabela</h2>
+
+    <main>
+        <table>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+            <tr>
+                <td class="numero">A4</td>
+                <td class="numero">B4</td>
+                <td class="numero">C4</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
