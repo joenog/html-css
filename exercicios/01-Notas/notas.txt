@@ -355,19 +355,24 @@ uso o atributo rowspan="2" para unir duas linhas    (rowspan / row= linhas > spa
                 4 table data = dados de tabela  (td)
     -->
     <table>
-        <tr>   <!-- primeira linha-->
-            <td>A1</td>  <!--Primeiro dado da primeira linha-->
-            <td>B1</td>
-            <td>C1</td>
-        </tr>
-        <tr>   <!--Segunda linha-->
-            <td>A2</td>
-            <td>B2</td>
-            <td class="numero">C2</td> <!--Terceiro dado da segunda linha-->
-        </tr>
+        <thead>
+            <tr> (PRIMEIRA LINHA)
+                <th>ESTADO</th>     (TH - PRIMEIRO TIRULO tfooter)
+                <th>POPULAÇÃO</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td> 
+                <td>46.649.132</td>
+            </tr>
 [No estilo posso mudar a posição dos dados na tabal com:
 text-align: center;
 vertical-align: top;] middle, bottom, top
+
+Uso a tag ( overflow-x: auto; ) para rolar larteralmente uma tabela, evitando a quebra 
+e o scroll lateral
 __________________________________________________________________________
 
 
@@ -657,7 +662,13 @@ linha ou se pode serquebrados em varias linhas
 [flex-wrap: wrap-reverse; = Organiza os itens na forma reversa
 [justify-content: center;
 [align-items: center;
-[justify-content: space-around; 
+[justify-content: space-around;     (EXEMPLO DE CODIGO)
+
+display: flex;
+        justify-content: center;  /* altera o alinhamento na orizontal*/
+        align-items: center;    /* altera o alinhamento vertical */
+        flex-wrap: wrap;  /* faz com q haja uma quebra de linha  mandando os que não cabe para baixo*/
+        
 __________________________________________________________________________
 
 
