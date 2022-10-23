@@ -20,7 +20,6 @@ body {
 main{
     position: relative;
     height: 100vh;
-
 }
 
 section#telefone {
@@ -39,11 +38,26 @@ iframe#tela {
     position: relative;
     top: 72px;
     left: 20px;
+
     width: 241px;
     height: 425px;
 }
 
 section#redes-sociais {
-    background-color: blue;
-    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-end;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+section > a > img {
+    width: 45px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.205);
+} section > a > img:hover {
+    width: 46px;
 }
