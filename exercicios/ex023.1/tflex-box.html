@@ -15,28 +15,34 @@
             max-width: 95vw;
             height: 240px;
             color: white;
-            
-
                 /* REGRAS DE FLEX */
             display: flex;
             justify-content: space-between;  /* altera o alinhamento na orizontal*/
-            align-items: center;    /* altera o alinhamento vertical */
+            align-items: flex-start;    /* altera o alinhamento vertical */
             flex-wrap: wrap;  /* faz com q haja uma quebra de linha  mandando os que não cabe para baixo*/
         }
         
         .item {
-            background-color: rgb(10, 85, 85);
+            background-color: rgb(10, 25, 85);
             border: 1px solid black;
             border-radius: 5px;
             width: 50px;
             height: 50px;
             text-align: center;
-        }
-
+        } 
+        
         .box {
             background-color: teal;
             border: 1px solid black;
             height: 50px;
+        } 
+        
+        #item1 {
+            background-color: black;
+            width: 20px;
+        } #item1:hover {
+            width: 150px;
+            transition-duration: 0.6s;
         }
 
     </style>
@@ -58,8 +64,8 @@
     </div>
 
     <div class="container">
-        <div class="box" id="item-1">1</div>
-        <div class="box" id="item-2">2</div>
-        <div class="box" id="item-3">3</div>
+        <div class="box" id="item1">1</div>
+        <div class="box" id="item2">2</div>
+        <div class="box" id="item3">3</div>
     </div>
 </html>
