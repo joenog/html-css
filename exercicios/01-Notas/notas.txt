@@ -379,11 +379,11 @@ __________________________________________________________________________
 }} [FORMULARIOS ]
 
     Dentro de um formulário você pode preencher alguns dados para que os mesmos sejam processados
-por uma linguagem de programção nomalmente em php, para que esse formularios sejam processados
-as tags dos formularios são varias como : (radio (circulos selecionavesi) input text, number etc..)
+por uma linguagem de programção nomalmente em php, para que esses formularios sejam processados
+as tags dos formularios são varias como : (radio (circulos selecionaveis) input text, number etc..)
     Os formularios são usados para capturarmos dados dos usuarios
 
-<form   Iniciamos o formulário com a tag form, nela colocarei tudo que pertence ao formulário
+<form>  Iniciamos o formulário com a tag form, nela colocarei tudo que pertence ao formulário
 <input  A tag input e a principal, a partir dela fazemos as caixas do formulario, nela posso ter
 input text, number, radio, password, submit, entre outros ... (input = entrada)
 }+ATRIBUTOS
@@ -393,7 +393,7 @@ input text, number, radio, password, submit, entre outros ... (input = entrada)
 <selec     Paraq o usuario selecione 1 item dentre uma lista muito grande    Estado(BA)(SP)(MG)(AM)
 <selec>
    <option> BAHIA <option>
-</selec>
+</selec>                         [<form action="cadastro.php" method="get" autocomplete="off">]
 
 Na tag input temos o valor id e name, o atributo name serv para tratarmos os dados do formulário
 usando uma linguagem de programção, normalmente PHP, usando a linguagem de programção podemos
