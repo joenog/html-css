@@ -52,6 +52,8 @@ section#redes-sociais {
 
     width: 100vw;
     height: 100vh;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
 section > a > img {
