@@ -52,15 +52,15 @@ section#redes-sociais {
 
     width: 100vw;
     height: 100vh;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 20px;
 }
 
 section > a > img {
     width: 45px;
-    margin: 10px;
+    margin-left: 20px;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.205);
 } section > a > img:hover {
-    border: 2px solid rgba(255, 255, 255, 0.555);
+    border: 2px solid rgba(255, 255, 255, 0.863);
 }
