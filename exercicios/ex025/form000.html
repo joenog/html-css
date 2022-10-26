@@ -64,6 +64,18 @@
                 <input type="reset" value="LIMPAR">
             </div>
 
+            <!---Cixas novas-->
+            <fieldset>
+                <legend><mark>DADOS ADICIONAIS</mark></legend>
+                <div>
+                    <label for="iemail">EMAIL: </label>
+                    <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="joao@gmail.com">
+                </div>
+                <div>
+                    <label for="itel">TELEFONE: </label>
+                    <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^[0-9]{2}[0-9]{5}-[0-9]{4}$" placeholder="(00) 00000-0000">
+                </div>
+            </fieldset>
         </form>
     </main>
 </body>
