@@ -333,8 +333,8 @@ Para inserir videos hospedados localmente é bem parecido, type src, esoclho e v
 }IMPORTANTE - Se precisar colocar videos num site, considere a possiblidade de hospedalo no
 youtube e incorporalo no seu site, assim você consumirá menos dados do servidor que tem
 contratado.
-
 __________________________________________________________________________
+
 
 }} [TABELAS ]
 
@@ -384,21 +384,74 @@ as tags dos formularios são varias como : (radio (circulos selecionaveis) input
     Os formularios são usados para capturarmos dados dos usuarios
 
 <form>  Iniciamos o formulário com a tag form, nela colocarei tudo que pertence ao formulário
+<div --- Uso a tag div para envolver as tags abaixo criando um Form organizado
 <input  A tag input e a principal, a partir dela fazemos as caixas do formulario, nela posso ter
 input text, number, radio, password, submit, entre outros ... (input = entrada)
 }+ATRIBUTOS
-<radio     Para selção de uma opção dentre varios itens                      Sexo M[x] F[ ]
-<chechbox  Para seleção de varios itens dentre varios intens                 Robie [x] [x] [x]
+<radio     Para selção de uma opção dentre varios itens                      Sexo  M[x]  F[ ]
+<chechbox  Para seleção de varios itens dentre varios intens                 Robie  [x][x][x]
 <textarea  Para que o usuario possa enviar grande mensagem ao formulario
 <selec     Paraq o usuario selecione 1 item dentre uma lista muito grande    Estado(BA)(SP)(MG)(AM)
 <selec>
-   <option> BAHIA <option>
+   <option> BAHIA <option>   (Cria opções para serem selecionadas no <selec>)
 </selec>                         [<form action="cadastro.php" method="get" autocomplete="off">]
+<submit    Para enviar os dados
+<reset     Para limpar todas as areas preenchidas.
+----------------
+
+[+ ATRIUTOS - de validação, Alguns abrigatorios]
+
+' required   (A exigir que uma caixa seja preenchida)
+' minlenght  (Para exigir um tamanho min ou max do prenchimento)  EX:  minlength="5"
+' size       (Redimenciona quantas letras a caixa exibira)        EX: size="10" 
+' placeholder(Usa-se pra mostrar oq deve ser escrito na caixa)    EX: placeholder="Seu Nome"
+' min        (Usa-se mim pra caixa numerica, valor min ou max)    EX: nim="0"  max="10"
+' step       (Passo numerico 0.5 - 1.0 - 1.5 - 2.0)               EX: nota step="0.5"  "0.1"
+' value      (Predefine um valor inicial a caixa)                 EX: value="5"  value="2020-10-12"
+
+' autocomplet(Usa-se para autocompletar as caixa, coloco o atrubuto no <form e <input)
+especificando oq ele deverá completar EX: [autocomplete="username">] [autocomplete="new-password"]
+[autocomplete="current-password">] current para a senha atual
+
+
+<label for="iusu">NOME: </label>
+        <input type="text" name="uso" id="iusu" required minlength="6" maxlength="15">
+
+---------------
+AS tags apresentadas acima sempre terão [name e ID] o name servirá para o tratamento dos dados em PHP
+o ID servirá para fazer a relação com LABEL e tambem com JavaScript.
+
+((Ciaxa  q - É a caixa da solicitação query))
 
 Na tag input temos o valor id e name, o atributo name serv para tratarmos os dados do formulário
 usando uma linguagem de programção, normalmente PHP, usando a linguagem de programção podemos
 recuperar os dados enviados pelo usuario, usando o atributo [action="processa.php"] action, para
 receber os dados e assim podermos trata-los.
+---------------
+
+}METODOS - ENVIO DE FORMULÁRIOS (Atributo : Method:)
+
+    Normalmente no HTML temos dois metodos basicos de envios de formulários, o 1º e padrão é o metodo
+[GET: O método GET utiliza a própria URI (normalmente chamada de URL) para enviar dados ao servidor,
+quando enviamos um formulário pelo método GET, o navegador pega as informações do formulário e coloca
+junto com a URI (URL) de onde o formulário vai ser enviado e envia, separando o endereço da URI dos 
+dados do formulário por um “?” ] Dados enviados por GET não podem exceder o tamanho de 3.000 bytes
+} 3 MIL bytes seria equivalente a 3 mil letras.
+}Não posso usar o GET para o envio de DADOS sensiveis: [Senhas, Numeros de documetnos, dados de cartão]
+
+[HEAD: O método HEAD solicita uma resposta idêntica ao método GET, mas sem conter o corpo da resposta.]
+
+[POST: O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente
+causando uma mudança no estado do recurso ou efeitos colaterais no servidor. Envia dados ao servidor]
+}Uso o metodo PSOT para dados sensíveis, querendo que eles n apareceçam na URL: FOTOS, SENHAS, CARTÕES,
+entre outros, e todos esses envia-se de forma criptografada usando (HTTPS, seguro e criptografado)
+Uso o posto também casa o arquivo exceda 3mil bytes onde o get nao servirá.
+
+[PUT: Este substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.]
+
+[DELETE: O método DELETE remove um recurso específico]
+__________________________________________________________________________
+
 
 [CARCTERES ESPECIAIS - entities]-------
 
@@ -406,8 +459,8 @@ receber os dados e assim podermos trata-los.
 <	less than	    &lt;	&#60;	
 >	greater than	&gt;	&#62;	
 &	ampersand	    &amp;	&#38;
-
 __________________________________________________________________________
+
 
 }} [CSS - INLINE] (AS FOLHAS DE ESTILHO EM CASCATA - CASCADING SHEETS)
 
@@ -437,6 +490,7 @@ estilo pra varias páginas. (Num mesmo arquivo posso usar CSS  interno, externo 
     De forma geral o CSS externo personalizará todas a folhas, sobreposta pelo CSS interno que
 tambem e sobreposto pelo CSS inline. No fim o Inline tem mais poder
 __________________________________________________________________________
+
 
 }} [REPRESENTAÇÃO DE CORES - CSS]
 
