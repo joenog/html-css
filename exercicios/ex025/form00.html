@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais tags de formulários</title>
+    <style>
+         body {
+            background-color: lightcyan;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        h1 {
+            text-align: center;
+        }
+        input {
+            margin: 10px;
+        }
+
+        main {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form {
+            background-color: bisque;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+        }
+
+        fieldset {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mais comandos sobre formulários</h1>
+    </header>
+    <main>
+        <form action="cadastro.php" method="get">
+
+            <fieldset>
+                <legend><strong>SEXO</strong></legend>
+
+                <div>
+                    <input type="radio" name="sex" id="imasc" checked value="masc">
+                    <label for="imasc">MASCULINO</label> <br>
+
+                    <input type="radio" name="sex" id="ifem" value="femi">
+                    <label for="ifem">FEMININO</label>
+                </div>
+            </fieldset> <br>
+
+            <fieldset>
+                <legend><strong>ESPORTES FAVORITOS</strong></legend>
+
+                <div>
+                    <input type="checkbox" name="bask" id="ibask">
+                    <label for="ibask">BASQUETE</label> <br>
+                    
+                    <input type="checkbox" name="fut" id="ifut" checked>
+                    <label for="ifut">FUTEBOL</label> <br>
+
+                    <input type="checkbox" name="vol" id="ivol">
+                    <label for="ivol">VOLEI</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>ESCOLHA</legend>
+
+                <div>
+                    <label for="icor">COR</label>
+                    <input type="color" name="cor" id="icor">
+                </div>
+
+                <div>
+                    <label for="iniv">NIVEL DE SATISFAÇÃO</label>
+                    <input type="range" name="niv" id="iniv" min="1" max="10" required>
+                </div>
+
+                <div>
+                    <label for="ifoto">FOTO DO PERFIL</label>
+                    <input type="file" name="foto" id="ifoto">
+                </div>
+            </fieldset>
+
+            <div>
+                <input type="reset" value="LIMPAR">
+                <input type="submit" value="ENVIAR">
+            </div>
+
+        </form>
+    </main>
+</body>
+</html>
