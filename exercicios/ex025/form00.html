@@ -87,6 +87,38 @@
                     <input type="file" name="foto" id="ifoto">
                 </div>
             </fieldset>
+            <fieldset>
+                <div>
+                    <label for="iest">ESTADO</label>
+                    <select name="est" id="iest">
+                        <optgroup label="NORDESTE">
+                            <option value="bahia">BAHIA</option>
+                            <option value="ceará">CEARÁ</option>
+                        </optgroup>
+                        <optgroup label="Região Centro oeste">
+                            <option value="saopaulo" selected>SÃO PAULO</option>
+                            <option value="rio">RIOS DE JANEIRO</option>
+                        </optgroup>
+                    </select>
+
+                    <fieldset>
+                        <legend>PROFISSÃO</legend>
+                        <label for="iprof">PROFISSÃO</label>
+                        <input type="text" name="prof" id="iprof" list="listprof">
+                        <datalist id="listprof">
+                            <option value="prof">Professor</option>
+                            <option value="prog">Programador</option>
+                            <option value="Admi">Administrador</option>
+                        </datalist>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>MENSAGEM</legend>
+                        <label for="imsg">Mensagem</label>
+                        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+                    </fieldset>
+                </div>
+            </fieldset>
 
             <div>
                 <input type="reset" value="LIMPAR">

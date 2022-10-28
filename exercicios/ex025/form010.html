@@ -13,20 +13,19 @@
 </style>
 <body>
     <h1>Formulário + javaScript</h1>
-    <form action="cadastro.php" method="post" autocomplete="on">
-        <p>
-            <label for="iano">Ano de nascimento:</label>
-            <input type="number" name="ano" id="iano" min="1930" max="2022" required
-            oninput="calcIdade()">
-        </p>
-        <p>
-            <label for="iidade">Sua idade é:</label>
+    <form action="cadastro.php" method="get">
+        <div>
+            <label for="iano">ANO DE NASCIMENTO:</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2022" oninput="calcIdade()">
+        </div>
+        <div>
+            <label for="iidade">Sua idade é: </label>
             <output id="iidade">0</output>
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
+        </div>
+        <div>
+            <input type="submit" value="ENVIAR">
+            <input type="reset" value="LIMPAR">
+        </div>
     </form>
 
     <script>

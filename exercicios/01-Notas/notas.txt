@@ -390,7 +390,7 @@ input text, number, radio, password, submit, entre outros ... (input = entrada)
 }+ATRIBUTOS
 <radio     Para selção de uma opção dentre varios itens(deve ter name igual)  Sexo  M[x]  F[ ]
 <chechbox  Para seleção de varios itens dentre varios intens                  Robie  [x][x][x]
-<textarea  Para que o usuario possa enviar grande mensagem ao formulario
+<textarea  Para que o usuario possa enviar grande mensagem ao formulario (method post)
 <selec     Paraq o usuario selecione 1 item dentre uma lista muito grande    Estado(BA)(SP)(MG)(AM)
 <selec>
    <option> BAHIA <option>   (Cria opções para serem selecionadas no <selec>)
@@ -401,10 +401,18 @@ input text, number, radio, password, submit, entre outros ... (input = entrada)
 <range     Para definir nivel de algo 0 à 10
 <select>   Define uma lista selecionável, também conhecida como drop-down;
 <option>   Define uma lista de opções dentro de um drop-down;
-<optgroup> Define um grupo de opções;
+<optgroup> Define um grupo de opções EX: agrupe varios options de uma regiao do brasil;
 <tel <email>
+<output    Serve para exibir um valor/calculo dentro de um formulario (ex: ex025 - form0)
 <fieldset> Para agrupar determiando formulario em um capo unico. <legend - Adiciona uma legenda/titulo
 à esse grupo criado (com fieldset posso agrupar (dados pessoas, dados financeiros criar categorias))
+
+}Posso tambem adicionar uma caixa de texto com opções de preenchimento veja o EX:
+<label for="iprof">PROFISSÃO</label>
+                        <input type="text" name="prof" id="iprof" list="listprof">
+                        <datalist id="listprof">
+                            <option value="prof">Professor</option>
+                            <option value="prog">Programador</option>
 ----------------
 
 [+ ATRIUTOS - de validação, Alguns abrigatorios]
@@ -604,7 +612,6 @@ tipso de format()
         }
 
 com tudo que vimos sobre fontes, você pode tmb pegar fontes deum site ou extrai-las de imagens
-
 __________________________________________________________________________
 
 
@@ -737,7 +744,6 @@ display: flex;
         justify-content: center;  /* altera o alinhamento na orizontal*/
         align-items: center;    /* altera o alinhamento vertical */
         flex-wrap: wrap;  /* faz com q haja uma quebra de linha  mandando os que não cabe para baixo*/
-        
 __________________________________________________________________________
 
 
@@ -756,7 +762,6 @@ periferico ao artigo
 Em position: relative , o elemento é posicionado em relação a si mesmo. Por outro lado, um elemento
 com position: absolute tem sua posição relacionada a de seu elemento pai. Um elemento com position:
 absolute é removido do fluxo normal do documento.
-
 __________________________________________________________________________
 
 
@@ -767,8 +772,7 @@ Depois crie e organize os arquivos dos projetos
 Depois estruture e forkmate todos aquivo HTML, depois aplique os estilos
 __________________________________________________________________________
 
-
-[ELEMENTOS FLUTUANTES ]------
+} [ELEMENTOS FLUTUANTES ]------
 
 A propriedade flutua do CSS determina que um elemento deve ser retirado do seu fluxo normal
 e colocadoao longo do lado direito ou esquerdo do seu containêr, onde textos e elementos em
@@ -791,7 +795,7 @@ aos seguintes comandos EX:)
 __________________________________________________________________________
 
 
-[IMAGEM DE FUNDO ]
+} [IMAGEM DE FUNDO ]
 
     Coloca-se imagem ao fundo com um unico proposito visual esse é o parametro
 background-image: url('imagens/pattern003.png');
@@ -814,7 +818,7 @@ body {
 __________________________________________________________________________
 
 
-[RELATIVE - ABSOLUTE]
+} [RELATIVE - ABSOLUTE]
 
 Em position: relative , o elemento é posicionado em relação a si mesmo. Por outro lado, um elemento
 com position: absolute tem sua posição relacionada a de seu elemento pai. Um elemento com position:
@@ -835,3 +839,25 @@ Usando o  [transform: translate]] posso movimentar com mais liberdade o iten chi
 O movimento ocorrerá com o mesmo padrao do left e top, posso usar valores positivos e negativos
 Com isso terei um objeto posicionado num lugar fixo.     [ex022 - fundo006]
 __________________________________________________________________________
+
+
+} [MEDIA QUERY]
+
+    Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das 
+folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas
+no CSS3, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não 
+precisando mudar o conteúdo em si. (Apapta o conteudo para telas de tamanhos diferentes)
+
+    }Sintaxe
+Media queries consistem de um media type e podem, a partir de uma especificação CSS3, contendo uma
+ou mais expressões, expressa em media features, que determinam ou verdadeiro ou falso. Os resultados
+da query são verdadeiros se o media type especificado na media query corresponde ao tipo dodocumento
+exibido no dispositivo e todas as expressões na media query são verdadeiras.
+]Com as MEDIAS QUERIES posso adptar o conteudo a diferentes telas adaptando ou reposicionando intes
+
+}Posso criar estilos para diferentes dipositivos (telas, tudo, imprimir)
+<link rel="stylesheet" href="style/tela.css" [media="screen"]>  [media="all"] [media="print"] EX:
+
+<title>Media Queries</title>
+    <link rel="stylesheet" href="style/tela.css" media="screen">
+    <link rel="stylesheet" href="style/impressora.css" media="print">
