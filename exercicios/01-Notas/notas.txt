@@ -841,7 +841,7 @@ Com isso terei um objeto posicionado num lugar fixo.     [ex022 - fundo006]
 __________________________________________________________________________
 
 
-} [MEDIA QUERY]
+} [MEDIA QUERY] = Media type + Media features
 
     Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das 
 folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas
@@ -855,9 +855,35 @@ da query são verdadeiros se o media type especificado na media query correspond
 exibido no dispositivo e todas as expressões na media query são verdadeiras.
 ]Com as MEDIAS QUERIES posso adptar o conteudo a diferentes telas adaptando ou reposicionando intes
 
+MEDIA TYPES
 }Posso criar estilos para diferentes dipositivos (telas, tudo, imprimir)
 <link rel="stylesheet" href="style/tela.css" [media="screen"]>  [media="all"] [media="print"] EX:
 
 <title>Media Queries</title>
     <link rel="stylesheet" href="style/tela.css" media="screen">
     <link rel="stylesheet" href="style/impressora.css" media="print">
+---------------------
+
+}MEDIA FESTURES (caracterstica/tamanho de midias)
+
+Quando uso medias posso usar media type e complementalas com media features, informando a forma
+que o conteudo deve se comportar dependendo da screen que eles está sendo visualisado
+
+Media types são escritas assim = [media="screen"  media="all" media="print"]
+Media features são e scritas entre parenteses (orientation:portrait) ex:
+
+[uso media=all para iformar que usarei as CSS pra todos tipo de media]
+    <link rel="stylesheet" href="style/all.css" media="all"> 
+    <link rel="stylesheet" href="style/retrato.css" media="screen and (orientation:portrait)">
+    <link rel="stylesheet" href="style/paisagem.css" media="screen and (orientation:landscape)">
+
+}Caso queira usar a media QUERY e FEATURES numa escala meno dentro de uma mesma folha de estilo
+deve-se usar a regra [@media] e nela declarar a query SCREEN e a feature EX:
+
+  @media screen and (orientation:portrait)
+  @media screen and (orientation:landscape) {
+    body {
+        background: #233eff url('../images/cev-landscape.jpg') left bottom no-repeat;
+        background-size: contain;
+    }
+}PARA UM PROJETO GRANDE COMENDA-SE USAR AS MEDIAS QUERIES SEPARADAS
