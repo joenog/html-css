@@ -887,3 +887,41 @@ deve-se usar a regra [@media] e nela declarar a query SCREEN e a feature EX:
         background-size: contain;
     }
 }PARA UM PROJETO GRANDE COMENDA-SE USAR AS MEDIAS QUERIES SEPARADAS
+__________________________________________________________________________
+
+} [MOBILE FIRST] Dispositivos moveis em primeiro lugar !
+
+    Mobile first é um projeto que faz a criação de projetos web e sites primeiro em dispositivos
+móveis, para depois fazer adaptações para o desktop e outras plataformas, ao contrário do que
+ainda acontece na maioria das vezes.
+Focado na arquitetura e desenvolvimento de sites para a web, ele cumpre com maestria o que propõe
+em sua tradução literal: móvel primeiro.
+
+} VANTAGENS DE DESENVOLVER EM MOBILE FIRST>
+    Os mecanismos de buscas valorizam sites que são desenvolvidos em MOBILE FIST, logo em buscas
+esse serãos os primeiros da lista
+    Melhoria na experiencias do usuário, quando uso mobile fist devo focar em site leve e rapido,
+e principalmente adaptavel, tento esses parametros meus site será valorizado ainda mais.
+
+----------
+
+} Typical Device breakpoints (pontos de interrupção CSS para design responsivo)
+
+    Os pontos de interrupção do CSS são os pontos adicionados no código, o conteúdo do site responde
+a esses pontos dependendo do tamanho da tela do dispositivo. Isso ajuda na exibição de um layout
+ideal para o usuário final. Os pontos de interrupção do CSS são usados juntamente com a consulta de
+mídia devido à qual também é conhecido como quebra-pontos de consulta de mídia CSS.
+
+Pequenas Telas: [ 600px]
+Celular: [600px - 768px]
+Tablet:  [768px - 992px]
+Desktop: [992px - 1020px]
+Grandes Telas: [acimda de 1200px]
+
+@media only screen and (max-width: 600px) {...}
+
+Usando os pontos de interrupção CSS mencionados acima, você pode criar um site responsivo 
+simplificado e gerenciável.
+
+} Quando faço um projeto baseado em MOBILE FIRST crio primeiro a versão mobile, logo vou configurar
+as breakpoints apenas para tablet e desktops, adaptando as CSSs para dispositivos maiores

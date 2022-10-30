@@ -1,0 +1,95 @@
+@charset "UTF- 8";
+
+/* TODAS AS DEMAIS MIDIAS*/
+
+@media print {
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background: url('../images/back-print.jpg');
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main, h1, h2, h3 {
+        text-shadow: none;
+        color: black;
+    }
+
+    main {
+        border: 1px solid black;
+    }
+
+    main::after {
+        content: 'ESSA impressão foi feita por joe.nog';
+        font-size: 0.9em;
+    }
+
+    ul {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {  /*tablet */
+    body {
+        background: url('../images/back-tablet.jpg');
+    }
+
+    #tab {
+        display: block;
+    } #cel {
+        display: none;
+    }
+
+    main {
+        background-color: rgba(31, 31, 46, 0.296);
+    }
+
+    article {
+        max-width: 70vw;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) { /* desktop */
+    body {
+        background: url('../images/back-pc.jpg');
+    }
+
+    #cel {
+        display: none;
+    } #pc {
+        display: block;
+    }
+
+    main {
+        background-color: rgba(32, 3, 32, 0.297);
+    }
+
+    article {
+        max-width: 70vw;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) { /* telas grandes */
+    body {
+        background: url('../images/back-tv.jpg');
+    }
+
+    #cel {display: none;}
+    #tv {display: block;}
+
+    main {
+        background-color: rgba(255, 255, 255, 0.293);
+    }
+
+    article {
+        max-width: 70vw;
+        display: block;
+        margin: auto;
+    }
+}
