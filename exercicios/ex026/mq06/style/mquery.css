@@ -2,34 +2,6 @@
 
 /* TODAS AS DEMAIS MIDIAS*/
 
-@media print {
-
-    * {
-        font-family: 'Courier New', Courier, monospace;
-    }
-    body {
-        background: url('../images/back-print.jpg');
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    main, h1, h2, h3 {
-        text-shadow: none;
-        color: black;
-    }
-
-    main {
-        border: 1px solid black;
-    }
-
-    main::after {
-        content: 'ESSA impressão foi feita por joe.nog';
-        font-size: 0.9em;
-    }
-
-    ul {
-        display: none;
-    }
-}
 
 @media screen and (min-width: 768px) and (max-width: 992px) {  /*tablet */
     body {
@@ -75,7 +47,8 @@
     }
 }
 
-@media screen and (min-width: 1200px) { /* telas grandes */
+
+@media screen and (min-width: 1200px) { /*telas grandes*/
     body {
         background: url('../images/back-tv.jpg');
     }
@@ -84,7 +57,7 @@
     #tv {display: block;}
 
     main {
-        background-color: rgba(255, 255, 255, 0.293);
+        background-color: rgba(225, 225, 225, 0.103);
     }
 
     article {
