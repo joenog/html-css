@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/*CONFIG TAB E DESK */
+
+@media print {
+    *{
+        font-weight: 2em;
+    }
+
+    menu {
+        display: none;
+    }
+
+    main::after {
+        font-weight: 1em;
+        content: 'Esta noticias foi publicar por Joe.Nog (20/11/2022)';
+    }
+}
+
+@media screen and (min-width: 768px) { /*tablet acima disso*/
+
+    span#burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+        text-align: center;
+    }
+
+    main {
+        max-width: 600px;
+    }
+}

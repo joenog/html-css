@@ -739,6 +739,11 @@ linha ou se pode serquebrados em varias linhas
 [justify-content: center;
 [align-items: center;
 [justify-content: space-around;     (EXEMPLO DE CODIGO)
+[Flex-basis: definindo o tamanho inicial do elemento Nessa propriedade, definimos a largura ou altura
+(dependendo da direção do eixo) inicial do item.
+[Flex-shrink: diminuindo o tamanho dos elementos do container Nessa outra propriedade, definimos
+a proporção que queremos diminuir o item. Parecido com o flex-grow, temos o valor padrão de 0 e
+apenas números positivos são aceitos.
 
 display: flex;
         justify-content: center;  /* altera o alinhamento na orizontal*/
@@ -916,7 +921,7 @@ Pequenas Telas: [ 600px]
 Celular: [600px - 768px]
 Tablet:  [768px - 992px]
 Desktop: [992px - 1020px]
-Grandes Telas: [acimda de 1200px]
+Grandes Telas: [acima de 1200px]
 
 @media only screen and (max-width: 600px) {...}
 

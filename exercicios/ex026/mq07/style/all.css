@@ -24,7 +24,7 @@ span#burger {
     background-color: #555555;
     display: block;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
 } #burger:hover {
     background-color: white;
     color: black;
@@ -41,7 +41,7 @@ menu > ul {
 
 menu > ul > li > a {
     display: block;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     background-color: rgb(70, 69, 69);
     text-align: center;

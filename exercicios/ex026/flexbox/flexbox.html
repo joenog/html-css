@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+        .container {
+            display: flex;
+            background-color: #808080;
+            margin: auto;
+            border-radius: 5px;
+            width: 70%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+
+            /*ALINHAMENTO VERTICAL*/
+            justify-content: space-between;
+
+            /*ALINHAMENTO ORIZONTAL*/
+            align-items: center;
+            flex-wrap: nowrap;
+
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            border: 2px solid white;
+            background-color: rgb(70, 12, 70);
+            margin: 10px;
+            box-sizing: border-box;
+        } .item:hover {
+            border: 25px solid white;
+            transition-duration: 0.5s;
+        }
+
+        .box {
+            background-color: rgb(8, 32, 85);
+            width: 20px;
+            height: 50px;
+            border-radius: 5px;
+            border: 2px solid white;
+            flex-basis: 30px;
+        }
+
+        #item1 {
+            flex-grow: 2;
+            background: url('../imagens/back-pc.jpg') center top no-repeat;
+            background-size: cover;
+        }
+
+        #item2 {
+            flex-basis: 70px;
+            flex-shrink: 2;
+        }
+
+        #item3 {
+            flex-basis: 50px;
+            flex-shrink: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Testando Flex Box</h2>
+    </header>
+
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="container" style="background-color: lightblue;">
+            <div class="box" id="item1"></div>
+            <div class="box" id="item2"></div>
+            <div class="box" id="item3"></div>
+        </div>
+</body>
+</html>
