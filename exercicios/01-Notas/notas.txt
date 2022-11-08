@@ -990,3 +990,12 @@ div {
 __________________________________________________________________________
 
 
+} [PESONALIZANDO LINKS] CSS
+
+O seletor :pseudo-classe para links
+São quatro as pseudo classes para links:
+
+a:link........define o estilo do link no estado inicial;
+a:visited...define o estilo do link visitado;
+a:hover.....define o estilo do link quando passa-se o mouse sobre ele;
+a:active....define o estilo do link ativo (o que foi "clicado").

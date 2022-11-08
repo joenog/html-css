@@ -44,13 +44,12 @@ main {
     margin: auto;
 }
 
-#destaques {
+.destaque {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 5px 30px;
-    margin: auto;
+    overflow: scroll;
+} .destaque::-webkit-scrollbar  {
+    display: none;
 }
 
 
