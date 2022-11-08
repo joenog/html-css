@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CONFIGURAÇÕES PARA TRABLETS E PCS */
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /*trabet*/
+   menu {
+    justify-content: right;
+   } 
+
+}
+
+@media screen and (min-width: 992px) {
+    menu {
+        justify-content: right;
+    }
+}

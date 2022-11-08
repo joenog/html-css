@@ -27,9 +27,10 @@ header{
 
 menu {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     margin-right: 30px;
+    margin-top: 10px;
 }
 
 menu > a {
@@ -64,7 +65,8 @@ img {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.055);
     margin: 10px;
     border-radius: 10px;
-}
+} 
+
 
 img:hover {
     width: 258px;
