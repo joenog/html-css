@@ -719,6 +719,10 @@ No navegador posso usar o devTools para configurar.
 ]Num elemento inline-blcok n posso definir altura e largura
 ([box-sizing: border-box;] que indica que o tamanho agora levará em conta até a borda -- ou seja,
  o width será a soma do conteúdo com a borda e o padding) Traz a border pra dentro do padding.
+
+ display: block (conteudo em linhas diferente)
+ display: inline(conteudo na mesma linha)
+ display: inline-block (conteudo na mesma linha, respeitando o conteudo da caixa)
 -------------------
 
 [DIPLAY - FLEX]
@@ -894,6 +898,7 @@ deve-se usar a regra [@media] e nela declarar a query SCREEN e a feature EX:
 }PARA UM PROJETO GRANDE COMENDA-SE USAR AS MEDIAS QUERIES SEPARADAS
 __________________________________________________________________________
 
+
 } [MOBILE FIRST] Dispositivos moveis em primeiro lugar !
 
     Mobile first é um projeto que faz a criação de projetos web e sites primeiro em dispositivos
@@ -930,3 +935,58 @@ simplificado e gerenciável.
 
 } Quando faço um projeto baseado em MOBILE FIRST crio primeiro a versão mobile, logo vou configurar
 as breakpoints apenas para tablet e desktops, adaptando as CSSs para dispositivos maiores
+__________________________________________________________________________
+
+
+} POSICIONAMENTO [ESTATICO - RELATIVE - ABSOLUTE - FIXED]
+
+]fixed; 
+irá fixar a posição do elemento na coordenada que você definir. A medida que a página é rolada,
+o elemento continua fixo na posição que você definiu e o conteúdo da página rola normalmente.
+
+]static
+O elemento é posicionado de acordo com o fluxo normal do documento(padrao das tags)
+
+]relative
+O position relative posiciona o elemento em relação a si mesmo. Ou seja, o ponto zero será
+o canto superior esquerdo, e ele começará a contar a partir dali (reposiciono com top, left=)
+
+]absolute
+O Position Absolute é um tanto diferente do Relative. Enquanto o elemento com Position Relative
+utiliza seu próprio canto para referenciar sua posição, o elemento com Position Absolute se 
+utiliza do ponto superior esquerdo de outros elementos. Estes elementos são os parentes dele do
+elemento com position absolute. Mais especificamente o pai.
+
+No caso, se o DIV pai não tivesse position definido, o div filho iria se referenciar pelo BODY mesmo
+Se caso o div pai não tivesse position definido, e se ele também fosse envolvido por outro div com 
+position, o div filho iria se referenciar por este terceiro div.
+Logo, o div com position absolute referencia sua posição pelo div mais próximo que o envolve e que 
+também tenha um position definido. Complicado, não é?
+(Um elemnto pai precisa do posicionamento RELATIVE para que o filho em ABSOLUTE possa ser posicionado
+dentro dele.)
+
+]sticky
+O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado em relação
+ao ancestral de rolagem mais próximo, Este valor sempre cria um novo contexto de empilhamento. 
+Observe q um elemento pegajoso "gruda" em seu ancestral mais próximo q tenha um "mecanismo de rolagem"
+(usado para fixar elemento depois da rolagem, como menus)
+
+
+]STATIC - Posicionamento padrão dos ELEMENTOS
+]RELATIVE - Quando usamos esse paramentro podemos usar propriedades de deslocamento para movimentar
+(top, left  - valores positivos e negativos  top:-20px)
+
+]z-index - Uso para posicionar as caixas uma acima da outra para decidadir qual deve ficar À frente
+(o objeto/caixa definido com maior z-index terá o posicionamento acima do definido com menor) EX:
+div {
+    x-index: 1;   aparecerá acima de    dix com z-index: 0;
+}
+
+}} Pseudo classe para OCULTAR SCROLL} #ajuda::-webkit-scrollbar {
+            display: none;
+        }
+} overflow: none - Para esconder conteudo que trabodar as bordas da caixa
+} overflow: scroll - Para rolar conteudo que transboda as boda da caixa
+__________________________________________________________________________
+
+

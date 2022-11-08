@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox HTML</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        section#container {
+            display: flex;
+            align-items: center;
+            align-content: space-around;
+            flex-wrap: wrap;
+            background-color: lightblue;
+            width: 90vw;
+            height: 90vh;
+        }
+
+        div.quad {
+            height: 50px;
+            width: 50px;
+            background-color: purple;
+            margin: 10px;
+        } div.quad:hover {
+            background-color: aqua;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            box-shadow: 5px 5px 0px black;
+            transform: translate3d(5px, -5px, 100px);
+            transition-duration: 1s;
+            animation-timing-function: ease-in-out;
+        }
+
+        #relative {
+            position: static;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section id="container">
+            <div id="relative" class="quad"> </div>
+            <div id="relative" class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+            <div class="quad"> </div>
+        </section>
+    </main>
+</body>
+</html>
