@@ -6,10 +6,18 @@
     justify-content: right;
    } 
 
+   #tit {
+    margin-left: 30px;
+}
+
 }
 
 @media screen and (min-width: 992px) {
     menu {
         justify-content: right;
+    }
+
+    #tit {
+        margin-left: 30px;
     }
 }
