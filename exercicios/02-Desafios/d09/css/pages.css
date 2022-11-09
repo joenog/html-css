@@ -83,14 +83,15 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
+} .vid::-webkit-scrollbar {
+    display: none;
 }
 
-
-script {
-    width: 50%;
-    height: 50%;
+.video {
+    padding: 20px;
+    width: 720px;  
 }
-
 
 
 /* CONFIGURAR MAS MOSTRAR VIDEO QUANDO LICADO IFRAME#VID
