@@ -999,3 +999,36 @@ a:link........define o estilo do link no estado inicial;
 a:visited...define o estilo do link visitado;
 a:hover.....define o estilo do link quando passa-se o mouse sobre ele;
 a:active....define o estilo do link ativo (o que foi "clicado").
+__________________________________________________________________________
+
+} [SELETORES - CSS ] Personalizados
+
+    USAMOS OS SELETEROES PARA PEGAR AS TAGS DA HTML PARA A FORMATAÇÃO -  div {}
+Padrao de uso dos seletores [ sletor p \ chaves {} \ propriedade color: \ valor blue; ]
+Esse padrão acima é chamado de DECLARAÇÃO -  veja alguns exemplos de seletores.
+
+* {}      seletor universal - nele as alteraçõs são aplicadas em toda a página
+
+h1, h2, h3 {}  seletor de texto - esse seleciona os elemntos pelos tipo, usando virgula
+para separalos.
+
+.classe {} seletor de classe - nesse usamos o ponto para referir-se a uma classe criada.
+
+#id {} seletor de ir - nesse a # e usada para indicar q estão selecionado um id
+
+div > h2 {} seletor de filho - esse seleciona um elemento direto que é filho de outro
+usamos > para indicar que o filho será formatado.
+
+p a {} seletor descendente - esse a formatação será aplicada a todos os links dentro
+do paragrafo mesmo n sendo filho direto
+
+h1 + p {} seletor irmao adjacente - esse seleciona o primeiro elemento depois da tag indicada sempre
+e somente o primeiro.
+
+h1 ~ p {} selector irmão geral - esse seleicona e formata todos os irmãos de uma tag (img) 
+EX: <article>
+        <h1> texto 
+        <p loren loren loren
+        <p loren loren loren        (ambos irmãos de h1 serao formatados )
+__________________________________________________________________________
+
