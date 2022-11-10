@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança e Especificidade</title>
+    <style>
+        body {
+            color: darkblue;
+        }
+
+        h2 {
+            color: #df87df;
+        }
+
+        p {
+            background-color: #df87df;
+        }
+
+        p.cor-padrao {
+            background-color: lightblue;
+        }
+
+        p#sobrepor { /* o ID  é mais forte então sobreporá a formatação da class*/
+            background-color: lightseagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pagina">
+        <h2>TITULO</h2>
+
+        <p class="cor-padrao"  id="sobrepor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestias eligendi sequi dolore temporibus! Nihil, mollitia explicabo molestiae obcaecati alias, aut laborum ducimus quo maiores quae unde facilis voluptatum officia?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima pariatur corrupti dolores fugit rem, similique ex blanditiis voluptatibus est assumenda sit aliquam exercitationem explicabo obcaecati veritatis earum aspernatur mollitia libero!</p>
+
+    </div>
+</body>
+</html>

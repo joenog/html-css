@@ -1022,13 +1022,22 @@ usamos > para indicar que o filho será formatado.
 p a {} seletor descendente - esse a formatação será aplicada a todos os links dentro
 do paragrafo mesmo n sendo filho direto
 
-h1 + p {} seletor irmao adjacente - esse seleciona o primeiro elemento depois da tag indicada sempre
-e somente o primeiro.
+h1 + p {} seletor irmao adjacente - esse seleciona o primeiro elemento depois da tag indicada
+sempre e somente o primeiro seu irmao.
 
-h1 ~ p {} selector irmão geral - esse seleicona e formata todos os irmãos de uma tag (img) 
+h1 ~ p {} selector irmão geral - esse seleicona e formata todos os irmãos após uma tag  EX:
 EX: <article>
         <h1> texto 
         <p loren loren loren
         <p loren loren loren        (ambos irmãos de h1 serao formatados )
-__________________________________________________________________________
+----------------------------
+[Herança e Especificidade]
+
+}} A ultima formatação especificada no seletetor sempre será a predominante!
+}} Quando mais for especifico o seletor mais sua regra será considerada EX:
+* { color: red;}   h1 {color: red;}  o h1 sobreporá a regra geral da CSS
+h1.cor-padrao {color: purple}  este ultimo caso ainda mais especifico sobreporá
+as duas formatações anteriores.
+h1#cor-padrao2 {color: green}  neste caso o ID é mais forte e sobreporá a formatação da class
+ __________________________________________________________________________
 
