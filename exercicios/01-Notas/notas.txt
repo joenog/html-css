@@ -1039,5 +1039,11 @@ EX: <article>
 h1.cor-padrao {color: purple}  este ultimo caso ainda mais especifico sobreporá
 as duas formatações anteriores.
 h1#cor-padrao2 {color: green}  neste caso o ID é mais forte e sobreporá a formatação da class
+
+Elemento, pseudo elemento: d = 1 — (0, 0, 0, 1)
+Classe, pseudo classe, atributo: c = 1 — (0, 0, 1, 0)
+Id: b = 1 — (0, 1, 0, 0)
+Estilo inline: a = 1 — (1, 0, 0, 0)
+O id é mais específico que uma classe que, por sua vez, é mais específica que um elemento.
  __________________________________________________________________________
 
