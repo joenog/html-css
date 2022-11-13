@@ -1047,3 +1047,11 @@ Estilo inline: a = 1 — (1, 0, 0, 0)
 O id é mais específico que uma classe que, por sua vez, é mais específica que um elemento.
  __________________________________________________________________________
 
+} [LAYOUTS - GRID]
+
+
+ [Fixo, Liquido]
+
+O layout fixo ele preenche o espaço pre-determinado de forma fixa sem adaptações
+O layout liquido se adapta a tela de acordo com seu tamanho, tablets ou pcs
+

@@ -8,9 +8,13 @@
 }
 
 header {
-    background-color: lightsteelblue;
+    background: #225992 url('../images/cabecalho2.jpg') no-repeat center;
+
     text-align: center;
     padding: 20px;
+    height: 200px;
+    line-height: 200px;
+    color: white;
 }
 
 main {
@@ -33,6 +37,12 @@ main {
     border: 1px solid red;
     width: 64%; /* --> 64% */
     float: left;
+}
+
+.img-conteudo {
+    display: block;
+    width: 64%;
+    padding: 10px;
 }
 
 .conteudo-secundario {
