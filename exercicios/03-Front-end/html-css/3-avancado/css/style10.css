@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* APRENDENDO GRID LAYOUT */
+/*
+.container {
+    background-color: lightblue;
+    border: 1px solid red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 50px auto 10%;
+    height: 70vh;
+    grid-template-rows: 70% 30%;
+    gap: 5px; /*   apenas o pags é usado para definir espaçamento igual  */
+    /*grid-row-gap: 10px;
+    grid-column-gap: 20px;*/
+/*
+.container > div {
+    background-color: grey;
+    padding: 20px;
+    border: 1px solid blue;
+}  */
+
+/*TEMPLATE AREAS  */
+.container {
+    background-color: lightblue;
+    border: 1px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px; 
+    grid-template-areas: 
+    'header header header header'
+    'sidebar content content content'
+    'footer footer footer footer';
+}
+
+#header {
+    grid-area: header;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    height: 50vh;
+}
+
+#content {
+    grid-area: content;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+.container > div {
+    background-color: grey;
+    padding: 20px;
+    border: 1px solid blue;
+} 
+

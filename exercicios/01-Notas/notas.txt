@@ -1047,11 +1047,94 @@ Estilo inline: a = 1 — (1, 0, 0, 0)
 O id é mais específico que uma classe que, por sua vez, é mais específica que um elemento.
  __________________________________________________________________________
 
-} [LAYOUTS - GRID]
 
+}} [GRID - LAYOUTS]
 
- [Fixo, Liquido]
-
+Fixo, Liquido
 O layout fixo ele preenche o espaço pre-determinado de forma fixa sem adaptações
 O layout liquido se adapta a tela de acordo com seu tamanho, tablets ou pcs
 
+Dimensões fixas ou flexíveis
+Você pode criar grids com dimensões fixas – por exemplo: definindo dimensões em pixels.
+Ou criar grids com dimensões flexíveis definindo-as com uso de porcentagem ou da nova unidade
+CSS fr criada para esse propósito.
+
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#:~:text=As%20CSS%20grid%20layout%20preveem%20as%20seguintes%20funcionalidades%3A,nova%20unidade%20CSS%20fr%20criada%20para%20esse%20prop%C3%B3sito. [+info]
+
+EXEMPLIFICANDO :: tags
+
+No container pai posso difinir as seguinte tags para organizar o GRID
+] display: grid;
+] grid-template-columns: 50px auto 10%; (estilipulo numero de colunas e defino seu tamanho podendo
+usa varias unidades de media.)
+] grid-tamplete-rows: 70% 70%; (defino a dimensão das linhas tmb uso varias unidade de medidas)
+
+] gap: 5px; (uso para definir um espaçamento entre o grid, como um margin)
+apenas o gap: é usado, pois define espaçaentos iguais 
+] grid-row-gap: 10px; (posso definir um espaçamento individual entre as linhas)
+] grid-columns-gap: 20px (posso definir espaçamento individual entre as colunas)
+-------------
+
+[TAMPLETE AREAS] Para dividir os site em algumas areas especficas
+
+Para definir o layout-base, usa-se a propriedade grid-template-area. Os nomes atribuídos à grid-area
+de cada contêiner podem ser dispostos de acordo com as colunas e linhas definidas. Quando se 
+adiciona cada row das template areas a uma nova linha, o CSS se torna um padrão visual de grid layout.
+
+.container {
+    background-color: lightblue;
+    border: 1px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px; 
+    grid-template-areas: 
+    'header header header'
+    'sidebar content content'
+    'footer footer footer';
+}
+
+#header {
+    grid-area: header;
+}
+
+#sidebar {
+    grid-area: sidebar;
+}
+
+#footer {
+    grid-area: footer;
+}
+--------
+[Alinhamento GRID Layout]
+
+justify-content: center;  (alinhamento horizontal das grids - [star - center- end])
+align-itens: start; (alinhamento vertical das grids - [start - center - end])
+]O alinhamento sempte respeitará a area livre disponivel
+--------
+[ALINHAMENTO INDIVIDUAL - GRID LAYOUT]
+
+Nessa regra consido indicar quando uma coluna/linha(column/row) começa e terminado na pagina EX:
+
+#container > .item-1 {            (Considerando a formatação do container pai)
+    grid-column-start: 1;         (redimensionando colunas)
+    grid-column-end: 4;
+}
+
+]A primeira coluna ja esta ocupada pela linha 1, posicionarei a segunda linha EX: (img-row-column)
+
+#container > .item-2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+] Para o posicionamento de um item INDIVIDUAL na [horizonatal] uso o senguinte paramentro.  EX:
+
+#container > .item-3 {          (justify self posicionamento de si mesmo)
+    justify-self: end;          (star, center, end)
+}
+
+] Para o posicionmento de im intem INDIVIDUAL na [vertical] uso o seguinte EX:
+
+#container > .item-4 {          (o aling-self movimentara o item na VERTICAL)
+    align-self: center;
+}
