@@ -52,7 +52,60 @@ nav > ul > li > a {
     background-color: var(--cor2);
 }
 
+/* CORPO DO SITE  */
+
 main {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     width: 80vw;
+    height: 90vh;
     margin: 70px auto;
+    border: 1px solid blue;
+}
+
+main > div {
+    border: 1px solid purple;
+    padding: 10px;
+}
+
+div.item-1 {
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    margin: 10px;
+}
+
+div.item-2 {
+    grid-column-start: 0;
+    grid-column-end: 0;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    margin: 10px;
+}
+
+div.item-3 {
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
+    margin: 10px;
+}
+
+/*  personalização do conteudo */
+
+.item-1 > ul {
+    margin: -5px;
+    padding: 15px 10px;
+    background-color: rgba(128, 0, 128, 0.055);
+    list-style-type: none;
+    width: 200px;
+}
+
+.item-1 > ul > li > a {
+    text-decoration: none;
 }
