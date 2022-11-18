@@ -9,24 +9,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-<body>
+<body id="home">
     <header>
         <h1>Noticias cidade</h1>
-        <nav>
-            <ul>
-                <li><a href="HOME">HOME</a></li>
-                <li><a href="HOME">BRASIL</a></li>
-                <li><a href="HOME">INTERNACIONAL</a></li>
-                <li><a href="HOME">ECONOMIA</a></li>
-                <li><a href="HOME">SAÚDE</a></li>
-                <li><a href="HOME">CIÊNCIAS</a></li>
-            </ul>
-        </nav>
     </header>
-
+    <nav> <!--MENU-->
+        <ul>
+            <li><a class="home" href="pages/index.html">HOME</a></li>
+            <li><a class="brasil" href="pages/brasil.html">BRASIL</a></li>
+            <li><a class="internacional" href="pages/internacional.html">INTERNACIONAL</a></li>
+            <li><a href="HOME">ECONOMIA</a></li>
+            <li><a href="HOME">SAÚDE</a></li>
+            <li><a href="HOME">CIÊNCIAS</a></li>
+        </ul>
+    </nav>
     <main>
-        <div class="item-1">
-            <h2>Entrevistas  <span class="material-symbols-outlined">person_pin</span> </h2> 
+        <div class="item-1">  <!--SIDEBAR 1-->
+            <h2>Entrevistas <span class="material-symbols-outlined">person_pin</span>  </h2>
 
             <ul>
                 <li><a href="">José Almeida</a></li>
@@ -41,12 +40,30 @@
                 <li><a href="">Alice Lopes</a></li>
                 <li><a href="">João Aguiar</a></li>
                 <li><a href="">Monica Gonçalves</a></li>
-
             </ul>
         </div>
 
-        <div class="item-2">
-            item 2
+        <div class="conteudo">
+            <div class="primario"> 
+                <article>
+                    <h2 class="tit-noticias">Medicina</h2>
+                    <img class="img-capa" src="images/doutor.jpg" alt="">
+                    <p class="legenda-capa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam maiores quos consectetur repellendus vitae.</p>
+                </article>
+            </div>
+
+            <div class="secundario">
+                <h2 class="tit-noticias">Mundo</h2>
+                    <img class="img-capa" src="images/mundo.jpg" alt="">
+                    <p class="legenda-capa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam maiores quos consectetur repellendus vitae.</p>
+            </div>
+
+            <div class="secundario">
+                <h2 class="tit-noticias">Mundo</h2>
+                    <img class="img-capa" src="images/mundo.jpg" alt="">
+                    <p class="legenda-capa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam maiores quos consectetur repellendus vitae.</p>
+            </div>
+
         </div>
 
         <div class="item-3">
