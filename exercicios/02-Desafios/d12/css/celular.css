@@ -1,6 +1,15 @@
 @charset "UTF-8";   /*  FORMAT OCELULAR  */
 
 @media screen and (max-width: 768px) {
+
+    body {
+        width: 100vw;
+    }
+
+    main {
+        width: 100vw;
+    }
+
     nav > ul {
         margin-left: 0px;
     }
