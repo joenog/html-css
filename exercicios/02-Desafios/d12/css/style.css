@@ -38,36 +38,37 @@ header {
 
 nav {
     position: sticky;
-    top: 0px;
-    z-index: 2;
+    top: -1px;
     margin-top: 40px;
-    background-color: var(--cor1);
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.027);
 }
 
 nav > ul {
-    margin-left: 50px-;
+    margin-left: 80px;
 }
 
 nav > ul > li {
     display: inline-block;
-    color: white;
     padding: 10px 0px;
     margin: 0px -7px;
 } 
 
 nav > ul > li > a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin: 5px;
     padding: 10px 10px;
 } nav > ul > li > a:hover {
-    background-color: var(--cor2);
+    background-color: var(--cor4);
 }
 
 #home ul a.home,
 #brasil ul a.brasil,
 #internacional ul a.internacional {
-    background-color: var(--cor0);
+    background-color: var(--cor2);
+    color: white;
+    cursor: default;
 }
 
 /* CORPO DO SITE  */
@@ -108,7 +109,7 @@ div.item-3 {
     grid-column-start: 0;
     grid-column-end: 1;
     grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-end: 6;
 
     margin: 5px;
     max-width: 220px;
@@ -145,30 +146,37 @@ main > div > h2 {
 
 /* Personalização do CONTEUDO -NOTICIAS */
 
+
+/* links gerais */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a.mais {
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
 div.conteudo {
     display: flex;
     align-content: flex-start;
-    align-items: flex-end;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 div.conteudo > div.primario {
     display: block;
-    background-color: whitesmoke;
     width: 280px;
     height: 280px;
     padding: 10px;
-    margin: 5px;
 }
 
 div.conteudo > div.secundario {
     display: block;
-    background-color: whitesmoke;
     width: 280px;
     height: 280px;
     padding: 10px;
-    margin: 5px;
 }
 
 div.conteudo h2.tit-noticias {
