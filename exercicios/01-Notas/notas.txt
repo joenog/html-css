@@ -1139,3 +1139,30 @@ Nessa regra consido indicar quando uma coluna/linha(column/row) começa e termin
     align-self: center;
 }
 __________________________________________________________________________
+
+
+} [NORMALIZE - css ]
+
+Normalize: O que é?
+A ideia de existir o Normalize CSS é a mesma que do Reset CSS, mas ele possui algumas diferenças
+importantes na hora de usar. (E suma essa folha CSS normalizar as TAGS para todos os BROWSERS)
+
+As diferenças entre Reset CSS e Normalize:
+
+O Reset CSS limpa TODOS os padrões dos navegadores. É uma forma muito agressiva de "limpeza"
+enquanto o Normalize ainda mantém padrões que são úteis.
+Normalize CSS corrige alguns bugs que existem nas estilizações padrões dos navegadores.
+Normalize é modular. O código todo é separado por seções específicas, então você pode procurar por
+mudanças de forma mais direta.
+O Normalize tem uma documentação detalhada sobre o uso e justificativas das mudanças feitas por ele.
+Como usar?
+Da mesma forma que o Reset CSS, o Normalize é uma folha de estilos que deve ser importado antes de
+qualquer estilização no projeto. Ele deve ser o primeiro arquivo CSS a ser importado no projeto.
+É importante "limpar" primeiro o projeto antes de começar a desenvolver.
+
+Como implementar?
+Em seu projeto html, dentro da tag head, utilize a tag link, para chamar o arquivo normalize.css:
+]<link rel="stylesheet" href="normalize.css">
+__________________________________________________________________________
+
+
