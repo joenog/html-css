@@ -93,7 +93,7 @@ div.item-1 {
     grid-row-start: 1;
     grid-row-end: 2;
     margin: 5px;
-    max-width: 220px;
+    max-width: 240px;
     max-height: 380px;
 }
 
@@ -117,11 +117,11 @@ div.item-3 {
 }
 
 /*  personalização do conteudo */
-/* ENTREVISTAS */
+/* ENTREVISTAS e Newsletter*/
 
 .item-1 > ul {
     list-style-type: none;
-    width: 130px;
+    width: 150px;
 }
 
 .item-1 > ul > li {
@@ -132,8 +132,30 @@ div.item-3 {
     text-decoration: none;
     color: black;
 } .item-1 > ul > li > a:hover {
-    text-decoration: underline;
-    color: var(--cor3);
+    padding-right: 20px;
+    background: url('../images/marcador.png') no-repeat center right;
+    color: grey;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+}
+
+input.send {
+    background-color: grey;
+    border: 1px solid grey;
+    margin-top: 5px;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Personalização do CONTEUDO -NOTICIAS */
@@ -153,20 +175,20 @@ a.mais {
 div.conteudo {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 div.conteudo > div.primario {
     display: block;
-    width: 280px;
+    width: 300px;
     height: 280px;
     padding: 10px;
 }
 
 div.conteudo > div.secundario {
     display: block;
-    width: 280px;
+    width: 300px;
     height: 280px;
     padding: 10px;
 }
