@@ -1202,3 +1202,33 @@ estabilizar curvas de aceleração.
 
 [ animation-fill-mode
 Configura que valores são aplicados pela animação antes e depois de se executar.
+
+-} Lembrando que ao usar animaçoes devo indicar o WEBKIT para a cessibilidade em outros navegadores
+
+@-webkit-keyframes anima-caixa {         [-webkit-keyframes / -moz-keyframes / -o-keyframes ...]
+    from{ /*  DE - ESTADO INICIAL  */
+        background-color: lightblue;
+        border-radius: 3px;
+        width: 300px;
+        top: 0px;
+        left: 0px;
+    }
+    to{  /*  PARA - ESTADO FINAL */
+        background-color: lightcoral;
+        border-radius: 80px;
+        width: 400px;
+        top: 50px;
+        left: 50px;
+    }
+}
+
+__________________________________________________________________________
+ } [TRASICOES EM CSS]
+
+CSS transitions provê uma forma de controlar a velocidade de uma animação quando há mudanças
+de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode 
+fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo.
+
+ease-in: indica a transição lenta apenas no início;
+ease-out: realiza a transição lenta apenas no final;
+ease-in-out: realiza a transição com o início e final lentos;

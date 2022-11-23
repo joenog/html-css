@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-@-webkit-keyframes anima-caixa {
+@-webkit-keyframes anima-caixa
+ {
     from{ /*  DE - ESTADO INICIAL  */
         background-color: lightblue;
         border-radius: 3px;
@@ -29,5 +30,6 @@ main #caixa {
     animation-direction: alternate;*/
     animation: name duration timing-function delay iteration-count direction fill-mode;
     /* NOME - DURAÇÃO - DELAY - REPEAT - ALTERNANCIA  */
-    animation: anima-caixa 1s 1s infinite alternate;   /*shorthand*/
+    -webkit-animation: anima-caixa 2s 1s infinite alternate;
+    animation: anima-caixa 2s 1s infinite alternate;   /*shorthand*/
 }
