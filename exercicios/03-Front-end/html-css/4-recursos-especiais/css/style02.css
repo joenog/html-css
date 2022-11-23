@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#caixa {
+    background-image: linear-gradient(to right, #a444f4, #acacac, #f0c129);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.178);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.096);
+}

@@ -53,6 +53,15 @@ main {
     display: none;
 }
 
+.conteudo-inicio {
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    padding-top: 20px;
+} .conteudo-inicio::-webkit-scrollbar  {
+    display: none;
+}
+
 
 h2, h3 {
     padding: 10px 0px;
