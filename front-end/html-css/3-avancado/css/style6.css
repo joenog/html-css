@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background: #225992 url('../images/cabecalho2.jpg') no-repeat center;
+
+    text-align: center;
+    padding: 20px;
+    height: 200px;
+    line-height: 200px;
+    color: white;
+}
+
+main {
+    background-color: lightblue;
+    width: 85%;
+    margin: auto;
+    min-width: 720px;
+}
+
+#conteudo {
+    width: 75%;
+    float: right;
+}
+
+#conteudo h2, h3 {
+    padding: 10px;
+}
+
+.conteudo-principal {
+    border: 1px solid red;
+    width: 64%; /* --> 64% */
+    float: left;
+}
+
+.img-conteudo {
+    display: block;
+    width: 64%;
+    padding: 10px;
+}
+
+.conteudo-secundario {
+    border: 1px solid red;
+    width: 34%;  /* ---> 36%  */
+    float: right;
+    background-color: aliceblue;
+}
+
+#conteudo p {
+    padding: 10px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+#navegacao {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    border: 1px solid purple;
+}
+
+#navegacao > ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+#navegacao > ul > li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: lightblue;
+    text-decoration: none;
+    border-radius: 5px;
+}  #navegacao > ul > li:hover {
+    background-color: rgb(104, 138, 150);
+}
+
+#navegacao > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    position: relative;
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    top: 20px;
+    clear: both;
+}

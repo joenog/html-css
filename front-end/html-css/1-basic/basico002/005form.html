@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário básico</title>
+    <style>
+        body {
+            background-color: #b384fd;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.925);
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            margin: auto;
+            box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.507);
+            color: rgba(0, 0, 0, 0.712);
+        }
+
+        #hd {
+            padding: 10px;
+        }
+
+        #cen {
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            margin: -25.01px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        #cen, a {
+            margin-bottom: 20px;
+            color: #9a6de4;
+        }
+
+        #obs {
+            width: 345px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="hd"></h1>
+        <menu></menu>
+    </header>
+    <main>
+        <h2 id="cen">CADASTRE-SE</h2>
+
+        <h3>Login Aqui</h3>
+
+        <form action="" method="get">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name"> <br> <br>
+            <label for="senha">Senha</label> 
+            <input type="password" name="senha" id="senha">
+            <input type="submit" value="Logar">
+        </form>
+
+        <h3>Cadastre-se Aqui</h3>
+        <form action="" method="get">
+            <label for="login">Login</label>
+            <input type="text" name="login" id="login"> <br><br>
+
+            <h3>Sexo</h3>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="sex" id="masc" value="mas">
+            <label for="femi">Feminino</label>
+            <input type="radio" name="sex" id="femi" value="fem"> <br><br>
+
+            <h3>Interesses</h3>
+            <label for="fut">Futebol</label>
+            <input type="checkbox" name="fut" id="fut">
+            <label for="vol">Volei</label>
+            <input type="checkbox" name="vol" id="vol">
+            <label for="ten">Tenis</label>
+            <input type="checkbox" name="ten" id="ten">
+
+            <h3>Estado</h3>
+            <label for="est">Estado</label>
+            <select name="est" id="est">
+                <option value="ba">Bahia</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="sp">São Paulo</option>
+            </select>
+
+            <h3>Obserações</h3>
+            <label for="obs">Obs</label>
+            <textarea name="obs" id="obs" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Enviar Dados">
+        </form>
+    </main>
+</body>
+</html>

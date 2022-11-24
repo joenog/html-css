@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0px; margin: 0px; box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+        }
+
+        #container {
+            width: 80vw;
+            background-color: white;
+            margin: auto;
+            padding: 10px;
+        }
+
+
+        #menu {
+            width: 100vw;
+            position: fixed;
+            background-color: lightcoral;
+            padding: 10px;
+            top: 40px;
+        }
+
+        #esconde {
+            position: relative;
+        }
+        p {
+            width: 200px;
+            padding:  10px;
+        }
+
+        .relative {
+            display: inline-block;
+            margin-right: 20px;
+            border: 1px solid red;
+            position: relative;
+            top: 20px;
+            left: 0px;
+        }
+
+        .aboslute {
+            position: absolute;
+            border: 1px solid blue;
+            top: 0px;
+            left: 340px;
+        }
+
+        #livre > img {
+            position: fixed;
+            right: 0px;
+            top: 350px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+        } #livre > img:hover {
+            width: 45px;
+            height: 45px;
+            box-shadow: 2px 2px 0px black;
+            transform: translate3d(-3px, -3px, 0px);
+            transition-duration: .5s;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 id="esconde">MEU SITE MENU FIXO</h1>
+        
+        <div id="menu">
+            home / news / position / relative / absolute / fixed
+        </div>
+    </header>
+    <section id="container">
+
+    <div id="livre">
+        <img src="../../../ex022/imagens/baticon.png" alt="">
+    </div>
+
+    <p class="fixed">P1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos.</p>
+
+    <p class="relative"> P2 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos. </p>
+
+    <p class="aboslute"> P3 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos. </p>
+
+    <p>P1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos.</p>
+
+    <p>P1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos.</p>
+    <p>P1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos.</p>
+    <p>P1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos.</p>
+    <p>P1 - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi impedit odit maxime et illum facilis dolor, ad aliquid vitae doloremque, tempora aut? Molestias praesentium aspernatur dicta suscipit odio sed dignissimos.</p>
+
+    </section>
+</body>
+</html>

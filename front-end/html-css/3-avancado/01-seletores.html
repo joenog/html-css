@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <style>
+        /* SELETOR UNIVERSAL */
+        * {
+            padding: 0px; box-sizing: border-box;
+        }
+
+        /* seletor de filho */
+        li > a {
+            color: green;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        /* seletor descendente -  seleciona todas as tags filhas indicadas mesmo estando aninhadas*/
+        #pai p {
+            background-color: lightcoral;
+        }
+
+
+
+        /* seletor irmão adjancente - formata o prmeiro irmão após a tag */
+        h1 ~ p {
+            color: red;
+        }
+
+        /* seletor irmão geral - formata dos os irmão indicados após a tag */
+        h1 + p {
+            background-color: lightblue;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>SELETORES em CSS</h1>
+    </header>
+
+    <ul>
+        <li> <a href="#">HOME</a></li>
+        <li> <a href="#">HOME</a></li>
+        <li> <a href="#">HOME</a></li>
+        <li> <a href="#">HOME</a></li>
+    </ul>
+    <hr>
+
+
+
+    <section>
+            <div id="pai">
+                <p>loren loren loren1</p>
+                <span>
+                    <p>lorere  ANINHADO DENTRO P</p>
+                </span>
+                <p>loren loren loren2</p>
+                <p>loren loren loren3</p>
+                <p>loren loren loren4</p>
+            </div>
+
+         <article>
+            <h1>loucos por</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, maxime. Iste impedit aperiam quisquam, officiis officia tempora explicabo laborum? Ipsa consequuntur debitis nesciunt nisi obcaecati, minima mollitia eum non error!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, maxime. Iste impedit aperiam quisquam, officiis officia tempora explicabo laborum? Ipsa consequuntur debitis nesciunt nisi obcaecati, minima mollitia eum non error!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, maxime. Iste impedit aperiam quisquam, officiis officia tempora explicabo laborum? Ipsa consequuntur debitis nesciunt nisi obcaecati, minima mollitia eum non error!</p>
+
+            
+         </article>
+    </section>
+    <h1> hue hue hue</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, pariatur. Debitis esse ipsam minima architecto voluptates cupiditate provident mollitia at, alias ipsum quos necessitatibus asperiores, saepe porro labore facilis ullam?
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatum delectus nihil inventore labore maiores voluptatem reiciendis nesciunt libero, rerum autem praesentium nostrum explicabo quas accusamus corrupti officia repellat asperiores.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ipsum asperiores tempore, adipisci iure explicabo sequi sunt reprehenderit libero cumque similique quibusdam maiores exercitationem saepe ullam porro autem. Maiores, temporibus!</p>
+</body>
+</html>
