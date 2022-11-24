@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+* {
+    padding: 0px; margin: 0px; box-sizing: border-box;
+}
+
+header { /*cabeçalho*/ 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    color: white;
+    font-size: 4vw;
+    text-align: center;
+    padding: 30px;
+} header > a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+} header > a:hover {
+    text-decoration: underline;
+} header > h1 {
+    padding-bottom: 10px;
+}
+
+section {
+    background-color: white;
+    font-family: 'Kalam', cursive;
+    padding: 6vh;
+} section > p {
+    max-width: 500px;
+    padding-bottom: 10px;
+    font-size: 3vmax;
+    padding: 10px;
+    text-shadow: 2px 3px 10px #0000001f;
+}
+
+#joaninha {
+    background: #202020 url('imagens/background001.jpg') center center no-repeat fixed;
+    background-size: cover;
+    width: 100vw;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.384);
+} #joaninha > p {
+    background-color: #2020204d;
+    color: white;
+}
+
+#folhas {
+    background: #202020 url('imagens/background002.jpg') center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.384);
+} #folhas > p {
+    background-color: #2020204d;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    font-size: 0.8em;
+    color: white;
+    padding: 8px;
+    text-align: center;
+} footer a {
+    color: rgb(102, 94, 21);
+    font-size: 1.1em;
+}
