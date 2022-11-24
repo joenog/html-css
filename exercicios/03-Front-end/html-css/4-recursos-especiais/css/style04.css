@@ -20,6 +20,8 @@
 
 .btn:hover {
     animation: anima 2s .2s alternate forwards ease-in-out;
+    border: 2px solid black;
+    color: black;
 }
 
 @keyframes anima {

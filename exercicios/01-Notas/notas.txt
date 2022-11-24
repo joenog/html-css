@@ -1187,11 +1187,11 @@ Configura o delay entre o tempo em que o elemento é carregado e o inicio da seq
 
 [ animation-iteration-count 
 Configura o numero de vezes que uma animação deveria se repetir; você pode especificar infinito
-para repetir a animação indefinidamente.
+para repetir a animação indefinidamente. (infinite - para que se repita)
 
 [ animation-direction 
 Configura se a animação deve ou nao alternar a direção em cada execução durante a sequência ou voltar
-ao ponto inicial e se repetir. (execulta o movimento e faz reverse)
+ao ponto inicial e se repetir. (alternate - execulta o movimento e faz reverse na animaçao)
 
 [ animation-play-state 
 Permite voce pausar e resumir a sequência da animação.
@@ -1228,7 +1228,52 @@ __________________________________________________________________________
 CSS transitions provê uma forma de controlar a velocidade de uma animação quando há mudanças
 de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode 
 fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo.
+-----
+Constituent properties
+This property is a shorthand for the following CSS properties:
+
+transition-delay (tempo para iniciara transiçao)
+transition-duration (duraçao da transiçao)
+
+
+transition-property (nome da trasiçao EX: width)
+[[transition-duration: 6s;
+transition-duration: 120ms;
+transition-duration: 1s, 15s;
+transition-duration: 10s, 30s, 230ms;]]
+
+transition-timing-function (tipo de animação)
+[[transition-timing-function: ease;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+transition-timing-function: linear;
+transition-timing-function: step-start;
+transition-timing-function: step-end;]]
 
 ease-in: indica a transição lenta apenas no início;
 ease-out: realiza a transição lenta apenas no final;
 ease-in-out: realiza a transição com o início e final lentos;
+
+]Exemplo simples
+Esse exemplo executa uma transição de com duração de 4 segundos de delay entre o tempo que o usuário
+passa o mouse sobre o elemento (evento mouseover), e o início do efeito da animação
+
+ #caixa {
+            width: 300px;
+            height: 300px;
+            background-color: #5656ca;
+            border-radius: 10px;
+        }#caixa:hover {
+            background-color: #1f1664;
+            border-radius: 90px;
+            width: 500px;
+            -webkit-transition: rotate 5s, width 3s, border-radius 5s, background 1s ease-in-out ;
+            -moz-transition: rotate 5s, width 3s, border-radius 5s, background 1s ease-in-out;
+            -o-transition: rotate 5s width 3s, border-radius 5s, background 1s ease-in-out;
+            transition: rotate 5s width 3s, border-radius 5s, background 1s ease-in-out;
+
+             /*POSSO DEFINIR DE FORMA SIPLIFICADA APENAS UM UM COMANDO ALL*/
+           /* transition: all 5s ease-in-out; */
+__________________________________________________________________________
+
