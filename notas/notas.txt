@@ -222,6 +222,14 @@ de <body>, é um conteúdo relacionado geral e; assim por diante.
 Evidentemente, pode haver vários <aside> por página, já que é o conteúdo que vai ditar o uso
 semântico correto do elemento e, a depender do tópico, vários podem ser necessários.
 
+}} Para q haja maior compatibilidade principalmente com as tags novas da HTML 5 devemos usar
+o SHIV  
+<!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
+
+HTML5 Shiv é um script criado para fazer com que os navegadores que não reconheçam as novas
+tags HTML5, passem a reconhecê-las. Para utiliza-lo basta chamá-lo dentro da sua tag <head>.
 __________________________________________________________________________
 
 
@@ -428,6 +436,7 @@ input text, number, radio, password, submit, entre outros ... (input = entrada)
 ' pattern    (Valida se determinado padrão está correto ^$)       EX: pattern="^[0-9]{2}[0-9]{5}-[0-9]{4}$">
 o parttern sempre começa com ^ e termina com $, dentro defino como deve ser o padrão
 ' autocomplet(Usa-se para autocompletar as caixa, coloco o atrubuto no <form e <input)
+' autocofus  (Usa-se para focar em uma caixa de formulario)     
 especificando oq ele deverá completar EX: [autocomplete="username">] [autocomplete="new-password"]
 [autocomplete="current-password">] current para a senha atual
 

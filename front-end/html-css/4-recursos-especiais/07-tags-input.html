@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novas Tags Imput</title>
+    <link rel="stylesheet" href="css/style07.css">
+</head>
+<body>
+    <header>
+        <h2>Aqui algumas tags imput </h2>
+    </header>
+
+    <main>
+        <form action="" method="get" autocomplete="on">
+            <div>
+                <label for="inome">NOME:</label>
+                <input type="text" name="nome" id="inome" required minlength="5"  maxlength="20" placeholder="Seu nome" size="20">
+            </div>
+
+            <div>
+                <label for="iemail">EMAIL:</label>
+                <input type="email" name="email" id="iemail" required minlength="10" placeholder="Seu email" size="30" value="joao@gmail.com" autocomplete="email" autofocus>
+            </div>
+
+            <div>
+                <label for="iurl">URL:</label>
+                <input type="url" name="url" id="iurl">
+            </div>
+
+            <div>
+                <label for="isats">SATISFAÇÃO:</label>
+                <input type="range" name="sats" id="isats" min="0" max="10" value="0">
+            </div>
+
+            <div>
+                <label for="icor">COR</label>
+                <input type="color" name="cor" id="icor" value="#00ffa0">
+            </div>
+
+            <fieldset>
+                <legend>MAIS TAGS</legend>
+                <div>
+                    <label for="data">DATA</label>
+                    <input type="date" name="data" id="data" value="20-05-2020" required>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="inum">NUMERO:</label>
+                <input type="number" name="num" id="inum" required max="20" min="0" step=".5">
+            </div>
+
+            <div>
+                <input type="submit" value="ENVIAR">
+            </div>
+
+            <div>
+                <label for="pesquisar">PESQUISAR</label>
+                <input type="search" name="pesq" id="pesquisar">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
