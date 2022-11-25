@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRASIÇÕES CSS</title>
     <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            width: 100vw;
+            height: 100vh;
+        }
+
         #caixa {
             width: 300px;
             height: 300px;
+            place-self: center;
             background-color: #5656ca;
             border-radius: 10px;
         }#caixa:hover {
@@ -52,12 +66,12 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>TRASIÇÕES css</h1>
-    </header>
 
-    <div id="caixa">
+    <div id="container">
+        <div id="caixa">
         
+        </div>
     </div>
+
 </body>
 </html>

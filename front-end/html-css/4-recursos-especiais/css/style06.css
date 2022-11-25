@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: lightblue;
+}
+
+nav {
+    background-color: lightslategray;
+} nav a {
+    display: inline;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px;
+}
+
+main {
+    width: 600px;
+    height: 100vh;
+    margin: auto;
+    background-color: lightcoral;
+}
+
+footer {
+    background-color: #c5bbbb;
+    padding: 10px;
+}
+
