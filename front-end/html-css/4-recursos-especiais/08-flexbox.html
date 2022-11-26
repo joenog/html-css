@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX</title>
+    <style>
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        #container {
+            color: white;   background-color: lavender;    height: 400px;
+
+            display: flex;
+            /* [direçao dos flex-itens : row - row-reverse - column - column-reverse */
+            flex-direction: row;
+            /* [para definir quebra de layout: wrap - nowrap -wrap-reverse*/
+            flex-wrap: nowrap;
+            /* [alinhamento horizontal justify-content:  flex-start - flex-end - space-arownd - space-between */
+            justify-content: space-evenly;  /*  eveny - espaço uniformemente em volta */
+            /* [alinhamento vertical align-itens:   stretch - center - flex-star -  flex-end - baseline */
+            align-items: baseline; /* alinhamento será iniciando a partir da linha de texto */
+        }
+
+        .item, .item1 {
+            background-color: darkslateblue;   padding: 20px;    margin: 10px;   text-align: center;
+
+            /* ALINHAMENTO INDIVIDUAL */
+
+        }
+
+        .item1 {
+            padding-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header><h1>FLEXBOX</h1></header>
+
+    <div id="container">
+
+        <div class="item1"><p>item01</p></div>
+        <div class="item"><p>item02</p></div>
+        <div class="item"><p>item03</p></div>
+        <div class="item"><p>item04</p></div>
+
+    </div>
+</body>
+</html>
