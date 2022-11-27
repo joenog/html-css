@@ -779,11 +779,24 @@ align-items: baseline; /* alinhamento será iniciando a partir da linha de texto
 .item1 {
             background-color: limegreen;
             order: 4;
--------------------------------   
+-----------------------
 
 [[AQUI TEREMOS A FORMATAÇÃO INDIVIDUAL DOS ITENS]]
 
+    flex-grow: 1;    (FLEX-GROW:0 ou 1,  com isso expando a caixa full VW)
+-USANDO VALORES maiores 3, 4, 8 - a box ocupará espaço ainda maior em relaçao aos outros itens.
+-O grow e shrink aumenta e diminiu dependendo da disposiçao dos intens da tela horizont ou vertical
+    flex-shrink: 5;  (o Shrink com ele controlarei a capacidade de redução da BOX
+como o anterio o valor padrão é 0 e a redução vai de acordo com o valor inserido 2,5,8...
+    quanto maior o valor mais a BOX diminuira)
+    align-self: flex-start;  (Para posicionamento individual uso align-self)
+} .basis {
+    flex-basis: 200px;  (Para definir a base inicial da width da BOX) valor padrao : auto 
 
+[em suma, uso shrink para itens menos importantes e podem ser diminuidos mais
+e o grow para itens mais importantes que devem aumentarem mais e primeiro]
+---shorthand
+[flex: grow- shrink - basis;]
 __________________________________________________________________________
 
 

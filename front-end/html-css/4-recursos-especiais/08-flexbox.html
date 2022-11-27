@@ -26,7 +26,7 @@
             /* [alinhamento horizontal justify-content:  flex-start - flex-end - space-arownd - space-between */
             justify-content: space-around;  /*  eveny - espaço uniformemente em volta */
             /* [alinhamento vertical align-itens:   stretch - center - flex-star -  flex-end - baseline */
-            align-items: flex-start; /* alinhamento será iniciando a partir da linha de texto */
+            align-items: center; /* alinhamento será iniciando a partir da linha de texto */
         }
 
         /* formatação individual dos itens  */ 
@@ -34,21 +34,22 @@
             width: 300px; padding: 30px; margin: 5px;
             background-color: limegreen;
             order: 0;
+            align-self: flex-start;
         }
 
         .item2 {
             width: 300px; padding: 30px; margin: 5px;
             background-color: tomato;
             order: 1;
-            flex-grow: 4;
+            flex-grow: 3;
         }
 
         .item3 {
             width: 300px; padding: 30px; margin: 5px;
             background-color: blueviolet;
             order: 2;
-            flex-grow: 4;
-            flex-shrink: 3;
+            flex-grow: 3;
+            flex-shrink: 1;
         }
 
         .item4 {
@@ -57,13 +58,15 @@
             order: 3; 
 
             /* FORMATAÇÃO INDIVIDUAL DE ITENS FLEX */
-            flex-grow: 2;  /* FLEX-GROW:0 ou 1,  com isso expando a caixa full VW*/
+            flex-grow: 1;  /* FLEX-GROW:0 ou 1,  com isso expando a caixa full VW*/
             /* USANDO VALORES maiores 3, 4, 8 - a box ocupará espaço ainda maior em relaçao aos outros itens */
-            flex-shrink: 3;  /* o Shrink com ele controlarei a capacidade de redução da BOX*/
+            flex-shrink: 5;  /* o Shrink com ele controlarei a capacidade de redução da BOX*/
             /* como o anterio o valor padrão é 0 e a redução vai de acordo com o valor inserido 2,5,8...
             quanto maior o valor mais a BOX diminuira*/
+            align-self: flex-start; /*  Para posicionamento individual uso align-self   */
         } .basis {
-            flex-basis: 200px;
+            flex-basis: 500px; /* Para definir a base inicial da width da BOX  */
+            /* valor padrao : auto */
         }
 
 
@@ -73,12 +76,10 @@
     <header><h1>FLEXBOX</h1></header>
 
     <div id="container">
-
         <div class="basis item1"><p>item01</p></div>  <!--UM PARAMETRO CLASS - PODE CONTER VARIAS CLASS's-->
         <div class="basis item2"><p>item02</p></div>
         <div class="basis item3"><p>item03</p></div>
         <div class="basis item4"><p>item04</p></div>
-
     </div>
 
 </body>
