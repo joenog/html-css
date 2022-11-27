@@ -753,17 +753,19 @@ linha ou se pode serquebrados em varias linhas
 [flex-wrap: wrap-reverse; = Organiza os itens na forma reversa
 [justify-content: center;
 [align-items: center;
-[justify-content: space-around;     (EXEMPLO DE CODIGO)
+[justify-content: space-around;     (EX: 4-recusos-especiais/08-flexbox)
 [Flex-basis: definindo o tamanho inicial do elemento Nessa propriedade, definimos a largura ou altura
 (dependendo da direção do eixo) inicial do item.
 [Flex-shrink: diminuindo o tamanho dos elementos do container Nessa outra propriedade, definimos
-a proporção que queremos diminuir o item. Parecido com o flex-grow, temos o valor padrão de 0 e
+a proporção que queremos diminuir o item o contrario  do flex-grow, temos o valor padrão de 0 e
 apenas números positivos são aceitos.
 
  #container {
     color: white;   background-color: lavender;    height: 400px;
 
-display: flex;
+display: flex; > Para tornaros itens nela flexiveis
+
+[[AQUI TEREMOS A FORMATAÇÃO GERAL DOS ITENS]]
     [direçao dos flex-itens : row - row-reverse - column - column-reverse
 flex-direction: row;
     [para definir quebra de layout: wrap - nowrap -wrap-reverse
@@ -772,7 +774,15 @@ flex-wrap: nowrap;
 justify-content: space-evenly;  /*  eveny - espaço uniformemente em volta
     [alinhamento vertical align-itens:   stretch - center - flex-star -  flex-end - baseline
 align-items: baseline; /* alinhamento será iniciando a partir da linha de texto
--------------------------------    
+------------
+}} POSSO ORDERAR OS ITENS FLEXIVEIS COM O PARAMETRO {ORDER: ;}
+.item1 {
+            background-color: limegreen;
+            order: 4;
+-------------------------------   
+
+[[AQUI TEREMOS A FORMATAÇÃO INDIVIDUAL DOS ITENS]]
+
 
 __________________________________________________________________________
 
@@ -801,6 +811,7 @@ Primeiro defina a modelo que fará e escolha a paleta de cores
 Depois crie e organize os arquivos dos projetos
 Depois estruture e forkmate todos aquivo HTML, depois aplique os estilos
 __________________________________________________________________________
+
 
 } [ELEMENTOS FLUTUANTES ]------
 
@@ -1242,9 +1253,9 @@ Configura que valores são aplicados pela animação antes e depois de se execut
         top: 50px;
         left: 50px;
     }
-}
-
 __________________________________________________________________________
+
+
  } [TRASICOES EM CSS]
 
 CSS transitions provê uma forma de controlar a velocidade de uma animação quando há mudanças
@@ -1298,4 +1309,5 @@ passa o mouse sobre o elemento (evento mouseover), e o início do efeito da anim
              /*POSSO DEFINIR DE FORMA SIPLIFICADA APENAS UM UM COMANDO ALL*/
            /* transition: all 5s ease-in-out; */
 __________________________________________________________________________
+
 

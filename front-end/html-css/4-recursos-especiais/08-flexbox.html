@@ -12,6 +12,7 @@
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
+            text-align: center;
         }
 
         #container {
@@ -23,21 +24,48 @@
             /* [para definir quebra de layout: wrap - nowrap -wrap-reverse*/
             flex-wrap: nowrap;
             /* [alinhamento horizontal justify-content:  flex-start - flex-end - space-arownd - space-between */
-            justify-content: space-evenly;  /*  eveny - espaço uniformemente em volta */
+            justify-content: space-around;  /*  eveny - espaço uniformemente em volta */
             /* [alinhamento vertical align-itens:   stretch - center - flex-star -  flex-end - baseline */
-            align-items: baseline; /* alinhamento será iniciando a partir da linha de texto */
+            align-items: flex-start; /* alinhamento será iniciando a partir da linha de texto */
         }
 
-        .item, .item1 {
-            background-color: darkslateblue;   padding: 20px;    margin: 10px;   text-align: center;
-
-            /* ALINHAMENTO INDIVIDUAL */
-
-        }
-
+        /* formatação individual dos itens  */ 
         .item1 {
-            padding-top: 50px;
+            width: 300px; padding: 30px; margin: 5px;
+            background-color: limegreen;
+            order: 0;
         }
+
+        .item2 {
+            width: 300px; padding: 30px; margin: 5px;
+            background-color: tomato;
+            order: 1;
+            flex-grow: 4;
+        }
+
+        .item3 {
+            width: 300px; padding: 30px; margin: 5px;
+            background-color: blueviolet;
+            order: 2;
+            flex-grow: 4;
+            flex-shrink: 3;
+        }
+
+        .item4 {
+            width: 300px; padding: 30px; margin: 5px;
+            background-color: cadetblue;
+            order: 3; 
+
+            /* FORMATAÇÃO INDIVIDUAL DE ITENS FLEX */
+            flex-grow: 2;  /* FLEX-GROW:0 ou 1,  com isso expando a caixa full VW*/
+            /* USANDO VALORES maiores 3, 4, 8 - a box ocupará espaço ainda maior em relaçao aos outros itens */
+            flex-shrink: 3;  /* o Shrink com ele controlarei a capacidade de redução da BOX*/
+            /* como o anterio o valor padrão é 0 e a redução vai de acordo com o valor inserido 2,5,8...
+            quanto maior o valor mais a BOX diminuira*/
+        } .basis {
+            flex-basis: 200px;
+        }
+
 
     </style>
 </head>
@@ -46,11 +74,12 @@
 
     <div id="container">
 
-        <div class="item1"><p>item01</p></div>
-        <div class="item"><p>item02</p></div>
-        <div class="item"><p>item03</p></div>
-        <div class="item"><p>item04</p></div>
+        <div class="basis item1"><p>item01</p></div>  <!--UM PARAMETRO CLASS - PODE CONTER VARIAS CLASS's-->
+        <div class="basis item2"><p>item02</p></div>
+        <div class="basis item3"><p>item03</p></div>
+        <div class="basis item4"><p>item04</p></div>
 
     </div>
+
 </body>
 </html>
