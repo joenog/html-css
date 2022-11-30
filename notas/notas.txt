@@ -1155,7 +1155,7 @@ adiciona cada row das template areas a uma nova linha, o CSS se torna um padrão
 
 justify-content: center;  (alinhamento horizontal das grids - [star - center- end])
 align-itens: start; (alinhamento vertical das grids - [start - center - end])
-]O alinhamento sempte respeitará a area livre disponivel
+]O alinhamento sempre respeitará a area livre disponivel
 --------
 [ALINHAMENTO INDIVIDUAL - GRID LAYOUT]
 
@@ -1165,20 +1165,16 @@ Nessa regra consido indicar quando uma coluna/linha(column/row) começa e termin
     grid-column-start: 1;         (redimensionando colunas)
     grid-column-end: 4;
 }
-
 ]A primeira coluna ja esta ocupada pela linha 1, posicionarei a segunda linha EX: (img-row-column)
-
 #container > .item-2 {
     grid-row-start: 2;
     grid-row-end: 4;
 }
-
 ] Para o posicionamento de um item INDIVIDUAL na [horizonatal] uso o senguinte paramentro.  EX:
 
 #container > .item-3 {          (justify self posicionamento de si mesmo)
     justify-self: end;          (star, center, end)
 }
-
 ] Para o posicionmento de im intem INDIVIDUAL na [vertical] uso o seguinte EX:
 
 #container > .item-4 {          (o aling-self movimentara o item na VERTICAL)

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Nacional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <!--[if lt IE 9]>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header> <!--INICIO HEADER-->
+        <div id="logo">
+            <h1><a href="#">Museu Nacional</a></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">EXPEDIÇÕES</a></li>
+                <li><a href="#">PESQUISAS</a></li>
+                <li><a href="#">ACERVO</a></li>
+                <li><a href="#">VIDEOS</a></li>
+                <li><a href="#">FOTOS</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header> <!--FIM HEADER-->
+
+    <main>
+        <div id="conteudo">
+            <section>
+                <img src="images/museu.png" alt="">
+            </section>
+        </div>
+
+        <aside>
+            <article>
+                <img src="images/depoimento.png" alt="">
+            </article>
+
+            <form action="" method="get" autocomplete="on">
+                    <h2>Agende uma visita</h2>
+                    <fieldset>
+                        <div>
+                            <label for="idata">Esolha o Dia</label>
+                            <input type="date" name="data" id="idata" required >
+                        </div>
+                        <div>
+                            <label for="ipessoas">Qnt. Pessoas</label>
+                            <input type="number" name="pessoas" id="ipessoas" min="0" max="10" placeholder="2">
+                        </div>
+                        <div>
+                            <input type="submit" value="VERIFICAR">
+                        </div>
+                    </fieldset>
+            </form>
+
+            <section id="galeria">
+                <h2>Galeria de Fotos</h2>
+                <div class="ft">
+                    <img src="images/imagem1.jpg" alt="foto entrada">
+                </div>
+                <div class="ft">
+                    <img src="images/imagem2.jpg" alt="foto do bar">
+                </div>
+                <div class="ft">
+                    <img src="images/imagem3.jpg" alt="foto vestido">
+                </div>
+                <div class="ft">
+                    <img src="images/imagem4.jpg" alt="foto parede">
+                </div>
+            </section>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Site criado por <a href="https://instagram.com/joe.nog" target="_blank" rel="noopener">Joe.Nog</a></p>
+    </footer>
+
+</body>
+</html>

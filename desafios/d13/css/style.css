@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* --------------------- HEADER ------------------ */
+
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    background: #f4f2ec url('../images/fundo.png');
+    padding: 20px 60px 90px 60px;
+} 
+
+header #logo {
+    display: block;
+    background: url('../images/logo.png') no-repeat left center;
+    margin: 10px 10px;
+}
+
+header #logo a  {
+    color: transparent;
+}
+/* ---------------------- FIM HEADER------------------ */
+
+
+/* -----------------------INICIO NAV -----------------*/
+a:link, a:active, a:visited {
+    color: #af670a;
+    text-decoration: none;
+} a:hover {
+    color: #227115;
+}
+
+nav {
+    display: inline-block;
+    text-align: right;
+    margin-top: 15px;
+}
+
+nav > ul > li{
+    display: inline-block;
+}
+
+nav > ul  > li > a {
+    padding: 10px;
+    font-size: .8em;
+    text-transform: uppercase;
+} nav a:hover {
+    border-bottom: 2px solid #535858;
+}/* -----------------------FIM NAV -----------------*/
+
+
+/* -----------------------INICIO MAIN -----------------*/
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    width: 80vw;
+    margin: auto;
+    transform: translate(-0px, -60px);
+}
+
+main #conteudo {
+    background-color: #add8e685;
+    width: 100%;
+    height: 100%;
+}
+
+#conteudo img {
+    width: 99%;
+}
+
+form  {
+    background-color: #f1ebdc;
+    padding: 10px 0px;
+    margin: 10px 0px 10px 8px;
+}
+
+form h2 {
+    text-transform: uppercase;
+    color: #886336;
+    font-size: 1em;
+    margin: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    font-weight: lighter;
+}
+
+form label {
+    font-size: .9em;
+    color: #474b4b;
+    margin: 5px;
+}
+
+form input {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-left: 5px;
+    color: #535858;
+}
+
+input[type=submit] {
+    width: 95%;
+    margin: 10px 5px;
+} input[type=submit]:hover {
+    background-color: #2171152f;
+    border: 1px solid #2171152f;
+    cursor: pointer;
+}
+
+fieldset {
+    padding: 15px;
+    border: none;
+}
+
+/*---------------GALERIA---------------------*/
+
+#galeria h2 {
+    color: #886336;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 8px;
+    padding: 5px;
+    font-weight: lighter;
+}
+
+aside #galeria {
+    background-color: #f1ebdc;
+    margin-left: 8px;
+    padding: 10px 10px;
+}
+
+section div.ft {
+    background: url('../images/fundo-foto.png') no-repeat;
+    display: inline-block;
+    min-width: 130px;
+    min-height: 130px;
+    margin: 5px 10px;
+}
+
+#galeria img {
+    width: 75%;
+    transform: translate(8px, 17px);
+}
+
+
+/* -------------------PERSONALIZAR ASIDE-----------  */
+
+aside {
+    width: 100%;
+}
+
+aside img {
+    width: 97.6%;
+    margin-left: 7px;
+}
+
+/* -----------------------FIM MAIN -----------------*/
+
+footer {
+    background-color: #2e1b03;
+    color: white;
+    text-align: center;
+    font-size: .8em;
+    padding: 5px;
+}
