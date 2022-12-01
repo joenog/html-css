@@ -67,15 +67,60 @@ main {
 }
 
 main #conteudo {
-    background-color: #add8e685;
     width: 100%;
     height: 100%;
+}
+
+#conteudo .tit {
+    font-size: 1.1em;
+    padding: 8px 0px;
+    color: #886336;
+    font-weight: lighter;
 }
 
 #conteudo img {
     width: 99%;
 }
 
+#conteudo #video {
+    display: inline-block;
+
+    padding: 5px;
+    margin: 5px 10px;
+}
+
+#conteudo #map {
+    display: inline-block;
+
+    padding: 5px;
+    margin: 5px 10px;
+}
+
+#conteudo #expo {
+    display: inline-block;
+    margin-top: 10px;
+    width: 320px;
+    margin: 15px 10px 5px 15px;
+} #conteudo #expo ul {
+    list-style-type: none;
+    font-size: .9em;
+}
+
+#conteudo #history {
+    display: inline-block;
+    width: 320px;
+    margin: 15px 20px;
+    font-size: .9em;
+} #conteudo #history .tit {
+    font-size: 1.1em;
+}
+
+#conteudo #history a {
+    font-size: .7em;
+    font-style: italic;
+}
+
+/* ----------------FORM DO ASIDE------------------  */
 form  {
     background-color: #f1ebdc;
     padding: 10px 0px;
