@@ -1320,3 +1320,54 @@ passa o mouse sobre o elemento (evento mouseover), e o início do efeito da anim
 __________________________________________________________________________
 
 
+}} [BOOTSTRAP] Design responsivo
+
+Bootstrap é um framework front-end que fornece estruturas CSS para criação de sites e aplicações
+responsivas de forma rápida e simples. Além disso, pode lidar com sites de desktop e páginas de
+dispositivos móveis da mesma forma.
+Usamo ao aplicar classes nas tags
+    {Originalmente, o Bootstrap foi desenvolvido para o Twitter por um grupo de desenvolvedores
+    liderados por Mark Otto e Jacob Thornton Logo e se tornou uma das estruturas de front-end
+    e projetos de código aberto mais populares do mundo.}
+[O que é framework para que serve?]
+A principal função de um framework é facilitar o processo de desenvolvimento de um software ou 
+aplicação. Ao oferecerem uma estrutura básica sobre a qual o sistema pode ser programado, os 
+frameworks representam uma vantagem em termos de tempo e segurança
+}Ao aplicar o Bootstrap e imprtante usar o arquivo -min pra que carregue mais rapido}
+
+(PARA INSTALA-LO BASTA INSERIR NA TAG HEAD DO HTML DUAS LINHAS DE CODIGO)
+
+[https://getbootstrap.com/docs/5.0/getting-started/download/]
+
+[mediaqueri.es] EX de sites responsivos
+
+----------------------------- APLICANDO BOOTSTRAP ------------------------
+[FORMATAÇÃO DE TEXTO
+Os titulos e seus niveis h1 a h6 sao pré formatados, mas para alterálos posso adicionar classes
+
+[CLASSES DE DISPLAY - para dar destaque aos cabeçalhos/titulos
+class= display-1 até display-5
+
+[FORMATAR TEXTOS EM PARAGRAFOS 
+<p class="lead"> [lead = destque] - um destque diferen ao texto
+<p class="font-monospace"> [font-monospace] - fonte monoespaçada igualmente
+<p class="fw-normal">FONTE- NORMAL</p>
+<p class="fw-bold">FONTE- BOLD</p>
+<p class="fst-italic">FONTE- ITALIC</p>
+<p class="fw-lighter">FONTE- LIGTHER</p>
+----
+<p class="text-uppercase">Upercase</p> - ALL letras maiusculas
+<p class="text-lowercase">LOwerCASE</p>  ALL letras pequenas
+<p class="text-decoration-underline  text-capitalize">Lorem ipsum dolor sit amet</p>
+Aqui apenas as iniciais serão maiusculas
+<p class="text-truncate"> - Para cortar parte do texto e exibi-lo parcialmente
+
+[FORMATANDO LISTAS -
+<div class="list-unstyled"> - Para remover circulos da lista
+<ul class="list-inline">
+    <li class="list-inline-item"><a href="#">HOEM</a></li> - Para deixar a lista inline
+    <li class="list-inline-item"><a href="#">HOEM</a></li>
+
+
+}}ALINHAMENTO DE TEXTO BOOTSTRAP 
+

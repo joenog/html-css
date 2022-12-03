@@ -51,6 +51,8 @@ main {
     overflow: scroll;
 } .destaque::-webkit-scrollbar  {
     display: none;
+} .destaque img:hover {
+    animation: mover-destaque 1s 1s both;
 }
 
 .conteudo-inicio {

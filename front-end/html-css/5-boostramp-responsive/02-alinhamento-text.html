@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---NORMALIZE e STYLE NATIVO-->
+        <link rel="stylesheet" href="css/style01.css">
+        <link rel="stylesheet" href="css/normalize.css">
+    
+        <!---BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        <title>ALINHAMENTO DE TEXTO - Bootstrap</title>
+    </head>
+<body>
+    <main>
+        <section>
+            <article>
+                <p class="marks">ALINHAMENTOS JUSTIFICADO</p>
+                <p class="marks text-lowercase">USADO TAMBÉM PARA CONFIGURAÇÃO DE LAYOUTS</p>
+
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum harum nemo laudantium cupiditate dolore, excepturi praesentium eum reprehenderit nihil veritatis distinctio fugit quasi, ipsam itaque dignissimos ullam ipsa, cum delectus?</p>
+            </article>
+
+            <article>
+                <p class="marks">Alinhamento Responsivo SM - MD - LG - XL</p>
+                <p>O alinhamento é alterado de acordo com o tamanho da tela</p>
+            </article>
+
+            <p class="text-sm-center text-md-end text-xl-start">
+                Lorem ipsum dolor sith elit.
+            </p>
+            <p class="text-xl-center">
+                Lorem ipsum dolor sith elit.
+            </p>
+
+            <article>
+                <p>CONVERTENDO ITENS BLOCK E INLINE</p>
+
+                <h1 class="bg-success text-xl-end rounded-3 p-3">Loren loren lore</h1>
+                <p class="bg-primary d-inline">Lorem ipsum dolor sith elit.</p>
+
+                <span class="bg-danger d-block">Lorem ipsum dolor sith elit.</span>
+
+                <h3 class="d-inline-block bg-secondary">ELEMTENTOS INLINE-BLOCK</h3>
+                <p>elementos inline-block tem a propriedade inline e tmb posso redimenciona-lo diferente dos elementos apenas inline (formatação ibrida)</p>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>
