@@ -1341,7 +1341,7 @@ frameworks representam uma vantagem em termos de tempo e segurança
 
 [mediaqueri.es] EX de sites responsivos
 
------------------------------ APLICANDO BOOTSTRAP ------------------------
+----------------------------- {APLICANDO BOOTSTRAP} ------------------------
 [FORMATAÇÃO DE TEXTO
 Os titulos e seus niveis h1 a h6 sao pré formatados, mas para alterálos posso adicionar classes
 
@@ -1367,7 +1367,41 @@ Aqui apenas as iniciais serão maiusculas
 <ul class="list-inline">
     <li class="list-inline-item"><a href="#">HOEM</a></li> - Para deixar a lista inline
     <li class="list-inline-item"><a href="#">HOEM</a></li>
-
+--------------------------------
 
 }}ALINHAMENTO DE TEXTO BOOTSTRAP 
 
+[Texto Justificado   - text-justify
+
+[Alinhamento Responsivo SM - MD - LG - XL (small, medium, large, extraLarge)
+O alinhamento é alterado de acordo com o tamanho da telas
+text-sm-center   text-md-end   text-xl-start
+
+[CONVERTENDO ITENS BLOCK, INLINE e inline-block
+d-inline / d-block / d-inline-block
+-elementos inline-block tem a propriedade inline e tmb posso redimenciona-lo adicionado padding
+e margim, diferente dos elementos apenas inline (formatação ibrida)
+
+[ARREDONDAR E ADICIOMAR padding
+rounded-3 / p-3
+
+[ELEMENTOS FLUTUANTES    <div class="clearfix"> (para limpar a area)
+class="float-start / class="float-right
+}FLOAT Responsivo>
+            class="float-sm-end d-block">float small   >= 576px
+            class="float-md-end d-block">float medium  >= 768px
+            class="float-lg-end d-block">float large   >= 992px
+            class="float-xl-end d-block">float x-large >= 1200px
+
+[Posicionamento FIXED - TOP - BOTTOM
+class="position-fixed fixed-top fixed-bottom
+
+[FIXANDO LISTA DE MENU
+            <ul class="list-inline sticky-top">
+-----------------------------------
+
+
+
+
+
+https://www.youtube.com/watch?v=vHSYytrtUSw [[VEJA QUANDO TEMINAR A CESSÃO BOOTSTRAP]
