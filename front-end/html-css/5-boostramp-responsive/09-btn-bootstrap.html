@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---NORMALIZE e STYLE NATIVO-->
+        <link rel="stylesheet" href="css/style01.css">
+        <link rel="stylesheet" href="css/normalize.css">
+    
+        <!---BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        <title>Tamanhos e Bordas - Bootstrap</title>
+    </head>
+<body>
+    <main>
+        <h3>Botões com diferentes tags</h3>
+        <a class="btn  btn-primary" href="#">Link</a>
+        <button class="btn btn-secondary" type="submit">Submit</button>
+        <input class="btn btn-danger" type="button" value="Button">
+        <input class=" btn btn-success" type="submit" value="Input Submit">
+        <input class=" btn btn-info" type="reset" value="Reset">
+        <hr>
+
+        <section>
+            <!-- Botoes com contorno
+        btn-outline-<formato>
+        -->
+        <h3>Botões com contorno</h3>
+        <button class="btn btn-outline-danger" type="button">Clique</button>
+        <button class="btn btn-outline-dark">Enviar</button>
+
+        <!-- Tamanhos de botões
+        opções: btn-lg, btn-sm, btn-block-->
+        <h3>Tamanhos dos botões</h3>
+        <button class="btn btn-danger btn-lg" type="button">Grande</button>
+        <button class="btn btn-secondary" type="button">Normal</button>
+        <button class="btn btn-dark btn-sm" type="button">Pequeno</button>
+        <br><br>
+        <button class="btn btn-success d-block w-100" type="button">Bloco</button> <!--btn w-100-->
+        </section>
+        <hr>
+        </section>
+        <hr> <hr>
+
+        <section class=" m-5">
+            <h3>ESTADOS DE BOTOES</h3>
+            <p>Serve para quando criamos sistemas ou quando queremos inativar botoes.</p>
+
+            <button class="btn btn-danger active"> ATIVO </button>
+            <button class="btn btn-danger disabled"> INATIVO </button>
+            <button class="btn btn-danger"> NORMAL </button>
+            <p>ABAIXO TEMOS O BOTÃO ATIVO</p>
+            <button class="btn btn-success" type="button">ATIVO AO LICAR</button>
+            <p>Pra mante'o ativo use type= buttom</p>
+
+
+             <!-- Estados dos botões opções: active, disabled -->
+            <h3>Estados de botões</h3>
+            <button class="btn btn-danger" type="button">Normal</button>
+            <button class="btn btn-primary active" type="button">Ativo</button>
+            <button class="btn btn-success disabled" type="button">Inativo</button>
+            <br><br>
+            <button class="btn btn-dark" type="button" data-bs-toggle="button">Alternar</button>
+        </section>
+        <hr>
+
+
+        <h3>Grupo de Botoes na Horizontal</h3>
+
+        <section class="btn-group">
+            <button class="btn btn-success" type="button">ESQUERDO</button>
+            <button class="btn btn-success" type="button">CENTRO</button>
+            <button class="btn btn-success" type="button">CENTRO</button>
+            <button class="btn btn-success" type="button">CENTRO</button>
+            <button class="btn btn-success" type="button">DIREITO</button>
+        </section>
+        <hr>
+
+        <h3>Grupo de botoes na vertical</h3>
+        <section class="btn-group-vertical">
+            <button class="btn btn-primary" type="button">TOPO</button>
+            <button class="btn btn-primary" type="button">CENTRO</button>
+            <button class="btn btn-primary" type="button">CENTRO</button>
+            <button class="btn btn-primary" type="button">CENTRO</button>
+            <button class="btn btn-primary" type="button">FUNDO</button>
+        </section>
+        <hr>
+
+        <h3>Toolbar de botoes</h3>
+        <section class="btn-toolbar">
+            <div>
+                <button class="btn btn-danger" type="button">001</button>
+                <button class="btn btn-danger" type="button">002</button>
+                <button class="btn btn-danger" type="button">003</button>
+            </div>
+            <div>
+                <button class="btn btn-danger" type="button">004</button>
+                <button class="btn btn-danger" type="button">005</button>
+            </div>
+        </section>
+        <hr>
+
+        <h3>Botoes dropDown</h3>
+
+        <div class="btn-group">
+            <button type="button"  class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+                DOWPDOWN
+            </button>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HOME</a></li>
+                <li><a class="dropdown-item" href="#">HOME</a></li>
+                <li><a class="dropdown-item" href="#">HOME</a></li>
+                <li class="dropdown-divider"></li> <!---para criar uma divisão nos itens-->
+                <li><a class="dropdown-item" href="#">HOME</a></li>
+            </ul>
+
+            <!--DIV COM btn grups / depois buttom com class dropdown-toggle bata-bs-toggle=dropdown -->
+        </div>
+    </main>
+</body>
+</html>

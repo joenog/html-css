@@ -900,12 +900,12 @@ __________________________________________________________________________
     Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das 
 folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas
 no CSS3, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não 
-precisando mudar o conteúdo em si. (Apapta o conteudo para telas de tamanhos diferentes)
+precisando mudar o conteúdo em si. (Adapta o conteudo para telas de tamanhos diferentes)
 
     }Sintaxe
 Media queries consistem de um media type e podem, a partir de uma especificação CSS3, contendo uma
 ou mais expressões, expressa em media features, que determinam ou verdadeiro ou falso. Os resultados
-da query são verdadeiros se o media type especificado na media query corresponde ao tipo dodocumento
+da query são verdadeiros se o media type especificado na media query corresponde ao tipo documento
 exibido no dispositivo e todas as expressões na media query são verdadeiras.
 ]Com as MEDIAS QUERIES posso adptar o conteudo a diferentes telas adaptando ou reposicionando intes
 
@@ -941,6 +941,15 @@ deve-se usar a regra [@media] e nela declarar a query SCREEN e a feature EX:
         background-size: contain;
     }
 }PARA UM PROJETO GRANDE COMENDA-SE USAR AS MEDIAS QUERIES SEPARADAS
+
+--------------
+[MEDIA QUERIES - breakpoints 
+
+pequenas telas: até 600px
+celular: de 600 até 768px
+tablet: de 768px até 992px
+desktop: de 992px até 1200px
+drandes telas: acima de 1200px
 __________________________________________________________________________
 
 
@@ -1320,7 +1329,7 @@ passa o mouse sobre o elemento (evento mouseover), e o início do efeito da anim
 __________________________________________________________________________
 
 
-}} [BOOTSTRAP] Design responsivo
+}} [BOOTSTRAP] Design Responsivo - CSS prático
 
 Bootstrap é um framework front-end que fornece estruturas CSS para criação de sites e aplicações
 responsivas de forma rápida e simples. Além disso, pode lidar com sites de desktop e páginas de
@@ -1400,7 +1409,75 @@ class="position-fixed fixed-top fixed-bottom
             <ul class="list-inline sticky-top">
 -----------------------------------
 
+[ COLORIR TEXTOS E LINKS
+class="text-primary">Color Primary
+class="text-secondary">Color Secondary....
 
+[PARA COLORIR O FUNDO Uso
+class="bg-primary">Color Primary
+class="bg-secondary">Color Secondary
+
+------------------------------------
+
+[ MARGIN E PADDING COM BOOTSTRAP
+
+mt- mb - mx - my - b  / pt - pb- px- py - mb-5 pb-5
+    A unidade de medida usado é o rem
+}Rem}
+Então, vamos entendê-la, 1rem é igual ao tamanho padrão da fonte da raiz(root) do documento,
+normalmente 16px, logo 1rem é igual à 16px.
+--------------------------------
+
+[Tamanhos e Bordas - Bootstrap
+
+[APLICANDO width
+w-25 / W-50 / W-75 / W-100 / W-AUTO
+
+[Aplicando height
+h-25 / w-50 / w-75 / w-100 / w-auto
+
+[APLICANDO BORDER
+    <div class="border border-primary">
+    <div class="border-bottom border-secondary">
+    <div class="border-end border-danger">
+    <div class="border-start border-warning">
+
+[APLICANDO BORDER RADIUS
+    <div class="bg-primary rounded-bottom m-2 p-2">
+    <div class="bg-secondary rounded-top m-2 p-2">
+    <div class="bg-info rounded-end m-2 p-2">
+    <div class="bg-success rounded-pill m-2 p-2">
+    <div class="bg-danger rounded-start m2 p-2 ">
+----------------------------------
+
+[BOTÕES - Bootstrap
+
+[Os botoes podem ser configurados em difernetes tags (linsk, input e button)
+<a class="btn  btn-primary" href="#">Link</a>
+
+[Botões com contorno
+<button class="btn btn-outline-danger" type="button">Clique</button>
+
+[Tamanho de botoes
+opções: btn-lg, btn-sm, btn-block-->
+
+[ESTADOS DE BOTOES 
+active - disabled 
+
+[GRUPO DE BOTOES 
+btn-group  / btn-grou-vertical
+
+[BOTOES DROP DOWN - Lista clicar 
+Crio uma DIV com um <button> e uma lista <ul>
+
+<div class=["btn-group"]>
+    <button [type="button"]  [class="btn btn-danger dropdown-toggle"] [data-bs-toggle="dropdown"]>
+         DOWPDOWN
+    </button>
+
+     <ul class=["dropdown-menu"]>
+            <li><a [class="dropdown-item"] href="#">HOME</a></li>
+             <li><a [class="dropdown-item"] href="#">HOME</a></li>
 
 
 

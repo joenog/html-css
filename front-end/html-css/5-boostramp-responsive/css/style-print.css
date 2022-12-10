@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body {
+    width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: blue;
+
+}
+
+p {
+    font-size: 2em;
+}
