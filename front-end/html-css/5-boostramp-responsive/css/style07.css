@@ -15,3 +15,9 @@ main {
     width: 80vw;
     margin: auto;
 }
+
+.marks {
+    background-color: rgba(144, 177, 238, 0.616);
+    padding: 8px;
+    border-radius: 5px;
+}

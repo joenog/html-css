@@ -1512,9 +1512,16 @@ Caso queira inserir uma caixa de pesquisa adicione dentro da div acima, um form 
                     <input class="form-control" placeholder="Pesquisar..." type="text"
 por fim adiciona um botão para de buscar.
 ------
+(Para fixar um menu ao topo uso (ticky-top))
 
 (Adicionando DROPDOWN no menu do NAV
+1- Seleciono o item da navegação onde o qual irei adicionar o DROPDOWN adiciono a clase dropdown EX:
+<li (class="nav-item dropdown">)
+        <a class=("nav-link dropdown-toggle" data-bs-toggle="dropdown") href="#">SERVIÇOS</a>
 
+        <div (class="dropdown-menu")>
+                <a class=("dropdown-item") href="#">serviço 1</a>
+                <a class="dropdown-item" href="#">serviço 1</a>
 
 
 ----------------------------------------
