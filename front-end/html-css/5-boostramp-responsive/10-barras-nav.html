@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---NORMALIZE e STYLE NATIVO-->
+        <link rel="stylesheet" href="css/style07.css">
+        <link rel="stylesheet" href="css/normalize.css">
+    
+        <!---BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+        <title>----------------------Barras de Navegação</title>
+    </head>
+<body>
+    <main>
+        <article>
+            <h3>-----------------------------NAV simples / e com Abas</h3>
+
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+            </ul>
+        </article>
+        <br> <br>
+
+        <article>
+            <h3>----------------------------------- Barra de Navegação</h3>
+
+            <nav class="navbar navbar-expand-sm navbar-dark bg-secondary p-3 rounded-3">
+                <a class="navbar-brand" href="#">PRÁTICA DEV</a>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">NOTICIAS</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">BRASIL</a>
+                            <a class="dropdown-item" href="#">INTERNACIONAL</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">SERVIÇOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SOBRE</a></li>
+                </ul>
+            </nav>
+        </article>
+        <br> <br>
+
+        <h3>--------------------------Barra de Navegação com Menu Responsivo</h3>
+        <br>
+        <!--MENU HAMBUGER-->
+
+        <nav class="navbar navbar-dark navbar-expand-sm bg-dark rounded-3 p-3">
+            <!--logo-->
+            <a class="navbar-brand" href="#">MENU HAMBUGER</a>
+
+            <!--barra de navegação-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-target">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--links do menu-->
+            <div class="collapse navbar-collapse" id="nav-target">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br><br>
+
+       <h3>------------------------BARRA DE NAVEGAÇÃO COM CAIXA DE PESQUISA</h3>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-md p-2 pt-5 rounded-2">
+            <!---logo-->
+            <a class="navbar-brand mx-2" href="#">LOGOSITE</a>
+
+            <!--menu hambuger-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#showitens">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--links do site-->
+
+            <div class="collapse navbar-collapse" id="showitens">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">SERVIÇOS</a>
+                        <!--links dentro-->
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">serviço 1</a>
+                            <a class="dropdown-item" href="#">serviço 1</a>
+                            <a class="dropdown-item" href="#">serviço 1</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!--caixa de pesquisa-->
+                <form action="" class="form-check-inline m-0">
+                    <input class="form-control" placeholder="Pesquisar..." type="text" name="pesquisar" id="pesquisar">
+                </form>
+                <!--bostao de pesquisa-->
+                <button class="btn btn-outline-light m-1"> OK
+                </button>
+            </div>
+         </nav>
+
+    <br><br> <br><br><br>
+    </main>
+</body>
+</html>

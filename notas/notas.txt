@@ -1430,19 +1430,19 @@ normalmente 16px, logo 1rem é igual à 16px.
 
 [Tamanhos e Bordas - Bootstrap
 
-[APLICANDO width
+(APLICANDO width
 w-25 / W-50 / W-75 / W-100 / W-AUTO
 
-[Aplicando height
+(Aplicando height
 h-25 / w-50 / w-75 / w-100 / w-auto
 
-[APLICANDO BORDER
+(APLICANDO BORDER
     <div class="border border-primary">
     <div class="border-bottom border-secondary">
     <div class="border-end border-danger">
     <div class="border-start border-warning">
 
-[APLICANDO BORDER RADIUS
+(APLICANDO BORDER RADIUS
     <div class="bg-primary rounded-bottom m-2 p-2">
     <div class="bg-secondary rounded-top m-2 p-2">
     <div class="bg-info rounded-end m-2 p-2">
@@ -1452,22 +1452,22 @@ h-25 / w-50 / w-75 / w-100 / w-auto
 
 [BOTÕES - Bootstrap
 
-[Os botoes podem ser configurados em difernetes tags (linsk, input e button)
+(Os botoes podem ser configurados em difernetes tags (linsk, input e button)
 <a class="btn  btn-primary" href="#">Link</a>
 
-[Botões com contorno
+(Botões com contorno
 <button class="btn btn-outline-danger" type="button">Clique</button>
 
-[Tamanho de botoes
+(Tamanho de botoes
 opções: btn-lg, btn-sm, btn-block-->
 
-[ESTADOS DE BOTOES 
+(ESTADOS DE BOTOES 
 active - disabled 
 
-[GRUPO DE BOTOES 
+(GRUPO DE BOTOES 
 btn-group  / btn-grou-vertical
 
-[BOTOES DROP DOWN - Lista clicar 
+(BOTOES DROP DOWN - Lista clicar 
 Crio uma DIV com um <button> e uma lista <ul>
 
 <div class=["btn-group"]>
@@ -1478,7 +1478,46 @@ Crio uma DIV com um <button> e uma lista <ul>
      <ul class=["dropdown-menu"]>
             <li><a [class="dropdown-item"] href="#">HOME</a></li>
              <li><a [class="dropdown-item"] href="#">HOME</a></li>
+--------------------------       
 
+[BARRAS DE NAV - Bootstrap
+
+(Navegação Simple ou com ABSOLUTAS
+
+Navegação Tipos de navegação: ul= nav  nav-pills / nav-tabs
+li class="nav-item"> <a class="(nav-link active)" uso active para idicar paginar selecionada
+Opções de alinhamento:  justify-content-center / justify-content-end / flex-column
+
+(BARRA de navegação simples com logo
+
+ <nav class="(navbar navbar-expand-sm navbar-dark bg-secondary)">  (tamanho - tema - bg-color
+            <a class=("navbar-brand)" href="#">Logo do Site</a>    (brand = é logo site
+            <ul class="navbar-nav mx-auto">                        (navbar-navegação margin auto
+                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+
+(BARRA DE NAVEGAÇÃO COM HAMBURGER
+
+CRIO TAG NAV com = class="navbar navbar-dark bg-primary navbar-expand-md
+1-Logo na navbar com <a> = class="navbar-brand
+2-Faço um botão abaixo <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#showitens">
+tipo toggler(botao de alternancia) data collapse para se esconder, e targert para identifica-lo
+3-dentro um span icone hambuger   =  <span class="navbar-toggler-icon"> </span>
+4-Faço uma lista n-ordenanda dentro duma div - com as classes =
+ <div class="collapse navbar-collapse" id="showitens">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+
+Caso queira inserir uma caixa de pesquisa adicione dentro da div acima, um form do tipo text
+<form action="" class="form-check-inline m-0">
+                    <input class="form-control" placeholder="Pesquisar..." type="text"
+por fim adiciona um botão para de buscar.
+------
+
+(Adicionando DROPDOWN no menu do NAV
+
+
+
+----------------------------------------
 
 
 https://www.youtube.com/watch?v=vHSYytrtUSw [[VEJA QUANDO TEMINAR A CESSÃO BOOTSTRAP]
