@@ -1525,6 +1525,29 @@ por fim adiciona um botão para de buscar.
 
 
 ----------------------------------------
+[Lista em Bootstrap
+
+Para formatar as listas uso as classes = (list-group e list-group-item)
+Listas em flush, sem contorno (list-group-flush)
+Lista com links adiciona  (list-group e list-group-item) em links
+Lista contextuais uso ul = (list-group e li class="list-group-item list-group-item-dark")
+Lista badge [indicando numeros me uma lista] Dentro de uma lista formatada uso no li um span
+(<li class="list-group-item">Caixa de Entrada
+                <span (class="badge bg-primary)">35</span>
+--------------------------
+
+[Formularios em Bootstrap
+
+Colocamos na div do formulario um b-3 para um espaçamento e as seguintes tags
+[label = form-label
+[input = form-control  / tamanhos - form-control-sm lg
+[text = form-text / para formatar legendas no formulário
+
+[select = form-select / tamanhos - form-select-sm
+[textarea = form-contol
+[range = form-range
+[submit= btn
+
 
 
 https://www.youtube.com/watch?v=vHSYytrtUSw [[VEJA QUANDO TEMINAR A CESSÃO BOOTSTRAP]
