@@ -1539,15 +1539,53 @@ Lista badge [indicando numeros me uma lista] Dentro de uma lista formatada uso n
 [Formularios em Bootstrap
 
 Colocamos na div do formulario um b-3 para um espaçamento e as seguintes tags
-[label = form-label
-[input = form-control  / tamanhos - form-control-sm lg
-[text = form-text / para formatar legendas no formulário
+(label = form-label
+(input = form-control  / tamanhos - form-control-sm lg
+(textarea = form-contol
+(range = form-range
+(submit= btn
+---------
 
-[select = form-select / tamanhos - form-select-sm
-[textarea = form-contol
-[range = form-range
-[submit= btn
+[Clsses para input
+A classe .input-group é um contêiner usado para aprimorar uma entrada adicionando um ícone, 
+texto ou um botão na frente ou atrás do campo de entrada como um "texto de ajuda".
 
+Utilizamos o .input-group-prepend para que este "texto de ajuda" seja adicionado antes do input
+e .input-group-append para adicioná-lo depois do input
+
+(input-group-text : usado para definir tageta de um formulari inserida antes ou depois
+--------------------------------------
+
+[Alertar e barra de progresso - em Bootstrap
+quand crias sistemas pode exibir pequenas mensagnes aos usuarios
+
+(Para indicar um mensagem de aler uso as classes = alert , alert-danger..primary
+numa div com um texto
+
+(Para adiciona um alerta com botão fechar uso as classe =
+<div [class="alert alert-success alert-dismissible]"> (aletar dispensavel)
+        <button class="btn-close" type="button"[data-bs-dismiss="alert]"> (data dispensavel)
+
+(Para adicionar uma barra de progresso uso as classe = 
+<div [class="progress]"> (progress)
+        <div class=["progress-bar progress-bar-animated progress-bar-striped w-50"]>50%</div>
+----------------------------------
+
+{Fomatação de Tabelas e Paginações - Bootstrap
+
+[Para indicar uma tabela uso class = table
+[Para modificar as cores uso class = table-dark, table-primary ..
+[Para uma tabela zebrada uso class = table-striped (table-bordered, table-borderless) opções
+[Para colorir as linhas uso na tr  = color-primary , secondary ...
+[Para redimencionar uso a class = table-sm / table-lg
+[Para tabelas grande uso na div que envolve a tabela a class = table-responsive
+
+[Para definir itens de paginação faço uma lista n-ordenada e uso as senguinte classe
+        <ul class=("pagination justify-content-center"> (para centralizar - justify)
+        <li class=("page-item">                         (para redimencionar pagination-sm,lg)
+            <a class="page-link" href="">Anterior</a>
+        </li> 
+        
 
 
 https://www.youtube.com/watch?v=vHSYytrtUSw [[VEJA QUANDO TEMINAR A CESSÃO BOOTSTRAP]
