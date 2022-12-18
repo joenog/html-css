@@ -1585,7 +1585,12 @@ numa div com um texto
         <li class=("page-item">                         (para redimencionar pagination-sm,lg)
             <a class="page-link" href="">Anterior</a>
         </li> 
-        
+
+--------------------------------
+
+{ Cards em bootstrap
+
+
 
 
 https://www.youtube.com/watch?v=vHSYytrtUSw [[VEJA QUANDO TEMINAR A CESSÃO BOOTSTRAP]
