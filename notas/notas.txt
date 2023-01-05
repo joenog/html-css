@@ -1596,7 +1596,66 @@ Para cartoes com imagens uso a class (card-img ou card-img-top/ card-img-bottom)
 Numa estrutura de card posso adicionar tmb header e footer (card-header / card-footer)
 ---------------------------------------
 
-{Jumbotrin e Alinhamento de Imagens
+{Jumbotron e Alinhamento de Imagens
+
+Jumbotron é um card grande que destaca algo num site uso as seguintes classes
+[<div class="p-5  m-3 rounded-3 bg-secondary text-white text-center">
+]<div class="container">
+    <h1 class="display-4">Música para todos</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas libero aut blanditiis sequi. Eos repellat est libero recusandae dolorem, provident iure, nobis porro delectus esse obcaecati perspiciatis dolores omnis earum.</p>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <a class="btn btn-primary btn-lg" href="">Ouvir todas</a>
+</div>
+
+{Estrutura de Imagem com Texto
+<h3 class="marks">Estrutura de imagens com textos</h3>
+    [<div class="d-flex">
+        <img class="rounded-3" src="img/img-pq.jpg" alt="">
+        <div class="media-body align-self-auto mx-4">
+            <h5>Titulo do conteudo</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero, veritatis maxime, dolorum nisi, quidem nostrum corrupti beatae aut nam dignissimos ullam deserunt! Ratione error distinctio, dicta porro asperiores maxime.</p>
+        </div>
+    </div>
+
+{Icones em bootstrap
+
+Para usar icones basta adicionar ao html a linha de codigo puxando o CSS do bs icones
+igualmente é feito cons icones do google
+
+[<div>
+    <h3 class="marks">ICONES BOOTSTRAP</h3>
+        <i class="bi bi-calculator display-4"></i>
+
+    <button class="btn btn-warning my-4 fs-6">
+        <i class="bi bi-calculator"></i>
+        CALCULAR
+    </button>
+</div>
+------------------------------------------
+
+{Grid Layout em Bootstrap
+
+Para usar GRID layout em bootstrap faço uma div=container dentro dela outra div=row
+nesta div=row adiciono varias divs que serão as colunas e as configuramos col-sm-12  EX:
+
+<div [class="container marcador-container]">
+        <div [class="row]">
+            <div [class="marcador col-6 col-sm-3 col-md-4 col-xl-5]">
+
+{Ao adicionar a classe ROW numa div, crias um sistema de 12 colunas}
+
+[container-fluid - para ocupar todo espaçamento da tela
+[col-sm          - para ter div responsivas uso col-sm para quanto atingir um dispositivo
+movel as divs se empilharem deixando o site organizado e responsivo
+[col-sm col-md col-lg ... tamanhos n especificados impilhas as divs
+--
+[Ao indicar o tamanhos das divs com uma medida (col-md-4) indico q à partir dela n haverá empilhamento
+
+[Offset - para indicar um deslocamento de uma div (offset-md-3) deslocara 3 colunas
+Posso indicar offset especificos para tamanhso das divs (offset-lg-4) para que quando
+a tela estiver em outros tamanhos o offset seja desativado
+
 
 
 
