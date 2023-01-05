@@ -1656,6 +1656,20 @@ movel as divs se empilharem deixando o site organizado e responsivo
 Posso indicar offset especificos para tamanhso das divs (offset-lg-4) para que quando
 a tela estiver em outros tamanhos o offset seja desativado
 
+---------------------------------------
+{Alinhamento em Grid-bs
+
+Divs em grid - quando tenho varias divs aninhadas dentro de outra num container posso posiciona-las
+usando a class (align-items: center, end, start)
+
+Para o alinhamento individual das divs dentro do container uso a class (align-self-end, star, center:)
+
+Para o alinhamento individual das colunas uso a class ((justify-content-end, center, start))
+
+Para dar espaçamento nas divs uso tmb (justify-content-between, around)
+
+
+
 
 
 

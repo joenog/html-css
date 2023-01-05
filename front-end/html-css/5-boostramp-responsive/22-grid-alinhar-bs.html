@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---NORMALIZE e STYLE NATIVO-->
+        <link rel="stylesheet" href="css/style07.css">
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    
+        <!---BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <style>
+            .marcador {
+                background-color: #fed9d9;
+                border: 1px solid #f94646;
+            }
+
+            .marcador-container {
+                background-color: #5df946;
+                border: 1px solid #36ae26;
+            }
+
+            .borda {
+                border: 2px solid rgb(255, 255, 255);
+            }
+
+            .divg {
+                height: 200px;
+                width: auto;
+            }
+        </style>
+
+        <title>Jumbotron e Alinhamento de Imagens</title>
+    </head>
+<body>
+    <main>
+        <div class="container">
+
+            <h2 class="display-5">Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h2>
+            <div class=" marcador row divg align-items-center">
+              <div class="col borda">Área 1</div>
+              <div class="col borda">Área 2</div>
+              <div class="col borda">Área 3</div>
+            </div>
+            <br>
+            <!------------------------------------------------------------>
+      
+            <h2>Alinhamento horizontal individual (align-self-ALINHAMENTO: start, center, end)</h2>
+            <div class="marcador divg row">
+              <div class="col borda align-self-end">Área 1</div>
+              <div class="col borda align-self-center">Área 2</div>
+              <div class="col borda align-self-start">Área 3</div>
+            </div>
+            <br>
+            <!------------------------------------------------------------>
+
+            <h2>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end)</h2>
+            <div class="marcador divg row justify-content-end">
+              <div class="marcador col-2">Área 1</div>
+              <div class="marcador col-2">Área 2</div>
+              <div class="marcador col-2">Área 3</div>
+            </div>
+            <br>
+            <!------------------------------------------------------------>
+
+            <h2>Distribuição (justify-content-ALINHAMENTO: around, between, end)</h2>
+            <div class=" marcador divg row justify-content-around">
+              <div class="marcador col-2">Área 1</div>
+              <div class="marcador col-2">Área 2</div>
+              <div class="marcador col-2">Área 3</div>
+            </div>
+            <br>
+            <!------------------------------------------------------------>
+      
+            <h2>Removendo espaçamento</h2>
+            <div class="row">
+              <div class="borda col-2">Área 1</div>
+              <div class="borda col-2">Área 2</div>
+              <div class="borda col-2">Área 3</div>
+            </div>
+      
+          </div>
+    </main>
+</body>
+</html>
