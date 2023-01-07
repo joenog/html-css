@@ -1657,6 +1657,7 @@ Posso indicar offset especificos para tamanhso das divs (offset-lg-4) para que q
 a tela estiver em outros tamanhos o offset seja desativado
 
 ---------------------------------------
+
 {Alinhamento em Grid-bs
 
 Divs em grid - quando tenho varias divs aninhadas dentro de outra num container posso posiciona-las
@@ -1667,7 +1668,26 @@ Para o alinhamento individual das divs dentro do container uso a class (align-se
 Para o alinhamento individual das colunas uso a class ((justify-content-end, center, start))
 
 Para dar espaçamento nas divs uso tmb (justify-content-between, around)
+----------------------------------------
 
+{Alinhamentos classes flexbox
+
+Devo usar a class (d-flex: pra tornar a caixa  flexbox e as classes )
+[flex-row, flex-column, flex-column, flex-row-reverse]
+
+Para Alinhamento Horizontal uso - Justify-content(star, center, end, start,between)
+
+Para o alinhamento de colunas uso na DIV - (d-flex, flex-column, flex-column-reverse)
+
+Para Alinhamento Vertical (d-flex / align-item-star, end, center, baseline, strench)
+
+Para Alinhamento individual (align-self-start, center, end, baseline, stretch)
+
+Esses alinhamentos podem ser usados em divs com iamgens textos entre outras coisas
+-
+Para usar paddin e magin nas divs D-FLEX uso (mx-auto, my-auto)
+
+Para quebrar/organizar divs aninhadas dentro de outros uso o flex-wrap
 
 
 
