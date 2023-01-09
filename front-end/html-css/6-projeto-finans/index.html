@@ -11,6 +11,9 @@
     <!--Google Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <!-- social midia buttons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!---Estilo da pagina-->
     <link rel="stylesheet" href="css/style.css">
 
@@ -23,7 +26,7 @@
       <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
         
         <div class="container">
-          <a class="navbar-brand mx-0" href="#"><img class="logo mx-md-5" src="img/logoecono.png" alt=""></a>
+          <a class="navbar-brand" href="#"><img class="logo mx-md-5" src="img/logoecono.png" alt=""></a>
           
           <button class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navpri">
             <span class="navbar-toggler-icon"></span>
@@ -33,21 +36,13 @@
         
         <div id="navpri" class="collapse navbar-collapse">
           <ul class="navbar-nav">
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#">Recursos</a>
-            </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Benefícios</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Planos</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-outline-light mx-sm-4 mx-2" href="">ENTRAR</a>
-              </li>
+
+            <li class="nav-item mx-2"> <a class="nav-link" href="pages/planos.html">Planos</a> </li>
+            <li class="nav-item mx-2"> <a class="nav-link" href="pages/beneficios.html">Benefícios</a> </li>
+            <li class="nav-item mx-2"> <a class="nav-link" href="pages/recursos.html">Recursos</a> </li>
+
+            <!-- botao -->
+            <li class="nav-item"> <a class="btn btn-outline-light mx-sm-4 mx-2" href="">ENTRAR</a> </li>
             </ul>
           </div>
         </nav>
@@ -59,25 +54,133 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-md-6 my-5">
-              <h2 class="display-4 text-light">Suas contas descomplicadas</h2>
-              <p class="text-light my-3">Usado por mais de 1 Milhão de pessoas o <strong>ECONOMIND</strong> é uma ferramenta online que facilitará sua vida financeira, de forma <strong>prática e segura</strong>.</p>
+            <div class="col-md-6 d-flex my-5">
+              <div class="align-self-center">
+                <h1 class="display-4 text-light">Prático e seguro</h1>
+                <p class="text-light my-3">Usado por mais de 1 Milhão de pessoas o <strong>ECONOMIND</strong> é uma ferramenta online que facilitará sua vida financeira.</p>
+
+                <form class="my-5" action="" method="get">
+                  <h5 class="flight text-white">Receba novidades</h5>
+                  <div class="input-group">
+                    <input class="form-control" type="text" name="email" id="email" placeholder="Seu email">
+                    <button type="button" class="btn btn-warning">Cadastre-se</button>
+                  </div>
+
+                </form>
+                
+                <p class="text-white flight">
+                  Disponivel para
+                   <a class="btn btn-outline-light btn-sm mx-1" href="#"> <span class="material-symbols-outlined">
+                    android
+                    </span> </a> 
+                   <a class="btn btn-outline-light btn-sm" href="#"> <span class="material-symbols-outlined">
+                    phone_iphone
+                    </span> </a>
+                </p>
+              </div>
             </div>
 
-            <div class="col-md-6 col-sm-3 d-sm-none d-md-block">
-              <img src="img/mdin.png" alt="">
-            </div
+            <div class="col-md-6 d-none d-md-block img-capa">
+                
+            </div>
 
           </div>
         </div>
       </section> <!--fim da sessão-->
-    </main>
-    
 
+
+      <section class="my-5"> <!-- Inicio da sessão SAIBA -->
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-6 d-flex">
+              <div class="align-self-center">
+                <h1 class="display-6">Mais acertividade</h1>
+                <p>Com o ECONOMIND, você terá profissionais do mercado a sua disposição para lhe instruir sobre qualquer investimento em qualquer cenário.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <img class="img-fluid my-2" src="img/saiba.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </section> <!-- fim da sessão saiba --> <hr class="text-black-50">
+
+
+      <section class="my-5"> <!-- inicio da sessão 2 -->
+        <div class="container">
+          <div class="row d-flex">
+
+            <div class="col-md-6 my-4">
+             <img class="img-fluid" src="img/facil.png" alt="">
+            </div>
+
+            <div class="col-md-6 align-self-center">
+              <h1 class="display-6">Aumente seu lucro</h1>
+              O efeito bola de neve invadirá sua carteira, seu patrimonio evoluirá diariamente. <br>
+
+              <a class="btn btn-outline-warning my-3" href="#">Saiba mais</a>
+            </div>
+
+          </div>
+        </div>
+      </section> <!-- fim da sessão 2 --> <hr class="text-black-50">
+
+
+      <section class="my-5"> <!-- inicio sessão 3 -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 my-4">
+              <h4 class="flight">Fácil de usar</h4>
+              <p>Temos uma plataforma simples e organizada onde você poderá ver seus investimentos de forma clara e sem confusão.</p>
+              <img class="img-fluid my-2" src="img/facil.png" alt="">
+            </div>
+
+            <div class="col-md-4 my-4">
+              <h4 class="flight">Economize tempo</h4>
+              <p>Não gaste horas do seu dias fazendo calculos dificeis, o Economind faz todo trabalho difícil para você.</p>
+              <img class="img-fluid my-2" src="img/economize.png" alt="">
+            </div>
+
+            <div class="col-md-4 my-4">
+              <h4>Suporte rápido</h4>
+              <p>Atendimento todos os dias da semana. Estamos sempre a disposição para tirar suas duvidas.</p>
+              <img class="img-fluid my-2" src="img/suporte.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section> <!-- fim sessão 3 -->
+
+    </main>
+
+    <footer class="card-footer py-4 bg-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 my-2">
+            <p>
+              <a class="link-light mx-1" href="#">RECURSOS</a>
+              <a class="link-light mx-1" href="#">BENEFÍCIOS</a>
+              <a class="link-light mx-1" href="#">PREÇOS</a>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <a href="#" class="fa fa-facebook"> </a>
+            <a href="#" class="fa fa-twitter"> </a>
+            <a href="#" class="fa fa-linkedin"> </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/65f22fe718.js" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

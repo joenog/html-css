@@ -2,5 +2,62 @@
 
 .logo {
     width: 230px;
-    margin-left: 5px;
+}
+
+.flight {
+    font-weight: lighter;
+}
+
+.btn-sm {
+    padding-top: 8px;
+}
+
+.img-capa {
+    background: url('../img/mdin.png') no-repeat center bottom;
+    background-size: contain;
+}
+
+footer p a {
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid #8d8d8d;
+    padding: 8px 6px;
+    border-radius: 5px;
+} 
+footer p a:hover {
+    color: #8a8a8a;
+    border: 1px solid #a8a8a8;
+    padding: 8px 6px;
+    border-radius: 5px;
+}
+
+
+/* config icons */
+
+.fa {
+    font-size: 1.4em;
+    text-decoration: none;
+    margin: 5px;
+
+}
+
+.fa-facebook {
+    color: #d4d4d4;
+    border: 1px solid #8d8d8d;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.fa-twitter {
+    color: #d4d4d4;
+    border: 1px solid #8d8d8d;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fa-linkedin {
+    color: #d4d4d4;
+    border: 1px solid #8d8d8d;
+    padding: 5px;
+    border-radius: 5px;
 }
