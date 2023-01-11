@@ -17,6 +17,65 @@
     background-size: contain;
 }
 
+/* config planos */
+.planos {
+    background-color: rgb(238, 238, 238);
+    padding: 0px;
+    width: 350px;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.128);
+} .planos:hover {
+    transform: translate(-5px, -5px);
+    transition-duration: .5s;
+}
+
+.plano-plus {
+    background-color: rgb(238, 238, 238);
+    padding: 0px;
+    width: 355px;
+    height: 495px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.128);
+} .plano-plus:hover {
+    transform: translate(-5px, -5px);
+    transition-duration: .5s;
+}
+
+.planos h3 {
+    background-color: #f3c331;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;   
+}
+
+.plano-plus h3 {
+    background-color: #8329e9;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;   
+}
+
+.planos ul li {
+    font-size: 1.4em;
+}
+
+.plano-plus ul li {
+    font-size: 1.4em;
+}
+
+.planos p {
+    background-color: #6c757d;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px;
+}
+
+.plano-plus p {
+    background-color: #6c757d;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
 footer p a {
     text-decoration: none;
     box-sizing: border-box;
