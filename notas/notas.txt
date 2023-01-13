@@ -1689,6 +1689,27 @@ Para usar paddin e magin nas divs D-FLEX uso (mx-auto, my-auto)
 
 Para quebrar/organizar divs aninhadas dentro de outros uso o flex-wrap
 
+{[Ao usar f12 e selecionando os itens posso sobrescrever as classes do BOOTSTRAP- e com isso
+posso personalizar ainda mais as criaçoes]}
+
+----OPINIAO SOBRE BOOTSTRAP
+3. Terceira opinião
+
+Depende da complexidade do site que precisa ser desenvolvido.
+
+Geralmente, nos trabalhos que faço, uso as 2 coisas: Bootstrap e customizações manuais.
+
+    Uso o Bootstrap basicamente apenas para resolver o grid da página — ou seja, as colunas de texto.
+Ele permite definir larguras de colunas diferentes para cada breakpoint apenas usando algumas 
+classes de CSS — isso é muito útil. Na prática, eu costumo usar apenas os arquivos
+bootstrap-reboot.css e bootstrap-grid.css, e não o Bootstrap inteiro.
+
+    Sites mais elaborados geralmente precisam de customizações manuais. Afinal, não adiantaapenas
+ter o grid responsivo, é preciso ajustar tamanhos de fonte, paddingse margins paradeixar o layout
+mais adequado para cada formato de tela. Esse tipo de ajuste fino precisa ser feito manualmente.
+---------------------------------
+
+
 
 
 

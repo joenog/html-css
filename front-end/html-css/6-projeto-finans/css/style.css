@@ -17,11 +17,12 @@
     background-size: contain;
 }
 
+
 /* config planos */
 .planos {
     background-color: rgb(238, 238, 238);
     padding: 0px;
-    width: 350px;
+    width: 340px;
     height: 380px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.128);
@@ -33,8 +34,8 @@
 .plano-plus {
     background-color: rgb(238, 238, 238);
     padding: 0px;
-    width: 355px;
-    height: 495px;
+    width: 345px;
+    height: 445px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.128);
 } .plano-plus:hover {
@@ -42,14 +43,32 @@
     transition-duration: .5s;
 }
 
+.plano-gratis {
+    background-color: rgb(238, 238, 238);
+    padding: 0px;
+    width: 355px;
+    height: 495px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.128);
+} .plano-gratis:hover {
+    transform: translate(-5px, -5px);
+    transition-duration: .5s;
+}
+
 .planos h3 {
-    background-color: #f3c331;
+    background-color: #f3c331d0;
     padding: 20px;
     border-radius: 10px 10px 0px 0px;   
 }
 
 .plano-plus h3 {
     background-color: #8329e9;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;   
+}
+
+.plano-gratis h3 {
+    background-color: #049b10d5;
     padding: 20px;
     border-radius: 10px 10px 0px 0px;   
 }
