@@ -5,6 +5,8 @@ body {
                       url(../img/ruido.png), 
                       linear-gradient(50deg, #ff4169, #7c26f8);
                       background-attachment: fixed;
+
+    overflow-x: hidden;
 }
 
 /* CONFIG HEADER */
@@ -12,6 +14,39 @@ body {
 .logo-inicio {
     height: 45px;
 }
+
+.indicador {
+    text-align: center;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.719);
+    position: absolute;
+    transform: translate(0px ,-40px);
+} .indicador:hover {
+    color: white;
+    transition-duration: .5s;
+    cursor: default;
+}
+
+@media (max-width: 576px) {
+    .indicador {
+        transform: translate(-20px ,-40px);
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .indicador {
+        transform: translate(-20px ,-40px);
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 992px ) {
+    .indicador {
+        transform: translate(-12px, -40px);
+    }
+ }
+
+
 
 /*  fim header */
 
@@ -55,7 +90,7 @@ body, main, #home {
 
 h1, .display-1 {
     font-weight: bold;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
 
 .btn-custom, .btn-roxo {
@@ -117,3 +152,86 @@ h1, .display-1 {
     }
  }
 /*   */
+
+/* CONFIGSS DOS SERVIÇOS */
+
+.text-servicos > h2, h3 {
+    text-align: left;
+    font-weight: bold;
+    color: #7c25f8;
+}
+
+.text-servicos > p {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .text-servicos > h2 {
+        font-size: 1.7em;
+        text-align: left;
+        font-weight: bold;
+        color: #7c25f8;
+    }
+
+    .text-servicos > h3 {
+        font-size: 1.4em;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .text-servicos > h2 {
+        font-size: 1.7em;
+        text-align: left;
+        font-weight: bold;
+        color: #7c25f8;
+    }
+
+    .text-servicos > h3 {
+        font-size: 1.4em;
+    }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .text-servicos > h2 {
+        font-size: 1.7em;
+        text-align: left;
+        font-weight: bold;
+        color: #7c25f8;
+    }
+
+    .text-servicos > h3 {
+        font-size: 1.4em;
+    }
+ }
+
+ /*  fim configuraçõs de serviços */
+
+ /*  inicio configs recursos*/
+
+#recursos {
+    text-align: left;
+}
+
+#recursos > h2, h3 {
+    color: #9bf0e0;
+}
+
+#recursos h2 {
+    font-weight: bold;
+}
+
+.rotate {
+    padding-left: 60px;
+    margin-top: 20px;
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+ /*  FIM CONFIGS RECURSOS  */
+
+ /*  configs foooter*/
