@@ -232,6 +232,55 @@ h1, .display-1 {
     transform: rotate(30deg);
 }
 
+
  /*  FIM CONFIGS RECURSOS  */
 
  /*  configs foooter*/
+
+ footer {
+    background-color: black;
+    padding: 50px 0px 20px 0px;
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+ }
+
+ footer h4 {
+    color: #919496;
+    font-size: .9em;
+    text-transform: uppercase;
+}
+
+footer, .nabar-nav, a {
+    text-decoration: none;
+    color: white;
+    font-size: .9em;
+ }
+ 
+ footer, .nabar-nav, a:hover {
+    color: #9bf0e0
+ }
+
+ footer a > img {
+    float: right;
+    margin: 5px;
+    height: 40%;
+ }
+
+
+ /*  imagem rodapé diminuir em mobile */
+
+ @media (max-width: 576px) {
+    footer .img-rodape {
+        width: 90px;
+        padding-bottom: 20px;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 768px) {
+    footer .img-rodape {
+        width: 90px;
+        padding-bottom: 20px;
+    }
+ }
