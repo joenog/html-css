@@ -1707,11 +1707,30 @@ bootstrap-reboot.css e bootstrap-grid.css, e não o Bootstrap inteiro.
     Sites mais elaborados geralmente precisam de customizações manuais. Afinal, não adiantaapenas
 ter o grid responsivo, é preciso ajustar tamanhos de fonte, paddingse margins paradeixar o layout
 mais adequado para cada formato de tela. Esse tipo de ajuste fino precisa ser feito manualmente.
+
+todo (data-bs é um javascript)
 ---------------------------------
 
+[Fazendo Carousel - Bootstrap]
+
+Fço uma div (Container) depois um (Row) e dentro dela uma (Col) para criar um carousel
+
+Adiciono as seguntes classes (id="carousel-1" class="carousel slide" data-bs-ride="carousel")
+
+EX:  <div id="carousel-1" class="carousel slide" data-bs-ride="carousel"> <!-- carousel -->
+                    <div class="carousel-inner"> <!-- inner -->
+
+                        <div class="carousel-item active">
+                            <img src="img/imagem1.jpeg" alt="">
+                        </div>
+
+No site boostrap posso encontrar varios outras funcionalides para o slide.
+__________________________________________________________________________
 
 
+{[JAVA SCRIPT]}
+
+- A linguagem javascript é uma linguagem de auto nivel, isso poque ele se aproxima bastante
+da linguam humana
 
 
-
-https://www.youtube.com/watch?v=vHSYytrtUSw [[VEJA QUANDO TEMINAR A CESSÃO BOOTSTRAP]

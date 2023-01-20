@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.carousel-caption, a {
+    background-color: rgba(0, 0, 0, 0.452);
+    padding-bottom: 30px;
+    width: 100%;
+    transform: translate(-110px, 0px);
+}

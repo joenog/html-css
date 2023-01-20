@@ -46,10 +46,15 @@ body {
     }
  }
 
-
-
 /*  fim header */
 
+/* controles carousel  */
+
+.carousel-control-next, .carousel-control-prev {
+    width: 3%;
+}
+
+/* fim controle carousel */
 
 /*  barra de navegação */
 
