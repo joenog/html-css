@@ -1728,9 +1728,23 @@ No site boostrap posso encontrar varios outras funcionalides para o slide.
 __________________________________________________________________________
 
 
-{[JAVA SCRIPT]}
+{{[JAVAscript}]}
 
-- A linguagem javascript é uma linguagem de auto nivel, isso poque ele se aproxima bastante
-da linguam humana
+- Javascript é uma linguagem de auto nivel, isso pq ela se aproxima bastante da linguam humana
+Linguem de alto/baixo nivel - está relacionado o quão facil esta linguagem é prum humano
 
+Exite duas forma de inclusão de javascript na pagina - internamente e externamente
+{Atente-se programas antigos podem conter inclusão de javascript diferente das atuais, essas
+estando obsoletas podem problematizar os codigos}
 
+- O javascript ao lado do cliete atua em páginas HTML
+
+- O javascript n precisa ser compilado ele é interpretado pelo browser usando o NODE.js
+
+- Um script adicionado dentro da tag HEADER será execultado primeiro por estar no topo da pag,
+isso podo causar problemas jaque comando do script serão execultados antes mesmo da pagina ser
+lida pelo browser, isso vai sejar conflitos na leitura e o script n será interpretado
+
+{{NÃO SE ESQUEÇA, COMENTAR CODIGO É UMA PRÁTICA MUITO IMPORTANTE !}}
+// comentario de uma linha
+/*   */ comentario de várias linhas
