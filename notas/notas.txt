@@ -1748,3 +1748,5 @@ lida pelo browser, isso vai sejar conflitos na leitura e o script n será interp
 {{NÃO SE ESQUEÇA, COMENTAR CODIGO É UMA PRÁTICA MUITO IMPORTANTE !}}
 // comentario de uma linha
 /*   */ comentario de várias linhas
+
+

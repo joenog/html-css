@@ -1,0 +1,716 @@
+
+window.alert       // este comando emite uma mensagem!
+window.confirm                  // este comando faz uma pergunta de confirmação
+window.prompt                  // este comando faz um pergunta de resposta!')
+________________________________________________________________________
+
+Variáveis:
+
+Como Criar variáveis, Ex: var nome ou let nome
+
+para uma variável receber um valor usamos:
+ var nome = Gustavo       // desta forma criamos uma variável e ao mesmo tempo demos uma valor a ela
+
+nome = Gustavo             //desta forma apenas demos um valor para a variável  que ja foi criada
+
+Regras das variáveis:
+Podem começar com: Letra, $ ou _
+Não podem começar com números 
+É possível usar letras ou números
+É possível usar  acentos e símbolos 
+Não pode conter espaços 
+Não pode usar palavras que são comandos
+
+Dicas para nomes das variáveis: 
+Maiúsculas e Minúsculas fazem a diferença!
+Tente escolher nomes coerentes a função da variável. Ex: Variável que vai armazenar a idade, coloca o nome dela de “idade”
+Evite se tornar um “Programador Alfabeto” ou um “Programador Numérico”. Ex: Não usar os nomes das variáveis como “a”, “b”, “c”, etc; ou “a1”, “a2”, “a3”, etc.
+
+Tipos de Dados das Variáveis: (Tipos Primitivos, lembrando que existem muitas outras!)
+
+Numbers;
+Strings;
+Boolean;
+
+// Numbers: 1; -2; 4.5; 6.555 -> Basicamente números
+// Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
+// Boolean: True; False
+________________________________________________________________________
+[AULA 6]
+Transformando uma string em um number
+
+var n1 = Number.parseInt (window.prompt ('digite aqui um numero!'))
+var numero1 = Number.parseFloat (window.prompt ('digite aqui um numero!'))
+var numero1 = Number (window.prompt ('digite aqui um numero!’))
+
+Mas qual é a diferença entra “Number.parseInt”, “Number.parseFloat” e Number?
+
+// Number.parseInt: Numero Inteiro
+// Number.parseFloat: Numero com virgula
+// Number: Js vai decidir qual é
+
+// number + number : adição
+// string + string : concatenação
+________________________________________________________________________
+
+---Transformando um number em uma string
+
+window.alert ('a soma dos numeros é: ' + soma.toString())  // Jeito mais antigo
+ou
+window.alert ('a soma dos numeros é: ' + String(soma))      // Jeito mais simples
+________________________________________________________________________
+
+---Formatando Strings:  // usando a crase dupla
+
+var teste = 'java script’
+
+‘eu estou aprendendo’ + teste
+`eu estou aprendendo ${teste}` -> não esqueça de usar crase! concatenação simples com crases 
+e var dentro de ${}  <<(placeholder)
+
+teste.length              // conta quantos caracteres tem a string 
+teste.toUpperCase()        // coloca tudo em caixa alta
+teste.toLowerCase()        // coloca tudo em minúsculo 
+()uso parenteses para a chamada do método
+________________________________________________________________________
+
+---Formatando números:
+
+Var n1 = 1545.5
+
+n1.toFixed(2) 
+// Coloca em duas casas decimais (para colocar em mais ou menos casas troque o numero entre parênteses) >> 1545.50
+
+n1.toFixed(2).replace (‘.’, ‘,’)  
+// Troca o ponto pela virgula
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+// Coloca o R$ na frente do numero (pode trocar entre outras moedas, USD)
+_________________________________________________________________________
+}}[AULA 7.] (Operadores Aritimeticos - PARTE 1)
+
+São eles:  +  -  *  /  %  
+Todos esse são operadores BINARIOS pois precisam de dois operandos(numeros)
+
+* MUTIPLICAÇÃO       -- 5 + 2 : 10
+/ DIVISÃO            -- 5 / 2 : 2.5
+
+% RESTO DA DIVISÃO   -- 5 % 2 : 1    (Divisão inteira)
+(divido 5 por 2 = 4 então sobra 1 esse valor refere-se a este operador %) (divisão inteira)
+
+** POTENCIA          -- 5 ** 2 : 25  (5² ao quadrado² é igual a 25)
+
+---
+}}7.1 ATENTE-SE À PRECEDENCIA DE OPERADORES, POSIÇÃO E CONSIDERAÇÃO
+
+EX:   5 + 3 / 2 : ??  (atente-se nas operações, na programação é considerado primeiro a divisão)
+RESP: 5 + 3 / 2 : 6.5 (3 / 2 : 1.5 esse valor + 5 é igual a 6.5)
+(A linguagem só dirá que está errado caso haja erro sintatico como na posição dos caracteres)
+
+Caso precise executar a adição primeiro depois a divisão devo colocar a parte de adição entre ( )
+usando os (parenteses) será mudada a ordem de precedencia!
+
+EX:  (5 + 3) / 2 : 4  (Agora sim primeiro a adição 5 + 3 é 8 divido por 2 será  4)
+
+}}7.2 [ORDEM CONSIDERADA RESPECTIVAMENTE] >> 
+PRIMEIRO  CALCULA-se OQ ESTÁ ENTRE (), dps  **²,  DEPOIS  *  /  %,  DEPOIS +  -
+como a * / % - tem a mesma precedencia CALCULA-se oq vier primeiro!
+EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
+
+Todos resultados gerados por qualq operação podem ser armazenados em - var (identificadores) EX:
+
+var a =  5 + 3        : 8
+var b =  a % 5        : 3   (8/5 igual a 1,, 1 vzs 5 igual à 5,, 5 para 8 igual a 3)
+var c =  5 * b ** 2   : 45  (var b:3 primeiro a potencia² > b ** 2 é igual À  9,, 9 * 5: 45)
+var d =  10 - a / 2   : 6   (var a:8 primeiro a divisão   > 8 divid por 2 é 4,, 10 menos 4: 6)
+var e =  6 * 2 / d    : 2   (*,/ tem precendencia igual   > 6 * 2 é 12,, 12 divido por 6: 2)  
+var f =  b % e + 4 / e :3   (b % e resta 1,, 1 mais (4/e: 2) 1 mais 2: 3)
+FAÇA ESSAS OPERAÇÕES NO NODE!
+----------
+}}7.3 Operadores de atribuição
+
+Nome	Operador encurtado	Significado
+Atribuição	x = y              	    x = y
+Atribuição de adição	x += y	      x = x + y
+Atribuição de subtração	x -= y	    x = x - y
+Atribuição de multiplicação	x *= y	x = x * y  ....
+---------------------
+}}7.3 Auto-atribuição
+var n = 4  >>  n = n + 4 ( somo ( n + 4: 8))  [var n] passará a valer 8
+isso é chamado de auto atribuição
+outros ex: n = n - 5  >>  (n - 5 : 3) a var n >> passará a valer 3
+outros ex: n = n * 2  >>  (n * 2 : 6) a var n >> passará a valer 6
+
+Auto-atribuição simplifica >>
+(x)QUANDO UMA VARIAVEL SE AUTO ATRIBUI POSSO SIMPLIFICAR A FORMA DA atribuição EX:
+Só posso usar este modo quando a variavel receber a si mesma.      > var k = 5
+AO inves de n = n + 4 >> [posso usar >> n += 4]                    > k *= 5
+                                                         node.>>   [25]
+                                                                   > k += 5
+------------------------------                                                      [30]
+}}7.4 OPERADORES DE INCREMENTO 
+esse incremento simplifica ainda mais o metodo(x) anterior veja!
+Esse operador sempre incrementará (1) unidade ou decrementará (-1)
+isso vai depender do sinal usado (++) ou (--)
+var n = 5
+AO inves de n = n + 1 >> posso usar >> n += 1 :6  ou incrementado 1 automatico
+n é 6 >>  (posso usar esse incremento simplificado antes ou depois da var (++n :7))
+(++n : 8   >>   ++n : 9    >>   ++n : 10   >>  --n : 9    >>   --n : 8 ....)
+
+________________________________________________________________________
+
+}}AULA 8 - Operadores part2 [OPERADORES RELACIONAIS]
+
+(> maiorq,  < menorq) (>= maior ou igual, <= menor ou igual) (== igual,  != diferent)
+-Pra toda expressao que tenha um operador relacional ligado a ela, o resultado será
+sempre um valor Booleano (false, True)
+EX:
+(5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
+(9 <= 7 : false)  (5 == 5 : true)  (4 != 4 : false)
+--Exemplo com variavel
+var a = 5 ... var b = 10  ...  (a > b : false)
+
+--Quando tenho expressao Aritimeticas e relacionais juntas resolvo primeiro 
+as Aritimeticas    --EX: seguindo as variaveis anteriores
+(var a = 5 ... var b = 10) 
+    var a >= b - 3 : false  ((var b) é 10, menos 3 é 7, logo (var a:5) não é >=7)
+        var a != b : true   ((var a: 5) é diferente da  var b: 8)
+
+------------------------------
+}}8.1 OPERADORES DE IDENTIDADE ( === , igualdade restrita)] 
+
+EX:      5 == 5 : true  (sim 5 é igual a cinco)
+         5 == '5': true  (sim, mesmo sendo uma string, o Js nao testa o tipo, Number or string)
+identic? 5 === '5': false (não é igual, usando === , a pergunta é se o valor é identico, neste
+  caso são diferentes pois o 5 é Num, e '5' uma string)
+ 5 !== '5': true  (5 é desigual restrito de '5', true!)
+
+-------------------------
+}}8.2[OPERADORES LOGICOS] !  &&  ||
+
+[!]  NEGAÇÃO -   (não) >> Requiro algo se obtivero resultado   | true  > false |
+esperado tenho TRUE, se não recebo oq peço tenho FALSE.        | false > true  |
+-EX: Operado unario, depois da !, eu coloco (false or true)    (operador unário)
+
+(!não) for true : false ,,, algo que não é verdadeiro será falso
+(!não) for false : true ,,, algo que não é falso será verdadeiro
+-------
+[&&] CONJUNÇÃO - ((e) lógico, X e Y)   >> Na conjunção requiro dois itens, so terei
+o resultado TRUE caso receba os dois, se recebo apenas um true e outros false, no fim
+o resultado sera false. Este operador é binário ou seja eu tenho dois valores logicos:
+
+true  (&& e) true : true    (true and true is true, os dois result preisam ser TRUE)
+true  (&& e) false: false   -na resposta binaria se um dos itens não for true
+false (&& e) true : false    a reposta será sempre false
+false (&& e) false: false
+-------
+[||] DISJUNÇÃO - ((ou) lógico, X ou Y) >> Da disjunção requiro dois itens, se eu
+receber os dois itens otimo TRUE, se recebo um dos itens e outro diferente TRUE,
+so terei um resultado FALSE caso os dois resultados sejam diferente do que requeri.
+- Tambem é um operador binário ha dois valores logicos:
+
+true  (||)  true: true  (basta que um deles seja verdadeiro para o resultdor ser true)
+true  (||) false: true
+false (||)  true: true
+false (||)false: false  (pipe|)
+
+-------------------------------
+}}8.3 ()ATENTE-se  quando tenho operadores logicos e relacionais na mesma operação,
+resolvo primeiro todos os operadores aritimeticos (** % / + *) depois resolvo
+os operadores relacionais (>, <, >=, <=, !=, ==,)  e por fim resolvo os 
+operadores logicos (!, &&, ||)  veja um exemplo abaixo: 
+
+(var a = 5) - (var b = 8)
+resp 2º       resolvo 1º
+[a > b] &&e  [b % 2 == 0]: false
+
+b % 2,  8 divid por 2 é 4 então me resta 0, é igual == 0, true
+a > b,  a5 não é maiorq b8, então tenho false
+------- true && false,  true AND false: (false)
+
+(var a = 5) - (var b = 8)
+resp 2º        resolvo 1º
+[a <= b] ||ou [b / 2 == 2]
+
+b8 / divid por 2 não é == igual a 2,     false \   false ||ou true: [true]
+a5 <= é menorq ou igual a b8 sim é menorq true /   basta que um seja verdadeiro
+
+**Se numa mesma operação eu tenho os 3 operadores LOGICOS essa será a ordem
+de resolução 1º - !no  depois &&and   porfim  ||or
+
+(ORDEM DE PRECEDENCIA ATUALIZADA)
+respectivamente...
+1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
+2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
+3º- Operadores Lógicos     .  [ ! &&  || ] ...  "Os logicos também devem sergui essa ordem"
+
+----------------------------
+}}8.4 - [OPERADOR TERNARIO]
+
+x [?] x [:] x - O operador ternario é a (? e :) dentro de uma mesma expressão.
+ele se chama ternario por que tem 3 partes (teste) ? (verdadeiro) : (falso)
+por isso ele se chamar ternario, porq ele junta 3 operandos...
+
+(teste) 1º é um teste lógico, com resultado (true or false)
+(verdadeiro) 2º é o que acontecera ser o resultado do teste for verdadeiro
+(false) 3º é o que acontecerá de o resultado do teste for falso
+
+var = media 8.5
+- media 8.5           (true)       (false)
+EX: média >= 7.0 [?]'APROVADO'[:]'REPROVADO'
+'APROVADO'
+
+- media += 0.5
+9.0             (true)       (false)
+- media > 9.1 ?'APROVADO':'REPROVADO'
+'REPROVADO'
+
+digitando essa expressão o resultado será aprovado ou reprovado,
+dependerá do teste logico realizado antes
+----------------------
+> var idade = 19
+19
+> var r = idade >= 18 ? 'MAIOR' : 'MENOR'
+> r
+'MAIOR'
+________________________________________________________________________
+                            [[[-RESUMO-]]]
+}OPERADORES ARITMETICOS
+EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
+
+}OPERADORES DE ATRIBUIÇÃO 
+ x = y            (a = 5)          x = x * y     (x =* y)
+ x = x + y        (x += x)         x = x / y     (x =/ y)
+ x = x - y        (x -= x)
+
+}OPERADORES RELACIONAIS
+(5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
+(9 <= 7 : false)  (5 == 5 : true)  (4 != 4 : false)
+
+}OPERADORES DE IDENTIDADE
+5 == 5 : true  (Nums iguais)
+5 == '5': true  (Num e String igual)
+5 === '5': false (Num e String são identicos ? nn)
+
+}OPERADORES LÓGICOS 
+[!] no    [&] and     [||] or
+    não       e            ou
+
+}OPERADOR TERNARIO
+X [?] X [:] X
+var = media 7.5  
+media 7.5   (test)    (true)       (false)
+EX: média >= 7.0 [?]'APROVADO'[:]'REPROVADO'  : 'REPROVADO'
+      
+}ORDEM DE PRECEDENCIA
+respectivamente...            {1º  2º  3º}
+1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
+2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
+3º- Operadores Lógicos     .  [ !  && || ] ...  "Logicos também devem seg essa ordem"
+4º- Operador Ternario      .  [[?] x [:] ] ...  "Sempre o ultimo a ser feito"
+________________________________________________________________________
+MODULO C
+}}9. [DOM - DOCUMENT OBJECT MODEL] - Modelo de objetos para documentos
+- DOM É A VERTENTE WEB DO JScript -É um conjunto de objetos poderosos dentro
+do navegador que da acesso aos objetos internos dos sites, serve pro tratamento de componentes visuais.
+
+-Entendendo o DOM
+Basicamente é um conjuto de objetos dentro do navegador que vai dar acesso aos 
+componentes internos webSite, o DOM (não funciona dentro do node JS) ele só 
+está presente quando estou rodando JS dentro do navegador 
+------------
+
+}}9.1  AROVORE DOM
+A arvore DOM começa da raiz chamada window
+(raiz)
+1.0 [window]    - (tudo do js está dentro do objeto chamado window)
+dentro do window tenho varios outros objetos >>
+1.1 [location]  - (localização do site, URL, pagATUAL, pagANTERIOR)
+1.2 [document]  - (Documento atual onde está o HTML JS)
+1.3 [history]   - (Armazena de onde vc veio pra onde você vai, facilita a navegação)
+
+dentro de DOCUMENT, tenho o object HTML
+
+[1.2 document > HTML]     > html é o um (parent) de head e body
+          > head > body   > são filhos de HTML então são (child)
+"quem está acima é PARENT, logo os ligados abaixo são CHILD"
+
+.document (parent de HTML)
+   |
+    HTML  (parent de body && child de .document)
+     / \
+head     \ body (child de HTML)          \
+ |           \                            -- [Elementos da Arvore DOM]
+ |            \                          /
+meta title     |
+             h1, p, h2, div
+
+( ESSA É A ARVORE IERARQUICA DO SITE QUE ACABEI DE CRIAR )
+---------
+
+}}9.2  SELECIONANDO ELEMENTOS NO DOM
+[metodos de acesso]
+-Posso selecionar objetos da arvore de varias formas são elas
+- (por marca)-(por ID)-(por NOME)-(por Class)-(por SELETOR)
+
+dento de .document
+(por MARCA) - getElementByTagName() 
+neste comando seleciono o primeiro paragrafo do meu doc. html
+-Seleciono por VAR
+-- var p1 = window.document.getElementsByTagName('p')[0] <--ordem d paragrafos
+window.document.write('Está escrito assim.' + p1.innerText)
+p1
+//innerText - o text oque está sdentro da tag
+//innerHTML - mostra o conteudo e a formatão dele
+
+------
+
+(por ID) getElementtByID()
+<div id="msg">Clique em mim</div>  <!--id or name-->
+var d = document.getElementById('msg')
+      div.style.background = 'gray'   // posso mudar estilo
+         div.innerText = 'Estou aguardando...'   //mudei o conteudo da div
+-----
+
+(por NEM) getElementsByName()
+ // essa mesma seleção pode ser feita por ID, NAMEs [0,1,2]...
+-----
+
+(por CLASSE) getElementsByClassName()
+-----
+
+(por seletor)  querySelector()       
+ por CSS       querySelectorAll()
+
+ <div id="query">AQUI FOI USADO O querySelector por CSS</div>
+      var divquery = document.querySelector('div#query')
+        divquery.style.background = 'purple'
+------------------------------
+
+}}10- [Eventos DOM]
+-DOM Documento object MODEL, ele é um facilitador que exite dentro do navegador
+para dar acesso aos Elementos diretamente no javaScript
+
+EVENTOS é tudo aquilo que possa acontecer com determinado item (div, h1..)
+Aventos mais comuns por exemplo numa div, são eventos de mouse, 
+- mouseEnter,  mouseMove, mouseDown,   mouseUp, click mouseOut (img ilustra)
+mouseEntrou, mouseMoveu, mousePrecionado, mouseSolto, cliquei e mouseFora
+[+info em - MDN js events (lista de eventos)]
+
+(Função em javaScript) funcion
+É um conjunto de codigo/linhas que vao ser executadas só quando o evento ocorrer
+----------
+[funcion]
+BLOCO EM javaScripté delimitado dento dos sinais de {}
+           nome evento
+em  funcion clicou() {
+  [comando que será execultado apenas quando o evento acontecer]
+  [toda pag. será carregada mas o evento só depois da ação]
+}
+
+ <div id="area" onclick="clicou()" onmouseenter="entrou()">
+        Interaja...
+    </div>
+
+EX:  <script>
+        var a = document.querySelector('div#area')
+//deixando a VAR fora do funcion posso usala para todas as açoes sem precisar repetir o codigo
+        function clicou() {
+            a.innerHTML = 'Clicou!'
+            a.style.background = 'red'
+        }
+     </script>
+    
+(EVITANDO a poluIção no parametro DIV no HTML, coloque os EVENTOS dentro do <script>) listners / ouvidores
+
+EX:       var a = document.getElementById('area')
+            a.addEventListener('click', clicou)                 / script js - coloco a  var
+            a.addEventListener('mouseenter', entrou)            \ e os listners
+            a.addEventListener('mouseout', saiu)
+________________________________________________________________________
+
+]}11 - CONDIÇÕES  part1
+
+Condição simples [if], se a condição for FLASE nada acontecerá 
+e o programa continuará rodando.
+if {}
+Condição Composta [else]  com essa ser o resultado for true o programa irá por 
+um caminha, se for false ele irá por outro caminho
+                  var pais = 'França'
+            console.log(`Vivendo em ${pais}`)
+            if (pais == 'Brasil') {
+                console.log(`Você é Brasileiro !`)
+            } else {
+                console.log(`Você é Estranjeiro!`)
+            }
+            ## textos interpolados entre crases ``
+        
+-- para execultar comando no console do VScode devo usar '' console.log ''
+________________________________________________________________________
+
+}}12 - CONDIÇÕES part2   [Condições Aninhadas]
+
+Nas condições Aninhadas posso aumentar minhas possibilidade de programação colocando
+condições dentro de condições. Aninhando uma condição dentro da outras  (aninhar.jpg)
+
+Condições aninhas 
+
+if { condição 1 }
+    se a condição 1 for verdadeira - essa será execultada
+    |
+    else {  ??  }
+        caso a condição anterior for falsa, a prox condição será chamada dentro do else
+            |
+        if { condição 2 }
+             caso a condição dois for satisfeita, essa será execultada
+             só será execultada se a cond1 for falsa
+                |
+            else {  bloco 3 }
+                    Esse será  execultado caso a condição dois for falsa
+
+img (condiçoes-aninhadas.jpg)
+**Também poderia colocar outra condição no meu bloco3, assim eu estaria aumentando 
+um nivel no meu aninhamento.
+
+[Ao fazer condiçoes sejam compostas ou aninhadas tome cuidado com ao escrever o codigo
+às vezs você pode não ter erro sintatico no codigo, mas pdoe haver erros lógicos, fazendo
+com seu programa funcione bem, mas de foma errada.]
+
+var idade = 19
+console.log(`Você tem ${idade} anos,`)
+if (idade < 16) {                                      [se a idade for menorq 16 não vota]
+    console.log('Não vota!')                            (else, if)
+} else if (idade >= 16 && idade < 18 || idade > 65) {  [senão, se a idade for < 18 e > 65, voto opcional]  
+        console.log('Voto opcional!')
+    } else if (idade >= 18) {                          [se a idade for >= 18 voto obrigatorio]
+        console.log('Voto obrigatório!')
+    }
+** ATENTE-SE A INDENTAÇÃO DO CODIGO, PARA TUDO FUNCIONAR BEM **
+ASSISTIR NOAMENTE ATÉ MINUTO 17 -- DEPOIS EXCLUA ALINHA
+--------------------------
+}}12.1  - Condiçoes Mutiplas
+
+Conheçamos a expressão switch - mais usada para valores fixos, (essa condoção/ expressão)
+serve para valores fixos, se tenho determinado resultado é execultado um comando,
+se tenho outro resultado, então outro comando diferente será execultado (cond-mutipla.jpg)
+(**essa codição mutipla não é aplicavel para todos os tipos de situação, ela não serve
+  bem para intervalos de valore com a condição if, mas sua constituição é parecida.)
+  - para essa condição usaremos o  [switch] e dentro dele o (case)
+            switch ( ){
+                case [e um bloco relacionado, igual ao if]
+            }
+            }default: // o parametro default serve como uma saida caso as condições
+            anteriores não forem o resutado esperado, 
+            }break   // dentro de cada bloco {} devemos colocar o break pois ele tem
+            a função de encerrar para que todos os parametros nao sejam executado.
+EX:
+    var agora = new Date()         // chamada da data
+    var diaSem = agora.getDay()   // os dias da semana começam em  0, 1 ,2 - dom, seg, ter
+    switch(diaSem) {
+        case 0:
+            console.log('Domingo')
+            break                              // o BREAK é obrigatorio para que nao haja erro
+        case 1:                               // break identifica o fim dum comando e segue o fluxo.
+            console.log('Segunda-Feira')
+            break
+        case 2:
+            console.log('Terça-Feira')
+            break
+        case 3:
+            console.log('Quarta-Feira')
+            break
+        default:
+            console.log('ERRO - Dia da semana inválido')
+            break
+        
+    }
+_____________________________________________________________________________
+
+}}13 - LAÇOS DE REPETIÇÃO
+
+AS REPETIÇÕES SÃO COMANDOS REPETIDOS QUE EXECUTAMOS PARA QUE UMA DETEMRINADA TAREFA SEJA 
+CONLUIDA, [de um ponto A até um ponto B vou execultando tarefas sequenciamente]. No meio 
+dessa sequencia pode haver passos que eu não deva execultar porque nem tudo é sequencial
+az vezes tenho desvios ou outras possiblidades, com isso devemos usar 
+as condiçoes que aprendemos anteriomente, seja simples ou compostas
+
+Os laços de repetição testa uma mesma condição varias vezes enquanto ela for verdadeira,
+se repete até que o valor da condição mude (images/while)   EX:
+
+}} [WHILE] ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO INICIO]
+faz-se o teste e sendo verdadeiro será feito o bloco{}
+
+enquanto
+while (condição) {     
+    [block] tudo que esta entre chaves é um bloco   
+}
+    [enquanto a condição for TRUE o laço(block) se repetira até q isso mude]
+    [quando a condição for FALSE  o fluxo será desviado para fora das {}]
+
+---------------EX
+funcion (comerPizza) {
+    while (temFatia()){    [enquanto o teste feito for TRUE o laço se repetira até q isso mude]
+        comerFatia         [enquanto houver fatias serão comidas, até que acabe e o fluxo siga]
+    }
+}
+---------------EX
+var c = 1 
+while (c <= 6) {
+    console.log(`Passos ${c}`) 
+    c++                            (o cod será incrementado +1 até que o valor chegue a 6)
+}
+---------------------------
+}[DO WHILE] - ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO FINAL
+
+var d = 2 
+do {
+    console.log(`DO-WHILE ${d}`)
+    d++
+} while (d <=3)
+
+/* (haverá casos e casos e para isso temos as duas opções) o [while] é a mais usada
+---------------------------------------
+
+}}14 REPETIÇÃO part2 - [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE]
+
+Essa estrutura é representada por um Exagono irregular <___> nele são feitas 3 coisas
+(1- INICIALIZAÇÃO  2- UM TESTE LOGICO   3- INCREMENTO)
+Na primeira passagem é feito a (inicialização e o teste lógico) SENDO este teste lógico
+verdadeiro será execultado o bloco {o bloco pode ter 1 ou varios comandos}
+Feito o bloco o laço se repetirá fazendo o 3º passo (ICREMENTO) então, o teste lógico
+é feito mais um vez e sendo verdadeiro o bloco será execultado e fará outro ICREMENTO
+e o looping vai acontecendo até que o teste lógico tenha o resultado FALSE então o codigo
+seguira para fora do bloco {}  (ESSA É [ESTRTURA DE REPETIÇÃO COM VARIÁVEL DE CONTROLE])
+
+{[WHILE e FOR] usamos quando sabemos os limites das execuções (var c=1; c<=10; c++)}
+
+---EX:
+var c = 1
+while (c <= 5) {
+    console.log('Bom dia!')
+    c++
+}
+
+/* Mesmo cod. usando FOR */
+
+for (c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e incremento]
+    console.log('Bom dia!')
+}
+
+[Posso usar o modo de DEPURAÇÃO / DEBUG, para monitorar a execução dos Scripts,
+saber se estão funcionado bem ou se há erros]
+ } Atente-se as vezes não ha erro no coddigo(sintaxe) mas pode haver erros de llogica }
+________________________________________________________________________
+
+}}15 [VARIAVEIS COMPOSTAS]
+
+- Variaveis simples só conseguem armazenar uma VAR por vez,( apenas um valor) EX:
+VAR n = 5  >>  VAR n = 20  ( o valor da var será  subistituido)
+
+- Variaveis compostas podem armazenar varios vares na mesma estrutura  EX:
+
+Criando um Array  ou ( VETOR - variável com varios espaços)
+var frutas = ['Maçã', 'Banana'];
+
+console.log(frutas.length);
+// 2
+Acessar um item (index) do Array
+var primeiro = frutas[0];
+// Maçã
+var ultimo = frutas[frutas.length - 1];
+// Banana
+-----
+Numa variavel composta, posso criar uma var com varios itens, e identificalos com indices
+(uma VAR que guarda varios valores) - auto
+vetor array  ou variavel composta  é \        - var auto = []
+[VETOR É UMA  VARIAVEL CM VARIOS ESPAÇOES]    - var auto = ['gol', 'hb20', 'argo']
+[Um VETOR  é composto por elementos]                         0       1       2  <--- indice/chave
+[UM elemento VETOR, é um par que agrupa >> O espaço na memoria, o valor atribuido a ele(nome)
+e o indice - que são os numeros das posições aos valores [0,1,2,3,4,5...]]
+
+(cada  array é composta por um 'valor' e uma  chave de identificação)
+
+----- let num = [5, 8, 2]  - um vertor com 3 elementos
+                 0  1  2
+
+let num = [5, 8, 2]
+console.log(`Nosso vetor é o ${num}`) --- Nosso vetor é o 5,8,2
+
+num[3] = 6      /* adicionando um indice [3] + valor = 6  (ou substitui indice já existente) */
+console.log(`Agora nosso vetor é ${num}`)  -- Agora nosso vetor é 5,8,2,6
+
+num.push(7)     /* o push adiciona o valor criando sempre um novo indice [4]  */
+console.log(`Agora nosso vetor é ${num}`)  -- Agora nosso vetor é 5,8,2,6,7
+
+/* Para sabe o comprimentdo de um vetor(quantidade de indices  num.length) */
+console.log(`meu vetor tem ${num.length} posições`) -- Meu vetor tem 5 posições
+
+/* mostrando posição de forma isolada */
+console.log(`O primeiro valor do vetor é ${num[0]}`)  -- O primeiro valor do vetor é 5
+console.log(num[1])  /* o segundo valor é 8 */  (5,8,2,6,7)
+
+/* metodo sort() */
+num.sort() /* colocará  os valores em oordem crescente*/  [2,5,6,7,8]
+
+**} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO PD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
+
+} Mostrando VETORES com mormataçao - não é bonita pra um produto final
+
+let valores = [1,5,6,7,8,2,5,6]
+
+console.log(valores)  - metod sem formatação
+~ [1,5,6,7,8,2,5,6]
+
+}motodo FORMATADO!   - chamado: percurso para exibição do vertor
+/*enquanto POS for menor que tamanho do vetor NUM, icremente +1 no POS*/
+for(let pos= 0; pos < num.length; pos++) {
+    console.log(num[pos])
+}
+
+} MODO SIMPLIFICAOD 
+for(let pos in num) {  /* para cada posição dentro de NUM, motrarei o NUM[pos] posição do num */ 
+    console.log(num[pos])
+}
+
+} BUSCAR valores no VETOR  indexOf(5)
+console.log(`A posição/index do 6 é: ${num.indexOf(6)}`)
+~~ A posição/index do 6 é: 1
+
+/*valor que não exita na variavel  > -1 */
+console.log(num.indexOf(55))
+________________________________________________________________________
+
+}}16 [FUNÇÕES]
+
+1º Toda funçao precisa ter uma CHAMADA, a chamada pode ser verbal ou autmatizada
+2º Preciso de um parametro de entrada para poder execultar a função
+3º Depois da chamada e do parametro de entrada peciso execultar uma ação
+4º Por fim daremos o retorno
+(CHAMADA, CONJUNT DE PARAMETROS, AÇÃO E RETORNO)
+nem todas as ações tem paramatros e retornos
+
+{{FUNÇÕES SÃO AÇÕES EXECUTADAS ASSIM QUE SAO CHAMADAS OU EM DECORRENCIA DE UM EVENTO}}
+{{UMA FUNÇÃO PDE RECEBER PARAMETROS E RETORNAR UM RESULTADO}}
+
+] DENTRO dos parenteses, adiciono PARAMETROS [ ação(X) ], esses parametros serão processados aq pela
+ação e podem ter um resultado. Essa ação não se execultará por padrão, para execultá-la preciso de
+uma CHAMADA [ ação(5) ] com essa CHAMADA, 
+
+OS PARAMETROS FICAM ENTRE PARENTESES NA FUNÇÃO ()   funcion(paramt.) {}
+              ,[(n) parametro formal]
+function chamada(n) {  
+    if (n%2 == 0) {   <[ação - calculo]
+        return 'par'   <[retorno]
+    } else {
+        return 'impar'   [tenho 2 return mas só o TRUE será aplicado ao let]
+    }
+}
+                   ,[CHAMADA- parametro real]
+let res = achamada(11)  <[aq A CHAMADA: linha de disparo da ação enviado acima]
+----------------
+
+outro exemplo:
+function soma(n1=0, n2=0) {   /* adiciono o 0 caso o numero real posteriormente n seja requerido */
+    return n1 + n2
+}
+console.log(soma(10, 5))  /* caso seja requerido apenas o 10 ele será somado com 0 citado acima */
