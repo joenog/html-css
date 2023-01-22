@@ -35,18 +35,45 @@ Boolean;
 // Numbers: 1; -2; 4.5; 6.555 -> Basicamente números
 // Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
 // Boolean: True; False
+
+// string - armaneza numeros e cadeia de caracteres
+let nome = 'Cadeia de caracteres';
+        
+// number - armazena numeros reais e inteiros
+let numeroInteiro = -7
+let numeroReal = 7.5
+
+// boolean - armazena estados - para testtes consdicionais
+let test = false
+
+// alert - serve para abrir um dialog
+// alert - normalmente e usado para debug - com alert posso expor o valor duma variável
+alert(numeroReal)
+
+// DOM - todos os elemtnos HTML contidos na paginas estão na arvore DOM
+// e posso buscalor com  - document
+document.write(nome)
+// este elemento será inserido como um nó na arvore de alements do DOM
+
+// console.log() esse comando e muito utilizado no processo de debuging
+console.log(numeroInteiro)
+// usamos o console em partes dum script longo para ver como vão evoluindo os testes
+/* quando estamos trabalhando com logicas mais complexas podemos incluir o console.log em varias
+partes para vermos a evolução */
 ________________________________________________________________________
+
+
 [AULA 6]
-Transformando uma string em um number
+Transformando uma string em Number
 
 var n1 = Number.parseInt (window.prompt ('digite aqui um numero!'))
 var numero1 = Number.parseFloat (window.prompt ('digite aqui um numero!'))
 var numero1 = Number (window.prompt ('digite aqui um numero!’))
 
-Mas qual é a diferença entra “Number.parseInt”, “Number.parseFloat” e Number?
+Mas qual é a diferença entre “Number.parseInt”, “Number.parseFloat” e Number?
 
 // Number.parseInt: Numero Inteiro
-// Number.parseFloat: Numero com virgula
+// Number.parseFloat: Numero flutuante
 // Number: Js vai decidir qual é
 
 // number + number : adição
@@ -87,6 +114,8 @@ n1.toFixed(2).replace (‘.’, ‘,’)
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 // Coloca o R$ na frente do numero (pode trocar entre outras moedas, USD)
 _________________________________________________________________________
+
+
 }}[AULA 7.] (Operadores Aritimeticos - PARTE 1)
 
 São eles:  +  -  *  /  %  

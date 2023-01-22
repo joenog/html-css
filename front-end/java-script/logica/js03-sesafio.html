@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <main>
+        <h1>Desafio</h1>
+    </main>
+
+    <span id="resp">
+        RESPOSTA
+    </span>
+
+    <!-- SCRIPT DA PAGINA -->
+    <script>
+        let num1 = Number(prompt('Digite um valor: '));
+        let num2 = Number(prompt('Digete outro valor: '));
+        let subs = num1 - num2;
+        let adic = num1 + num2;
+        let mult = num1 * num2;
+        let divi = num1 / num2;
+
+        document.querySelector('#resp');
+
+        resp.innerHTML = (`Esses são os valor ${num1} ${num2}
+                           A subtração dos numeros é: ${subs}
+                           A adição dos numeros é: ${adic}
+                           A multiplicação dos numeros é ${mult} 
+                           A divisão dos numeros e: ${divi}`);
+    </script>
+
+</body>
+</html>
