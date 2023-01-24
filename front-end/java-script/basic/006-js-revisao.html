@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVISAO HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Revisão HTML</h1>
+        <h2>Invertendo valores das variaveis</h2>
+    </header>
+
+    <script>
+
+        var a = 10;
+        var b = 20;
+        var c = null;   // variável auxiliar utilizafa na lógica
+
+        document.write('A ' + a + '</br>')
+        document.write('B ' + b + '</br>')
+        document.write('B ' + c + '</br>')
+
+        document.write('<hr>')
+
+
+        //LÓGICA DE INVERSÃO DOS VALORES  A e B
+
+        c = a;  //utilizada a variável C para armazenar temporariamente o valor da variável A (para ficar vazio)
+        a = b;  //sobreponho o valor da variável A (null) com o valor da variável B -20
+        b = c;  //sobrepóe o valor da variável B com o valor da variável C (C nesse momento contém o valor da variável A)
+        c= null; //opcional: remove o valor contido na variável C
+
+
+        document.write('A ' + a + '</br>')
+        document.write('B ' + b + '</br>')
+        document.write('C ' + c + '</br>')
+
+    </script>
+</body>
+</html>

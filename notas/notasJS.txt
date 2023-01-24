@@ -1,4 +1,25 @@
 
+{{[JAVAscript}]}
+
+- Javascript é uma linguagem de auto nivel, isso pq ela se aproxima bastante da linguam humana
+Linguem de alto/baixo nivel - está relacionado o quão facil esta linguagem é prum humano
+
+Exite duas forma de inclusão de javascript na pagina - internamente e externamente
+{Atente-se programas antigos podem conter inclusão de javascript diferente das atuais, essas
+estando obsoletas podem problematizar os codigos}
+
+- O javascript ao lado do cliete atua em páginas HTML
+
+- O javascript n precisa ser compilado ele é interpretado pelo browser usando o NODE.js
+
+- Um script adicionado dentro da tag HEADER será execultado primeiro por estar no topo da pag,
+isso podo causar problemas jaque comando do script serão execultados antes mesmo da pagina ser
+lida pelo browser, isso vai sejar conflitos na leitura e o script n será interpretado
+
+{{NÃO SE ESQUEÇA, COMENTAR CODIGO É UMA PRÁTICA MUITO IMPORTANTE !}}
+// comentario de uma linha
+/*   */ comentario de várias linhas
+
 window.alert       // este comando emite uma mensagem!
 window.confirm                  // este comando faz uma pergunta de confirmação
 window.prompt                  // este comando faz um pergunta de resposta!')
@@ -26,11 +47,11 @@ Maiúsculas e Minúsculas fazem a diferença!
 Tente escolher nomes coerentes a função da variável. Ex: Variável que vai armazenar a idade, coloca o nome dela de “idade”
 Evite se tornar um “Programador Alfabeto” ou um “Programador Numérico”. Ex: Não usar os nomes das variáveis como “a”, “b”, “c”, etc; ou “a1”, “a2”, “a3”, etc.
 
+{todas aqui são variáveis do escopo global do js}
+
 Tipos de Dados das Variáveis: (Tipos Primitivos, lembrando que existem muitas outras!)
 
-Numbers;
-Strings;
-Boolean;
+Numbers;  Strings;  Boolean;
 
 // Numbers: 1; -2; 4.5; 6.555 -> Basicamente números
 // Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
@@ -50,6 +71,14 @@ let test = false
 // alert - normalmente e usado para debug - com alert posso expor o valor duma variável
 alert(numeroReal)
 
+| // null - representa a ausencia intencial de um valor, se preciso criar uma variavel e esta 
+| inicialmente n tem valor atribuo o 'null' a ela para que seja criada valorizado
+|
+| // undefined - indica que a variável apesar de declarada de fato n possui nenhum valor. 
+| podendo atribuir o vaor 'undefinide' ou omiti-lo.
+--Nestas duas situações acima as variáveis podem ser trablhandas, podemos posteriormente
+atribuir valores a elas.
+
 // DOM - todos os elemtnos HTML contidos na paginas estão na arvore DOM
 // e posso buscalor com  - document
 document.write(nome)
@@ -60,6 +89,8 @@ console.log(numeroInteiro)
 // usamos o console em partes dum script longo para ver como vão evoluindo os testes
 /* quando estamos trabalhando com logicas mais complexas podemos incluir o console.log em varias
 partes para vermos a evolução */
+
+// posso incluir tags HTML no javascript dentro de aspas EX: - document.write('A ' + a + '</br>')
 ________________________________________________________________________
 
 
@@ -78,6 +109,7 @@ Mas qual é a diferença entre “Number.parseInt”, “Number.parseFloat” e 
 
 // number + number : adição
 // string + string : concatenação
+
 ________________________________________________________________________
 
 ---Transformando um number em uma string
@@ -96,9 +128,18 @@ var teste = 'java script’
 e var dentro de ${}  <<(placeholder)
 
 teste.length              // conta quantos caracteres tem a string 
-teste.toUpperCase()        // coloca tudo em caixa alta
-teste.toLowerCase()        // coloca tudo em minúsculo 
+teste.toUpperCase()       // coloca tudo em caixa alta
+teste.toLowerCase()       // coloca tudo em minúsculo 
 ()uso parenteses para a chamada do método
+
+
+{MODIFICANDO VARIÁVEIS}
+
+Às variáveis damos um nome que aponta a um endereço na memoria que podemos de forma temporaria
+alocar um valor, e este pode ser modificado a qualquer movimento
+| - let nome = 'maria'
+|| - nome = 'maria lucia'
+
 ________________________________________________________________________
 
 ---Formatando números:
@@ -113,6 +154,23 @@ n1.toFixed(2).replace (‘.’, ‘,’)
 
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
 // Coloca o R$ na frente do numero (pode trocar entre outras moedas, USD)
+
+________________________________________________________________________
+
+[DESAFIO]
+
+INVERTA OS VALORES DAS VARIÁVEIS A e B
+
+var a = 10;
+var b = 20;
+var c = null;   // variável auxiliar utilizafa na lógica
+
+-- reposta;
+
+c = a;  //utilizada a variável C para armazenar temporariamente o valor da variável A (para ficar vazio)
+a = b;  //sobreponho o valor da variável A (null) com o valor da variável B -20
+b = c;  //sobreponho o valor da variável B com o valor da variável C (C nesse momento contém o valor da variável A)
+c = null; //opcional: remove o valor contido na variável C
 _________________________________________________________________________
 
 
@@ -121,16 +179,16 @@ _________________________________________________________________________
 São eles:  +  -  *  /  %  
 Todos esse são operadores BINARIOS pois precisam de dois operandos(numeros)
 
-* MUTIPLICAÇÃO       -- 5 + 2 : 10
+* MUTIPLICAÇÃO       -- 5 * 2 : 10
 / DIVISÃO            -- 5 / 2 : 2.5
 
 % RESTO DA DIVISÃO   -- 5 % 2 : 1    (Divisão inteira)
-(divido 5 por 2 = 4 então sobra 1 esse valor refere-se a este operador %) (divisão inteira)
+(dividi 5 por 2 = 4 então sobra 1 esse valor refere-se a este operador %) (divisão inteira)
 
 ** POTENCIA          -- 5 ** 2 : 25  (5² ao quadrado² é igual a 25)
 
----
-}}7.1 ATENTE-SE À PRECEDENCIA DE OPERADORES, POSIÇÃO E CONSIDERAÇÃO
+--------
+}}7.1 ATENTE-SE À PRECEDENCIA DOS OPERADORES, POSIÇÃO E CONSIDERAÇÃO
 
 EX:   5 + 3 / 2 : ??  (atente-se nas operações, na programação é considerado primeiro a divisão)
 RESP: 5 + 3 / 2 : 6.5 (3 / 2 : 1.5 esse valor + 5 é igual a 6.5)
@@ -141,12 +199,13 @@ usando os (parenteses) será mudada a ordem de precedencia!
 
 EX:  (5 + 3) / 2 : 4  (Agora sim primeiro a adição 5 + 3 é 8 divido por 2 será  4)
 
+-------
 }}7.2 [ORDEM CONSIDERADA RESPECTIVAMENTE] >> 
-PRIMEIRO  CALCULA-se OQ ESTÁ ENTRE (), dps  **²,  DEPOIS  *  /  %,  DEPOIS +  -
+PRIMEIRO  CALCULA-se OQ ESTÁ ENTRE (), dps  **²,  DEPOIS  *  /  %,  POR FIM +  -
 como a * / % - tem a mesma precedencia CALCULA-se oq vier primeiro!
 EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
 
-Todos resultados gerados por qualq operação podem ser armazenados em - var (identificadores) EX:
+Todos resultados gerados por qlqr operação podem ser armazenados em - var (identificadores) EX:
 
 var a =  5 + 3        : 8
 var b =  a % 5        : 3   (8/5 igual a 1,, 1 vzs 5 igual à 5,, 5 para 8 igual a 3)
@@ -159,10 +218,10 @@ FAÇA ESSAS OPERAÇÕES NO NODE!
 }}7.3 Operadores de atribuição
 
 Nome	Operador encurtado	Significado
-Atribuição	x = y              	    x = y
-Atribuição de adição	x += y	      x = x + y
-Atribuição de subtração	x -= y	    x = x - y
-Atribuição de multiplicação	x *= y	x = x * y  ....
+Atribuição	x = y              	     x = y
+Atribuição de adição	x += y	     x = x + y
+Atribuição de subtração	x -= y	     x = x - y
+Atribuição de multiplicação	x *= y	 x = x * y  ....
 ---------------------
 }}7.3 Auto-atribuição
 var n = 4  >>  n = n + 4 ( somo ( n + 4: 8))  [var n] passará a valer 8
