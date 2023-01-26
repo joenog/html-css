@@ -30,42 +30,53 @@ Variáveis:
 Como Criar variáveis, Ex: var nome ou let nome
 
 para uma variável receber um valor usamos:
- var nome = Gustavo       // desta forma criamos uma variável e ao mesmo tempo demos uma valor a ela
+{o nome dado as variáveis é chamado de identificadores}
+ var nome1 = Gustavo       // desta forma criamos uma variável e ao mesmo tempo demos uma valor
+    {isso é chamado de atribuição}
+nome1 = Gustavo            //desta forma apenas demos um valor para a variável que ja foi criada
 
-nome = Gustavo             //desta forma apenas demos um valor para a variável  que ja foi criada
-
-Regras das variáveis:
+//Regras das variáveis:
 Podem começar com: Letra, $ ou _
 Não podem começar com números 
 É possível usar letras ou números
 É possível usar  acentos e símbolos 
 Não pode conter espaços 
-Não pode usar palavras que são comandos
+Não pode usar palavras que são comandos da linguagem js
 
-Dicas para nomes das variáveis: 
+//Dicas para nomes das variáveis: 
 Maiúsculas e Minúsculas fazem a diferença!
-Tente escolher nomes coerentes a função da variável. Ex: Variável que vai armazenar a idade, coloca o nome dela de “idade”
-Evite se tornar um “Programador Alfabeto” ou um “Programador Numérico”. Ex: Não usar os nomes das variáveis como “a”, “b”, “c”, etc; ou “a1”, “a2”, “a3”, etc.
+Tente escolher nomes coerentes a função da variável. Ex: Variável que vai armazenar a idade,
+coloca o nome dela de “idade”
+Evite se tornar um “Programador Alfabeto” ou um “Programador Numérico”. Ex: Não usar os nomes das
+variáveis como “a”, “b”, “c”, etc; ou “a1”, “a2”, “a3”, etc.
 
 {todas aqui são variáveis do escopo global do js}
-
 Tipos de Dados das Variáveis: (Tipos Primitivos, lembrando que existem muitas outras!)
-
 Numbers;  Strings;  Boolean;
 
 // Numbers: 1; -2; 4.5; 6.555 -> Basicamente números
 // Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
-// Boolean: True; False
+// Boolean: True; False  -> armazena o estdo de algo
 
 // string - armaneza numeros e cadeia de caracteres
 let nome = 'Cadeia de caracteres';
+{Para sctring em javascript eu posso usar 3 tipos de aspas (''  ""  ``)}
+{No JavaScript não há diferença entre uma string criado com aspas simples ou duplas.}
+{`` a crase usamo para interpolatar a string assim podendo adicionar calculos a string}
         
 // number - armazena numeros reais e inteiros
-let numeroInteiro = -7
-let numeroReal = 7.5
+let numeroInteiro = -7  15  
+let numeroReal = 7.5  6.2 (float com pontos flutuantes)
 
-// boolean - armazena estados - para testtes consdicionais
-let test = false
+// boolean - armazena estados - para testes condicionais (false - true)
+let n1 = 2
+ let n2 = 3
+ let resp = n1 == n2;
+  document.write(resp)
+ / false /
+
+ {Existe varios DATA TYPES in javascript - para descobri-los uso o (typeof n1)}
+-------------
 
 // alert - serve para abrir um dialog
 // alert - normalmente e usado para debug - com alert posso expor o valor duma variável
@@ -519,12 +530,18 @@ ________________________________________________________________________
 
 ]}11 - CONDIÇÕES  part1
 
-Condição simples [if], se a condição for FLASE nada acontecerá 
-e o programa continuará rodando.
-if {}
-Condição Composta [else]  com essa ser o resultado for true o programa irá por 
+{RESUMO} - Os comando (IF - ELSE) consite numa estrutura de controle, eles nos possibilita com base 
+numa determinada condiçao definir qual será o fluxo que a aplicação tomará. E eles que podemos
+fazer diversas verificações para criar fluxos dentro das nossas aplicaçoes q atendam todos os tipos
+de possiblidades, ao menos todas aquelas que sao possiveis de serem previstas. Ao prevermos 
+possiblidades dentro do nosso codigo podemos evitar falhas e bugs.
+
+Condição simples [if], se a condição for FALSE nada acontecerá e o programa continuará rodando. if {}
+
+Condição Composta [else]  com essa se o resultado for true o programa irá por 
 um caminha, se for false ele irá por outro caminho
-                  var pais = 'França'
+
+    var pais = 'França'
             console.log(`Vivendo em ${pais}`)
             if (pais == 'Brasil') {
                 console.log(`Você é Brasileiro !`)

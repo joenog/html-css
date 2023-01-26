@@ -7,10 +7,13 @@
     <title>Desafio resto da divisão</title>
 
     <style>
-        body, html {
+        html {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 2em;
+        }
 
+        body {
+            background-color: lightblue;
         }
     </style>
 </head>
@@ -29,7 +32,9 @@
 
       let resto = n1 % n2;
 
-      document.write(`O resto da divisão de ${n1} % ${n2} é : ${resto} !`.toLocaleUpperCase())
+      document.write(`O resto da divisão de ${n1} % ${n2} é : ${resto} ! </br>`.toLocaleUpperCase())
+
+      document.write(`O numero ${ n1} ** ${ n2} é : ${n1**n2}`)  //posso adiciona calculo numa string interpolada
 
     </script>
 </body>
