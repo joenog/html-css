@@ -25,14 +25,15 @@
         <img id="meme" src="../../html-css/" alt="">
 
     <script>
-        let n1 = Number(prompt('Digite um numero: '));
-        let n2 = Number(prompt('Digite outro numero: '));
+        let n1 = Number(prompt('Digite um numero:'));
+        let n2 = Number(prompt('Digite otro numero:'));
         let media = (n1 + n2) / 2;
 
         if (media >= 5) {
-            document.write('APROVADO PARABENS!')
-        } else {
-            document.write('REPROVADO !! KKKKKKKKKKKKKKKKKK ')
+            document.write(`Sua media foi ${media}, você está APROVADO`.toLocaleUpperCase());
+        } 
+        else {
+            document.write(`Sua media foi ${media}, você foi REPROVADO`.toLocaleUpperCase());
         }
 
 
