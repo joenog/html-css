@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio sorteio</title>
+    <title>if else</title>
 
     <style>
         html {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 2em;
+            font-weight: bold;
         }
 
         body {
             background-color: lightblue;
+            
         }
     </style>
+
 </head>
 <body>
     <header>
-        <h1>Desafio sorteio</h1>
+        <h1>Operadores de comparação</h1>
+        <h3>NOTAS E FALTAS</h3>
     </header>
 
     <script>
+        var notas = Number(prompt('Digite sua nota:'));
+        let media = 7;
+        let falta = Number(prompt('Digite suas  faltas'));
+        let ausen = 15;
 
-        let n1 = Number(prompt('Primeiro jogador digite um numero: '));
-        let n2 = Number(prompt('Segundo jogador digite um numero: '));
-
-        if (n1 == n2) {
-            document.write('Os valores foram iguais, EMPATE!');
-        } else if (n1 > n2) {
-            document.write('O primeiro jogador ganhou!');
+        if (notas >= media && falta <= ausen ) {
+            document.write('Você está aprovado')
         } else {
-            document.write('O segundo jogador ganhou!');
+            document.write('Você reprovou kkkkkkkkkkkkkk')
         }
-
     </script>
+
 </body>
 </html>

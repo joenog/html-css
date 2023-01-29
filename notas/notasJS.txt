@@ -265,13 +265,27 @@ isso é chamado de auto atribuição
 outros ex: n = n - 5  >>  (n - 5 : 3) a var n >> passará a valer 3
 outros ex: n = n * 2  >>  (n * 2 : 6) a var n >> passará a valer 6
 
+var n = 3
+n = n + 4   - 7
+n = n - 5   - 2
+n = n
+
 Auto-atribuição simplifica >>
 (x)QUANDO UMA VARIAVEL SE AUTO ATRIBUI POSSO SIMPLIFICAR A FORMA DA atribuição EX:
 Só posso usar este modo quando a variavel receber a si mesma.      > var k = 5
 AO inves de n = n + 4 >> [posso usar >> n += 4]                    > k *= 5
-                                                         node.>>   [25]
+                        (n + ele mesmo recebe 4)         node.>>   [25]
                                                                    > k += 5
-------------------------------                                                      [30]
+                                                                   [30]
+var n = 3 
+    n += 4       7
+    n -= 5       2
+    n *= 4       8
+    n /= 2       4
+    n **= 2      8
+    n %= 5       3   
+------------------------------ 
+
 }}7.4 OPERADORES DE INCREMENTO 
 esse incremento simplifica ainda mais o metodo(x) anterior veja!
 Esse operador sempre incrementará (1) unidade ou decrementará (-1)
@@ -312,9 +326,9 @@ identic? 5 === '5': false (não é igual, usando === , a pergunta é se o valor 
 -------------------------
 }}8.2[OPERADORES LOGICOS] !  &&  ||
 
-[!]  NEGAÇÃO -   (não) >> Requiro algo se obtivero resultado   | true  > false |
-esperado tenho TRUE, se não recebo oq peço tenho FALSE.        | false > true  |
--EX: Operado unario, depois da !, eu coloco (false or true)    (operador unário)
+[!]  NEGAÇÃO -   (não) >> Requiro algo se obtiver o resultado  | true  será> false |
+esperado tenho TRUE, se não recebo oq peço tenho FALSE.        | false será> true  |
+-EX: Operado unario, depois da !, eu coloco (false or true)      (operador unário)
 
 (!não) for true : false ,,, algo que não é verdadeiro será falso
 (!não) for false : true ,,, algo que não é falso será verdadeiro

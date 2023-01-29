@@ -7,6 +7,10 @@
     <title>PLAYLISTS</title>
     <link rel="stylesheet" href="../../css/pages.css">
     <link rel="stylesheet" href="../../css/pctab.css">
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 </head>
 <body>
     <header oncontextmenu="return false" onselectstart="return false"> <!-- inicio do header -->
@@ -20,19 +24,35 @@
 
     <main> <!-- inicio main -->
 
-    <h3>PLAYLIST HTML E CSS ../</h3>
+    <h3 class="htm-h3">PLAYLIST HTML E CSS ../</h3>
+        <!-- botão expandir playlist -->
+        <button id="showhide" onclick="clicou()">
+            <span id="icon-btn" class="material-symbols-outlined">
+                expand_more
+                </span>
+        </button>
 
-        <div class="vid">
+        <!-- video da playlist -->
+        <div class="playlist">
             <iframe class="video" width="760" height="415" src="https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <h3>LÓGICA DE PROGRAMAÇÃO ../</h3>
 
-        <div class="vid">
-            <iframe class="video" width="760" height="415" src="https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+
+        <h3 class="logic-h3">LÓGICA DE PROGRAMAÇÃO ../</h3>
+
+        <button id="showhide" onclick="clicou()">
+            <span id="icon-btn" class="material-symbols-outlined">
+                expand_more
+                </span>
+        </button>
+    
+    
+                <div class="playlist">
+                    <iframe class="video" width="760" height="415" src="https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
     </main> <!-- fim do main -->
 
-    <script src="../../script/playlist.js"></script>
+    <script src="../../js/playlist.js"></script>
 </body>
 </html>

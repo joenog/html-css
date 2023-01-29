@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+
+        .form {
+            width: 210px;
+            margin: auto;
+            font-size: .5em;
+            background-color: rgb(204, 248, 213);
+            border-radius: 5px;
+            border: 2px solid #065306;
+            padding: 20px;
+        }
+
+        .form div {
+            margin-bottom: 15px;
+        }
+
+        .form input {
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            height: 30px;
+            margin-top: 5px;
+        }
+
+        .form .enviar {
+            background-color: #065306;
+            color: white;
+            border: none;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Praticando JS - iniciante</h1>
+    </header>
+
+    <main>
+        <span id="resp">
+            Resposta
+        </span>
+    </main>
+
+    <script>
+        let n1 = Number(prompt('Digite um numero: '))
+        let n2 = Number(prompt('`Digite outro numero: '))
+        let resp = document.getElementById('resp')
+        
+        let soma = n1 + n2;
+        let subt = n1 - n2;
+        let mult = n1 * n2;
+        let divi = n1 / n2;
+        let rest = n1 % n2;
+        let expo = n1 ** n2;
+
+        resp.innerHTML = `Os valores foram ${n1}, ${n2} <br>
+                          A soma dos valores : ${soma} <br>
+                          A subtração dos valores : ${subt} <br>
+                          A mutiplicação dos valores : ${mult} <br>
+                          A divisão dos valores : ${divi} <br>
+                          O resto da divisão dos valores : ${rest} <br>
+                          A exponenciação dos valores: ${expo}`.toLocaleUpperCase();
+
+    </script>
+</body>
+</html>

@@ -6,48 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRÁTICA DEV ../</title>
     <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+
+    <!-- styles -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/pctab.css">
+
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 </head>
 
 <body>
-    <header oncontextmenu="return false" onselectstart="return false"> <!-- inicio HEADER -->
-        <h2 id="tit">PRÁTICA DEV ../</h2>
 
-        <menu> <!-- inicio menu -->
+    <header oncontextmenu="return false" onselectstart="return false"> <!-- inicio HEADER -->
+        <div id="tit">
+            <h2>PRÁTICA DEV ../</h2>
+        </div>
+
+        <div class="menu"> <!-- inicio menu -->
             <a id="menubolder" href="index.html">ÍNICIO</a> / <a href="../d09/pages/playlists/playlist.html">PLAYLISTS</a> / <a href="../d09/pages/artigos/artigos.html">ARTIGOS</a>
-        </menu> <!-- fim menu -->
+        </div> <!-- fim menu -->
 
     </header> <!-- fim heaer -->
 
 
-    <main> <!-- inicio main -->
-        <section>
-            <h3>DESTAQUES</h3>
+    <main oncontextmenu="return false" onselectstart="return false"> <!-- inicio main -->
 
-            <div class="destaque">
-                    <a href="pages/playlists/playlist.html"><img src="images/list01.png" alt="&lt;"></a>
-                    <img src="images/list02.png" alt="">
-                    <img src="images/list03.png" alt="">
-                    <img src="images/list04.png" alt="">
-            </div>
+        <h3>DESTAQUES</h3>
 
-            <h3>INSPIRADORES</h3>
-            <div class="conteudo-inicio">
-                <a href="pages/playlists/playlist.html"><img src="images/list01.png" alt="&lt;"></a>
-                <img src="images/list02.png" alt="">
-                <img src="images/list03.png" alt="">
-                <img src="images/list04.png" alt="">
-            </div>
+         <!-- botão lado esquerdo -->
+         <section class="btnL">
+            <button id="btnleft" onclick="entrouL()">
+                <span class="material-symbols-outlined">
+                    chevron_left
+                    </span>
+            </button>
         </section>
 
-        <section>
-            <h3>DICAS </h3>
+            <!-- botão lado direito -->
+            <section class="btnR">
+                <button id="btnright" onclick="entrou()">
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                        </span>
+                </button>
+            </section>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta repudiandae ab consequuntur odit consequatur dolore numquam iste perspiciatis, doloremque asperiores, incidunt quae ratione quam! Maiores id nostrum aspernatur rem provident.</p>
-        </section>
+            </section>
+
+            <section class="destaq" >
+                
+                <div class="card"><a href="pages/playlists/playlist.html"><img src="img/list01.png" alt="&lt;"></a></div>
+                <div class="card"><img src="img/list02.png" alt=""></div>
+                <div class="card"><img src="img/list03.png" alt=""></div>
+                <div class="card"><img src="img/list04.png" alt=""></div>
+            </section>
+
+        <h3 class="h3-inline">DICAS</h3>
+            <button id="showhide" onclick="clicou()">
+                <span id="icon-btn" class="material-symbols-outlined">
+                    expand_more
+                    </span>
+            </button>
+            <section class="playlist">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi omnis temporibus dicta distinctio at, aliquid iure, deleniti tenetur quisquam repellendus sed saepe delectus eos natus quia porro maiores. Distinctio, ipsum?</p>
+            </section>
+            
 
     </main> <!-- fim main -->
+
+    <script src="js/playlist.js"></script>
+
+    <script>
+        let destaq = document.querySelector('.destaq')
+        let btnright = document.querySelector('#btnright')
+        let btnleft = document.querySelector('#btnleft')
+
+        function entrou() {
+            document.querySelector('.destaq').scrollLeft += 150;
+        }
+
+        function  entrouL() {
+            document.querySelector('.destaq').scrollLeft -= 150;
+        }
+
+    </script>
+
 
 </body>
 </html>

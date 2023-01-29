@@ -1,97 +1,157 @@
 @charset "UTF-8";
 
+@charset "UTF-8";
+
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body {
-    background-color: #d3e2ff;
-    font: normal 1.3em monospace;
+:root {
+    --cor0: #d3e2ff; --cor1: #230e3f57;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px 30px 20px;
+/* CONFIG DO HEADER  */
+html, body {
+height: 100vh;
+background: 
+        url(../images/background01.png), 
+        linear-gradient(50deg, #3d098659, #2020);
+        background-blend-mode: multiply, normal;
+        background-size: contain;
+}
+
+
+header {
+    padding: 40px  30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: var(--cor1);
+}
+
+header .menu {
+    padding: 5px;
+    text-align: end;
 }
 
 #tit {
-    justify-content: left;
-    padding: 10px 0px;
+    color: black;
+    animation: roxow 3s .2s;
 }
 
-#menubolder {
-    font: bolder 1em monospace;
+            /* animation tit*/
+@keyframes roxow {
+    0% {
+        color: rgba(21, 6, 46, 0.842);
+    }
+    20% {
+        color: rgba(36, 11, 77, 0.842);
+    }
+    40% {
+        color: rgba(60, 23, 119, 0.842);
+    }
+    60% {
+        color: rgba(52, 23, 97, 0.842);
+    }
+    70% {
+        color: rgba(38, 11, 85, 0.842);
+    }
+    80% {
+        color: rgba(28, 8, 59, 0.842);
+    }
+    90% {
+        color: rgba(21, 6, 46, 0.842);
+    }
+    100% {
+        color: rgba(9, 1, 22, 0.842);
+    }
 }
 
-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 30px;
-    margin-top: 10px;
+/* FIM CONFIG DO HEADER  */
+
+/* configuranto titulo das playlist  */ 
+.htm-h3 {
+    background-color: rgb(5, 5, 107);
+    color: white;
+    margin: 15px 0px -15px 0px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
-menu > a {
-    text-decoration: underline 1px;
-    color: #551a8b;
-    margin-left: 9px;
+.logic-h3 {
+    background-color: rgb(107, 5, 39);
+    color: white;
+    margin: 15px 0px -15px 0px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
+
+
+/* INICIO CONFIG DESTAQUE */
 main {
-    padding: 10px;
+    width: 80vw;
     margin: auto;
-    background-color: rgba(116, 112, 112, 0.719);
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    main {
+        width: 90vw;
+    }
+
+}
+
+@media screen and (min-width:480px) and (max-width:600px) {
+    main {
+        width: 90vw;
+    }
 }
 
 h3 {
-    padding: 10px 0px;
-    color: white;
+    margin: 20px 0px;
 }
 
 
-picture {
-    display: flex;
-    direction: ltr;
-}
 
-img {
-    width: 300px;
-    height: 150px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.055);
-    margin: 10px;
-    border-radius: 15px;
-}
+/* CONFIG PLAYLIST */
 
-img:hover {
-    width: 300px;
-    height: 158px;
-    transform-style: preserve-3d;
-    transform: rotate3d(1, 1, 1, 3deg);
-    transition-duration: 0.5s;
-    transition-delay: 0.1s;
-    box-shadow: 3px 3px 9px #551a8b;
-}
-
-
-a:hover {
-    text-decoration: underline 3px ;
-}
-
-.vid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: scroll;
-} .vid::-webkit-scrollbar {
+.playlist {
     display: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid black;
 }
+
+button {
+    background-color: whitesmoke;
+    height: 25px;
+    width: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-left: 5px;
+}
+
+#icon-btn {
+    padding: 2px;
+    font-size: 1.7em;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.h3-inline {
+    display: inline-block;
+}
+
+/*  fim config playlist */
+
+/* confgi video*/
 
 .video {
-    padding: 20px;
-    width: 720px;  
+    display: block;
+    width: 100%;
 }
-
-
-/* CONFIGURAR MAS MOSTRAR VIDEO QUANDO LICADO IFRAME#VID
