@@ -320,7 +320,7 @@ as Aritimeticas    --EX: seguindo as variaveis anteriores
 EX:      5 == 5 : true  (sim 5 é igual a cinco)
          5 == '5': true  (sim, mesmo sendo uma string, o Js nao testa o tipo, Number or string)
 identic? 5 === '5': false (não é igual, usando === , a pergunta é se o valor é identico, neste
-  caso são diferentes pois o 5 é Num, e '5' uma string)
+  caso são diferentes pois o 5 é Num, e '5' uma string) [=== igualdade restrita]
  5 !== '5': true  (5 é desigual restrito de '5', true!)
 
 -------------------------
@@ -353,8 +353,8 @@ false (||)  true: true
 false (||)false: false  (pipe|)
 
 -------------------------------
-}}8.3 ()ATENTE-se  quando tenho operadores logicos e relacionais na mesma operação,
-resolvo primeiro todos os operadores aritimeticos (** % / + *) depois resolvo
+}}8.3 ()ATENTE-se  quando tenho operadores aritimeticos, relacionais e logicos  na mesma
+operação, resolvo primeiro todos os operadores aritimeticos (** % / + *) depois resolvo
 os operadores relacionais (>, <, >=, <=, !=, ==,)  e por fim resolvo os 
 operadores logicos (!, &&, ||)  veja um exemplo abaixo: 
 
@@ -378,9 +378,9 @@ de resolução 1º - !no  depois &&and   porfim  ||or
 
 (ORDEM DE PRECEDENCIA ATUALIZADA)
 respectivamente...
-1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
-2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
-3º- Operadores Lógicos     .  [ ! &&  || ] ...  "Os logicos também devem sergui essa ordem"
+1º- Operadores Aritimeticos.  [ () ** /  ] ... "Siga a ordem depois faça os outros"
+2º- Operadores Relacionais .  [ >  <  >= ] ... "Sem ordem de precedencia"
+3º- Operadores Lógicos     .  [ ! &&  || ] ... "Os logicos também devem serguir essa ordem"
 
 ----------------------------
 }}8.4 - [OPERADOR TERNARIO]

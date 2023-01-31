@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Js</title>
+
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual a sua idade ?</h1>
+
+    <script>
+        /*let idade = Number(prompt('Qual tua idade ?'))
+        let r = idade >= 18 ? 'Você é de maior pode entrar!' : 'De menor, Vaza!'
+
+        document.write(`${r}`)*/
+
+        let media = Number(prompt('Sua nota: '))
+        let faltas = Number(prompt('Suas faltas: '))
+        let res = (media >= 7 && faltas <= 15 ? 'Aprovado!' : 'Reprovado!')
+        document.write(res)
+    </script>
+</body>
+</html>
