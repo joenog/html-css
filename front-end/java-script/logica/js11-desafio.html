@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 11</title>
+</head>
+<body>
+    <header>
+        <h1>Faça um script que leia 3 numeros e mostre o maior entre eles!</h1>
+    </header>
+
+    <span id="resp">
+        resultado
+    </span>
+
+
+    <script>
+        let n1 = Number(prompt('Digite o primeiro numero:'))
+        let n2 = Number(prompt('Digite o segundo numero:'))
+        let n3 = Number(prompt('Digite o terceiro numero:'))
+        let resp = document.querySelector('#resp')
+
+        if (n1 >  n2  && n1 > n3) {
+            resp.innerHTML = `${n1} é o maior numero!`
+        } else if (n2 > n1 && n2 > n3) {
+            resp.innerHTML = `${n2} é o maior numero!`
+        } else {
+            resp.innerHTML = `${n3} é o maior numero!`
+        }
+    </script>
+</body>
+</html>

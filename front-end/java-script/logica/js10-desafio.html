@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semaforo</title>
+
+    <style>
+        body {
+            background-image: url('../img/DALL·E\ 2023-02-01\ 16.04.19\ -\ street\ in\ cartoon.png');
+            background-size: cover;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+
+        #container {
+            position: fixed;
+            transform: translate(-250px, 20px);
+            background-color: rgb(31, 30, 30);
+            height: 320px;
+            width: 120px;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: -10px -2px 0px black;
+        }
+
+        .verm {
+            background-color: rgba(255, 0, 0, 0.541) ;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px;
+        } .verm:hover {
+            background-color: red;
+            box-shadow: 2px 2px 15px rgb(248, 0, 0);
+        }
+
+        .amare {
+            background-color: rgba(255, 255, 0, 0.473) ;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px;
+        } .amare:hover {
+            background-color: yellow;
+            box-shadow: 2px 2px 15px rgb(251, 255, 0);
+        }
+
+        .verde {
+            background-color: rgba(0, 128, 0, 0.397) ;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px;
+        } .verde:hover {
+            background-color: rgb(2, 196, 2);
+            box-shadow: 2px 2px 15px rgb(0, 255, 0);
+        }
+
+        .resp {
+            display: none;
+            background-color: gray;
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .ocult {  /* botão de ocultar mensagem */
+            position: fixed;
+            transform: translate(-250px, 350px);
+
+            border: 2px solid rgb(70, 70, 70);
+            border-radius: 5px;
+            font-weight: bold;
+            background-color:rgb(49, 49, 49);
+            color: white;
+            height: 40px;
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div class="verm" onclick="verm()">
+                <p>k</p>
+            </div>
+            <div class="amare" onclick="amare()">
+            </div>
+            <div class="verde" onclick="verde()">
+            </div>
+        </div>
+        <div class="resp">
+        
+        </div>
+        <button class="ocult" onclick="ocultar()">
+            OCULTAR
+        </button>
+    </main>
+
+    <script>
+        let verme = document.querySelector('.verm')
+        let amarel = document.querySelector('.amare')
+        let verdee = document.querySelector('.verde')
+        let resp = document.querySelector('.resp')
+        let ocult = document.querySelector('.ocult')
+
+        function verm() {
+            resp.style.display = 'block'
+            resp.innerHTML = 'Sinal vermelho! Pare antes da faixa de predestre!';
+        }
+
+        function amare() {
+            resp.style.display = 'block'
+            resp.innerHTML = 'Sinal amarelo! Pare e observe ambos lados!'
+        }
+
+        function verde() {
+            resp.style.display = 'block'
+            resp.innerHTML = 'Sinal verde! Pode passar, fdm kkkkkkkkkkkk!'
+        }
+
+        function ocultar() {
+            resp.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
