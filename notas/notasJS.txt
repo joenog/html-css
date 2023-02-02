@@ -634,17 +634,17 @@ ASSISTIR NOAMENTE ATÉ MINUTO 17 -- DEPOIS EXCLUA ALINHA
 --------------------------
 }}12.1  - Condiçoes Mutiplas
 
-Conheçamos a expressão switch - mais usada para valores fixos, (essa condoção/ expressão)
+Conheçamos a expressão switch - mais usada para valores fixos, (essa condição/ expressão)
 serve para valores fixos, se tenho determinado resultado é execultado um comando,
 se tenho outro resultado, então outro comando diferente será execultado (cond-mutipla.jpg)
 (**essa codição mutipla não é aplicavel para todos os tipos de situação, ela não serve
-  bem para intervalos de valore com a condição if, mas sua constituição é parecida.)
+bem para intervalos de valores como a condição if, mas sua constituição é parecida.)
   - para essa condição usaremos o  [switch] e dentro dele o (case)
             switch ( ){
                 case [e um bloco relacionado, igual ao if]
             }
-            }default: // o parametro default serve como uma saida caso as condições
-            anteriores não forem o resutado esperado, 
+            }default: // o parametro default serve como uma saída caso as condições
+            anteriores não forem o resutado esperado, (default é como o ELSE)
             }break   // dentro de cada bloco {} devemos colocar o break pois ele tem
             a função de encerrar para que todos os parametros nao sejam executado.
 EX:
@@ -665,9 +665,8 @@ EX:
             break
         default:
             console.log('ERRO - Dia da semana inválido')
-            break
-        
-    }
+            break   
+    }  [A condiciona (Switch) só aninalisa oq é identico ===]
 _____________________________________________________________________________
 
 }}13 - LAÇOS DE REPETIÇÃO
