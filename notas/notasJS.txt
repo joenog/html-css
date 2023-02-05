@@ -283,10 +283,22 @@ var n = 3
     n *= 4       8
     n /= 2       4
     n **= 2      8
-    n %= 5       3   
+    n %= 5       3  
+
+ A atribuição também é válida para Strings
+ let nome = 'Bom dia, '
+ nome += 'Jon
+ ---'Bom dia, Jon' 
 ------------------------------ 
 
 }}7.4 OPERADORES DE INCREMENTO 
+
+incremento pre  ++num
+incremento pós  num++
+Estas são feitas a nivel de instrução, o pre-incremento disponibiliza o valor atualizado
+dentrodo contexto da instruçao onde a operção é feita, eo pós-incremento disponibliza
+o valor atualizado somente após a execuçao da instrução onde a operação está contida.
+
 esse incremento simplifica ainda mais o metodo(x) anterior veja!
 Esse operador sempre incrementará (1) unidade ou decrementará (-1)
 isso vai depender do sinal usado (++) ou (--)
@@ -415,11 +427,20 @@ ________________________________________________________________________
                             [[[-RESUMO-]]]
 }OPERADORES ARITMETICOS
 EX: (3 + 2) ** 2 * 2 / 5 % 3 + 6 - 2: 5
+incremento pre  ++num    /  decremento pre  ++num
+incremento pós  num++    /  decremento pós  num++
+Estas são feitas a nivel de instrução, o pre-incremento disponibiliza o valor atualizado
+dentro do contexto da instruçao onde a operção é feita, eo pós-incremento disponibliza
+o valor atualizado somente após a execuçao da instrução onde a operação está contida.
 
 }OPERADORES DE ATRIBUIÇÃO 
  x = y            (a = 5)          x = x * y     (x =* y)
  x = x + y        (x += x)         x = x / y     (x =/ y)
  x = x - y        (x -= x)
+ A atribuição também é vaálida para Strings
+ let nome = 'Bom dia, '
+ nome += 'Jon
+ ---'Bom dia, Jon'
 
 }OPERADORES RELACIONAIS
 (5 > 2 : true)    (7 < 4 : false)  (8 >= 8 : true)
@@ -537,16 +558,27 @@ mouseEntrou, mouseMoveu, mousePrecionado, mouseSolto, cliquei e mouseFora
 
 (Função em javaScript) funcion
 É um conjunto de codigo/linhas que vao ser executadas só quando o evento ocorrer
-----------
+a função encapsula determinado block de codigo com objetivo bem definido e atravez das
+chamadas das funções podemos executalas
+funcion Nome da Função. ['verb'substantiv - abrirJanela] mesma regra para criação de VAR
+Lista de argumentos para a função, entre parênteses e separados por vírgulas. ( )
+Declarações JavaScript que definem a função, entre chaves { }.
+Essas declaração/parametros são variaveis criadas que serevem para auxiliaa a fincion
+
+-Dentro da Funcion posso incluir de tudo - Estruturas de repetições, condicionas, swift,
+podmeos declara variaveis, podemos utilizar operadores aritmeticos e ETC. emfim, 
+a intenção é criar um subprograma da nossa aplicação
+
+---------- Sitaxe funcion
 [funcion]
-BLOCO EM javaScripté delimitado dento dos sinais de {}
+BLOCO EM javaScript é delimitado dento dos sinais de {}
            nome evento
-em  funcion clicou() {
+em  funcion clicarJanela() {
   [comando que será execultado apenas quando o evento acontecer]
   [toda pag. será carregada mas o evento só depois da ação]
 }
 
- <div id="area" onclick="clicou()" onmouseenter="entrou()">
+ <div id="area" onclick="clicarJanela()" onmouseenter="entrou()">
         Interaja...
     </div>
 

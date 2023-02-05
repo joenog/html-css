@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        html {
+            background-color: rgb(126, 36, 126);
+        }
+
+        section {
+            width: 50vw;
+            margin: auto;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px auto;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
+        }
+
+
+        h2 {
+            margin: 20px 0px;
+        }
+
+        #resp {
+            display: block;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px auto;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.233);
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <main>
+
+        <section>
+            <h2>Cálculo IMC</h2>
+            <p>
+                IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
+            
+                O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+            
+                Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela.
+                Importante: siga os exemplos e use pontos como separadores.</p>
+
+                <span id="resp">
+                    RESPOSTA
+                </span>
+        </section>
+
+    </main>
+
+    <script>
+
+        let nome = prompt('Seu nome: ')
+        let altu = Number(prompt('Sua altura: ')) / 100;
+        let peso = Number(prompt('Seu peso:'))
+        let resp = document.querySelector('#resp')
+        let conv = peso / altu ** 2
+        conv = conv.toFixed(2)
+    
+        
+        if (conv < 16) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Baixo peso muito grave`)
+        } else if (conv >= 16 && conv <= 16.99) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Baixo peso grave`)
+        } else if (conv >= 17 && conv <= 18.49) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Baixo peso`)
+        } else if (conv >= 18.50 && conv <= 24.99) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Peso normal`)
+        } else if (conv >= 25 && conv <= 29.99) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Sobrepeso`)
+        } else if (conv >= 30 && conv <= 34.99) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Obesidade grau I`)
+        } else if (conv >= 35 && conv <= 39.99) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Obesidade grau II`)
+        } else if (conv >= 40) {
+            resp.innerHTML = (`Oi ${nome} seu IMC: ${conv} </br> Obesidade grau III`)
+        }
+
+    </script>
+
+</body>
+</html>
