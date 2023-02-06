@@ -574,8 +574,9 @@ a intenção é criar um subprograma da nossa aplicação
 BLOCO EM javaScript é delimitado dento dos sinais de {}
            nome evento
 em  funcion clicarJanela() {
-  [comando que será execultado apenas quando o evento acontecer]
+  [comando que será execultado apenas quando o event acontecer]
   [toda pag. será carregada mas o evento só depois da ação]
+  [os parametros () devem ser preenchidos respectivamente]
 }
 
  <div id="area" onclick="clicarJanela()" onmouseenter="entrou()">

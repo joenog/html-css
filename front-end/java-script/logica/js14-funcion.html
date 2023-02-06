@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcions JS</title>
+
+    <style>
+        body {
+            width: 60vw;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #card {
+            display: none;
+            background-color: blueviolet;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 1px solid black;
+            animation: coloree 8s .5s;
+        }
+
+        #button {
+            position: fixed;
+            top: 200px;
+        }
+
+        @keyframes coloree {
+            0% {
+                background-color: blueviolet;
+            }
+
+            40% {
+                background-color: rgb(104, 34, 170);
+            }
+
+            80% {
+                background-color: rgb(60, 18, 100);
+            }
+
+            100% {
+                background-color: blueviolet;
+            }
+        }
+
+    </style> 
+
+</head>
+<body>
+    <h2>Funcions JS</h2>
+
+    <span id="resp">
+        salario
+    </span>
+
+    <button onclick="clicou()">
+        CALCULAR
+    </button>
+
+
+    <script>
+        /*
+        let largura = Number(prompt('Largura do terreno: '))
+        let comprimento = Number(prompt('Comprimento do terreno: '))
+       
+        function calcularArea(largura, comprimento) {
+
+            var area = largura * comprimento;
+            //document.write(`Ò terreno possui ${area} metros quadrados!`)
+
+            return area;
+            // o retorno pode ser uma 'string' um valor bloolean 'true' , um number ou uma variavel..
+
+        }
+
+        let area = calcularArea(largura, comprimento)
+
+        document.write(`O terreno mede ${area} metros quadrado`);  //parametros respectivamento*/
+
+        
+
+        let vhora = Number(prompt('Qual valor hora?'))
+        let hdia = Number(prompt('Quantas horas trab por dia ?'))
+        let res = document.querySelector('#res')
+
+        function calcularSalario(vhora, hdia) {
+           
+            let salario = vhora * hdia * 4;
+
+            return salario;
+        }
+
+        function clicou() {
+            
+            let salario = calcularSalario(vhora, hdia);
+            
+            resp.innerHTML = `Seu salario mensão é de: ${salario} reais!`
+        }
+
+    </script>
+</body>
+</html>

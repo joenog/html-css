@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcions ex3</title>
+
+    <style>
+        main {
+            width: 60vw;
+            margin: auto;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: bisque;
+        }
+
+        #card {
+            display: block;
+            background-color: rgb(1, 105, 100);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.185);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            color: white;
+        }
+
+        button {
+            background-color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.075);
+        }
+    </style>
+
+</head>
+<main>
+    
+    <header>
+        <h2>Calculando IMC</h2>
+
+    </header>
+
+    <main>
+       
+        <span id="card">
+            IMC
+        </span>
+
+        <button onclick="clicou()">
+            Calcular
+        </button>
+        
+    </main>
+
+
+    <script>
+
+        let res = document.querySelector('#card');
+
+        let altura = Number(prompt('Sua altura em CM:'));
+        let peso = Number(prompt('Seu peso:'));
+
+        function calcImc(altura, peso) {
+            let imc = peso / (altura  / 100 ) ** 2;
+
+            return imc;
+        }
+
+        let imc = calcImc(altura, peso).toFixed(2);
+        
+        function clicou() {
+            res.innerHTML = `Seu IMC é: ${imc}`
+        }
+
+    </script>
+
+
+</body>
+</html>
