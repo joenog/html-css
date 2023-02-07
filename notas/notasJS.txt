@@ -437,7 +437,7 @@ o valor atualizado somente após a execuçao da instrução onde a operação es
  x = y            (a = 5)          x = x * y     (x =* y)
  x = x + y        (x += x)         x = x / y     (x =/ y)
  x = x - y        (x -= x)
- A atribuição também é vaálida para Strings
+ A atribuição também é válida para Strings
  let nome = 'Bom dia, '
  nome += 'Jon
  ---'Bom dia, Jon'
@@ -468,6 +468,95 @@ respectivamente...            {1º  2º  3º}
 3º- Operadores Lógicos     .  [ !  && || ] ...  "Logicos também devem seg essa ordem"
 4º- Operador Ternario      .  [[?] x [:] ] ...  "Sempre o ultimo a ser feito"
 ________________________________________________________________________
+
+][Escopos em Javascript]
+
+O que é escopo ?
+    Escopo é a acessibilidade de objetos, variáveis e funções em diferentes partes do código.
+Em outras palavras, o que determina quais são os dados que podem ser acessados em umadeterminada
+parte do código é o escopo. Imagine que escopo é uma caixa e tudo que for criado nela pode ser
+acessado por qualquer objeto dentro da mesma. Um escopo é criado sempreque definimos uma função.
+[+ info: https://imasters.com.br/desenvolvimento/escopos-em-javascript]
+
+1- Escopo global: Escopo do script como um topo
+2- Escopo de funcao: Corresponde ao coneudo dentro de um bloco de funcão
+3- Escopo de bloco: São instruções inseridas dentro de comandos como - if, switch {}
+
+Sabendo-se que exitr 3 tipos de escp´ps vamso entender como a declaração de variaveis
+utilizando o operador VAR se comporta em cada um desses escopos.
+
+))VAR global podem ser acessadas pelos escopso de /função e blocos/
+
+var nome = 'Maria';
+        if (true) {
+            document.write(nome);
+        }
+
+        document.write('</br> </br>')
+
+        function x() {
+            document.write(nome);
+        }
+        x()  // chamando a função
+
+))VAR criando dentro dum escopo de bloco pode ser acessado de forma global, pois o comando
+[-VAR faz um Hoisting(içamento) uma elevação de declaração de variavel, fazendo com que
+a variavel seja acessada em qualquer parte do codigo, VEJA:
+
+var nome = 'Maria';
+        if (true) {
+            var seie = 'Mr robot'
+            document.write(nome);
+        }
+
+        document.write(serie)       // podera ser acessada no escopo global
+
+        document.write('</br> </br>')
+
+        function x() {
+            document.write(nome);
+            document.write(serie)    // poderá ser acessada no escopo funcao
+        }
+        x()  // chamando a função
+
+))Porem, se eu criar uma VAR dentro do escopo de função está não sofrerá um Hoisting(elevação)
+pois as variaveis criadas em Funcion pertencem apenas a si mesma.
+
+var nome = 'Maria';
+        //escopo de block
+        if (true) {
+            var serie = 'Mr robot'
+            document.write(nome);
+        }
+        // parte global
+        document.write('</br> </br>')
+        document.write(serie)
+        
+        document.write('</br> </br>')
+
+
+        //escopo de funcao
+        function x() {
+
+            document.write(nome);
+            document.write(serie)
+
+            var idade = 'Dezoito'
+        }
+
+        x()
+        document.write(idade)  // variavel declarada em funcion, n será exibida no escopo global.
+
+)) EM RESUMO: 
+Se eu declaro uma variável no escopo global, consigo usa-la dentro de um escopo de bloco e de função.
+
+Declarando no escopo de bloco, depende de onde este bloco se encontra. Se global eleva global,
+Se função eleva para função.
+
+No escopo de função só conseguirei usar a variável dentro da função em que a variável foi declarada.
+
+________________________________________________________________________
+
 MODULO C
 }}9. [DOM - DOCUMENT OBJECT MODEL] - Modelo de objetos para documentos
 - DOM É A VERTENTE WEB DO JScript -É um conjunto de objetos poderosos dentro
@@ -591,6 +680,11 @@ EX:  <script>
             a.style.background = 'red'
         }
      </script>
+
+[ Os paramentros () em JS podem ser passados ou não, também pdoem ser incluindo mais parametros
+doq se é esperando, o JS só considerará os parametros que são mencionados dentro do funcion. 
+E caso o valor do parametro n for passado ou apenas um for, o segundo será entendido com undefined
+trandendo o resultado NaN - not a number.
     
 (EVITANDO a poluIção no parametro DIV no HTML, coloque os EVENTOS dentro do <script>) listners / ouvidores
 

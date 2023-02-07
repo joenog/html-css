@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo Variaveis</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Escopo variaveis</h1>
+    </header>
+
+    <script>
+
+        var nome = 'Maria';
+        //escopo de block
+        if (true) {
+            var serie = 'Mr robot'
+            document.write(nome);
+        }
+        // parte global
+        document.write('</br> </br>');
+        document.write(serie);
+        
+        document.write('</br> </br>');
+
+
+        //escopo de funcao
+        function x() {
+
+            document.write(nome);
+            document.write(serie);
+
+            var idade = 'Dezoito';
+        }
+
+        x()
+        document.write(idade)  // variavel declarada dentro de funcion, não será exibida no escopo global
+
+
+    </script>
+</body>
+</html>

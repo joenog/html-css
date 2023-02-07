@@ -56,7 +56,7 @@
 
     <script>
 
-        let res = document.querySelector('#card');
+        /*let res = document.querySelector('#card');
 
         let altura = Number(prompt('Sua altura em CM:'));
         let peso = Number(prompt('Seu peso:'));
@@ -71,7 +71,16 @@
         
         function clicou() {
             res.innerHTML = `Seu IMC é: ${imc}`
+        }*/
+
+        function soma(a, b) {
+            /* caso um parametro n seja passado, posso atribuir a var um valor pre-definido atribuindo a si
+             mesma como no ex abaixo*/
+            b = b === undefined ? 0 : b;
+            return a + b;
         }
+
+        document.write(soma(2,));
 
     </script>
 
