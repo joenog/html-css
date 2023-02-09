@@ -17,16 +17,16 @@
     </header>
 
     <script>
-
+/*
         var nome = 'Maria';
         //escopo de block
         if (true) {
             var serie = 'Mr robot'
-            document.write(nome);
+            document.write(nome); //maria
         }
         // parte global
         document.write('</br> </br>');
-        document.write(serie);
+        document.write(serie);  //mr robot
         
         document.write('</br> </br>');
 
@@ -34,15 +34,51 @@
         //escopo de funcao
         function x() {
 
-            document.write(nome);
-            document.write(serie);
+            document.write(nome);    //maria
+            document.write(serie);   //mr robot
 
             var idade = 'Dezoito';
         }
 
         x()
         document.write(idade)  // variavel declarada dentro de funcion, não será exibida no escopo global
+*/
 
+        //---------------------------
+
+        var nome = 'John'
+
+        //escopo de bloco
+        if (true) {
+
+            document.write(nome);    // john será exibido
+            document.write('<br>')
+
+            var serie = 'The flash'
+        }
+        //escopo global
+
+            document.write(nome)    // jhon será exibido
+            document.write('<br>')
+
+            document.write(serie)   // the flash será exivido, pois a var num bloco é içada
+            document.write('<br>')
+
+        //escopo de funcao
+        function x() {
+
+            document.write(nome)   // jhon será exibido pois a var num bloco é içada
+            document.write('<br>')
+
+            document.write(serie)
+
+            var idade = 'quize'
+        }
+
+        document.write(idade)  // idade n será exibida pois n há içamento dentro de funcion
+        x()
+
+        // porém se crio um funcio e dentr dela um bloco, o içamento acontecerá do bloco ao funcion
 
     </script>
 </body>

@@ -37,7 +37,7 @@ header .menu {
 }
 
 #tit {
-    color: black;
+    color: rgb(26, 3, 48);
     animation: roxow 3s .2s;
 }
 
@@ -70,6 +70,51 @@ header .menu {
 }
 
 /* FIM CONFIG DO HEADER  */
+
+/* breakpoint cel e tab */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    main {
+        width: 90vw;
+    }
+
+    header {
+        grid-template-columns: auto;
+    }
+
+    header .menu {
+        margin: 20px 0px 0px -10px;
+        padding: 0px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width:480px) and (max-width:600px) {
+    main {
+        width: 90vw;
+    }
+
+    header {
+        grid-template-columns: auto;
+    }
+
+    header .menu {
+        margin: 20px 0px 0px -10px;
+        padding: 0px;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (min-width:600px) and (max-width:835px) {
+    main {
+        width: 90vw;
+    }
+}
+                /* fim breakpoints */
 
 /* configuranto titulo das playlist  */ 
 .htm-h3 {
@@ -119,7 +164,7 @@ h3 {
 
 /* CONFIG PLAYLIST */
 
-.playlist {
+.playlisthtml, .playlistlogica {
     display: none;
     background-color: white;
     border-radius: 5px;

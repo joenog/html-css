@@ -499,9 +499,9 @@ var nome = 'Maria';
         }
         x()  // chamando a função
 
-))VAR criando dentro dum escopo de bloco pode ser acessado de forma global, pois o comando
+))VAR criada dentro dum escopo de bloco pode ser acessado de forma global, pois o comando
 [-VAR faz um Hoisting(içamento) uma elevação de declaração de variavel, fazendo com que
-a variavel seja acessada em qualquer parte do codigo, VEJA:
+a variavel seja acessada em qualquer parte do codigo, global e funcion{}, VEJA:
 
 var nome = 'Maria';
         if (true) {
@@ -521,6 +521,8 @@ var nome = 'Maria';
 
 ))Porem, se eu criar uma VAR dentro do escopo de função está não sofrerá um Hoisting(elevação)
 pois as variaveis criadas em Funcion pertencem apenas a si mesma.
+{Um escopo de bloco(if, switch) criado dentro duma funcion poderá ser içado para fora
+fazendo com que o funcion use suas variaveis!}
 
 var nome = 'Maria';
         //escopo de block
@@ -559,13 +561,13 @@ ________________________________________________________________________
 
 MODULO C
 }}9. [DOM - DOCUMENT OBJECT MODEL] - Modelo de objetos para documentos
-- DOM É A VERTENTE WEB DO JScript -É um conjunto de objetos poderosos dentro
-do navegador que da acesso aos objetos internos dos sites, serve pro tratamento de componentes visuais.
+- DOM É A VERTENTE WEB DO JScript -É um conjunto de objetos poderosos dentro do navegador
+que da acesso aos objetos internos dos sites, serve pro tratamento de componentes visuais.
 
 -Entendendo o DOM
 Basicamente é um conjuto de objetos dentro do navegador que vai dar acesso aos 
-componentes internos webSite, o DOM (não funciona dentro do node JS) ele só 
-está presente quando estou rodando JS dentro do navegador 
+componentes internos  do webSite, o DOM (não funciona dentro do node JS) ele só 
+está presente quando estou rodando JS dentro do navegador.
 ------------
 
 }}9.1  AROVORE DOM
@@ -608,36 +610,50 @@ neste comando seleciono o primeiro paragrafo do meu doc. html
 -- var p1 = window.document.getElementsByTagName('p')[0] <--ordem d paragrafos
 window.document.write('Está escrito assim.' + p1.innerText)
 p1
-//innerText - o text oque está sdentro da tag
-//innerHTML - mostra o conteudo e a formatão dele
+//innerText - o text oque está dentro da tag
+//innerHTML - mostra o conteudo e a formatação dele
 
 ------
 
 (por ID) getElementtByID()
 <div id="msg">Clique em mim</div>  <!--id or name-->
+
 var d = document.getElementById('msg')
       div.style.background = 'gray'   // posso mudar estilo
          div.innerText = 'Estou aguardando...'   //mudei o conteudo da div
 -----
 
-(por NEM) getElementsByName()
+(por NAME) getElementsByName()
  // essa mesma seleção pode ser feita por ID, NAMEs [0,1,2]...
+ elementos como form onde há names
 -----
 
 (por CLASSE) getElementsByClassName()
+Quando o comando estiver no plural 'ElementS' devo usar o identificado [] para indicar a ordem
 -----
 
-(por seletor)  querySelector()       
+(por seletor)  querySelector()    ('.classe)  ('#id)   
  por CSS       querySelectorAll()
 
  <div id="query">AQUI FOI USADO O querySelector por CSS</div>
       var divquery = document.querySelector('div#query')
         divquery.style.background = 'purple'
+
+--Quando tenho mais de um obejtos da mesma classe ou do mesmo nome vou usar mais 
+(getElementsByName)
+--Quando quer selecionar um objeto ou a famiila deles vou usar o (getElementById)
 ------------------------------
 
 }}10- [Eventos DOM]
 -DOM Documento object MODEL, ele é um facilitador que exite dentro do navegador
 para dar acesso aos Elementos diretamente no javaScript
+
+Eventos Dom (Dom Events) são utilizados para notificar o código de novidades durante a navegação
+do usuário. Cada evento é representado por um objeto que é baseado na interface Event, e pode
+ter campos customizados adicionados e/ou funções usadas para obter informações adicionais sobre
+o que aconteceu. Eventos podem representar desde interações básicas do usuário (cliques, rolagem
+da página...) até notificações automáticas de novidades no DOM.
+[+info: https://developer.mozilla.org/pt-BR/docs/Web/Events]
 
 EVENTOS é tudo aquilo que possa acontecer com determinado item (div, h1..)
 Aventos mais comuns por exemplo numa div, são eventos de mouse, 

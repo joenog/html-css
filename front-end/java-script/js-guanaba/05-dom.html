@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos com DOM </title>
+
+    <style>
+        body {
+            background-color: grey;
+            color: white;
+            font-size: 2em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Testando DOM</h1>
+    </header>
+
+    <main>
+        <h1>Aqui vai o resultado</h1>
+
+        <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+        <p>Esse é o segundo paragrafo do main e no <br> javascript vou identificalo como [1]</p>
+
+        <div id="msg">CLique em mim</div>
+    </main>
+
+    <script>
+
+        var corpo = document.body
+        var resp = document.getElementsByTagName('p')[0]
+
+        var parag = document.getElementsByTagName('p')[1]
+
+        var diver = document.getElementById('msg').style.borderRadius = '12px'
+        msg.style.background = 'purple'
+        msg.style.border = '2px solid white'
+
+
+        
+        document.write(resp.innerText)
+        document.write(parag.innerHTML)
+
+    </script>
+
+</body>
+</html>
