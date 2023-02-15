@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes Callback</title>
+</head>
+<body>
+    <h1>Funções  Callback</h1>
+
+
+    <script>
+
+        function exibirArtigo(id, callbackSucesso, callbackErro) {
+
+            //recuperar id via requisição HTTP
+            if (true) {
+                callbackSucesso('Funções de Callback em JS' + 'Funçoes de callback são muito utilizadas')
+            } else {
+                callbackErro('Erro ao recuperar o arquivo!')
+            }
+        }
+
+        var callbackSucesso = function {
+
+        }
+
+        var callbackErro = function {
+            
+        }
+
+        exibirArtigo(1, callbackSucesso {...},
+            
+
+    </script>
+</body>
+</html>

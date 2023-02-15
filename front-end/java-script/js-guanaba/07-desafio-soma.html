@@ -20,18 +20,22 @@
     </span> 
 
     <script>
-        
 
         function soma() {
+            
             let n1 = document.querySelector('#nn1');
             let n2 = document.querySelector('#nn2');
-            let nn1 = Number(n1.value)
-            let nn2 = Number(n2.value)
-            let res = document.querySelector('#resp')
+            let resp = document.querySelector('#resp');
 
-            let soma = nn1 + nn2;
-            resp.innerHTML = (`A soma entre ${nn1} e ${nn2} é: ${soma}`)
+            let nn1 = Number(n1.value);
+            let nn2 = Number(n2.value);
+
+            let result = nn1 + nn2;
+
+            document.write(`O soma dos números é: ${result}`)
         }
+
+    
      </script>
 </body>
 </html>

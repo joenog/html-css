@@ -699,15 +699,27 @@ EX:  <script>
 
 [ Os paramentros () em JS podem ser passados ou não, também pdoem ser incluindo mais parametros
 doq se é esperando, o JS só considerará os parametros que são mencionados dentro do funcion. 
-E caso o valor do parametro n for passado ou apenas um for, o segundo será entendido com undefined
+E caso o valor do parametro n for passado ou apenas um for, o segundo será entendido como undefined
 trandendo o resultado NaN - not a number.
     
-(EVITANDO a poluIção no parametro DIV no HTML, coloque os EVENTOS dentro do <script>) listners / ouvidores
+(EVITANDO a poluIção na tag DIV do HTML, coloque os EVENTOS dentro do <script>) listners / ouvidores
 
 EX:       var a = document.getElementById('area')
             a.addEventListener('click', clicou)                 / script js - coloco a  var
             a.addEventListener('mouseenter', entrou)            \ e os listners
             a.addEventListener('mouseout', saiu)
+
+---------
+]funcion ANONIMA
+
+Posso criar uma funçao anonima/sem nome, simplismente criando uma VAR e atribuindo a ela uma
+funcion. Com isso exibirei a VAR da mesma forma que exibo uma funcion nome e ()
+
+EX: var calc = funcion {}   >  para exbiri escrevo >  calc()
+
+
+
+
 ________________________________________________________________________
 
 ]}11 - CONDIÇÕES  part1
@@ -810,6 +822,9 @@ EX:
             console.log('ERRO - Dia da semana inválido')
             break   
     }  [A condiciona (Switch) só aninalisa oq é identico ===]
+
++ info [Com javascript posso criar um site com interatividade apenas com o sistema
+ou apenas com o usuario]
 _____________________________________________________________________________
 
 }}13 - LAÇOS DE REPETIÇÃO

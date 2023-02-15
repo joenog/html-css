@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30"> -->
+    <title>Hora do Dia</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body, main {
+            background-color: lightsalmon;
+            height: 92vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+
+        section {
+        height: 400px;
+        width: 500px;
+        background-color: white;
+        border-radius: 10px;
+        align-self: center;
+        align-items: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247);
+        }
+
+        div {
+            text-align: center;
+            padding: 18px;
+            font-size: 1.4em;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 65%;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin: 30px;
+        }
+
+        footer  a {
+            color: rgb(30, 75, 119);
+            text-decoration: none;
+        } a:hover {
+            color: rgb(0, 0, 48);
+        }
+
+        
+
+    </style>
+    
+</head>
+<body  onload="carregar()">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+        <section>
+            <div id="msg">
+                Aqui aparecerá a mensagem...
+            </div>
+
+            <div id="dimg">
+                <img id="img" src="img/manha.jpg" alt="foto da manha">
+            </div>
+        </section>
+
+
+    <footer>
+        <p>  &copy; Criado por <a href="https://instagram.com/joe.nog" rel="noopenner" >Joe.nog</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
