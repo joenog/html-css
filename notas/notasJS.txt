@@ -825,6 +825,15 @@ EX:
 
 + info [Com javascript posso criar um site com interatividade apenas com o sistema
 ou apenas com o usuario]
+
+------------- 
++ info []
+Para criar um elemento Js para ser exibido no HTML:
+
+ver img = document.creatElement('img)
+também posso adicionar um id ao elemento criado
+
+img.setAttribute('id', 'foto')
 _____________________________________________________________________________
 
 }}13 - LAÇOS DE REPETIÇÃO

@@ -9,6 +9,7 @@ function carregar() {
     let data = new Date()
     let hora = data.getHours()
     let min = data.getMinutes()
+
     msg.innerHTML = `Agora são ${hora} horas`
 
     if (hora > 0 && hora < 6) {
