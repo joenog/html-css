@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: #B8D1E3;
+}
+
+header {
+    margin: 40px;
+}
+
+main {
+    width: 60vw;
+    margin: auto;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 3px 3px 10px rgba(53, 51, 51, 0.151);
+}
+
+.card {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    margin: 40px 5px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px rgba(53, 51, 51, 0.144);
+}
+
+input, select {
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+}
+
+input[type=submit] {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 15px;
+    font-size: 1em;
+} #btn:hover {
+    background-color: #7796ce;
+    transition-duration: .8s;
+}
+
+#res {
+    margin: 10px 40px;
+    border-radius: 15px;
+    height: 300px;
+    box-shadow: 3px 3px 10px rgba(53, 51, 51, 0.144);
+}

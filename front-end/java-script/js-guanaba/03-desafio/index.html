@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Lugar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lugares a conhecer</h1>
+    </header>
+
+    <main>
+        <form action="" method="get">
+            <div class="card">
+                <label for="valor">Preço: </label>
+                <input type="number" name="valor" id="valor" min="1000" max="50000" step="100">
+            </div>
+
+            <div class="card">
+                <span>Clima:  </span>
+                <label for="frio">Frio</label>
+                <input type="radio" name="clima" id="frio" checked>
+                <label for="quente">Quente</label>
+                <input type="radio" name="clima" id="quente">
+            </div>
+
+            <div id="btn"   class="card">
+                <input type="submit" value="Buscar" onclick="buscar()">
+            </div>
+        
+        </form>
+
+        <div id="res">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum consequatur rem rerum minus cupiditate illum id eligendi architecto deserunt eveniet ipsa laborum consequuntur ullam labore, perspiciatis tenetur porro. Corrupti, hic Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestiae alias perferendis ullam sunt debitis tempore aperiam, iure cumque quas itaque est reiciendis ad, corporis unde. Rem, blanditiis velit. Porro?.</p>
+        </div>
+    </main>
+
+    <script src="scriptviagem.js"></script>
+
+</body>
+</html>
