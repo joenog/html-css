@@ -826,6 +826,10 @@ EX:
 + info [Com javascript posso criar um site com interatividade apenas com o sistema
 ou apenas com o usuario]
 
+O switch case é uma estrutura condicional do Javascript como o if, e serve para analisar os valores
+e executar um bloco de código condicionalmente. Normalmente é utilizado, quando se deseja analisar
+diversos valores diferentes para a mesma variável.
+
 ------------- 
 + info []
 Para criar um elemento Js para ser exibido no HTML:

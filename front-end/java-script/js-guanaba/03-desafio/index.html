@@ -4,41 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melhor Lugar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mudand</title>
 </head>
 <body>
     <header>
-        <h1>Lugares a conhecer</h1>
+        <h1>Mudando cor do site</h1>
     </header>
 
+
     <main>
-        <form action="" method="get">
-            <div class="card">
-                <label for="valor">Preço: </label>
-                <input type="number" name="valor" id="valor" min="1000" max="50000" step="100">
-            </div>
+        Oi
 
-            <div class="card">
-                <span>Clima:  </span>
-                <label for="frio">Frio</label>
-                <input type="radio" name="clima" id="frio" checked>
-                <label for="quente">Quente</label>
-                <input type="radio" name="clima" id="quente">
-            </div>
-
-            <div id="btn"   class="card">
-                <input type="submit" value="Buscar" onclick="buscar()">
-            </div>
-        
-        </form>
-
-        <div id="res">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum consequatur rem rerum minus cupiditate illum id eligendi architecto deserunt eveniet ipsa laborum consequuntur ullam labore, perspiciatis tenetur porro. Corrupti, hic Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestiae alias perferendis ullam sunt debitis tempore aperiam, iure cumque quas itaque est reiciendis ad, corporis unde. Rem, blanditiis velit. Porro?.</p>
-        </div>
+        <section id="msg">
+            Hora do dia
+        </section>
     </main>
 
-    <script src="scriptviagem.js"></script>
+    <script>
+        var data = new Date();
+        var hora = 17
+        var min = data.getMinutes();
+        var msg = document.querySelector('#msg')
+        var img = document.createElement('img')
+        
+        var h1 = document.createElement('h1')
 
+        if (hora <= 12) {
+            msg.innerHTML = `Afora são ${hora} e ${min}`;
+            document.body.style.background = 'blue';
+            img.setAttribute('src', 'alien.png')
+        } else if (hora <= 18) {
+            msg.innerHTML = `Agora são ${hora} e ${min}`;
+            document.body.style.background = 'yellow'
+            img.setAttribute('src', 'alien.png')
+            if (min > 30) {
+                alert('Min maiorq 30')
+                h1.innerHTML = 'aaaaaaaaaaaaaaaaak'
+                img.setAttribute('src', 'alien.png')
+                
+            } else if (min > 50) {
+                alert('min - maiorq 40')
+                img.setAttribute('src', 'alien.png')
+                
+            }
+        }
+        
+        msg.appendChild(h1).style.background = 'white'
+        h1.style.widht = '110px'
+        msg.appendChild(img).style.display = 'block'
+        img.style.borderRadius = '20px'
+
+    </script>
 </body>
 </html>
