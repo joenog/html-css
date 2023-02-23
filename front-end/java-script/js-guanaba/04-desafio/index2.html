@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha correta ?</title>
+</head>
+<body>
+    <header>
+        <h1>Senha correta ?</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            senha
+
+        </div>
+    </main>
+
+    <script>
+        let senha = Number(prompt('Qual a senha ?'));
+        let res = document.querySelector('#res')
+        let corre = 1234
+
+        if (senha.length == 0 || isNaN(senha) || senha == '') {
+            alert('Senha incorreta!');
+            document.body = location.reload();
+        } else if (senha == corre) {
+            res.innerHTML = `Senha correta pode entrar!`;
+        } else {
+            res.innerHTML = `Senha incorreta`
+            document.body = location.reload();
+        }
+
+    </script>
+</body>
+</html>
