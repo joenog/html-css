@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+
+    <style>
+        
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+
+        #res {
+            background-color: lightblue;
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+            width: 400px;
+            font-size: 1.5em;
+        }
+
+        #form {
+            background-color: rgb(108, 152, 167);
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+            width: 400px;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        label {
+            vertical-align: bottom;
+        }
+
+        input[type=number] {
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        input[type=submit] {
+            padding: 5px;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reajuste Salarial</h1>
+    </header>
+
+    <main>
+        <p>
+            <!--Faça um script que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+
+            salários até R$ 280,00 (incluindo) : aumento de 20%
+            salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+            salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+            salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+            o salário antes do reajuste;
+            o percentual de aumento aplicado;
+            o valor do aumento;
+            o novo salário, após o aumento. -->
+        </p>
+
+        <div id="form">
+            <label for="sal">Salário atual</label>
+            <input type="number" name="sal" id="sal">
+
+            <input type="submit" value="Enviar" onclick="atualizar()">
+        </div>
+
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+
+        let sal = document.querySelector('#sal');
+        let res = document.querySelector('#res');
+        
+        function atualizar() {
+
+            let salario = Number(sal.value)
+
+            if (salario == '' || isNaN(salario)) {
+                alert('ERRO! Preencha corretamene !');
+                document.body = location.reload(); 
+                
+            } else {
+                let soma =''    
+                let div = document.createElement('div')
+    
+                if (salario <= 280) {
+                    soma = salario + (salario * 20 / 100); // regra de 3 incremento 20%     
+                }
+                else if (salario <= 700) {
+                    soma = salario + (salario * 15 / 100);
+                }
+                else if (salario <= 1500) {
+                    soma = salario + (salario * 10 / 100);
+                }
+                else {
+                    soma = salario + (salario * 5 / 100);
+                }
+                
+                res.innerHTML = `Atualização salarial: ${soma.toFixed(2)} R$`;
+                res.appendChild(div);
+                div.innerHTML = `Antes você recebia: ${salario} R$`;
+            }
+        }
+
+    </script>
+</body>
+</html>

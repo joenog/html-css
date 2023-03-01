@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <header>
+        <h1>Desafio</h1>
+    </header>
+
+    <main>
+        <!-- 
+            7. Faça um script que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+         -->
+
+         <div id="res">
+
+         </div>
+    </main>
+
+    <script>
+
+        let turno = prompt('Em que turno você estuda?').toLocaleLowerCase();
+        let res = document.querySelector('#res')
+
+        if (turno.length == '') {
+            alert('Preencha o campo!')
+            document.body = location.reload()
+        } else {
+            if (turno =='m' || turno == 'de manhã' || turno == 'de manha') {
+                res.innerHTML = `Oi bom dia!`
+            }
+            else if (turno == 'v') {
+                res.innerHTML = `Oi boa tarde!`
+            }
+            else if (turno == 'n') {
+                res.innerHTML = `Oi boa noite`
+            }
+        }
+
+    </script>
+</body>
+</html>
