@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="res">
+
+        res
+    </div>
+
+    <script>
+
+        let n1 = Number(prompt('Primeiro numero'));
+        let n2 = Number(prompt('Segundo numero'));
+        let n3 = Number(prompt('Terceiro numero'));
+        let img = document.createElement('img') // inseri uma imagem pelo javascript
+        let res = document.querySelector('#res')
+
+        if (isNaN(n1) || isNaN(n2) || isNaN(n3) || n1 =='' || n2 == '' || n3 =='' || n1 == n2 || n1 == n3 || n2 == n1 || n2 == n3 || n3 == n1 || n3 == n2) { /// verificações uqep doem ser simpllificadas 
+            alert('ERRO! apenas numeros, e todos devem ser diferentes!')
+            document.body = location.reload() // recarregar
+        } else {
+
+            if (n1 > n2 && n1 > n3) {
+                res.innerHTML = `${n1} É maior!`
+                img.setAttribute('src','eliot.jpg')// imagem adicionada dinamicamente
+            } 
+            else if  (n2 > n1 && n2 > n3) {
+                res.innerHTML = `${n2} É maior!`
+            }
+            else if (n3 > n1 && n3 > n1) {
+                res.innerHTML = `${n3} É maior!`
+            }
+
+            res.appendChild(img).style.width = '300px'
+            res.appendChild(img).style.display = 'block'
+            res.appendChild(img).style.borderRadius = '30px'
+        }
+ 
+        /* 
+        let numeros = [n1, n2, n3];
+            let numerosSet = new Set(numeros);
+
+            if (numeros.some(isNaN) || numeros.includes('') || numerosSet.size < numeros.length) {
+            alert('ERRO! Preencha corretamente!');
+            } else {
+            // Faz a lógica de comparação dos números aqui
+            }
+
+        */
+        
+    </script>
+</body>
+</html>

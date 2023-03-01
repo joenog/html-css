@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DerrubArvore</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+
+        #banner {
+            display: flex;
+            align-items: self-start;
+            background-color: rgba(37, 25, 82, 0.486);
+            border-radius: 10px;
+        }
+        main {
+            margin: auto;
+            width: 480px;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #0c50a867, #0e39b159,  #3e790e);
+        }
+
+        #arvo > img {
+            height: 150px;
+            position: absolute;
+            left: 700px;
+            top: 70%;
+        }
+
+        #madeira {
+            font-size: 1.5em;
+            display: inline-block;
+            margin: 5px;
+        }
+
+
+        #troncos {
+            width: 40px;
+            margin: 4px;
+            transform: translate(15px, 5px);
+        }
+
+        #num {
+            margin: 20px 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="banner">
+            <img id="troncos" src="tronco.png" alt="">
+            <div id="madeira">
+                <div id="num">
+                    0
+                </div>
+            </div>
+        </div>
+
+        <div id="arvo">
+            <img id="ft" src="1arvo.png" alt="">
+        </div>
+    </main>
+
+    <script>
+        
+        let madeira = document.querySelector('#madeira')
+        let arvo = document.querySelector('#arvo')
+        let ft = document.querySelector('#ft')
+        let cair = 0;
+        
+        arvo.addEventListener('click', function() { 
+    
+            cair++
+            if (cair <= 8) {
+                madeira.innerHTML = `${cair}`
+            } 
+            else {
+                ft.setAttribute('src', '2arvo.png');
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>

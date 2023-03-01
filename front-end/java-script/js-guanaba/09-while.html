@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Clientes</title>
+</head>
+<body>
+    <header>
+        <h1>While</h1>
+    </header>
+
+    <button id="btn">
+        Mostrar
+    </button>
+
+    <div id="res">
+        Clientes
+    </div>
+
+
+    <script>
+        let btn = document.querySelector('#btn');
+        let res = document.querySelector('#res');
+        let clientes = ['Jon','Marcos','Alice','Ana','Flavia','Clara','Caio','Pedro','Igor','Uri','Italo','Vini','Pedro','Maria','Jessica','Paula','Any','Diego','Hugo','Igrid','Alana','Itan','Mauro','Nathan',];
+        let contador = 0
+
+        btn.addEventListener('click', mostrarClientes)
+
+        function mostrarClientes() {
+
+            
+
+            for (let contador = 0; contador < clientes.length; contador++) {
+                document.write(`${clientes[contador]} <br>`)
+            }
+
+            while (contador < clientes.length) {
+                document.write(`${clientes[contador]} <br>`)
+                contador++
+                // enquanto let i for menor que quantidade em clientes let i adicionara a si mais 1
+                document.write('<br>')
+            }
+        }
+
+    </script>
+</body>
+</html>

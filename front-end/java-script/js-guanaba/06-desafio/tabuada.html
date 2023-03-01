@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <style>
+        main {
+            margin: auto;
+            background-color: lightblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            height: 500px;
+            width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        select {
+            width: 200px;
+            margin: 20px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Tabuada !</h1>
+    </header>
+
+    <main>
+
+        <div>
+            <label for="txtn">Numero:</label> <br>
+            <input type="number" name="num" id="txtn">           
+        </div>
+
+        <input type="submit" value="Gerar Tabuada" onclick="gerar()">
+
+        <div>
+            <select name="tabuada" id="seltab" size="12">
+                <option value="">Digite um numero acima!</option>
+
+            </select>
+        </div>
+
+    </main>
+
+    <script src="trabuada.js"></script>
+</body>
+</html>

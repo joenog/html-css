@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contado numeros</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #res {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+
+    <main>
+
+            <div class="card">
+                <label for="ini">Inicio</label>
+                <input type="number" name="ini" id="ini">
+            </div>
+
+            <div class="card">
+                <label for="fim">Fim</label>
+                <input type="number" name="fim" id="fim">
+            </div>
+
+            <div class="card">
+                <label for="pas">Passo</label>
+                <input type="number" name="pas" id="pas">
+            </div>
+
+            <div class="card">
+                <input type="submit" value="Contar" onclick="contar()">
+            </div>
+
+            <div id="res">
+                Contagem
+            </div>
+
+    </main>
+
+    <script src="contador.js"></script>
+
+</body>
+</html>

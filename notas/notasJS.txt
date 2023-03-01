@@ -840,13 +840,30 @@ também posso adicionar um id ao elemento criado
 img.setAttribute('id', 'foto')
 _____________________________________________________________________________
 
-}}13 - LAÇOS DE REPETIÇÃO
+}}13 - LAÇOS DE REPETIÇÃO / iteraçoes
 
 AS REPETIÇÕES SÃO COMANDOS REPETIDOS QUE EXECUTAMOS PARA QUE UMA DETEMRINADA TAREFA SEJA 
 CONLUIDA, [de um ponto A até um ponto B vou execultando tarefas sequenciamente]. No meio 
 dessa sequencia pode haver passos que eu não deva execultar porque nem tudo é sequencial
 az vezes tenho desvios ou outras possiblidades, com isso devemos usar 
 as condiçoes que aprendemos anteriomente, seja simples ou compostas
+
+Existem várias formas diferentes de laços, mas eles essencialmente fazem a mesma coisa: repetir
+uma ação múltiplas vezes ( inclusive você poderá repetir 0 vezes). Os vários mecanismos diferentes
+de laços oferecem diferentes formas de determinar quando este irá começar ou terminar. Há várias
+situações em qé mais fácil resolver um prob. utilizando um determinado tipo de laço do que outros.
+
+Os possíveis laços de repetição em JavaScript:
+
+// + info[https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration]
+for_statement 
+do...while_statement
+while_statement
+label_statement
+break_statement
+continue_statement
+for...in_statement
+for...of_statement
 
 Os laços de repetição testa uma mesma condição varias vezes enquanto ela for verdadeira,
 se repete até que o valor da condição mude (images/while)   EX:
@@ -914,6 +931,28 @@ for (c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e increment
 [Posso usar o modo de DEPURAÇÃO / DEBUG, para monitorar a execução dos Scripts,
 saber se estão funcionado bem ou se há erros]
  } Atente-se as vezes não ha erro no coddigo(sintaxe) mas pode haver erros de llogica }
+
+[Eplicando - Declaração for
+
+Um laço for é repetido até que a condição especificada seja falsa. O laço for no JavaScript
+é similar ao Java e C. Uma declaração for é feita da seguinte maneira:
+
+for ([expressaoInicial]; [condicao]; [incremento])
+  declaracao
+Quando um for é executado, ocorre o seguinte:
+
+A expressão expressao Inicial é inicializada e, caso possível, é executada. Normalmente essa
+expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau
+de complexidade. Podendo conter também declaração de variáveis.
+
+A expressão condicao é avaliada. caso o resultado de condicao seja verdadeiro, o laço é executado.
+Se o valor de condicao é falso, então o laço terminará. Se a expressão condicao é omitida,
+a condicao é assumida como verdadeira.
+
+A instrução é executada. Para executar múltiplas declarações, use uma declaração 
+em bloco ({ ... }) para agrupá-las.
+
+A atualização da expressão incremento, se houver, executa, e retorna o controle para o passo 2.
 ________________________________________________________________________
 
 }}15 [VARIAVEIS COMPOSTAS]
