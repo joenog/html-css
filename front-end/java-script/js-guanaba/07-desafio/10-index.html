@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de email e senha</title>
+</head>
+<body>
+    <header>
+        <h1>VALIDACAO</h1>
+    </header>
+
+    <main> 
+
+    </main>
+
+    <script>    
+
+        let idade;
+        let sexo;
+        let salario;
+
+        do {
+            idade = prompt('Digite sua idade')
+            sexo = prompt('Digite a inicial do seu sexo')
+            salario = prompt('Digite o valor do seu salario')
+            
+            if (idade > 150 || sexo !== 'm' && sexo !== 'f' || salario  < 1) {
+                alert('Dados incorretos')
+            }
+        } while (idade > 150 || sexo !== 'm' && sexo !== 'f' || salario  < 1)
+
+        alert('Dados corretos pode entrar!')
+
+    </script>
+</body>
+</html>

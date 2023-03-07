@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JS</title>
+
+    <style>
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box  ;
+            text-align: center;
+        }
+
+        main {
+            background-color: lightblue;
+            width: 400px;
+            height: 200px;
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+
+        input[type=number] {
+            margin: 15px 10px;   
+        }
+
+        #res {
+            background-color: rgb(133, 139, 141);
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+            margin: 10px auto;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+
+        input[type=submit], input[type=number] {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            padding: 7px;
+            font-size: 1em;
+            width: 150px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Desafio</h1>
+
+    </header>
+
+    <main>
+    
+        <div>
+            <label for="nota1">NOTA1:</label>
+            <input type="number" name="nota1" id="nota1" > <br>
+
+            <label for="nota2">NOTA1:</label>
+            <input type="number" name="nota2" id="nota2">
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar" onclick="clicou()">
+        </div>
+
+        
+    </main>
+        <div id="res">
+            Sua nota  !
+        </div>
+
+        <!-- 11. Faça um script que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:
+
+      Média de Aproveitamento  Conceito
+      Entre 9.0 e 10.0                      A
+      Entre 7.5 e 9.0                        B
+      Entre 6.0 e 7.5                        C
+      Entre 4.0 e 6.0                        D
+      Entre 4.0 e zero                      E
+    O algoritmo deve mostrar numa janela de alert as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E. -->
+    
+    <script>
+
+        let nn1 = document.querySelector('#nota1');
+        let nn2 = document.querySelector('#nota2');
+        let res = document.querySelector('#res');
+
+        function clicou() {
+
+        let n1 = Number(nn1.value);
+        let n2 = Number(nn2.value);
+
+            if (n1 == '' || isNaN(n1) || n2 == '' || isNaN(n2)  || n1 > 10 || n2 > 10) {
+                alert('ERRO! Preencha os campos corretamente!')
+                document.body = location.reload();
+            } 
+            else {
+                var nota = '';
+                var media = (n1 + n2) / 2;
+
+                if (media >= 9) {
+                    nota = 'A; Aprovado! <br>';
+                }
+                else if (media >= 7.5) {
+                    nota = 'B; Aprovado! <br>' ;
+                }
+                else if (media >= 6) {
+                    nota = 'C; Aprovado! <br>';
+                }
+                else {
+                    nota = 'E; Reprovado! <br>';
+                }
+            }
+            res.innerHTML = `NOTA: ${nota}  MEDIA ${media.toFixed(2)}`;
+        }
+
+        
+    </script>
+</body>
+</html>

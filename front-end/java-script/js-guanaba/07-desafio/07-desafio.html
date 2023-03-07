@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JS tabuada</title>
+
+    <style>
+        main {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 20px;
+            margin: auto;
+            width: 370px;
+            height: 400px;
+            box-shadow: 5px 4px 0px rgba(52, 66, 92, 0.616);
+        }
+
+        input, label {
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+        } input[type=submit]:hover {
+            background-color: aliceblue;
+        }
+
+        select {
+            margin-top: 20px;
+            width: 100%;
+            background-color: aliceblue;
+            border: none;
+            font-size: 1em;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <main>
+        <div>
+            <input type="number" name="num" id="num" min="0" placeholder="Digite um numero" >
+
+            <input type="submit" value="enviar" onclick="enviar()">
+        </div> 
+
+        <div>
+            <select name="sel" id="sel" size="14">
+               
+            </select>
+        </div>
+
+        <script src="tabuada.js"></script>
+    </main>
+</body>
+</html>

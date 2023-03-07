@@ -1067,3 +1067,30 @@ function soma(n1=0, n2=0) {   /* adiciono o 0 caso o numero real posteriormente 
     return n1 + n2
 }
 console.log(soma(10, 5))  /* caso seja requerido apenas o 10 ele será somado com 0 citado acima */
+
+________________________________________________________________________
+
+[LÓGICA DE PROGRAMÇAO]
+
+Num algoritmo deve-se comsiderar todos os passos ate os mais simples
+Os programas e APPS são algoritimos escritos numa linguagem de programção (JS, C# JAVA, PYTHON..)
+São escritos coa funçao de criar solucoes ao nosso dia-a-dia e são sempre bem rigorosos e especificos
+
+]PSEUDOCODIGO
+É uma forma generica de escrever um algoritmo
+Um pseudo codigo com algoritmo bem feito serpa facil de se interpretar podendo ser codificado
+codado em qualquer linguagem. 
+
+] Regras para criar ALGORITMO
+
+1- Usar somente um verbo por frase
+2- Imaginar que está desenvolvendo algoritmo para pessoas q não trabalhar com informatica
+3- Usar frases curtas
+4- Ser objetivo
+5- Usar palavrar que não tenha setidos dubio
+
+EX: algoritmo - Tirar lampada
+
+1 pegar escada / 2 posicionar escada / 3 subir escada / 4 desenrroscar lampada 
+5 descer escada / 6 quardar escada / 7 jogar lampda lixo
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5 Js</title>
+</head>
+<body>
+    
+        <header>
+            <h1>Desafio JS</h1>
+        </header>
+
+        <main>
+            <div id="res">
+                TRIANGULO
+            </div>
+
+            <div id="triangle">
+
+            </div>
+        </main>
+
+        <script>
+
+            let lad1 = prompt('Tamanho do primeiro lado:');
+            let lad2 = prompt('Tamanho do segundo lado:');
+            let lad3 = prompt('Tamanho do terceiro lado:');
+            var triangle = document.getElementById("triangle");
+
+            
+            if (lad1 == '' ||  lad2 == '' || lad3 == '') {
+                alert('ERRO! Preencha todos os lados para formar o triangulo!');
+                document.body = location.reload();
+
+            } else {
+                triangle.style.width = '0';
+                triangle.style.height = '0';
+                
+                if (lad1 == lad2 && lad1 == lad3) {
+                    res.innerHTML = `3 lados iguais - Equilatero!`    
+                }
+                else if (lad1 == lad2 || lad1 == lad3 || lad2 == lad1 || lad2 == lad3 || lad3 == lad1 || lad3 == lad2) {
+                    res.innerHTML = `2 lados iguais - Isóceles!`
+                } 
+                else {
+                    res.innerHTML = `Lados diferentes - Escaleno!`
+                }
+            }
+
+        </script>
+</body>
+</html>
