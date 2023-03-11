@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia</title>
+</head>
+<body>
+    <h1>Aninhando condicionais</h1>
+
+    <div id="res">
+        Resposta
+    </div>
+
+    <script>
+
+        let nota = Number(prompt('Sua nota')); 
+        let res = document.querySelector('#res');
+
+        if (nota  >= 5) {
+            if (nota >= 7) {
+                res.innerHTML = `Aprovado`
+            }
+            else {
+                res.innerHTML =  `Presisará fazer outra prova`
+            }
+        } else {
+            res.innerHTML = `Aluno reprovado`
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Par ou impar</h1>
+    </header>
+
+    <script>
+
+        let num = Number(prompt('Digite um numero'))
+        let par;
+        let impar;
+
+        if (num % 2 === 0) { // se o resto da divisao do numero for igual a 0 ele sera par
+            par = num;
+            alert(`numero ${num} armazenado na var PAR`)
+        } else {
+            impar = num;
+            alert(`numero ${num} armazenado na var IMPAR`)
+        }
+
+    </script>
+</body>
+</html>

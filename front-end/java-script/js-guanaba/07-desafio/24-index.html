@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Diagrama</h1>
+    </header>
+
+    <div id="res">
+        res
+    </div>
+
+    <script>
+
+        let n1 = Number(prompt('Diga um numero1:'));
+        let n2 = Number(prompt('Diga um numero2:'));
+        let n3 = Number(prompt('Diga um numero3:'));
+        let n4 = Number(prompt('Diga um numero4:'));
+        let res = document.querySelector('#res');
+
+        if (n1 === 0 && n2 === 0 && n3 === 0 && n4 === 0 ) {
+            alert('Preencha corretamente!');
+            document.body = location.reload();
+        }
+        else {
+            nn1 = n1**2; 
+            nn2 = n2**2;
+            nn3 = n3**2;
+            nn4 = n4**2;
+
+            if (nn1 < 1000 && nn2 < 1000 && nn3 < 1000 && nn4 < 1000) {
+                res.innerHTML = `Valores inseridos: ${n1}, ${n2}, ${n3}, ${n4} <br>`;
+                res.innerHTML += `Esse é o quadrado de cada numero n1= ${nn1} n2= ${nn2} n3= ${nn3} n4= ${nn4}`
+            }
+            else {
+                 res.innerHTML = `Esse é o quadrado de cada numero n1= ${nn1} n2= ${nn2} n3= ${nn3} n4= ${nn4}` 
+                }
+            }
+
+    </script>
+</body>
+</html>

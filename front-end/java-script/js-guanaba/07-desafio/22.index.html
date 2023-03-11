@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor hora</title>
+</head>
+<body>
+    <header>
+        <h1>Valor hora</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            salario
+        </div>
+
+    </main>
+
+
+    <script>
+
+        let nome = prompt('Qual seu nome Senhor ?');
+        let hTrab = Number(prompt('Quantas horas trabalhadas ?'));
+        let res = document.querySelector('#res');
+        let vhora = 10;
+
+        if (nome =='' || hTrab == '' || isNaN(hTrab)) {
+            alert('{ERRO !!} Preencha corretamente os campos...');
+            document.body = location.reload();
+        } 
+        else {
+            res.innerHTML = `Oi ${nome}, horas trabalhadas ${hTrab} salario de: ${hTrab * vhora}`+ '<br>';
+            if (hTrab > 50) {
+                let exce = hTrab - 50;
+                let vExce = exce * vhora * 2;
+                let remu = hTrab + vExce;
+
+                res.innerHTML += `Devido excedente de ${exce}h, vc receberá mais ${vExce}` + '<br>' + `Totalizando o salario em ${(hTrab * vhora) + vExce}`;
+
+            } else {
+                res.innerHTML += `Não ouve excedente!`
+            }
+           
+        }
+
+    </script>
+
+</body>
+</html>

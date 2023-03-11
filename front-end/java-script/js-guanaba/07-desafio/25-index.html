@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS</title>
+</head>
+<body>
+    
+    <header>
+
+        <h1>Praticado JS</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            Resposta
+        </div>
+    </main>
+
+    <script>
+
+       let g1 = Number(prompt('Nivel de poluição G1'));
+       let g2 = Number(prompt('Nivel de poluição G2'));
+       let g3 = Number(prompt('Nivel de poluição G3'));
+       let poluTotal = g1 + g2 + g3;
+       let res = document.querySelector('#res')
+
+       if (g1 === 0 && g2 === 0 && g3 === 0 || isNaN(g1) || isNaN(g2) || isNaN(g3)) {
+           alert('Preencha honestamente o nivel de poluiçao emitido.');
+       }
+       else {
+            if (poluTotal < .30) {
+                res.innerHTML = `Nivel: ${poluTotal} -Notificado GRUPO 1, deve paralisar motores`
+            }
+            else if (poluTotal > .30 && poluTotal < .40) {
+                res.innerHTML = `Nivel: ${poluTotal} -Notificado GRUPOS 1 e 2, devem paralisar motores.`
+            }
+            else if (poluTotal > .40 && poluTotal < .50) {
+                res.innerHTML = `Nivel: ${poluTotal} -Notificado GRUPOS 1 2 e 3, devem paralisar motores.`
+            }
+            else  {
+                res.innerHTML = `Apoluição transcende tudo! falencia ás empresas.`
+            }
+       }
+
+    </script>
+</body>
+</html>

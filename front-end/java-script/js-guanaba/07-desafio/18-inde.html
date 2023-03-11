@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codando Fluxograma</title>
+</head>
+<body>
+    <header>
+        <h1>Codando Fluxograma</h1>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script>
+
+        let salBase = Number(prompt('Insira seu salario base'));
+        let gratifi = Number(prompt('Quanto fo ia gratificação'));
+        
+        if (salBase =='' || gratifi =='') {
+            alert('Preencha os dados');
+            document.body = location.reload();
+        } else {
+            let ir;
+            let salLiquid;
+            let salBruto = salBase + gratifi;
+
+            if (salBruto <= 1000) {
+                ir = salBruto * (20/100);
+            }
+            if (salBruto > 1000) {
+                ir = salBruto * (15/100); 
+            }
+
+            alert(`Seu salario com desconto do IR será ${salBruto - ir}`)
+        }
+
+    </script>
+
+</body>
+</html>

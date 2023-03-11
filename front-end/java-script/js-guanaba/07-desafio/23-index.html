@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Diagrama</h1>
+    </header>
+
+    <script>
+
+        let num = Number(prompt('Escreva um numero:'));
+
+        if (!Number.isInteger(num) || isNaN(num)) {
+            alert('Apenas numeros inteiros!');
+            document.body = location.reload();
+        } 
+        else {
+            if (num < 0 && num % 2 === 0) {
+                alert('Numero negativo e par');
+            }
+            else if (num < 0 && num % 2 !== 0) {
+                alert('Numero negativo e impar');
+            }
+            else if (num > 0 && num % 2 === 0) {
+                alert('Numero positivo e par');
+            }
+            else if (num > 0 && num % 2 !== 0) {
+                alert('Numero positivo e impar');
+            }
+        }
+
+    </script>
+</body>
+</html>

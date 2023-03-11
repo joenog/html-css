@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia</title>
+</head>
+<body>
+    <h1>Case</h1>
+
+    <div id="res">
+       Nomes: A arca, O boi, A galinha
+    </div>
+    <script>
+
+        let nomeFilme = prompt('Nomes : 1- A arca <br> 2-O boi <br> 3-A galinha')
+        let res = document.querySelector('#res')
+
+        switch (nomeFilme) {
+
+            case '1': 
+                nomeFilme = 'A arca'
+            break
+
+            case '2':
+                nomeFilme = 'O boi'
+            break
+
+            case '3': 
+                nomeFilme = 'A Galinha'
+            break
+            default :
+                nomeFilme = 'Inserção incorreta'
+        }
+        res.innerHTML= `${nomeFilme}`
+
+    </script>
+
+</body>
+</html>

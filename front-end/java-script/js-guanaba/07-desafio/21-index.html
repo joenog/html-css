@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houve multa</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Houve multa ?</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            HOUVE MULTA ?
+        </div>
+    </main>
+
+    <script>
+
+        let pesoP = Number(prompt('Quantos KG de peixe ?'));
+        let res = document.querySelector('#res');
+
+        if (pesoP == '' || isNaN(pesoP)) {
+            alert('Preencha corretamente');
+            document.body = location.reload();
+        }
+        else { 
+            if (pesoP > 50) {
+                res.innerHTML = `Peso total = ${pesoP.toFixed(2)} KG` + '<br>';
+                pesoP = pesoP - 50;
+                let exce = pesoP;
+                let multa = exce * 4;
+                res.innerHTML += ` Excedente = ${exce.toFixed(2)}` + '<br>' + `Multa = ${multa.toFixed(2)} R$`;
+            } else {
+                exce = 0;
+                res.innerHTML = `Nao houve excedente, tenhau ma boa viagem!`;
+            }
+        }
+
+
+    </script>
+</body>
+</html>
