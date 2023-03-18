@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max value</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Max value</h1>
+    </header>
+    
+    <main>
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+
+        let nums = []; // array recebera o random de numeros
+        let maiorNum = Number.MIN_VALUE;   // variavei para receber o maior numero
+        let menorNum = Number.MAX_VALUE;  // variavel para recber o meno rnumero
+        let res = document.querySelector('#res')  // var que puxa o res
+
+        for (let cont = 1; cont < 100; cont++) {  // loop  com contador
+            
+            let num = Math.floor(Math.random() * 500); //   let math.floor pra gerar numeros inteiros
+            nums.push(num);  // pusho para array nums o random de numeros num
+            
+            if (num > maiorNum) { // condição se NUM é maior q random de numeros é maior que MIN_VALUE
+                maiorNum = num; /// let maior num recebe o num maior
+            }
+            if (num < menorNum) { // condicao  se NUM é menor que MAX_VALUE
+                menorNum = num;
+            }  
+        }
+            let media = maiorNum / 2;
+            res.innerHTML = `Numeros aleatorios: ${nums.join(', ')} <br> <br> 
+            Menor numero: ${menorNum} <br>
+            Media numeros: ${media} <br>
+            Maior numero: ${maiorNum}`;  // impressao das resp - join para colocar virgulas
+
+
+    </script>
+</body>
+</html>

@@ -31,8 +31,12 @@
            alert('Preencha honestamente o nivel de poluiçao emitido.');
        }
        else {
-            if (poluTotal < .30) {
-                res.innerHTML = `Nivel: ${poluTotal} -Notificado GRUPO 1, deve paralisar motores`
+
+            if ( poluTotal < .05) {
+                res.innerHTML = `Nivel: ${poluTotal} -No momento não há perigo.`
+            }
+            else if (poluTotal > .05 && poluTotal < .30) {
+                res.innerHTML = `Nivel: ${poluTotal} -Notificado GRUPO 1, deve paralisar motores.`
             }
             else if (poluTotal > .30 && poluTotal < .40) {
                 res.innerHTML = `Nivel: ${poluTotal} -Notificado GRUPOS 1 e 2, devem paralisar motores.`

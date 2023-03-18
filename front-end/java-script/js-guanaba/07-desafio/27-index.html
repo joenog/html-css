@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS</title>
+</head>
+<body>
+    <header>
+        <h1>Praticando JS</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            resposta!
+        </div>
+
+        <script>
+
+            let res = document.querySelector('#res')
+
+            let nums = []; // array vazia
+            let ini = 1; // contador iniciado em 1
+
+            while (ini <= 200) {  // enquanto ini for menorq 200
+                if (ini % 2 == 1) { // verificaçao para push apenas numerosi impares
+                    nums.push(ini) //  array nums push(numeros do ontado )
+                }
+                ini++; // iteração ini ++
+                res.innerHTML = `Conteudo ${nums.join(', ')}` //  resp = nums.join (',')
+            }
+
+
+        </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While - do while</title>
+
+    <style>
+
+        #res {
+            background-color: lightblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>While - do while</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            respo
+        </div>
+    </main>
+
+    <script>
+
+        let nums = []; // array para receber nums random
+        let maiorNum = Number.MIN_VALUE; //  maiorNum = a contante minima quase zero
+        let res = document.querySelector('#res'); // variavel para recebr a respsota
+        let cont = 0; // contador iniciado em zero
+
+        while (cont < 3000) { // enquando o contador for menorq y se reiterará
+        
+            cont++; // reiteração
+            let num = Math.floor(Math.random() * 100); // let num receber radom de numeros de 0 ate 100
+            nums.push(num); // array nums puxará o rado mde numeros para si
+
+            if (num == 0) { // se o num random receber 0 o contador finalizará em y
+                cont = 3000;
+            }
+
+            if (num > maiorNum) { // num será analizado procurando o maior numero
+                maiorNum = num;  // var maior num receberá o maior numero do random
+                // o loop analisa todos os valores e vai mostrando até uqe chegue no ultimo maior
+            }
+
+            res.innerHTML = `Aqui estão os numeros: ${nums} <br> 
+            O maior numeros: ${maiorNum}  <br> <br>
+            Fim do loop -NUM é igual: ${num} <br>`; // print do rsultados
+        }
+
+    </script>
+</body>
+</html>

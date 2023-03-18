@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Pratiando JS</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            Respota
+        </div>
+    </main>
+
+    <script>
+
+        let idade = Number(prompt('Qual sua idade nadado ?'));
+        let res = document.querySelector('#res')
+
+        if (idade =='' || isNaN(idade)) {
+            res.innerHTML = `Preencha corretamente para saber sua categoria`
+        } else {
+            if (idade <= 7) {
+                res.innerHTML = `Com ${idade} - Categoria infatil A!`
+            }
+            else if (idade <= 11) {
+                res.innerHTML = `Com ${idade} - Categoria infatil B!`
+            }
+            else if (idade <= 13) {
+                res.innerHTML = `Com ${idade} - Categoria Juvenil A!`
+            }
+            else if (idade <= 17) {
+                res.innerHTML = `Com ${idade} - Categoria Juvenil B!`
+            }
+            else {
+                res.innerHTML = `Com ${idade} - Categoria Adulto!`
+            }
+        }
+
+    </script>
+</body>
+</html>

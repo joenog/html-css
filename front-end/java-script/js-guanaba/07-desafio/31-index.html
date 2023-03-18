@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutiplos de dez</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Mutiplos de 10</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+            Frutas
+        </div>
+    </main>
+
+    <script>
+        let res = document.querySelector("#res");
+        let frutas = ['maça', 'pera'];
+        frutas[2] = 'laranja';
+        frutas.push('melancia');
+
+        res.innerHTML = `${frutas.join(', ')} //  há ${frutas.length} frutas no array
+        // <br> Em ordem ficaria: ${frutas.sort().join(', ')}
+        // <br> Aprimeira fruta: ${frutas[0]}
+        // <br> A ultima fruta: ${frutas[3]}`
+
+        // uso o atritubo .sort para ordenar numericamente os itens
+        // .sort() deixa em ordem crescente e alfabetica
+    </script>
+</body>
+</html>

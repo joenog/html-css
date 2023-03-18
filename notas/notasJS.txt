@@ -957,13 +957,13 @@ ________________________________________________________________________
 
 }}15 [VARIAVEIS COMPOSTAS]
 
-- Variaveis simples só conseguem armazenar uma VAR por vez,( apenas um valor) EX:
+- Variaveis simples só conseguem armazenar um valor por vez,( apenas um valor) EX:
 VAR n = 5  >>  VAR n = 20  ( o valor da var será  subistituido)
 
 - Variaveis compostas podem armazenar varios vares na mesma estrutura  EX:
 
 Criando um Array  ou ( VETOR - variável com varios espaços)
-var frutas = ['Maçã', 'Banana'];
+var frutas = ['Maçã', 'Banana', 'Pera];
 
 console.log(frutas.length);
 // 2
@@ -1007,7 +1007,7 @@ num.sort() /* colocará  os valores em oordem crescente*/  [2,5,6,7,8]
 
 **} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO PD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
 
-} Mostrando VETORES com mormataçao - não é bonita pra um produto final
+} Mostrando VETORES sme formataçao - não é bonita pra um produto final
 
 let valores = [1,5,6,7,8,2,5,6]
 
@@ -1021,7 +1021,7 @@ for(let pos= 0; pos < num.length; pos++) {
 }
 
 } MODO SIMPLIFICAOD 
-for(let pos in num) {  /* para cada posição dentro de NUM, motrarei o NUM[pos] posição do num */ 
+for(let pos in num) {  /* para cada posição dentro de NUM, mostrarei o NUM[pos] posição do num */ 
     console.log(num[pos])
 }
 

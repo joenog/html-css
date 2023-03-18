@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.3em;
+            background-color: lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>header</h1>
+    </header>
+
+    <div id="res">
+        
+    </div>
+
+    <script>
+
+        let res = document.querySelector('#res')
+        let nomes = ['Maria', 'Pedro', 'Calos', 'Uri', 'Igor', 'Alice,', 'Mariana'];
+        let uri = nomes.indexOf('Uri')
+
+        for (let cont in nomes) {
+            res.innerHTML += `<br> Aluno ${nomes[cont]} - Cadastro Feito em ${cont}`
+        }
+
+        res.innerHTML += `<br> O aluno Uri estána posiçao ${uri}`
+
+
+    </script>
+</body>
+</html>
