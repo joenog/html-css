@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados nova empresa</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dados nova empresa</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+            <h3>Dados: </h3> <br>
+
+        </div>
+
+    </main>
+
+    <script>
+        
+        let usuarios = [ // array com informaçoes dos trab
+        { nome: 'Maria', idade: 25, sexo: 'Feminino', salario: 120 },
+        { nome: 'Julia', idade: 21, sexo: 'Feminino', salario: 95 },
+        { nome: 'João', idade: 35, sexo: 'Masculino', salario: 220 },
+        { nome: 'Pedro', idade: 29, sexo: 'Masculino', salario: 420 },
+        { nome: 'Aline', idade: 22, sexo: 'Feminino', salario: 320},
+        { nome: 'Alvaro', idade: 32, sexo: 'Masculino', salario: 520}
+    ];
+    //variaveos
+        let res = document.querySelector('#res')   
+        let usuMaisVelho = usuarios[0]; // indico que user mais velho inicia-se no idice 0 do array
+        let usuMaisNovo = usuarios[0]; // o usuario ja recebe o primeiro indice automaticamente
+        let mulheres = [];
+        let salMaiores = [];
+        let qtdHomens = 0;
+        let somaSalarios = 0;
+
+       for (let i = 0; i < usuarios.length; i++) {   // Usa-se loops/iterador para ler 
+           // aqui o loop i passa pela idade checando se a idade é maiorq 0 se for usu mais velhor vai recebendo o maior
+            if (usuarios[i].idade > usuMaisVelho.idade) { 
+                usuMaisVelho = usuarios[i];  // usu mair velhor sempre receberá a idade maior durante o loop
+            } else if (usuarios[i].idade < usuMaisNovo.idade) {
+                usuMaisNovo = usuarios[i];
+            }
+            //Checar mulheres
+            if (usuarios[i].sexo === 'Feminino' && usuarios[i].salario > 100) {
+                mulheres.push(usuarios[i].nome);
+                salMaiores.push(usuarios[i].salario);
+            }
+            //checar homens
+            if (usuarios[i].sexo == 'Masculino' || usuarios[i].sexo == 'masculino') {
+                qtdHomens++;  
+            }
+            //checar media salarial
+            somaSalarios += usuarios[i].salario // valor salarial vai ser iterando durante o loop
+
+        }
+
+        let mediaSalarial = somaSalarios / usuarios.length; // mediaSal recebe a soma dos SAL dividido pelo num de user
+
+        //respostas
+       res.innerHTML = `
+            Trabalhador Mais velho ${usuMaisVelho.nome}, ${usuMaisVelho.idade} Anos / <br>
+            Trabalhador Mais novo ${usuMaisNovo.nome}, ${usuMaisNovo.idade}    Anos / <br>
+            Mulheres com salario maior que 100: ${mulheres.join(', ')} Salarios de: ${salMaiores.join(', ')} R$ / <br>
+            Quatidade de Homens: ${qtdHomens} / <br>
+            Media salario do Grupo: ${mediaSalarial.toFixed(2)} R$`
+
+    </script>
+</body>
+</html>

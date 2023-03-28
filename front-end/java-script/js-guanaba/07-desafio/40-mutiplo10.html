@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutiplo de 10</title>
+</head>
+<body>
+    <header>
+        <h1>Mutiplo de 10</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            <h3>Aqui está a contagem: </h3> <br>
+        </div>
+
+    </main>
+
+
+    <script>
+
+        let res = document.querySelector('#res')
+
+        for (let cont = 1; cont < 101; cont++) {
+
+            if ( cont % 10 == 0) { // se resto da divisao cont por 100 for igual a 0 
+                res.innerHTML += `${cont} <- mutiplo de 10 <br>`;
+            } else {
+                res.innerHTML += `${cont},  `;
+            }
+        }
+    
+
+    </script>
+</body>
+</html>

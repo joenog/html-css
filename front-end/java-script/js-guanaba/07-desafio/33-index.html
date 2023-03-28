@@ -25,18 +25,28 @@
     <div id="res">
         
     </div>
+    <input type="submit" value="Enviar" onclick="clicou()">
+    <input id="limp" type="submit" value="Limpar" onclick="limpar()">
 
     <script>
 
-        let res = document.querySelector('#res')
-        let nomes = ['Maria', 'Pedro', 'Calos', 'Uri', 'Igor', 'Alice,', 'Mariana'];
-        let uri = nomes.indexOf('Uri')
-
-        for (let cont in nomes) {
-            res.innerHTML += `<br> Aluno ${nomes[cont]} - Cadastro Feito em ${cont}`
+        let res = document.querySelector('#res') // setei a variavel de resp
+        let nomes = ['Maria', 'Pedro', 'Calos', 'Uri', 'Igor', 'Alice,', 'Mariana']; // array de nomes
+        let limp = document.querySelector('#limp')
+        let uri = nomes.indexOf('Uri') // buscando o indice de algo numa array
+        nomes.sort // ordenando array
+        
+        function clicou() {
+            for (let cont in nomes) { // simplificando array
+                res.innerHTML += `Aluno ${nomes[cont]} -- Codigo: #00${cont} <br>` // inserindo resp array interpolada
+            }
+    
+            res.innerHTML += `Ò aluno Uri está na posiçao ${uri}`
+            
         }
-
-        res.innerHTML += `<br> O aluno Uri estána posiçao ${uri}`
+            function limpar() {
+                res.innerHTML = ``;
+            }
 
 
     </script>

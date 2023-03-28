@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.3em;
+            background-color: rgb(182, 146, 248);
+            text-align: center;
+        }
+
+        input[type=submit] {
+            background-color: rgb(48, 7, 48);
+            border-radius: 20px;
+            font-size: .6em;
+            padding: 12px;
+            border: none;
+            transform: translate(0px, 20px);
+            position: relative;
+            color: white;
+        }
+
+        input[type=text] {
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            font-size: 1em;
+            padding: 10px;
+            border: none;
+            color: black;
+        }
+        
+        #botoes {
+            position: absolute;
+            top: 85vh;
+            left: 40vw;
+            background-color: rgba(240, 248, 255, 0);
+            
+        }
+        
+        #res {
+            width: 410px;
+            margin: 5px auto;
+            height: 400px;
+            background-color: rgb(100, 100, 100);
+            border-radius: 20px;
+            background-color: white;
+            overflow-y: auto;
+            font-size: .8em;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Tarefas a Fazer</h1>
+    </header>
+    <main>
+        <input type="text" name="itens" id="itens">
+    
+        <div id="res">
+    
+        </div>
+        <div id="botoes">
+            <input type="submit" value="Adicionar" onclick="add()">
+            <input type="submit" value="Limpar" onclick="clean()">
+        </div>
+    </main>
+
+    <script>
+
+        let tasks = [];
+        let res = document.querySelector("#res");
+        
+        function add() {
+            if (tasks.length < 18) {
+                let itens = document.querySelector('#itens');
+                itens = String(itens.value)
+                tasks.push(itens);
+                res.innerHTML = ` ${tasks.join('<br>').toLocaleUpperCase()}`
+            } else {
+                alert('Faça essas antes de adicionar mais!')
+            }
+        }
+
+        function clean() {
+            res.innerHTML = `Tarefas apagadas`;
+            tasks = [];
+        }
+
+
+    </script>
+</body>
+</html>

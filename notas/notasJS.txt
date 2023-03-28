@@ -1061,16 +1061,119 @@ function chamada(n) {
                    ,[CHAMADA- parametro real]
 let res = achamada(11)  <[aq A CHAMADA: linha de disparo da ação enviado acima]
 ----------------
-
-outro exemplo:
-function soma(n1=0, n2=0) {   /* adiciono o 0 caso o numero real posteriormente n seja requerido */
-    return n1 + n2
+function soma(n1, n2) { // declaro os parametros que n pode ser apenas numeros 
+    return n1 + n2; // retorno com a soma desse parametros
 }
-console.log(soma(10, 5))  /* caso seja requerido apenas o 10 ele será somado com 0 citado acima */
+------
+function soma(n1=0, n2=0) { // declaro os parametros que n pode ser apenas numeros 
+            // posso inserir o valor dos parametros ja na funcao
+    return n1 + n2; // retorno com a soma desse parametros
+}
+
+console.log('A soma dos valores:' + soma(5)); // imprimo a funcao soma, inserindo nela o valor dos parametros
+//se um dosp parametros n for passado terei o resultado NaN o valor n passado será indefinido
+// Posso inserir o vaor dos parametros na funcion ou na varivel de retorno
+
+----
+
+// fatorial do numero 
+
+function fatori(n) {
+    let fat = 1;
+    for (let cont = n; cont > 1; cont--)
+    fat = fat * cont;
+    return fat
+}
+console.log(fatori(4))
+----
+
+] Funcao Recursiva/ RECURSIVIDADE
+
+A funcao recuriva acontece qudo a funcion chama a si mesma
+
+function fatorial(n) {
+
+    if (n == 1) {  // se o fatorial igual a 1
+        return 1; // retorne 1
+    }else {
+        return n * fatorial(n-1) // se não for retorne o o numero inseriod vezes ele mesmo menos 1
+    }
+}
+
+console.log(fatorial(3))
+________________________________________________________________________
+
+[]} Funcion UDEMY
+
+    Uma funcao tem o objetivo de encapsular determinado bloco de codigo que possui um objetivo
+bem definido, e atravez das chamadas das funcoes podemos recupero-las e reutilizar em 
+varias partes do nosso programa.
+
+Posso utilizar uma funcion de forma VOID apenas a deixando execultando uma logica ou posso 
+aplicar a ela uma return fazendo com que essa logica posso ser aplicanda a outras partes do
+programa se necessario.
+
+funcion (a, b, c) <-- Os parametros duma funcao podem ser declarados ou nao, e msm sendo aplicados
+caso haja o requerimento de parametros a mais (a,b,c,d) o JS de forma inteligente irá ignora-los
+-- Caso seja passado parametros a menos, o parametros n inserido será lido pelo JS como undefined
+com isso a logica retornará not a number NaN.
+    Por fim, caso nao seja passado nenhum parmetro o retorno tmb será NaN, com isso ressaltamos
+a flexibilidade do javascript
+----
+
+} Escopo de variaveis
+
+Escopo global / escopo de funcao / e escopo de bloco
+
+Escopo global refere ao script como um topo
+Escopo da funcao refere as variaveis dentro duma funcao
+Escopo de bloco refere-se aos comando inseridos detro de blocos com swift e if/else 
+
+Em resumo posso criar variveis para ser acessadas por todos programas, dentro de if/ crio 
+let que podera ser acessada apenas la dentros e caso queira uma elevação da variavel uso o
+nome VAR - ja nas funcion, todas as VAR e LET so podem se utilizadas la dentros, nao havendo
+elevaçao para fora da funcao.
+Casa hja blocos dentro duma funcion, as VAR criadras no bloco serao iaçadas para fora assim
+ficando disponiveis para a funcion.
+-----
+
+}Funcion anonima
+
+A funcion anonima é criada sem nome para que seja exultada apena numa parte do codigo, 
+ou posso colocala dentro duma variavel VAR (funcion expression), com isso passo chama-la ao
+requerir a VAR EX:
+
+var showIMC = function(peso, altura) {
+    var imc  = peso / altura ** 2
+    console.log(imc.toFixed(2))
+}
+showIMC(75, 1.75)
+------
+
+}Funcion CallBack
+
+Funcion de CallBack é apenas funcions encaminhadas como parametros ( funcion, funcion2) para
+outras funcions, nela colocando if/else para reseber umma funcion ou outra funciion e com isso
+dar continuidade no processament da logica de programacao EX: PSEUDOCODIGO
+
+funcion ShowArchive(id, callbackSucesso, callbackERRO)
+logica para recuperar o arquivo com base no ID
+
+if (?) {
+	callbackSUCESSO (' titulo do arquivo')
+else {
+	callbackERRO ('erro')
+
+-Temos duas duncoes encaminhadas como parametros de uma funcao principal quer retornará uma
+ das duas dependendo das condicoes!
+
+-Encapsular as funcoes anonimas dentro de variveis acaba sendo uma boa pratica, deixando
+o codigo mais limpo
+
 
 ________________________________________________________________________
 
-[LÓGICA DE PROGRAMÇAO]
+}}[LÓGICA DE PROGRAMÇAO]
 
 Num algoritmo deve-se comsiderar todos os passos ate os mais simples
 Os programas e APPS são algoritimos escritos numa linguagem de programção (JS, C# JAVA, PYTHON..)
@@ -1080,6 +1183,16 @@ São escritos coa funçao de criar solucoes ao nosso dia-a-dia e são sempre bem
 É uma forma generica de escrever um algoritmo
 Um pseudo codigo com algoritmo bem feito serpa facil de se interpretar podendo ser codificado
 codado em qualquer linguagem. 
+
+]BOAS PRATICAS PESEUDOCÓDIGO
+Usar palavras-chave simples e diretas para descrever as ações, como "leia", "escreva", "se",
+"enquanto", "para", etc.
+Usar indentação e/ou chaves para indicar a estrutura do código, como em uma linguagem de programação.
+
+Usar comentários para explicar partes complexas do algoritmo ou para adicionar informações adicionais.
+
+Usar variáveis ou símbolos descritivos para representar valores ou objetos em vez de números
+ ou nomes específicos.
 
 ] Regras para criar ALGORITMO
 
@@ -1093,4 +1206,5 @@ EX: algoritmo - Tirar lampada
 
 1 pegar escada / 2 posicionar escada / 3 subir escada / 4 desenrroscar lampada 
 5 descer escada / 6 quardar escada / 7 jogar lampda lixo
+
 

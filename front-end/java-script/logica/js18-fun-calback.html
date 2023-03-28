@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes Callback</title>
+</head>
+<body>
+    <h1>Funções  Callback</h1>
+
+
+    <script>
+        var terra = true;
+
+        function planeta(id, terra, marte) {
+
+            if(true) {
+                console.log('Boas vindas ao terraqueo')
+            } else {
+                console.log ('Boas vindas ao marciano')
+            }
+        }
+
+        let terra = function(terra) {
+            console.log('O callback foi efetuado terraquio você está preparado ?')
+        }
+
+        let marte = function (marte) {
+            console.log('O callback foi efetuado marciano você está preparado ?')
+        }
+
+        planeta(1, terra, marte);
+    </script>
+</body>
+</html>

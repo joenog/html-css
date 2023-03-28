@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JS</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Numeros</h1>
+    </header>
+
+    <main>
+        <div id="form">
+            <input type="number" name="fnum" id="fnum" placeholder="Numeros entre 1 e 100">
+            <input type="submit" value="Adicionar" onclick="adicionar()">
+            <br>
+
+            <select name="flist" id="flist" size="12">
+
+            </select> <br>
+
+            <input type="submit" value="Checar" onclick="checar()">
+        </div>
+
+        <div id="res">
+            Resposta    
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado por <a href="https://instagram.com/joe.nog" target="blank" rel="noopenner">JOE.NOG</a></p>
+    </footer>
+
+    <script>
+        let num = document.querySelector('#fnum'); // variavel para pegar num
+        let list = document.querySelector('#flist'); // variavel para pegarq lista
+        let res = document.querySelector('#res') // variavel paa mostrar resposta
+        let valores = [];  // array para armazenar os numeros digitados
+
+        function adicionar() { // função para adicionar numero a array
+
+            function isNumero(numero) { // funcao para checar se foi inserido numemro
+                if (Number(n) >= 1 || Number(n) <= 100) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            function inList(numero, lista) { // funcion para checar se o numer oja está na lista
+                if (n = !inList ) {
+                    return alert('O numero n está na lista')
+                } else {
+                    
+                }
+
+            }
+
+            if (isNumero(num.value) && !inList(num.value, valores)) {
+
+            } else {
+                alert('Valor invalido ou já inserido!')
+            }
+
+        } EXERCICIOS GUANABARA
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.3em;
+            background-color: lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>header</h1>
+    </header>
+
+    <div id="res">
+        
+    </div>
+    <input type="submit" value="Enviar" onclick="clicou()">
+    <input type="submit" value="Limpar" onclick="limpar()">
+    <input type="submit" value="Adicionar" onclick="adicionar()">
+    
+
+    <script>
+
+        let res = document.querySelector('#res');
+        let itens = ['Macarrão', 'Feijão', 'Arroz'];
+
+        function adicionar() {
+            let add = prompt('Dicione um item');
+            itens.push(add);
+        }
+
+        function clicou() {
+            for (let cont in itens) {
+                res.innerHTML += `Item ${cont}: ${itens[cont]} <br>`;
+            }
+        }
+
+        function limpar() {
+            res.innerHTML = ``;
+        }
+
+
+    </script>
+</body>
+</html>
