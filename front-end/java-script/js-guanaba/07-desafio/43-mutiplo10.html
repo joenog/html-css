@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados nova empresa</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dados nova empresa</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+            
+        </div>
+
+    </main>
+
+    <script>
+        
+        let user = [
+            {nome: 'João', idade: 22, sexo: 'Masculino', salario: 860.20},
+            {nome: 'Carla', idade: 23, sexo: 'Feminino', salario: 660.93},
+            {nome: 'Igor', idade: 26, sexo: 'Masculino', salario: 890.87},
+            {nome: 'Alice', idade: 29, sexo: 'Feminino', salario: 985.23},
+            {nome: 'Lucas', idade: 32, sexo: 'Masculino', salario: 1860.20},
+            {nome: 'Alana', idade: 29, sexo: 'Feminino', salario: 860.91},
+            {nome: 'Italo', idade: 22, sexo: 'Masculino', salario: 790.87},
+        ];
+        //varivareis
+        let res = document.querySelector('#res');
+        let masc = 0;
+        let femi = 0;
+        let maisVelho = user[0]; // variaveis recebem o primeiro indexe para que seja substituido
+        let maisNovo = user[0];  // por outros indices com comparaçoes posterioes
+        let maiorSal = user[0];
+        let menorSal = user[0];
+        let somaSal = 0;
+        let todosFun = [];
+        let div01 = document.createElement('div')
+        
+        
+        //iterador
+        for (let i = 0; i < user.length; i++) {
+            //numero de mulheres e homens,
+            if (user[i].sexo === 'Masculino') {
+                masc++;
+            } else {
+                femi++;
+            }
+
+            //mais velho e mais novo
+            if (user[i].idade > maisVelho.idade) {
+                maisVelho = user[i];  // user mais velho recebe index do user analisado mais velho
+            } else {
+                maisNovo = user[i];
+            }
+
+            //maior e menor salario
+            if (user[i].salario > maiorSal.salario) {
+                maiorSal = user[i];
+            } else if (user[i].salario < menorSal.salario){
+                menorSal = user[i];
+            }
+
+            //media saalarial
+            somaSal += user[i].salario;
+
+            // Listagem de funconarios
+            todosFun.push(user[i].nome);
+        }
+
+        let mediaSal = somaSal / user.length;
+
+        res.innerHTML = 
+            `Quantidade de Homens: ${masc} <br>
+            Quantidade de Mulheres: ${femi} <br>
+            Funcionario Mais velho: ${maisVelho.nome}, ${maisVelho.idade} Anos <br>
+            Funcionario Mais novo:  ${maisNovo.nome}, ${maisNovo.idade} Anos <br>
+            Func. com maior Salário:  ${maiorSal.nome}, ${maiorSal.salario} R$ <br>
+            Func. com menor Salário:  ${menorSal.nome}, ${menorSal.salario} R$ <br>
+            Todos os funcionaros: <br> ${todosFun} <br> <br>
+            Média salarial dos Func: ${mediaSal.toFixed(2)} R$
+             `;
+        
+            div01.innerHTML = `Aqui está a nova div !`
+            document.body.appendChild(div01);
+        
+            
+            //estilizando resposta
+            res.style.background = 'lightblue';
+            res.style.padding = '20px';
+            res.style.fontFamily = 'Arial';
+            res.style.borderRadius = '20px';
+             
+
+        
+    </script>
+</body>
+</html>
