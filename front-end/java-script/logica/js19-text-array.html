@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes Callback</title>
+</head>
+<body>
+    <h1>FTeste array</h1>
+
+    <main>
+        <div id="res">
+            resp
+        </div>    
+    </main>
+
+
+    <script>
+        
+       let res = document.querySelector('#res');
+       let user = [
+        { nome: 'Jon', idade: 25, gen: 'Masculino', salario: 1500.20 },
+        { nome: 'Joane', idade: 30, gen: 'Feminino', salario: 1200.60 },
+        { nome: 'Igor', idade: 18, gen: 'Masculino', salario: 750.50 },
+        { nome: 'Mario', idade: 35, gen: 'Masculino', salario: 3500.20 },
+        { nome: 'Alice', idade: 27, gen: 'Feminino', salario: 1200.60 },
+        { nome: 'Junior', idade: 16, gen: 'Masculino', salario: 550.50 },
+        { nome: 'Marie', idade: 16, gen: 'Masculino', salario: 550.50 }
+       ]
+
+       let maiores = [];
+       let menores = [];
+       let qtdHomens = '';
+       let qtdMulheres = '';
+       let somaSal = 0;
+
+       for (let i = 0; i < user.length; i++) {
+        
+        if (user[i].idade >= 18) {
+            maiores.push(user[i].nome);
+        } else {
+            menores.push(user[i].nome);
+        }
+        
+        if (user[i].gen === 'Masculino') {
+            qtdHomens++;
+        }
+        
+        if (user[i].gen === 'Feminino') {
+            qtdMulheres++;
+        }
+
+        somaSal += user[i].salario;
+       }
+
+       let mediaSal = somaSal / user.length;
+
+       res.innerHTML = `
+       Maiores de idades: ${maiores.join(', ')} <br>
+       Menores de idades: ${menores.join(', ')} <br>
+       Quant. de Homens:  ${qtdHomens} <br>
+       Quant. de Mulheres:${qtdMulheres} <br>
+       Média Salarial fun.${(mediaSal.toFixed(2))}
+       `
+
+    </script>
+</body>
+</html>

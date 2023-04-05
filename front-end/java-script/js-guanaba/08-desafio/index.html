@@ -21,7 +21,7 @@
             <br>
 
             <select name="flist" id="flist" size="12">
-
+                <option value="" disabled>00</option>
             </select> <br>
 
             <input type="submit" value="Checar" onclick="checar()">
@@ -44,31 +44,45 @@
         let valores = [];  // array para armazenar os numeros digitados
 
         function adicionar() { // função para adicionar numero a array
+            let n = Number(num.value);
 
-            function isNumero(numero) { // funcao para checar se foi inserido numemro
-                if (Number(n) >= 1 || Number(n) <= 100) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-            function inList(numero, lista) { // funcion para checar se o numer oja está na lista
-                if (n = !inList ) {
-                    return alert('O numero n está na lista')
-                } else {
-                    
-                }
-
-            }
-
-            if (isNumero(num.value) && !inList(num.value, valores)) {
+            if (n >= 1 && n <= 100) {
+                valores.push(n);
+                
 
             } else {
-                alert('Valor invalido ou já inserido!')
+                alert('Numero fora de cogitação!')
             }
 
-        } EXERCICIOS GUANABARA
+            
+           
+
+        }
+
+        
+
+        /* function isNumero(numero) { // funcao para checar se foi inserido numemro
+                    if (Number(n) >= 1 || Number(n) <= 100) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+    
+                function inList(numero, lista) { // funcion para checar se o numer oja está na lista
+                    if (n = !inList ) {
+                        return alert('O numero n está na lista')
+                    } else {
+                        
+                    }
+    
+                }
+    
+                if (isNumero(num.value) && !inList(num.value, valores)) {
+    
+                } else {
+                    alert('Valor invalido ou já inserido!')
+                }*/
 
     </script>
 </body>

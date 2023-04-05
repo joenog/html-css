@@ -1170,6 +1170,12 @@ else {
 -Encapsular as funcoes anonimas dentro de variveis acaba sendo uma boa pratica, deixando
 o codigo mais limpo
 
+[Funcion expression nome dado qunado colocar uma funcao dentro duma variavel]
+essa funcão pode ou nao ser anonima, (com ou sem nome)
+Posso ter o memso efeito usanfo a sitaxe de ARROW FUNCION () => {} dentro duma varivel
+
+
+
 
 ________________________________________________________________________
 

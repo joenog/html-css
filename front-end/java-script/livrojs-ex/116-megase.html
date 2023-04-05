@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA DA SORTE</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+           background: url('armyphot.jpg');
+           background-size: cover;
+        }
+        
+        header {
+            color: white;
+            text-align: center;
+            padding: 40px;
+            user-select: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-rows: auto auto;
+            background-color: rgba(12, 37, 5, 0.89);
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.74);
+        }
+        
+        #res {
+            align-self: first baseline;
+            width: 100%;
+            background-color: rgb(253, 253, 253);
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 1.6em;
+        }
+
+        #btn {
+            align-self:last baseline;
+            width: 100%;
+            color: white;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.342);
+            padding: 15px;
+            font-weight: bolder;
+            font-size: 1.2em;
+            text-align: center;
+            user-select: none;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.384);
+        }#btn:hover {
+            background-color: rgb(15, 116, 15);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.384);
+            transition-duration: .3s;
+            transition-delay: .1s;
+            transform: translate(1px,2px);
+        }
+        
+        #btnReset {
+            align-self:last baseline;
+            width: 100px;
+            color: white;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.342);
+            padding: 12px;
+            font-weight: bolder;
+            font-size: 1.2em;
+            text-align: center;
+            user-select: none;
+            box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.384);
+            margin: 20px auto;
+        }#btnReset:hover {
+            background-color: rgb(121, 16, 16);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.384);
+            transition-duration: .3s;
+            transition-delay: .1s;
+            transform: translate(1px,2px);
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>MEGA DA SORTE</h1>
+    </header>
+
+    <main>
+        <div id="res">
+            /
+        </div>
+        <p id="btn" onclick="clicou()">
+            GERAR NÚMEROS
+        </p>
+    </main>
+    
+    <p id="btnReset" onclick="reset()">
+        RESETAR
+    </p>
+
+    <script src="116-exemplo.js"></script>
+
+    <!--  <script>
+        function clicou() {
+                let num = [''];
+                let res = document.querySelector("#res")
+
+                if (num.length === 0) {
+                    console.log('ERRO!')
+                } else {
+                    for (let i = 0; i < num.length; i++) {
+                        if (num.length < 7) {
+                            num.push(Math.floor(Math.random() * 60));
+                        }
+                        if (num[i] === num.values) {
+                            num.push('ERRO!')
+                        }
+                    }
+                    res.innerHTML = `> ${num.join(' ')}`;
+                }
+            } 
+    </script>-->
+</body>
+</html>
