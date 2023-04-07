@@ -1121,7 +1121,7 @@ com isso a logica retornará not a number NaN.
 a flexibilidade do javascript
 ----
 
-} Escopo de variaveis
+    } Escopo de variaveis
 
 Escopo global / escopo de funcao / e escopo de bloco
 
@@ -1137,7 +1137,7 @@ Casa hja blocos dentro duma funcion, as VAR criadras no bloco serao iaçadas par
 ficando disponiveis para a funcion.
 -----
 
-}Funcion anonima
+    }Funcion anonima
 
 A funcion anonima é criada sem nome para que seja exultada apena numa parte do codigo, 
 ou posso colocala dentro duma variavel VAR (funcion expression), com isso passo chama-la ao
@@ -1150,7 +1150,7 @@ var showIMC = function(peso, altura) {
 showIMC(75, 1.75)
 ------
 
-}Funcion CallBack
+    }Funcion CallBack
 
 Funcion de CallBack é apenas funcions encaminhadas como parametros ( funcion, funcion2) para
 outras funcions, nela colocando if/else para reseber umma funcion ou outra funciion e com isso
@@ -1162,7 +1162,7 @@ logica para recuperar o arquivo com base no ID
 if (?) {
 	callbackSUCESSO (' titulo do arquivo')
 else {
-	callbackERRO ('erro')
+	callbackERRO ('erro') }
 
 -Temos duas duncoes encaminhadas como parametros de uma funcao principal quer retornará uma
  das duas dependendo das condicoes!
@@ -1170,16 +1170,92 @@ else {
 -Encapsular as funcoes anonimas dentro de variveis acaba sendo uma boa pratica, deixando
 o codigo mais limpo
 
-[Funcion expression nome dado qunado colocar uma funcao dentro duma variavel]
-essa funcão pode ou nao ser anonima, (com ou sem nome)
 Posso ter o memso efeito usanfo a sitaxe de ARROW FUNCION () => {} dentro duma varivel
 
+AS funcoes em JS são como quaquer outro valor, posso atribui-la a uma variavel, coloca-la como
+ parametro de outra funcao, encare funcion como qualweur outro obejte, array, number boolear..
+ ] POSSO DECLARA UM FUNCION DE VARIAS FORMAS
+
+1- funcion soma() {}  [forma padrao]
+
+2- const somar = funcion(a,b) {  [funcion expression] quando colocada numa variavel
+    return a + b;                -essa funcão pode ou nao ser anonima, (com ou sem nome)
+}
+
+!DIFERENÇA ENTRE FUNCOIN NOMEADA E ANONIMA
+A principal diferença entre as duas formas é que a função nomeada pode ser referenciada
+diretamente pelo seu nome, enquanto a função anônima precisa ser referenciada por meio
+da variável ou constante à qual foi atribuída. 
+
+3- const minhaFuncao = () => {}
+!!(Funcao Arrow Ela é uma alternativa mais simples e elegante para escrever funções que têm
+apenas uma expressão como corpo.
+!FUNCOES RECEBEM ARGUMENTOS E RETORNAM VALORES!
+
+[}clik] [EXEMPLO DE OBEJTOS EM JS]
+    { const person = {                      (obejto atribuido a uma const)
+    name: 'John',
+    age: 35,
+    isMarried: true,
+    hobbies: ['reading', 'hiking', 'cooking'],
+    address: {
+        street: '123 Main St',
+        city: 'Anytown',
+        state: 'CA',
+        zipCode: '12345'
+    },
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+    },
+    introduceHobbies: function() {
+        console.log(`My hobbies are ${this.hobbies.join(', ')}.`);
+    } --------------
+    Com um objeto, é possível agrupar informações relacionadas em um só lugar e acessá-las 
+    facilmente usando as propriedades do objeto. O objeto pode ser passado como argumento
+    para funções e pode ser usado para interagir com outros objetos e APIs em JavaScript. }
+
+4- const mfuncion = () =>      [Funcion arrow anonima]
+4- const mfuncion = parametro =>      [Funcion com um parametro n precisa de ()]
+4- const mfuncion = (a, b) =>      [Funcion com  mais de um paramt. precisa de ()]
+!!(As funcoes arrow não consegue fazer içamento
+
+ ]]]]!EXEMPLO DE ATRIBUIÇAO DE FUNCION             
+                      ↓argumento
+ funcion criarPessoa(nome) => {
+    return {nome}
+ }
+  > const pessoa = criarPessoa 
+    aqui estou atribuindo toda funcao a constante, toda a execulçao
+    isso acontece quando n uso() ou seja n execulto a funcao 
+  > const pessoa = criarPessoa('jon')
+    ja aqui estou atribuindo o objeto que a funcao retornará
+    logo a constante passa a ter o return e não a funcao em si.
+----------
+!]]MAIS EXMEPLOS DE ATRIBUIÇOES
+
+    function criarPessoa(nome) {   // > funcion com argumento nome
+    return nome                    //  > retorno nome - argumento
+    }
+
+const pessoa = criarPessoa;  // > contante pessoa recebe a funcçao em si criarPessoa
+const jon = pessoa('Jon')    // > contante jon recebe a constante pessoa ja execultando a funcion()
+const alice = criarPessoa('Alice')
+document.write(`${jon}, ${alice}`) 
+---------
+!]]MAIS EXMEPLOS DE ATRIBUIÇOES - forma mais simplificada
+
+let criarPessoa = nome => (nome) // funcion arrow recebe argumento nome e retorna nome simplificad
+let daniel = criarPessoa('Daniel Satori')
+let alicia = criarPessoa('Alicia Satori')
+document.write(`${daniel}, ${alicia}`)
+---------
 
 
 
-________________________________________________________________________
 
-}}[LÓGICA DE PROGRAMÇAO]
+_______________________________________________________________________
+
+][LÓGICA DE PROGRAMÇAO]
 
 Num algoritmo deve-se comsiderar todos os passos ate os mais simples
 Os programas e APPS são algoritimos escritos numa linguagem de programção (JS, C# JAVA, PYTHON..)

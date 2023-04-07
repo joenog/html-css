@@ -7,16 +7,20 @@
     <title>Funçoes Callback</title>
 </head>
 <body>
-    <h1>Funções  Callback</h1>
-
+    <h1>Funções ↓ Callback</h1>
+    
 
     <script>
         
-       function x() {
-        console.log('Aviso inserido')
-       }
-       
-       x()
+      function criarPessoa(nome) {   // > funcion com argumento nome
+        return nome                 //  > retorno nome - argumento
+      }
+
+      const pessoa = criarPessoa;   // > contante pessoa recebe a funcçao em si criarPessoa
+      const jon = pessoa('Jon')     // > contante jon recebe a constante pessoa ja eecultando a funcion()
+      const alice = criarPessoa('Alice')
+      //document.write(`${jon}, ${alice}`)   
+
 
     </script>
 </body>

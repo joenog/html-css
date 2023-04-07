@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta pizza</title>
+</head>
+<body>
+    <header>
+        <h1>Conta Pizza</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+            RESPOSTA  <br>
+        </div>
+        
+    </main>
+
+    <script>
+
+       const vProdutudo = Number(prompt('Qual valor do produto ?'));
+       const aVista = vProdutudo - (vProdutudo * 0.10);
+       const Parcelado = vProdutudo / 3;
+
+       document.write(`
+       Valor produto: ${vProdutudo.toFixed(2)} <br>
+       Preço à vista: ${aVista.toFixed(2)} <br>
+       Parcelado em 3x:${Parcelado.toFixed(2)}
+       `)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media aluno</title>
+</head>
+<body>
+    <header>
+        <h1>Noata aluno</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+            RESPOSTA  <br>
+        </div>
+        
+    </main>
+
+    <script>
+
+       let nota1 = Number(prompt('Nota 1'));
+       let nota2 = Number(prompt('Nota 2'));
+       const media = (nota1 + nota2) / 2;
+        
+       document.write(`
+        1Nota: ${nota1} <br>
+        2Nota: ${nota2} <br>
+
+        A media do aluno ${media.toFixed(1)}
+       `)
+    </script>
+</body>
+</html>

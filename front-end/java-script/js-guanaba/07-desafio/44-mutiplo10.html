@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados nova empresa</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dados nova empresa</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+            
+        </div>
+
+    </main>
+
+    <script>
+        
+        let text = prompt('Faça seu comentario')
+        let pOfensivas = ['porra', 'caralho', 'viado', 'fdp'];  // array com palavras ofensivas
+        let novoText = text;  // let novo text orecebe text
+
+            for (let i = 0; i < pOfensivas.length; i++) { //loop para ler todas as palavras do array
+                let regex = RegExp(pOfensivas[i], 'gi'); // regEx analisar palavrar , 'gi' globar e ignorar maisuc
+                novoText = novoText.replace(regex, '#**&@') // novo texto recebe text com replace reger 
+            }
+            document.writeln(novoText)
+                
+    </script>
+</body>
+</html>

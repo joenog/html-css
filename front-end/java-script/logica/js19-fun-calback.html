@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes Callback</title>
+</head>
+<body>
+    <h1>Funções ↓ Callback</h1>
+    
+
+    <script>
+        
+      let criarPessoa = nome => {
+        return nome
+      }
+
+      let pessoa = criarPessoa;
+      let daniel = pessoa('Daniel')
+      let cintia = criarPessoa('cintia')
+      document.writeln(daniel)
+      document.writeln(cintia)
+
+    </script>
+</body>
+</html>
