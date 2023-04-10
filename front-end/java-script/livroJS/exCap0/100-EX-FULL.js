@@ -5,7 +5,3 @@ const saudar = (horaAtual) => {
 }
 console.log(saudar(new Date().getHours()))
 console.log(Number.isInteger(4))
-
-let text = 'freestyle lugar distante aprta  o rec prum lugar distante'
-let text2 = text.replace(/lugar/g, 'MATUÊ')
-console.log(text2)

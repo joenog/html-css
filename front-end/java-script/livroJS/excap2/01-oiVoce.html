@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oi você</title>
+</head>
+<body>
+    <header>
+        <h1>Oi você</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+            <p>
+                Seu nome:
+                <input type="text" name="nome" id="nome">
+                <input type="submit" value="Enviar" id="clicou">
+            </p>
+        </form>
+
+        <div id="res">
+            AQUI
+        </div>
+    </main>
+
+    <script>
+        const form = document.querySelector('form');
+        const res = document.querySelector('#res');
+
+        form.addEventListener('submit', (e) => {
+            const nome = form.nome.value;
+            res.innerHTML = `Oi bom dia Sr. ${nome}`
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>
