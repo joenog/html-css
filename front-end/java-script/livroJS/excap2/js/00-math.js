@@ -1,0 +1,1 @@
+console.log( Math.sqrt(9) - 5 * 5 + (8-2) )

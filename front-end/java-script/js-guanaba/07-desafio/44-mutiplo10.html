@@ -18,6 +18,11 @@
             
         </div>
 
+        <form action="">
+            <p>Seu nome</p>
+            <input type="text" name="nome" id="nome">
+        </form>
+
     </main>
 
     <script>
@@ -27,7 +32,7 @@
         let novoText = text;  // let novo text orecebe text
 
             for (let i = 0; i < pOfensivas.length; i++) { //loop para ler todas as palavras do array
-                let regex = RegExp(pOfensivas[i], 'gi'); // regEx analisar palavrar , 'gi' globar e ignorar maisuc
+                let regex = RegExp(pOfensivas[i], 'gi'); // regEx analisar palavrar , 'gi' global gnorar maisuc
                 novoText = novoText.replace(regex, '#**&@') // novo texto recebe text com replace reger 
             }
             document.writeln(novoText)

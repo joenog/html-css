@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta pizza</title>
+</head>
+<body>
+    <header>
+        <h1>Conta Pizza</h1>
+    </header>
+
+    <main>
+        <form action="">
+
+            <p>
+                Valor da pizza:
+                <input type="number" name="vPizza" id="vPizza"> <br>
+
+                Pessoas que pagarão:
+                <input type="number" name="qPessoas" id="qPessoas"> <br>
+
+                <input type="submit" value="Enviar">
+
+            </p>
+
+        </form>
+
+        <div id="res">
+            RESPOSTA  <br>
+        </div>
+        
+    </main>
+
+    <script>
+        const res = document.querySelector('#res');
+        const form = document.querySelector('form');
+        
+        form.addEventListener('submit', (enviar) => {
+            enviar.preventDefault(); // previne que o formilario seja enviado
+            const vPizza = Number(form.vPizza.value);
+            const qPessoas = Number(form.qPessoas.value);
+            if(isNaN(vPizza) || isNaN(qPessoas)) {
+                res.innerHTML = `ERRO!, há algo de errado, confira os dados inseridos`
+            } else {
+                const divi = vPizza / qPessoas;
+                res.innerHTML = `Valor da pizza ${vPizza.toFixed(2)} $ <br>
+                Quantidade de pessoas: ${qPessoas}<br>
+                Cada uma pagará: ${divi.toFixed(2)} $`
+            }
+        })
+      
+        
+    </script>
+</body>
+</html>

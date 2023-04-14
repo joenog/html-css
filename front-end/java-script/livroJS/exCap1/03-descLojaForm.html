@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta pizza</title>
+</head>
+<body>
+    <header>
+        <h1>Conta Pizza</h1>
+    </header>
+
+    <main>
+        <form action="">
+
+            <p>
+                Valor do produto:
+                <input type="number" name="vPro" id="vPro">
+                <input type="submit" value="ENVIAR">
+            </p>
+
+        </form>
+
+        <div id="res">
+            RESPOSTA  <br>
+        </div>
+        
+    </main>
+
+    <script>
+        const form = document.querySelector('form');
+        const res = document.querySelector('#res');
+        
+        form.addEventListener('submit', (enviar)=> {
+            enviar.preventDefault()
+            const vPro = Number(form.vPro.value);
+            if (isNaN(vPro) || vPro <= 10 ) {
+                alert(' erro !')
+                return;
+            }
+            if (vPro <= 20) {
+                res.innerHTML = `Imparcelavel pague a vista: ${vPro}`  
+            } else {
+                res.innerHTML = `A vista ${vPro - (vPro * 0.10).toFixed(2)} <br>
+                A prazo 3x de ${(vPro / 3).toFixed(2)}  
+                `  
+             }
+        })
+       
+        
+    </script>
+</body>
+</html>

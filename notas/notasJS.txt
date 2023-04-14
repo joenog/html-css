@@ -463,6 +463,7 @@ EX: média >= 7.0 [?]'APROVADO'[:]'REPROVADO'  : 'REPROVADO'
       
 }ORDEM DE PRECEDENCIA
 respectivamente...            {1º  2º  3º}
+0º- Comando Math. primeiro    [Math.pow()] ...  "Comando math antes dos parenteses"
 1º- Operadores Aritimeticos.  [ () ** /  ] ...  "Siga a ordem depois faça os outros"
 2º- Operadores Relacionais .  [ >  <  >= ] ...  "Sem ordem de precedencia"
 3º- Operadores Lógicos     .  [ !  && || ] ...  "Logicos também devem seg essa ordem"
@@ -1241,15 +1242,84 @@ const pessoa = criarPessoa;  // > contante pessoa recebe a funcçao em si criarP
 const jon = pessoa('Jon')    // > contante jon recebe a constante pessoa ja execultando a funcion()
 const alice = criarPessoa('Alice')
 document.write(`${jon}, ${alice}`) 
+
+** funcoes recebem argumentos e retornam valores!
+ou seja numa funciona expression  --> const nome = (nomePessoa => {return 'jon'}
+o parametro sempre tornará o que for passado a ele posteriormente
 ---------
 !]]MAIS EXMEPLOS DE ATRIBUIÇOES - forma mais simplificada
 
-let criarPessoa = nome => (nome) // funcion arrow recebe argumento nome e retorna nome simplificad
+let criarPessoa = nome => (nome) //funcao => recebe argumento nome e retorn nome, forma simplificad
 let daniel = criarPessoa('Daniel Satori')
 let alicia = criarPessoa('Alicia Satori')
 document.write(`${daniel}, ${alicia}`)
 ---------
 
+!!]]] Ultimo exmplo funcion CallBack simplificado [js24.fun-callback]
+                        ↓callcack - cb
+const saudar = (nome, responder) => {
+        const horaAtual = new Date().getHours()
+        //const responder = resposta => console.log(nome, resposta)
+
+        if (horaAtual <= 12) return responder(nome, 'Bom dia!')    
+        if (horaAtual <= 16) return responder(nome, 'Boa tarde!')
+        return responder (nome, 'Boa noite!')    
+}
+const respCb = (nome, resposta) => console.log(nome, resposta)
+saudar('Jon', respCb)
+--------------
+{mais simplifcado}
+
+const saudar = (nome, cb) => {
+        const horaAtual =  new Date().getHours();
+        if (horaAtual <=12) return cb(nome, 'Bom dia')
+        if (horaAtual <=12) return cb(nome, 'Boa tarde')
+        return cb(nome, 'Boa noite')
+}
+saudar('Jon', cback = (nome, resposta) => console.log(nome, resposta))
+-------------
+
+[Metodo preventDefault()]
+Este metodosp previne que seja enviado os dados inseridos no formulario e evita que o formulario
+seja recaregado e suma com os dados inseridos
+
+-----------
+[Funçoes nativas pra manipular STRINGS]  (js24-fun-string)
+
+1- .length() - serve para retorna a quantidade de carcteres de uma String
+2- .charAt() - busca o caracter da string indicado nos parenteses 
+3- .indexOf()- buca o carcter indicado 'a' e mostra sua posicao na String
+4- .replace()- substituiu carcater/nome indicado por outros ex:  /jon/ gi, 'mary'
+5- .subsrt() - usado pra extrair uma part da string ex: (4, 6) recortar da posicao 4 ao 6
+6- .toLowerCase() - muda a string pra caixa baixa
+7- .toUpperCase() - muda a string pra caixa alta
+8- .trin() - remove todos os espaços da string
+---------
+
+[Metodos para calculos Matematicos .Math] (js25-fun-math)
+
+_______________________________________________________________________
+
+}}[METODOS. OBEJTOS (PROPRIEDADE]
+
+Em JS, os objetos são usados pra representar entidades do mundo real ou conceitos abstratos.
+Cada objeto tem suas próprias propriedades, que são características ou atributos do objeto.
+As (propriedades) podem ser valores primitivos, como números ou strings, ou outras referências
+a objetos. Os objetos também podem ter .métodos(), que são funções associadas ao objeto q podem
+ser chamadas para executar alguma tarefa específica relacionada a esse objeto.
+
+O método de um objeto em JavaScript é simplesmente uma função que é associada a um objeto.
+Os métodos são definidos dentro do corpo do objeto e são chamads com a notação de ponto (".")
+após o nome do objeto. Por exemplo, se tivermos um objeto "carro" com um método "acelerar",
+podemos chamá-lo da seguinte maneira:
+     
+let carro = {
+  velocidade: 0,
+  acelerar: function() {
+    this.velocidade += 10;
+  }
+↓objeto ↓metodo - ↓propriedad
+carro.acelerar   ();    // aumenta a velocidade em 10
 
 
 

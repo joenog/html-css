@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxa ao Garçon</title>
+</head>
+<body>
+    <header>
+        <h1>Taxa ao Garçon</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <p>
+                nome:
+                <input type="text" name="inome" id="inome">
+                <input type="submit" value="ENVIAR">
+            </p>
+        </form>
+
+
+        <div id="res">
+            res
+        </div>
+    </main>
+
+    <script>
+
+        const res = document.querySelector('#res');
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', (e) => {
+            const nome = form.inome.value;
+            res.innerHTML = `Oi ${nome}`
+            e.preventDefault();
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media aluno</title>
+</head>
+<body>
+    <header>
+        <h1>Noata aluno</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+            <p>
+                nota1:
+                <input type="number" name="nota1" id="inNota1">
+            </p>
+            
+            <p>
+                nota2:
+                <input type="number" name="nota2" id="inNota2">
+            </p>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div id="res">
+            RESPOSTA 
+        </div>
+        
+    </main>
+
+    <script>
+        const form = document.querySelector('form');
+        const nota1 = form.inNota1;
+        const nota2 = form.inNota2;
+        const res = document.querySelector('#res');
+        
+        form.addEventListener('submit', (enviar) => {
+            enviar.preventDefault();
+            const nt1 = Number(nota1.value)
+            const nt2 = Number(nota2.value)
+
+            if (isNaN(nt1) || isNaN(nt2)) {
+                res.innerHTML = `ERRO! Preencha corretamente para ver a media!`
+            } else {
+                const media = (nt1 + nt2) / 2;
+                res.innerHTML = `Sua média: ${media}`;
+            }
+        })
+
+    </script>
+</body>
+</html>

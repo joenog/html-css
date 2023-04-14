@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Propriedade lenght</title>
+</head>
+<body>
+        <header>
+                <h1>Manipulaçao de strings</h1>
+        </header>
+
+        <main>
+                <div id="res"> 
+                        resp
+                </div>
+        </main>
+        
+        <script>
+                const nome =  'Joab Alves Nogueira'
+                const res = document.querySelector('#res')
+
+               if (nome.length > 5) {
+                let nomez = nome.replace(/a/gi, 'X')
+                document.write('LENGHT' + nomez + '<br>')
+               }
+
+               if (nome.charAt() == 'J' ) {
+                res.innerHTML += `<br> chartAt: - posição: Inicial J <br>`
+               }
+
+               if (nome.indexOf('J') == 0) {
+                res.innerHTML += `Indexof: <br> Letra J está no index0 <br>`
+               }
+
+               if (nome.length > 5) {
+                nomeReplace = nome.replace(/a/gi, 'kkk-')
+                res.innerHTML += ` ${nomeReplace} <br>`
+               }
+
+               if (nome.length > 5) {
+                res.innerHTML += `<br> subSrt: cortado <br> ${nome.substr(0, 3)} <br>`
+               }
+
+               if (nome.length > 5) {
+                res.innerHTML += `<br> `
+               }
+        </script>
+</body>
+</html>
