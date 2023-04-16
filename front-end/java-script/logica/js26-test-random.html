@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste radom</title>
+</head>
+<body>
+        <header>
+                <h1>Teste radom</h1>
+        </header>
+
+        <main>
+                <div id="res"> 
+                        resp
+                </div>
+        </main>
+        
+        <script>
+        
+        const res = document.querySelector('#res')
+        const num = [];
+        let num20 = 3;
+        
+        for (let i = 0; i < 200; i++) {
+                const numRandom = Math.floor(Math.random() * 60);
+                num.push(numRandom)        
+                if (!num.includes(num20)) {
+                        num.push('21 kkkkkkk')
+                }
+        }
+
+                res.innerHTML = `${num.join(', ')}`
+              
+        </script>
+</body>
+</html>

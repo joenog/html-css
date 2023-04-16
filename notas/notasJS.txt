@@ -1288,15 +1288,26 @@ seja recaregado e suma com os dados inseridos
 
 1- .length() - serve para retorna a quantidade de carcteres de uma String
 2- .charAt() - busca o caracter da string indicado nos parenteses 
-3- .indexOf()- buca o carcter indicado 'a' e mostra sua posicao na String
+3- .indexOf()- Retorna o índice da primeira ocorrência dum valor especificado numa string
 4- .replace()- substituiu carcater/nome indicado por outros ex:  /jon/ gi, 'mary'
 5- .subsrt() - usado pra extrair uma part da string ex: (4, 6) recortar da posicao 4 ao 6
-6- .toLowerCase() - muda a string pra caixa baixa
-7- .toUpperCase() - muda a string pra caixa alta
+6- .toLowerC() - muda a string pra caixa baixa
+7- .toUpperC() - muda a string pra caixa alta
 8- .trin() - remove todos os espaços da string
+9- .concat() - Concatena uma string ao valor - .concat('Bem vindo')
+10- .split() - Divide a string em array com base no separador indicado (,)
 ---------
 
 [Metodos para calculos Matematicos .Math] (js25-fun-math)
+
+1- .abs() - Retorna o valor absoluto dum numero -  -5 == 5
+2- .floor()- Arredonda o valor para baixo - (5.76) == 5
+3- .ceil() - Arredonda o valor para cima - (5.23) == 6
+4- .randon() - Retorna uma numer alatorio entre 0 e 1 == 0.56236
+5- .Round() - Arredoda o valor para o inteiro mais proximo (5.6) == 6  (5.3) == 5
+6- .pow() - Retorna a base elevada ao expoente   Math.pow(5, 2) == 25
+7- .sqrt() - Retorna a raiz dum numero (9) == 3
+8- .max()  - Retorna o maior valor entre dois numeros - math.max(a=10, b=20) == 20
 
 _______________________________________________________________________
 

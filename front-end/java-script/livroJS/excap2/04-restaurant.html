@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço carro</title>
+    <!-- estilo da pagina -->
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+        }
+
+        main {
+            width:  400px;
+            margin: auto;
+        }
+
+        form {
+            background-color: rgb(230, 217, 173);
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #res {
+            background-color: lightblue;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 10px;
+            border: .1px solid white;
+        } 
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Restaurant Jaccan</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+            <p>
+                Preço pr Kg:
+                <input type="number" name="inQuilo" min="0" id="inQuilo" required step="0.01">
+            </p>
+            <p>
+                Consumo do Cliente:
+                <input type="number" name="inCosumo" min="0" id="inConsumo" required>
+            </p>
+            <p>
+                <input type="submit" value="Check">
+            </p>
+        </form>
+
+        <div id="res">
+            Preço...
+        </div>
+    </main>
+
+    <script src="js/04-restaurant.js"></script>
+</body>
+
+</html>

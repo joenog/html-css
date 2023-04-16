@@ -28,24 +28,15 @@
 
     <script>
 
-        let form = document.querySelector('form');
-        let res = document.querySelector('#res');
-        let nomes = [];
+        const res = document.querySelector('#res');
+        const form = document.querySelector('form');
 
-        form.addEventListener('submit', e=> {
+        form.addEventListener('submit', (e) => {
+            const nome = form.inome.value;
+            res.innerHTML = `Oi ${nome}`
             e.preventDefault();
-            if (nomes.length == 7) {
-                res.innerHTML += `<br> Numero maximo de nomes foi atingindo! :D`
-                return;
-            }
-            const pessoa = form.inome.value;
-            nomes.push(pessoa);
-            res.innerHTML = `${nomes.join('<br> ')}`
-            
-            if (nomes.length == 5) {
-                alert('Só mais dois nomes!')
-            }
         })
+
     </script>
 </body>
 </html>

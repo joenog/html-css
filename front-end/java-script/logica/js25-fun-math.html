@@ -19,7 +19,26 @@
         
         <script>
               
+              const res = document.querySelector('#res')
+              const num = [];
 
+              while (num.length <10) { // enquanto a qntdd de numero for menor que 10
+                const aleat = Math.round(Math.random() * 20); // gerarei um nuemro aleatorio
+                if (!num.includes(aleat)) { // se o numero n ta incluso em aleatorio
+                        num.push(aleat); // puxo o numer oaleatori opara a array
+                }
+              }
+              
+              res.innerHTML = `${num.join(',')}`
+
+              const x = 20;
+              const y = 33;
+              res.innerHTML += `<br> O maior numero: ${Math.max(x,y)} <br>`
+              res.innerHTML += `<br> Numero absoluto.abs -50 == ${Math.abs(-50)}<br>`
+              res.innerHTML += `<br> Arrendodar pra baixo.floor 3.93 == ${Math.floor(3.93)}<br>`
+              res.innerHTML += `<br> Arrendodar pra cima.ceil 3.13 == ${Math.ceil(3.13)}<br>`
+              res.innerHTML += `<br> Mostra a valor potencia dada.pow 3²== ${Math.pow(3,2)}<br>`
+              res.innerHTML += `<br> Raiz quadrada dum numero.sqrt 9== ${Math.sqrt(9)}<br>`
 
         </script>
 </body>
