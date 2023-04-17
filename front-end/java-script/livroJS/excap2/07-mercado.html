@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+    <!-- estilo da pagina -->
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+        main {
+            width:  400px;
+            margin: auto;
+        }
+
+        form {
+            background-color: #6e2623ce;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        #res {
+            background-color: #6e2623ce;
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 10px;
+            border: .1px solid white;
+            font-size: 1em;
+            background-color: white;
+        } 
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mercado</h1>
+    </header>
+
+        <main>
+    
+            <form>
+                <p>Nome Produto: <br>
+                    <input type="text" name="inProduto" id="inProduto">
+                </p>
+                <p>Preço Produto: <br>
+                   <input type="number" name="inValor" id="inValor" required step="0.01">
+                </p>
+                <p>
+                    <input type="submit" value="Valor a Pagar">
+                </p>
+            </form>
+            
+            <div id="res">
+                Preço final...
+            </div>
+
+        </main>
+
+        <script src="js/07-mercado.js"></script>
+
+</body>
+
+</html>
