@@ -11,7 +11,10 @@ form.addEventListener('submit', enviar=> {
         alert('Não houve centavos, sem descontos :D')
     } else {
         let desconto = Math.floor(valor * 2);
+        let cent = valor % 1;
         res.innerHTML = `Comprando 2 ${medic} - ${valor * 2} R$ <br>
-        Com Promoção <mark> ${desconto.toFixed(2)}<mark>`
+        Com Promoção <mark> ${desconto.toFixed(2)}</mark> <br>
+        Teve um descont de ${cent.toFixed(2)}
+        `
     }
 })

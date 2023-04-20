@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media aluno</title>
+
+        <style>
+            * {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        
+            header {
+                text-align: center;
+                padding: 50px;
+            }
+        
+            main {
+                width: 400px;
+                margin: auto;
+            }
+        
+            form {
+                background-color: #e1ade6;
+                border-radius: 20px;
+                padding: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        
+            #res {
+                background-color: #e1ade6;
+                border-radius: 20px;
+                padding: 20px;
+            }
+        
+            input {
+                border-radius: 10px;
+                padding: 10px;
+                border: .1px solid white;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Media  aluno</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <p>
+                Nome:
+                <input type="text" name="nome" id="inNome">
+            </p>
+            <p>
+                Nota1:
+                <input type="number" name="nota1" step="0.1" min="0" max="10" id="nota1">
+            </p>
+
+            <p>
+                Nota2:
+                <input type="number" name="nota2" step="0.1" min="0" max="10" id="nota2">
+            </p>
+
+            <p><input type="submit" value="ENVIAR"></p>
+        </form>
+
+        <div id="res">
+            Resposta...
+        </div>
+
+    </main>
+
+    <script src="js/notaAluno.js"></script>
+</body>
+</html>

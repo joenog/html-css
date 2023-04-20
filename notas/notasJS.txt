@@ -1284,7 +1284,8 @@ Este metodosp previne que seja enviado os dados inseridos no formulario e evita 
 seja recaregado e suma com os dados inseridos
 
 -----------
-[Funçoes nativas pra manipular STRINGS]  (js24-fun-string)
+
+[Matodos nativos pra manipular STRINGS]  (js24-fun-string)
 
 1- .length() - serve para retorna a quantidade de carcteres de uma String
 2- .charAt() - busca o caracter da string indicado nos parenteses 
@@ -1296,7 +1297,7 @@ seja recaregado e suma com os dados inseridos
 8- .trin() - remove todos os espaços da string
 9- .concat() - Concatena uma string ao valor - .concat('Bem vindo')
 10- .split() - Divide a string em array com base no separador indicado (,)
----------
+--------- 
 
 [Metodos para calculos Matematicos .Math] (js25-fun-math)
 
@@ -1308,6 +1309,18 @@ seja recaregado e suma com os dados inseridos
 6- .pow() - Retorna a base elevada ao expoente   Math.pow(5, 2) == 25
 7- .sqrt() - Retorna a raiz dum numero (9) == 3
 8- .max()  - Retorna o maior valor entre dois numeros - math.max(a=10, b=20) == 20
+---------------
+
+[Metodos nativos pra manipular DATAS]  (js27-fun-string)
+
+Para trabalhar com datas em JS temos de criar uma nova estancia
+Em JavaScript, uma "instância" refere-se a um objeto específico criado a partir de uma classe
+ou construtor. O JavaScript é uma linguagem de programação orientada a objetos, onde os 
+objts são criados a partir de classes ou construtores, que são modelos pra a criação de objets.
+
+EX: function Pessoa(nome, idade) {
+      this.nome = nome;
+      this.idade = idade;
 
 _______________________________________________________________________
 
