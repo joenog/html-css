@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste radom</title>
+        <style>
+                body {
+                        background-color: lightgoldenrodyellow;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+
+                h1 {
+                        text-align: center;
+                        padding: 40px;
+                }
+
+                #res {
+                        background-color: rgb(77, 77, 77);
+                        padding: 20px;
+                        border-radius: 20px;
+                        color: white;
+                        width: 400px;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 4em;
+                }
+        </style>
+</head>
+<body>
+        <header>
+                <h1>DATA E HORA ATUAL</h1>
+        </header>
+
+        <main>
+                <div id="res"> 
+                        
+                </div>
+        </main>
+        
+        <script>
+                
+                ///ADICIOANR OU REMOVER DIAS DA DATA!
+                let data = new Date();
+
+                document.write(data.toString() + '<hr>  ADICIONADO DIA <br>')
+                // editando dia da dataa
+                data.setDate(data.getDate()+1)  // aqui foi adiconado mais 1 dia as data atual 
+                document.write(data.toString() + '<hr> <br> <br>') // aqui foi impresso novamente a data atual atualizada mais 1
+
+                // adicionar / remover meses
+                 document.write(data.toString() + '<hr> ADICONADO MES <br> <br>')
+                 data.setMonth(data.getMonth() + 1)
+                 document.write(data.toString() + '<<hr> <br> <br>>')
+
+                // adicionar / remover anos
+                 document.write(data.toString() + '<hr> ADICONADO ANO <br> <br>')
+                 data.setFullYear(data.getFullYear() + 1)
+                 document.write(data.toString() + '<hr> <br> <br>')
+
+                
+        
+        </script>
+</body>
+</html>

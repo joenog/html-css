@@ -1321,6 +1321,32 @@ objts são criados a partir de classes ou construtores, que são modelos pra a c
 EX: function Pessoa(nome, idade) {
       this.nome = nome;
       this.idade = idade;
+-get serve para obter valores em data
+-set serve  para definir valores em uma data
+
+1- getDate(): Retorna o dia do mês (1-31) com base no horário local.
+2- getMonth(): Retorna o mês (0-11) com base no horário local. Jan é representado por 0.
+3- getFullYear(): Retorna o ano com base no horário local, com 4 dígitos.
+4- getHours(): Retorna a hora (0-23) com base no horário local.
+5- getMinutes(): Retorna os minutos (0-59) com base no horário local.
+6- getSeconds(): Retorna os segundos (0-59) com base no horário local.
+7- getMilliseconds(): Retorna os milissegundos (0-999) com base no horário local.
+8- getDay(): Retorna o dia da semana (0-6), domingo é representado por 0 e sábado por 6.
+9- getTime(): Retorna o valor numérico do tempo representado pela data em milissegundos
+desde 1º de janeiro de 1970 (conhecido como "época" ou "timestamp").
+10- toString(): Retorna uma string representando a data.
+11- toLocaleString(): Retorna uma string representando a data em formato localizado,
+de acordo com a configuração regional do sistema.
+
+}///ADICIOANR OU REMOVER DIAS DA DATA!
+    let data = new Date();
+    document.write(data.toString() + '<hr>')
+    // editando dia data
+    data.setDate(data.getDate()+1)  // aqui foi adiconado mais 1 dia as data atual 
+    document.write(data.toString()) // aqui foi impresso data atual atualizada mais 1
+** essa tecnica pode ser aplciada a meses anos, horas e segundos...
+
+------------
 
 _______________________________________________________________________
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste radom</title>
+        <style>
+                body {
+                        background-color: lightgoldenrodyellow;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+
+                h1 {
+                        text-align: center;
+                        padding: 40px;
+                }
+
+                #res {
+                        background-color: rgb(77, 77, 77);
+                        padding: 20px;
+                        border-radius: 20px;
+                        color: white;
+                        width: 400px;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 4em;
+                }
+        </style>
+</head>
+<body>
+        <header>
+                <h1>DATA E HORA ATUAL</h1>
+        </header>
+
+        <main>
+                <div id="res"> 
+                        
+                </div>
+        </main>
+        
+        <script>
+                
+               //CALCULAR DIAS E NTRE DUAS DATA
+
+               let data1 = new Date(2022, 02, 01);
+               let data2 = new Date(2022, 03, 01);
+
+               document.write(data1.toString() + '<br>')
+               document.write(data2.toString() + '<hr> CONTANDO MILIDECONDS E SUBTRAINDO <BR>')
+               //calculando diferença entre datas
+               document.write(data1.getTime() +'<br>') // milisegundos da data
+               document.write(data2.getTime() +'<hr> <br> SUBTRAINDO MILISECONDS <BR>') // milisegundos da data
+                //uso math.abs par a retornar o valor absoluto 
+                let milisec_entre_dias = Math.abs(data1.getTime() - data2.getTime())
+                let mili_dia = 1 * 24 * 60 * 60 *1000;
+                //cada dia tem 24 horas, cada hora tem 60 minutos, cada minutos tem 60 segundos, e cada seg tem 1000 mili
+                document.write('1 dia tem ' + mili_dia + ' milisegundos <br>')
+                //divisão resultado
+                document.write('A diferença entre data1 e data2 é DIAS ' + Math.ceil(milisec_entre_dias / mili_dia))
+                
+        
+        </script>
+</body>
+</html>

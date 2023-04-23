@@ -22,9 +22,14 @@
 
                 let data = new Date()
                 document.writeln(data.getDate() + '/' + (data.getMonth()+1) +'/'+ data.getFullYear() +
-                '<br> <br>' + data.getHours() + ':' + data.getMinutes() + ':' + data.getSeconds()) +
-                '<br> <br>' + data.get() ;
+                '<br> <br>' + data.getHours() + ':' + data.getMinutes() + ':' + data.getSeconds() +
+                '<br> <br> Dia da semana:' + data.getDay() +
+                '<br> <br> Valor da data atual em miliseconds:' + data.getTime() +
+                '<br> <br> Retorna a data competla:' + data.toString() +
+                '<br> <br> Retorna a data competla/formatada:' + data.toLocaleDateString() +
+                '<br> <br>Miliseconds' + data.getMilliseconds())
 
+                
                  // fazer video salvo no insta javascirpt puro
 
 

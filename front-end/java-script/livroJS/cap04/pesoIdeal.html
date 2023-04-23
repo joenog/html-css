@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso ideal</title>
+
+        <style>
+            :root {
+                --cor1: #ade6d8;
+            }
+
+            * {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        
+            header {
+                text-align: center;
+                padding: 50px;
+            }
+        
+            main {
+                width: 400px;
+                margin: auto;
+            }
+        
+            form {
+                background-color: var(--cor1);
+                border-radius: 20px;
+                padding: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        
+            #res {
+                background-color: var(--cor1);
+                border-radius: 20px;
+                padding: 20px;
+            }
+        
+            input {
+                border-radius: 10px;
+                padding: 10px;
+                border: .1px solid white;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Peso ideal</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <p>
+                Nome:
+                <input type="text" name="nome" id="inNome" placeholder="João">
+            </p>
+            <p>
+                Genero:
+                M:<input type="radio" name="gen" id="inMas" required>
+                F:<input type="radio" name="gen" id="inFem" required>
+            </p>
+
+            <p>
+                Altura:
+                <input type="number" name="inAltura" step="0.01" min="0" id="inAltura" placeholder="1.75" required>
+            </p>
+
+            <p>
+                <input type="submit" value="Peso ideal">
+                <input type="reset" value="Resetar" id="reset">
+            </p>
+        </form>
+
+        <div id="res">
+            Resposta...
+        </div>
+
+    </main>
+
+    <script src="js/pesoIdeal.js"></script>
+</body>
+</html>
