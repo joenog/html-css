@@ -1346,6 +1346,9 @@ de acordo com a configuração regional do sistema.
     document.write(data.toString()) // aqui foi impresso data atual atualizada mais 1
 ** essa tecnica pode ser aplciada a meses anos, horas e segundos...
 
+crtl + shift + k = apaga linha
+crrtl + shift + L = edita todos os nomes
+ul>li*5>a*1 = para aninha lista entre outros
 ------------
 
 _______________________________________________________________________

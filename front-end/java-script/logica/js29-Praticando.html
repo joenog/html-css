@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html l?ompatible" content="IE=edge">
+        <meta name="viewport" c?ontent="width=device-width, initial-scale=1.0">
+        <title>Data e hora atual</title>
+        <style>
+                body {
+                        background-color: lightgoldenrodyellow;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+
+                h1 {
+                        text-align: center;
+                        padding: 40px;
+                }
+
+                #res {
+                        background-color: rgb(77, 77, 77);
+                        padding: 20px;
+                        border-radius: 20px;
+                        color: white;
+                        width: 400px;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 4em;
+                }
+        </style>
+</head>
+<body>
+        <header>
+                <h1>DATA E HORA ATUAL</h1>
+        </header>
+
+        <main>
+                <form action="">
+                       
+
+                </form>
+                <div id="res"> 
+                        
+                </div>
+        </main>
+        
+        <script>
+
+                let n1 = prompt('Primeir numeror');
+                let operador = prompt(' + ou - ');
+                let n2 = prompt('Segund numeror');
+                function calc(a, b, operador)  {
+                        a = Number(a);
+                        b = Number(b);
+                        if (operador === '+') return a + b;       
+                        if (operador === '-') return a - b;
+                        if (operador === '*') return a * b;
+                        if (operador === '/') return a / b;
+                }
+                document.write(calc(n1, n2, operador));
+                
+                
+        
+        </script>
+</body>
+</html>
