@@ -23,6 +23,11 @@ header {
     padding: 40px;
 }
 
+.navbar-brand img {
+   width: 45vh;
+
+}
+
 #validade{
     font-weight: bold;
     text-align: center;
@@ -32,12 +37,13 @@ header {
 
 #mapa {
     position: fixed;
-    right: -15px;
+    right: -14px;
     bottom: 20px;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: var(--cor1);
     cursor: pointer;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
+    border: none;
 } #mapa:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
@@ -45,12 +51,13 @@ header {
 
 #whatsapp {
     position: fixed;
-    right: -15px;
+    right: -14px;
     bottom: 70px;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: var(--cor2);
     cursor: pointer;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
+    border: none;
 } #whatsapp:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
@@ -92,11 +99,11 @@ section#produtos {
 }
 
 .itemEncarte {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     margin: 10px;
     margin-bottom: 60px;
-    padding: 15px;
+    padding: 10px;
 }
 
 .imgProduto {

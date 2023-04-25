@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html l?ompatible" content="IE=edge">
+        <meta name="viewport" c?ontent="width=device-width, initial-scale=1.0">
+        <title>Data e hora atual</title>
+        <style>
+                body {
+                        background-color: lightgoldenrodyellow;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+
+                h1 {
+                        text-align: center;
+                        padding: 40px;
+                }
+
+                #res {
+                        background-color: rgb(77, 77, 77);
+                        padding: 20px;
+                        border-radius: 20px;
+                        color: white;
+                        width: 400px;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 4em;
+                }
+        </style>
+</head>
+<body>
+        <header>
+                <h1>DATA E HORA ATUAL</h1>
+        </header>
+
+        <main>
+                <form action="">
+                       
+
+                </form>
+                <div id="res"> 
+                        
+                </div>
+        </main>
+        
+        <script>
+/*
+               let n1 = prompt('Primeiro numero');
+               let sinal = prompt('+ ou -');
+               let n2 = prompt('Segundo numero');
+        
+               let calc = (a, b, sinal)=> {
+                a = parseFloat(a)
+                b = parseFloat(b)
+                if (sinal === '+') return a + b;
+                if (sinal === '-') return a - b;
+                if (sinal === '*') return a * b;
+                if (sinal === '/') return a / b;
+
+                
+        }
+        document.write(calc(n1, n2, sinal).toFixed(2) + '<br>');*/
+        
+        let paragrafo = document.createElement('p') // elemennto criado nuam vaz
+        let mHora = ()=>{
+                return hora;
+        }
+        let mHora  = new Date().toString();
+
+        let interval = setInterval(() => {
+                let dataHora = mHora();
+                document.body.appendChild(paragrafo); // variavel com elemento adiiocnado ao body
+                paragrafo.innerHTML = `${dataHora}` // paragrafo recebe inner
+        }, 1000);
+                
+        
+        </script>
+</body>
+</html>
