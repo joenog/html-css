@@ -23,6 +23,14 @@ header {
     padding: 40px;
 }
 
+#conteudoNavbarSuportado ul li {
+   border: 1px solid rgba(255, 255, 255, 0.041);
+   border-radius: 10px;
+   
+} #conteudoNavbarSuportado ul li:hover {
+    background-color: #2ab6662d;
+}
+
 #banner{
     height: 40px;
     user-select: none;
@@ -52,6 +60,8 @@ header {
     cursor: pointer;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
     border: none;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.555);
 } #mapa:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
@@ -66,6 +76,8 @@ header {
     cursor: pointer;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
     border: none;
+    font-weight: bold;
+        color: rgba(255, 255, 255, 0.555);
 } #whatsapp:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
