@@ -8,7 +8,7 @@
 }
 
 :root {
-    --cor1: #A751E0; --cor2: #15944C;
+    --cor0:#15944C; --cor1: #A751E0;
 }
 
 /* HEADER*/
@@ -16,13 +16,9 @@ header {
     background-color: var(--cor1);
     text-align: center;
     color: white;
-    margin-bottom: 20px;
-} header > h1 {
-    font-size: 3em;
-    margin: 10px;
-    padding: 40px;
-}
+} 
 
+/*  PERSONALIZAÇÃO BOOTOES MENUS BT */
 #conteudoNavbarSuportado ul li {
    border: 1px solid rgba(255, 255, 255, 0.041);
    border-radius: 10px;
@@ -31,18 +27,23 @@ header {
     background-color: #2ab6662d;
 }
 
+/* ICONE SACOLA */
 #banner{
     height: 40px;
     user-select: none;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.075);
-} #banner, a {
-    user-select: none;
-    margin: 3px;
+    margin-right: 5px;
+    border: .2px solid #ffffff09;
+    box-shadow: 1px 1px 0px #00000013;
+} #banner:hover {
+    transform: rotateX(20deg);
+    transition-duration: .5s;
+    box-shadow: 1px -3px 0px rgba(0, 0, 0, 0.175);
 }
+/*  fim icone */
 
-
+/*   validade da promoçao */
 #validade{
     font-weight: bold;
     text-align: center;
@@ -51,6 +52,7 @@ header {
     padding: 5px;
 }
 
+/*  botoes mapa e whatsapp  */
 #mapa {
     position: fixed;
     right: -14px;
@@ -60,8 +62,7 @@ header {
     cursor: pointer;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
     border: none;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.555);
+    color: rgba(255, 255, 255, 0.603);
 } #mapa:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
@@ -72,47 +73,74 @@ header {
     right: -14px;
     bottom: 70px;
     border-radius: 12px;
-    background-color: var(--cor2);
+    background-color: var(--cor0);
     cursor: pointer;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
     border: none;
-    font-weight: bold;
-        color: rgba(255, 255, 255, 0.555);
+    color: rgba(255, 255, 255, 0.603)
 } #whatsapp:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
 }
 
 
+/*  novo menu flutuante */
+#menuFlutuante {
+    position: fixed;
+    width: 115px;
+    right: 5px;
+    bottom: 5px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 8px 0px 8px 0px;
+    background-color: rgba(73, 72, 72, 0.5);
+    border: 1px solid rgba(109, 105, 105, 0.226);
+} #menuFlutuante img {
+    width: 30px;
+    margin: 0px 2px;
+} #menuFlutuante img:hover {
+    background-color: #15944c65;
+    border-radius: 10px 10px 10px 0px;
+}
+
+#whats {
+    text-decoration: none;
+    color: rgba(48, 48, 48, 0.603);
+    padding: 10px;
+}
+
+#map {
+    text-decoration: none;
+        color: rgba(48, 48, 48, 0.603);
+        padding: 10px;
+}
+/* fim menu flutuante */
+
 /* FIMHEADER*/
 
 /* MENU */
-nav {
-    background-color: var(--cor2);
-
-}
-
-menu {
-    padding: 15px;
-    display: inline-block;
-}
-
-ul {
-    list-style: none;
-    font-size: 1em;
-}
 
 li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 /* FIM  MENU */
 
+
 /* BODY */
 main {
-    width: 90vw;
+    width: 85vw;
     margin: auto;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    main {
+        width: 99vw;
+    }
+
+    #menuFlutuante {
+        right: 35%;
+    }
 }
 
 section#produtos {
