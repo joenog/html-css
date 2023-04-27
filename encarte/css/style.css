@@ -40,11 +40,12 @@ header {
     transform: rotateX(20deg);
     transition-duration: .5s;
     box-shadow: 1px -3px 0px rgba(0, 0, 0, 0.175);
-}
+} 
 /*  fim icone */
 
 /*   validade da promoçao */
 #validade{
+    margin-top: 64px;
     font-weight: bold;
     text-align: center;
     user-select: none;
@@ -102,7 +103,7 @@ header {
     border-radius: 12px;
     background-color: #40054711;
 } #menuFlutuante img:hover {
-    background-color: #a751e03d;
+    background-color: #a751e028;
     transition-duration: .2s;
 }
 
@@ -141,13 +142,41 @@ main {
         width: 99vw;
     }
 
+    /*disposição dos intes na tela MOBILE */
+        .itemEncarte {
+            width: 100px;
+            height: 100px;
+            margin: 10px 12px 20px 12px;
+            margin-bottom: 65px;
+            padding: 5px;
+        }
+
+        .imgProduto {
+            width: 90%;
+        }
+
+        .nomeProduto {
+            margin-bottom: 2px;
+        }
+
+        .precoProduto {
+            background-color: rgba(255, 255, 0, 0.925);
+            border-end-end-radius: 20px;
+            font-weight: bold;
+            text-align: right;
+            font-size: 1.6em;
+            padding-right: 4px;
+        }
+
+    /*disposição dos intes na tela */
+
 
     #menuFlutuante {
         display: block;
         left: 100px;
         padding: 3px;
         width: 180px;
-        background-color: rgba(255, 255, 255, 0.747);
+        background-color: rgba(255, 255, 255, 0.795);
     }
 
     #menuFlutuante img {
@@ -157,28 +186,28 @@ main {
         border-radius: 12px;
         background-color: #40054711;
     }
-}
 
+}
+/*
 section#produtos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+} */
 
 .itemEncarte {
     width: 140px;
     height: 130px;
-    margin: 15px;
+    margin: 30px 16px 50px 16px;
     margin-bottom: 65px;
     padding: 5px;
 }
 
 .imgProduto {
-    width: 90%;
+    width: 100%;
 }
 
 .nomeProduto {
-    font-size: 1.1em;
     margin-bottom: 2px;
 }
 
@@ -187,7 +216,7 @@ section#produtos {
     border-end-end-radius: 20px;
     font-weight: bold;
     text-align: right;
-    font-size: 2em;
+    font-size: 1.8em;
     padding-right: 4px;
 }
 
@@ -198,6 +227,6 @@ section#produtos {
 footer {
     font-size: .8em;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 60px;
     color: white;
 }

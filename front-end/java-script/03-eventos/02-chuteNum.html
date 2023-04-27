@@ -28,23 +28,8 @@
     </main>
 
     <script>
-        let res = document.querySelector('#res');
-        let frm = document.querySelector('form');
-        let nomes = [];
         
-        frm.addEventListener('submit', e=> {
-            e.preventDefault();
-            let nome = frm.inNome.value;
-            while (nomes.length < 5) {
-                nomes.push(nome);
-            }
-            res.innerHTML = `${nomes.join(', ')}`
-        })
-
-        /*frm.addEventListener('submit', e=> {
-            e.preventDefault();
-            res.innerHTML = `${nomes.join(', ')}`
-        })*/
+        
 
     </script>
 </body>

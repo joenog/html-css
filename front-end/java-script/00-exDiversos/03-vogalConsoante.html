@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogal ou consoante</title>
+</head>
+<body>
+    <header>
+        <h1>Vogal ou consoante</h1>
+    </header>
+    
+    <main>
+
+        <form action="">
+            <p>NOTA 1: 
+                <input type="number" name="nota1" id="nota1" min="0" max="10" step="0.1">
+            </p>
+            <p>NOTA 2: 
+                <input type="number" name="nota2" id="nota2" min="0" max="10" step="0.1">
+            </p>
+
+                <p>
+                    <input type="submit" value="Media">
+                </p>
+        </form>
+
+        
+        <div id="res">
+            resp.....
+        </div>
+    </main>
+
+    <script>
+
+        const frm = document.querySelector('form');
+        const res = document.querySelector('#res');
+
+        frm.addEventListener('submit', e=> {
+            e.preventDefault();
+
+            const nota1 = Number(frm.nota1.value);
+            const nota2 = Number(frm.nota2.value);
+            const media = (nota1 + nota2) / 2;
+
+            if (media < 5) return res.innerHTML = `Media ${media.toFixed(2)}, Reprovado!`
+            if (media < 7) return res.innerHTML = `Media ${media.toFixed(2)}, Faça outra avaliação!`
+            return res.innerHTML = `Media ${media.toFixed(2)}, Aprovado!`
+        })
+
+        
+        // posso fazer com return, operaor ternario ou com if else;
+
+    </script>
+</body>
+</html>
