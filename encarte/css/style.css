@@ -87,8 +87,6 @@ header {
 
 /*  novo menu flutuante */
 #menuFlutuante {
-    position: fixed;
-    right: 5px;
     bottom: 7px;
     padding: 3px;
     width: 145px;
@@ -137,63 +135,6 @@ main {
     margin: auto;
 }
 
-@media (min-width: 300px) and (max-width: 600px) {
-    main {
-        width: 99vw;
-    }
-
-    /*disposição dos intes na tela MOBILE */
-        .itemEncarte {
-            width: 100px;
-            height: 100px;
-            margin: 10px 12px 20px 12px;
-            margin-bottom: 65px;
-            padding: 5px;
-        }
-
-        .imgProduto {
-            width: 90%;
-        }
-
-        .nomeProduto {
-            margin-bottom: 2px;
-        }
-
-        .precoProduto {
-            background-color: rgba(255, 255, 0, 0.925);
-            border-end-end-radius: 20px;
-            font-weight: bold;
-            text-align: right;
-            font-size: 1.6em;
-            padding-right: 4px;
-        }
-
-    /*disposição dos intes na tela */
-
-
-    #menuFlutuante {
-        display: block;
-        left: 100px;
-        padding: 3px;
-        width: 180px;
-        background-color: rgba(255, 255, 255, 0.795);
-    }
-
-    #menuFlutuante img {
-        width: 50px;
-        height: 49px;
-        margin-left: 4px;
-        border-radius: 12px;
-        background-color: #40054711;
-    }
-
-}
-/*
-section#produtos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
 
 .itemEncarte {
     width: 140px;
