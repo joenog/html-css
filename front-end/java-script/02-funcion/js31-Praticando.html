@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html l?ompatible" content="IE=edge">
+        <meta name="viewport" c?ontent="width=device-width, initial-scale=1.0">
+        <title>Data e hora atual</title>
+        <style>
+                body {
+                        background-color: lightgoldenrodyellow;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+
+                h1 {
+                        text-align: center;
+                        padding: 40px;
+                }
+
+                #res {
+                        background-color: rgb(77, 77, 77);
+                        padding: 20px;
+                        border-radius: 20px;
+                        color: white;
+                        width: 400px;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 4em;
+                }
+        </style>
+</head>
+<body>
+        <header>
+                <h1>DATA E HORA ATUAL</h1>
+        </header>
+
+        <main>
+                <form action="">
+                       <p>
+                        N1: <input type="text" name="n1" id="n1">
+                       </p>
+                       <p>
+                        + ou -: <input type="text" name="operador" id="operador">
+                       </p>
+                       <p>
+                        N2: <input type="text" name="n2" id="n2">
+                       </p>
+                       <input type="submit" value="Enviar">
+                </form>
+                <div id="res"> 
+                      resp  
+                </div>
+        </main>
+        
+        <script>
+
+                let frm = document.querySelector('form');
+                let res = document.querySelector('#res');
+                
+                frm.addEventListener('submit', e=> {
+                        e.preventDefault();
+                        let n1 = Number(frm.n1.value);
+                        let n2 = Number(frm.n2.value);
+                        let operador = frm.operador.value;
+
+                        let calc = (a, b, operador)=> {
+                                a = Number(a)
+                                b = Number(b)
+                                if(operador === '+') return a + b;
+                                return a - b
+                        }
+                        res.innerHTML = `${calc(n1, n2, operador)}`
+                })
+         
+        </script>
+</body>
+</html>

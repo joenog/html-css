@@ -52,7 +52,7 @@ header {
     padding: 5px;
 }
 
-/*  botoes mapa e whatsapp  */
+/*  botoes mapa e whatsapp  
 #mapa {
     position: fixed;
     right: -14px;
@@ -81,26 +81,29 @@ header {
 } #whatsapp:hover{
     box-shadow: 0px 0px 0px black;
     transform: translate(2px, 2px);
-}
+} */
 
 
 /*  novo menu flutuante */
 #menuFlutuante {
     position: fixed;
-    width: 115px;
     right: 5px;
     bottom: 5px;
-    margin: auto;
-    border-radius: 15px;
-    padding: 8px 0px 8px 0px;
-    background-color: rgba(73, 72, 72, 0.5);
-    border: 1px solid rgba(109, 105, 105, 0.226);
+    padding: 3px;
+    width: 145px;
+    border-radius: 22px;
+    background-color: rgba(53, 53, 53, 0.205);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.219);
 } #menuFlutuante img {
-    width: 30px;
-    margin: 0px 2px;
+    width: 40px;
+    height: 39px;
+    padding: 3px;
+    margin-left: 2px;
+    border-radius: 12px;
+    background-color: #40054711;
 } #menuFlutuante img:hover {
-    background-color: #15944c65;
-    border-radius: 10px 10px 10px 0px;
+    background-color: #4005471a;
+    transition-duration: .2s;
 }
 
 #whats {

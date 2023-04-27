@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Math.</title>
+</head>
+<body>
+    <header>
+        <h1>Math.JS</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+            <p>
+               Chute um numero: <input type="text" name="nome" id="inNome"> 
+            </p>
+            <p>
+                <input type="submit" value="Chutar">
+            </p>
+        </form>
+
+        <div id="res">
+            resp
+        </div>
+    </main>
+
+    <script>
+        let res = document.querySelector('#res');
+        let frm = document.querySelector('form');
+        let nomes = [];
+        
+        frm.addEventListener('submit', e=> {
+            e.preventDefault();
+            let nome = frm.inNome.value;
+            while (nomes.length < 5) {
+                nomes.push(nome);
+            }
+            res.innerHTML = `${nomes.join(', ')}`
+        })
+
+        /*frm.addEventListener('submit', e=> {
+            e.preventDefault();
+            res.innerHTML = `${nomes.join(', ')}`
+        })*/
+
+    </script>
+</body>
+</html>
