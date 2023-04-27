@@ -5,6 +5,9 @@
         width: 99vw;
     }
 
+    /* ZOOM PADRAO MOBILE  */
+    
+
     /*disposição dos intes na tela MOBILE */
     .itemEncarte {
         width: 105px;  /* emova essa linha para duas colunas  */
@@ -46,7 +49,7 @@
     #menuFlutuante {
         padding: 3px;
         width: 180px;
-        background-color: rgba(255, 255, 255, 0.836);
+        background-color: rgba(255, 255, 255, 0.863);
     }
 
     #menuFlutuante img {
