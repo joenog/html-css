@@ -46,7 +46,7 @@
     #menuFlutuante {
         padding: 3px;
         width: 180px;
-        background-color: rgba(255, 255, 255, 0.795);
+        background-color: rgba(255, 255, 255, 0.836);
     }
 
     #menuFlutuante img {
@@ -54,7 +54,7 @@
         height: 49px;
         margin-left: 4px;
         border-radius: 12px;
-        background-color: #40054711;
+        background-color: #40054709;
     }
 
 }
