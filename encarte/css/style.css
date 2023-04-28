@@ -116,6 +116,48 @@ header {
         color: rgba(48, 48, 48, 0.603);
         padding: 10px;
 }
+
+/* menu flutuante ao cliar  */
+
+@keyframes corCard {
+   0% {
+    background-color: rgba(255, 255, 255, 0.11);
+   } 
+   20% {
+    background-color: rgba(255, 255, 255, 0.308);
+   } 
+   40% {
+    background-color: rgba(255, 255, 255, 0.438);
+   } 
+   60% {
+    background-color: rgba(255, 255, 255, 0.507);
+   } 
+   70% {
+    background-color: rgba(255, 255, 255, 0.781);
+   } 
+   80% {
+    background-color: white;
+   } 
+   100% {
+    background-color: white;
+   } 
+  
+}
+
+#showConfig {
+    position: fixed;
+    bottom: 10px;
+    z-index: 3;
+    display: none;
+    width: 300px;
+    height: 150px;
+    margin-bottom: 55px;
+    border-radius: 15px;
+    animation: corCard .1s ease-in-out;
+}
+/* menu flutuante ao cliar  */
+
+
 /* fim menu flutuante */
 
 /* FIMHEADER*/
