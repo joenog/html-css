@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,33 +20,34 @@
 </head>
 <body>
 
-    <!-- inicio header -->
+    <!-- INICIO HEADER-->
     <header>
+        <!-- Bbarra de navegação -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
         <a class="navbar-brand mx-2" href="#"><img id="banner" src="img/favPromotx.png" alt="">PROMO tx.</a>
         <button class="navbar-toggler btn btn-success"  type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        <!-- lista menus topo -->
         <div class=" collapse navbar-collapse" id="conteudoNavbarSuportado">
             <ul class="navbar-nav mr-auto mx-auto font-weight-bold">
-            <li class="nav-item active">
+            <li class="nav-item mx-3 active">
                 <a class="nav-link" href="#">Atacadão <span class="sr-only">(página atual)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
                 <a class="nav-link" href="#">Assaí</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
                 <a class="nav-link" href="#">Casa Grande</a>
             </li>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
                 <a class="nav-link" href="#">Trento</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
                 <a class="nav-link" href="#">Mix Mateus</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-3 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Mais
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,28 +57,26 @@
                     <a class="dropdown-item" href="#">Config</a>
                 </div>
             </li>
-            </ul>
-           <!--- <form class="form-inline my-2 my-lg-0">
+            </ul>  
+
+           <!-- CAIXA DE PESQUISA DESATIVADA -->
+
+           <!--- <form class="form-inline my-2 my-lg-0">   
             <input class="form-control w-auto" type="search" placeholder="Mercados, produtos.." aria-label="Pesquisar">
             <button class="btn btn-outline-light mx-1 my-2 my-sm-0" type="submit">Buscar</button> 
             <a href="" class="btn btn-dark mx-1">o</a> botão config
             </form> -->
         </div>
-        </nav>
+        </nav> <!-- FIM DA BARRA DE NAVEGAÇÃO -->
 
-        <div id="validade">
+        <div id="validadePromo"> <!-- Validade promoçao encarte -->
             <p>PROMO VÁLIDA ATÉ 20/05/2023</p>
         </div>
-        <!-- botoes informativos 
-            <a id="whatsapp" href="" class="btn btn-dark">Whatsapp</a>
-            <a id="mapa" href="" class="btn btn-dark">Endereço</a>
-        -->
-        
-    </header> <!-- fim header -->
 
-    <!-- inicio main -->
+    </header> <!-- FIM HEADER -->
+
+    <!-- INICIO MAIN -->
     <main>
-
         <!-- inicio session itens -->
         <section id="produtos" class="d-flex flex-wrap justify-content-center">
 
@@ -189,8 +188,7 @@
                 <p class="precoProduto">PREÇO</p>
             </div>
         </section>  <!-- fim session itens -->
-
-    </main>
+    </main> <!-- FIM MAIN -->
 
             <!-- menu futuante -->
             <div id="menuFlutuante" class="d-block m-auto m-lg-2 fixed-bottom">
@@ -199,20 +197,26 @@
                 <img src="img/config.png" alt="" onclick="toggleConfig()"> <a href=""></a> </img>
             </div>
             <!-- menu suspenso display none até ser editado -->
-            <div id="showConfig" class=" mx-auto card">
+            <div id="showConfig" class=" mx-auto card bg-light">
                 <div class="mx-auto">
-                    <button class="btn m-3">
-                        test
+                    <button class="btn my-3 mx-2" onclick="modoEscuro()">
+                        Escuro
                     </button>
-                </div>
+                    <button class="btn my-3 mx-2" onclick="modoEscuro()">
+                        Claro
+                    </button>
+                    <button class="btn my-3 mx-2" onclick="modoEscuro()">
+                        Papel
+                    </button>
+                </div> 
             </div>
 
-        <!-- footer -->
+     <!-- FOOTER -->
     <footer class="card-footer bg-dark">
         <p>Criado por PROMOV.net | Direitos reservados &copy;</p>
-    </footer>
+    </footer> <!-- FIM FOOTER -->
 
-    <!-- script bootstrap -->
+    <!-- SCRIPT BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -222,7 +226,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <!-- fim script bootstrap -->
+    <!-- FIM SCRIPT BOOTSTRAP -->
 
     <!-- menu futuantoe js-->
     <script src="js/menuFlutuante.js"></script>

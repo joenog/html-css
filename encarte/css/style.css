@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-* {
+* {  /* CONFIG GLOBAL */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-:root {
+:root { /* VARIAVEIS PALETA DE CORES */
     --cor0:#15944C; --cor1: #A751E0;
 }
 
@@ -27,8 +27,7 @@ header {
     background-color: #2ab6662d;
 }
 
-/* ICONE SACOLA */
-#banner{
+#banner{ /* icone sacola */
     height: 40px;
     user-select: none;
     margin: auto;
@@ -40,58 +39,26 @@ header {
     transform: rotateX(20deg);
     transition-duration: .5s;
     box-shadow: 1px -3px 0px rgba(0, 0, 0, 0.175);
-} 
-/*  fim icone */
+}  /* fim icone */
 
-/*   validade da promoçao */
-#validade{
+
+#validadePromo{ /* validade da promoçao */
     margin-top: 64px;
-    font-weight: bold;
     text-align: center;
     user-select: none;
-} #validade p {
+} #validadePromo p {
     padding: 5px;
 }
-
-/*  botoes mapa e whatsapp antigos  
-#mapa {
-    position: fixed;
-    right: -14px;
-    bottom: 20px;
-    border-radius: 12px;
-    background-color: var(--cor1);
-    cursor: pointer;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
-    border: none;
-    color: rgba(255, 255, 255, 0.603);
-} #mapa:hover{
-    box-shadow: 0px 0px 0px black;
-    transform: translate(2px, 2px);
-}
-
-#whatsapp {
-    position: fixed;
-    right: -14px;
-    bottom: 70px;
-    border-radius: 12px;
-    background-color: var(--cor0);
-    cursor: pointer;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.788);
-    border: none;
-    color: rgba(255, 255, 255, 0.603)
-} #whatsapp:hover{
-    box-shadow: 0px 0px 0px black;
-    transform: translate(2px, 2px);
-} */
+/* FIM HEADER */
 
 
-/*  novo menu flutuante */
+/*  NOVO MENU FLUTUANTE */
 #menuFlutuante {
     bottom: 7px;
     padding: 3px;
     width: 145px;
     border-radius: 22px;
-    background-color: rgba(255, 255, 255, 0.678);
+    background-color: #ffffffad;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.219);
 } #menuFlutuante img {
     width: 40px;
@@ -115,33 +82,44 @@ header {
     text-decoration: none;
         color: rgba(48, 48, 48, 0.603);
         padding: 10px;
-}
+} /* FIM MENU FUTUANTE */
 
-/* menu flutuante ao cliar  */
 
+/* ANIMAÇAO MENU FLUTUANTE AO / ABA MENU   */
 @keyframes corCard {
    0% {
     background-color: rgba(255, 255, 255, 0.11);
    } 
+   10% {
+    background-color: rgba(255, 255, 255, 0.100);
+   } 
    20% {
-    background-color: rgba(255, 255, 255, 0.308);
+    background-color: rgba(255, 255, 255, 0.200);
+   } 
+   30% {
+    background-color: rgba(255, 255, 255, 0.300);
    } 
    40% {
-    background-color: rgba(255, 255, 255, 0.438);
+    background-color: rgba(255, 255, 255, 0.400);
+   } 
+   50% {
+   background-color: rgba(255, 255, 255, 0.500);
    } 
    60% {
-    background-color: rgba(255, 255, 255, 0.507);
+   background-color: rgba(255, 255, 255, 0.600);
    } 
    70% {
-    background-color: rgba(255, 255, 255, 0.781);
+   background-color: rgba(255, 255, 255, 0.700);
    } 
    80% {
-    background-color: white;
+   background-color: rgba(255, 255, 255, 0.800);
+   } 
+   90% {
+   background-color: rgba(255, 255, 255, 0.900);
    } 
    100% {
-    background-color: white;
+   background-color: white;
    } 
-  
 }
 
 #showConfig {
@@ -153,32 +131,23 @@ header {
     height: 150px;
     margin-bottom: 55px;
     border-radius: 15px;
-    animation: corCard .1s ease-in-out;
+    animation: corCard .1s forwards;
 }
-/* menu flutuante ao cliar  */
-
-
-/* fim menu flutuante */
-
-/* FIMHEADER*/
-
-/* MENU */
-
-li {
-    margin-right: 15px;
-}
-
-/* FIM  MENU */
+/*FIM  ANIMAÇÃO MENU FLUTUANTE / ABA MENU  */
 
 
 /* BODY */
+
+body {
+    background-color: white;
+}
 main {
     width: 85vw;
     margin: auto;
 }
 
 
-.itemEncarte {
+.itemEncarte {  /* div que contendo img, nome e preço */
     width: 140px;
     height: 130px;
     margin: 30px 16px 50px 16px;
@@ -186,15 +155,15 @@ main {
     padding: 5px;
 }
 
-.imgProduto {
+.imgProduto { /* controle img dos itens  */
     width: 100%;
 }
 
-.nomeProduto {
+.nomeProduto {  /* config nome produto */
     margin-bottom: 2px;
 }
 
-.precoProduto {
+.precoProduto { /* preço do prduto  */
     background-color: rgba(255, 255, 0, 0.925);
     border-end-end-radius: 20px;
     font-weight: bold;
@@ -202,14 +171,14 @@ main {
     font-size: 1.8em;
     padding-right: 4px;
 }
-
 /* FIM BODY */
 
-/* FOOTER */
 
+/* FOOTER */
 footer {
     font-size: .8em;
     text-align: center;
     margin-top: 60px;
     color: white;
 }
+/* FIM FOOTER */

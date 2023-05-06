@@ -5,16 +5,12 @@
         width: 99vw;
     }
 
-    /* ZOOM PADRAO MOBILE  */
-    
-
     /*disposição dos intes na tela MOBILE */
     .itemEncarte {
         width: 105px;  /* emova essa linha para duas colunas  */
         margin: 5px 5px 65px 5px;
         /*margin: 10px 10px 65px 10px;    margin para duas colunas*/
     }
-
     /* 
     itens encarte 3 fileiras 
 
@@ -22,29 +18,14 @@
             width: 105px;
             margin: 5px 5px 65px 5px;
             border: 1px solid black;
-        }
-    
+        }   
     */
 
-    .imgProduto {
-        width: 95%;
-    }
-
-    .nomeProduto {
-        margin-bottom: 2px;
-    }
-
     .precoProduto {
-        background-color: rgba(255, 255, 0, 0.925);
-        border-end-end-radius: 20px;
-        font-weight: bold;
-        text-align: right;
-        font-size: 1.6em;
-        padding-right: 4px;
+        font-size: 1.6em;  /* diminui preço do produto  */
     }
 
     /*disposição dos intes na tela */
-
 
     #menuFlutuante {
         padding: 3px;
@@ -61,7 +42,7 @@
     }
 
     #showConfig {
-        width: 100%;
+        width: 100%;  /* aba flutuante menu fiar em 100%  */
     }
 
 }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso ideal</title>
+
+        <style>
+            :root {
+                --cor1: #ade6d8;
+            }
+
+            * {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        
+            header {
+                text-align: center;
+                padding: 50px;
+            }
+        
+            main {
+                width: 400px;
+                margin: auto;
+            }
+        
+            form {
+                background-color: var(--cor1);
+                border-radius: 20px;
+                padding: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        
+            #res {
+                background-color: var(--cor1);
+                border-radius: 20px;
+                padding: 20px;
+            }
+        
+            input {
+                border-radius: 10px;
+                padding: 10px;
+                border: .1px solid white;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Fuso horario França</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <p>
+                Horas:
+                <input type="text" name="hora" id="inHora" max="24" step="0.01" placeholder="18.30">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+          
+        </form>
+
+        <div id="res">
+            Resposta...
+        </div>
+
+    </main>
+
+    <script>
+
+        const frm = document.querySelector('form');
+        const res = document.querySelector('#res');
+
+        frm.addEventListener('submit', e=>{
+            e.preventDefault();
+
+            let hora = Number(frm.inHora.value);
+            let horaFra = hora + 5;
+            if (horaFra > 24) {
+                horaFra = horaFra - 24;
+            }
+            res.innerHTML = `Hora no brasil ${hora.toFixed(2)} <br> Hora na França ${horaFra.toFixed(2)}`
+        })
+        
+    </script>
+</body>
+</html>
