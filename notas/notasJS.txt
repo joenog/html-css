@@ -1375,6 +1375,16 @@ let carro = {
 carro.acelerar   ();    // aumenta a velocidade em 10
 
 
+]] EVETNOS JS
+
+Eventos em JavaScript são ações que ocorrem em um elemento da página web com a iteração do usuario
+como um clique num botão, pressionar uma tecla, mover o mouse sobre elementos, carregar uma página..
+
+O JavaScript pode "escutar" (ou "capturar") esses eventos e, em seguida, executar uma função
+específica (conhecida como "handler" ou "callback") quando o evento ocorre. Essa função pode
+fazer qualquer coisa, como alterar o conteúdo da página, enviar uma solicitação de servidor,
+exibir uma mensagem de alerta, etc.
+
 
 _______________________________________________________________________
 
