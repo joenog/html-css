@@ -53,7 +53,7 @@
 
     <main>
 
-        <input type="text" name="itext" id="itext" onkeypress="clicou()">
+        <input type="text" name="itext" id="itext" onkeydown="clicou()">
         
     </main>
 
@@ -61,16 +61,11 @@
 
         let caixa = document.querySelector('#itext')
 
-        function clicou() {
-            
-            caixa.style.borderRadius = '50px'
-            caixa.style.transitionDuration = '1s'
-            
-            while (caixa.style.borderRadius === '50px') {
-                caixa.style.background = 'blue'
-            } 
-        }
-
+        caixa.addEventListener('keydown', aoclicar =>{
+            if (aoclicar.key === 'k') {
+                alert('letra ka foi cicada')
+            }
+        })
     </script>
 </body>
 </html>

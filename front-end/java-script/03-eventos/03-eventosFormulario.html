@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos mouse</title>
+    <title>Eventos teclado</title>
 
     <style>
 
@@ -20,7 +20,6 @@
         main {
             display: flex;
             width: 800px;
-            height: 400px;
             border-radius: 20px;
             margin: auto;
             background-color: white;
@@ -48,29 +47,39 @@
 </head>
 <body>
     <header>
-        <h1>Eventos mouse</h1>
+        <h1>Eventos teclado</h1>
     </header>
 
     <main>
-
-        <div class="box" >
-
-       </div>
-    
+        <form action="">
+            <p>Email: </p>
+            <select name="" id="sele">
+                <option value="1">Bahia</option>
+                <option value="2">Minas gerais</option>
+                
+            </select>
+            
+            numero:
+            <input type="number" name="num" id="num">
+        </form>
         
     </main>
 
     <script>
 
-        let box = document.querySelector('.box');
+       let frm = document.querySelector('form');
+        let num = document.querySelector("#num");
 
-        box.addEventListener('dblclick', e => {
-            e.preventDefault();
-            box.style.background = 'red';
+        num.addEventListener('invalid', e=> {
+            alert('caracter invalido ')
         })
 
-        
+       frm.addEventListener('change', e => {
 
+           alert("enviado");
+           e.preventDefault();
+       })
+      
     </script>
 </body>
 </html>

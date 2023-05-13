@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos mouse</title>
+    <title>Eventos teclado</title>
 
     <style>
 
@@ -20,7 +20,7 @@
         main {
             display: flex;
             width: 800px;
-            height: 400px;
+            height: 1400px;
             border-radius: 20px;
             margin: auto;
             background-color: white;
@@ -48,28 +48,27 @@
 </head>
 <body>
     <header>
-        <h1>Eventos mouse</h1>
+        <h1>Eventos teclado</h1>
     </header>
 
     <main>
 
-        <div class="box" >
-
-       </div>
-    
+        <input type="text" name="itext" id="itext" onkeydown="clicou()">
         
     </main>
 
     <script>
 
-        let box = document.querySelector('.box');
+        // eventos de janela serve para quando redirecionarmos ou quando der scrool
+        const main = document.querySelector('main')
 
-        box.addEventListener('dblclick', e => {
-            e.preventDefault();
-            box.style.background = 'red';
+        window.addEventListener('scroll', ()=> {
+            main.style.borderRadius = '100px'
+            main.style.transitionDuration = '3s'
         })
 
-        
+
+
 
     </script>
 </body>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO</title>
+
+    <style>
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        body  {
+            background-color: #01692c;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        main {
+            width: 850px;
+            height: 400px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.089);
+            background: url(img/2Ct5.gif) no-repeat;
+            background-size: cover;
+        }
+
+        #menu {
+            position: fixed;
+            display: flex;
+            background-color: rgba(32, 32, 32, 0.26);
+            width: 160px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .gasolina {
+            user-select: none;
+            background-color: rgba(58, 58, 58, 0.26);
+            width: 80px;
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+             font-size: 1.1em;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .pontos {
+            user-select: none;
+            background-color: rgba(66, 66, 66, 0.26);
+            width: 80px;
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+            font-size: 1.1em;
+            color: white;
+            font-weight: bold;
+        }
+
+        #box {
+            position: relative;
+            top: 260px;
+            left: 30px;
+            width: 40px;
+            height: 75px;
+            padding: 10px;
+            border-radius: 60px;
+            border: 1px solid #233e473b;
+            background-color: #007aa73b;
+        }
+
+        #cabeca {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+        }
+
+        #corpo {
+            background-color: #003500;
+            width: 30px;
+            height: 50px;
+            border-radius: 15px;
+            box-shadow: 1px 5px 8px #0000007e;
+        }
+
+        #nave {
+            position: relative;
+            background: url('img/navee.png') no-repeat center center;
+            background-size: cover;
+            width: 100px;
+            height: 40px;
+            border-radius: 100%;
+            top: -20px;
+            left: -30px;
+        } /* FIM PERSONANGEM */
+
+
+        /* OBSTACULOS GAME  */
+
+        #alien {
+            position: relative;
+            width:  40px;
+            height: 40px;
+            border: 2px solid blue;
+            left: 800px;
+        }
+        
+        #pedra {
+            position: relative;
+            width:  40px;
+            height: 40px;
+            border: 2px solid blue;
+            align-self: end;
+            left: 800px;
+            top: 190px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NOME DO JOGO</h1>
+    </header>
+
+    <main>
+        <div id="menu">
+            <div class="pontos">
+                0
+            </div>
+
+            <div class="gasolina">
+                0
+            </div>
+        </div>
+
+        <div id="box"> 
+            <div id="cabeca">
+
+            </div>
+            <div id="corpo">
+
+            </div>
+            <div id="nave">
+
+            </div>
+        </div>
+
+        <!-- obstaculos jogo -->
+        <div id="alien">
+            
+        </div>
+        <div id="pedra">
+            
+        </div>
+        <!-- obstaculos jogo -->
+        
+    </main>
+
+    <script>
+        //itens do jogo
+        const box = document.querySelector('#box');
+        const cabeca = document.querySelector('#cabeca');
+
+        //aperta espaço nave sobe
+         document.addEventListener('keydown', suvirNave=> {
+                if (suvirNave.key === ' ' || suvirNave.key === 'ArrowUp') {
+                    box.style.top = '100px';
+                    box.style.transitionDuration = '.7s';
+                    cabeca.style.background = 'red';
+                    cabeca.style.transitionDuration = '.3s';
+                    corpo.style.width = '27px'
+                    corpo.style.transitionDuration = '.4s'
+                    nave.style.rotate = '0deg';
+                } 
+            })
+        //soltar espaço nave descerNave
+        document.addEventListener('keyup', descerNave=> {
+                   if (descerNave.key === ' ' || descerNave.key === 'ArrowUp') {
+                     box.style.top = '260px';
+                     box.style.transitionDuration = '1s';
+                     cabeca.style.background = 'lightblue';
+                     cabeca.style.transitionDuration = '.3s';
+                     corpo.style.transitionDuration = '.4s';
+                     corpo.style.width = '30px';
+                     nave.style.rotate = '0deg';
+                     nave.style.transitionDuration = '.5s';  
+                 }   
+
+            })
+
+        //movimento esquerda direita
+         document.addEventListener('keydown', movimentarNave=> {
+                   if (movimentarNave.key == 'd' || movimentarNave.key === 'ArrowRight') {
+                     box.style.left = '260px';
+                     box.style.transitionDuration = '1s'; 
+                   }
+                   if(movimentarNave.key == 'a' || movimentarNave.key === 'ArrowLeft') {
+                    box.style.left = '20px';
+                    box.style.transitionDuration = '1s';
+                   }
+            })
+
+             //animar nave
+                const animarNave = function () {
+                    nave.style.rotate = '-10deg'
+                    nave.style.transitionDuration = '.3s'
+                    cabeca.style.color = 'red'
+                }
+                //revete animação
+                const reverterAnimacao = function () {
+                    nave.style.rotate = '0deg'
+                    nave.style.transitionDuration = '.1s'
+                    cabeca.style.background = 'lightblue'
+                }
+
+
+                const animacaoNaveInterval = setInterval(() => {
+                    animarNave();
+                    setTimeout(() => {
+                        reverterAnimacao();
+                    }, 300);
+                }, 400);
+
+                // OBSTACULOS DO GAME
+
+                const pedra = document.querySelector("#pedra")
+                const nave = document.querySelector("#nave")
+
+                let pedraInterval // constiável para armazenar o intervalo de atualização da pedra
+
+                    function iniciarJogo() {
+                        pedraInterval = setInterval(() => {
+
+                            const positionNave = parseFloat(nave.style.left);
+                            const positionPedra = parseFloat(pedra.style.left);
+
+                            positionPedra = pedra.style.left.replace(/[^0-9]/g, '') - 5 + 'px'
+                            pedra.style.transitionDuration = '3s'
+
+                            if (positionPedra <= positionNave ) {
+                                alert('fim do jogo')
+                            }
+                        }, 2000) // intervalo de atualização de 60 frames por segundo
+                    }
+
+                    iniciarJogo()
+
+
+    </script>
+</body>
+</html>

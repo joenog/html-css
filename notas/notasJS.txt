@@ -1385,6 +1385,49 @@ específica (conhecida como "handler" ou "callback") quando o evento ocorre. Ess
 fazer qualquer coisa, como alterar o conteúdo da página, enviar uma solicitação de servidor,
 exibir uma mensagem de alerta, etc.
 
+[EVENTOS DE MOUSE]
+
+click - acionado quando um elemento é clicado com o botão esquerdo do mouse.
+dblclick - acionado quando um elemento é clicado duas vezes com o botão esquerdo.
+mouseover - acionado quando o cursor do mouse entra em um elemento.
+mouseout - acionado quando o cursor do mouse sai de um elemento.
+mousemove - acionado quando o cursor do mouse é movido dentro de um elemento.
+mousedown - acionado quando o botão do mouse é pressionado dentro de um elemento.
+mouseup - acionado quando o botão do mouse é liberado dentro de um elemento.
+contextmenu - acionado quando o botão direito do mouse é clicado dentro de um elemento.
+
+[EVENTOS DE TECLADO]
+
+keydown: acionado quando uma tecla é pressionada, antes da letra ou símbolo ser exibido na tela.
+keypress: acionado quando uma tecla é pressionada e uma letra ou símbolo é exibido na tela.
+keyup: acionado quando uma tecla é solta após ser pressionada.
+Além disso, há outros eventos relacionados ao teclado, como:
+input: acionado quando o valor de um elemento de formulário é alterado.
+focus: acionado quando um elemento de formulário recebe o foco.
+blur: acionado quando um elemento de formulário perde o foco.
+
+[EVENTOS DE JANELA]
+
+load: acionado quando a página é totalmente carregada, incluindo imagens, scripts etc..
+unload: acionado quando a página é fechada ou quando o usuário navega para outra página.
+resize: acionado quando a janela do navegador é redimensionada pelo usuário.
+scroll: acionado quando a barra de rolagem da página é movida pelo usuário.
+focus: acionado quando a janela ou um elemento dentro dela recebe o foco.
+blur: acionado quando a janela ou um elemento dentro dela perde o foco.
+beforeunload: acionado antes da página ser fechada ou quando o usuário navega para outra página.
+
+[EVENTOS DE FORMULARIO]
+
+submit - acionado quando o formulário é enviado.
+reset - acionado quando o botão "Redefinir" é clicado para limpar o formulário.
+change - acionado quando o valor de um elemento de formulário é alterado (por exemplo, 
+selecionando uma opção em um menu suspenso ou marcando uma caixa de seleção).
+focus - acionado quando um elemento de formulário recebe o foco.
+blur - acionado quando um elemento de formulário perde o foco.
+input - acionado quando um usuário insere texto em um elemento de formulário.
+invalid - acionado quando um elemento de formulário é inválido (por exemplo, quando
+o usuário não preencheu um campo obrigatório).
+
 
 _______________________________________________________________________
 
