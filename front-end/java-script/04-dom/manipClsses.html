@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Estilos das paginas</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font-size: 1.2em;
+        }
+
+        header h1{
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        main {
+            width: 600px;
+            margin: auto;
+        }
+
+       .style1 {
+        width: 600px;
+        height: 50px;
+        border-radius: 20px;
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        padding: 5px;
+        user-select: none;
+       }
+
+       .style2 {
+        width: 600px;
+        height: 60px;
+        border-radius: 40px;
+        background-color: rgb(97, 19, 86);
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+        user-select: none;
+        color: white;
+       }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manipulando Classe do elemento</h1>
+    </header>
+
+    <main>
+
+        <div id="box" class="style1">
+            Modificando a classe do Elemento
+        </div>
+        <br>
+
+        <button id="btn">
+            Aplicar Classe
+        </button>
+
+    </main>
+
+    <script>
+      
+        const btn = document.querySelector('#btn');
+        
+        btn.addEventListener('click', ()=> {
+            let box = document.querySelector('#box');
+            if (box.className === 'style1') {
+                box.className = 'style2';
+            } else {
+                box.classList = 'style1';
+            }
+        })
+
+
+    </script>
+</body>
+</html>

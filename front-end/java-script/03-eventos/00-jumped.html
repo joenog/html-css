@@ -77,6 +77,7 @@
             width: 20px;
             height: 20px;
             border-radius: 20px;
+            background-color: lightblue;
         }
 
         #corpo {
@@ -96,29 +97,20 @@
             border-radius: 100%;
             top: -20px;
             left: -30px;
-        } /* FIM PERSONANGEM */
+        } 
+        
+        /* FIM PERSONANGEM */
 
 
         /* OBSTACULOS GAME  */
 
-        #alien {
-            position: relative;
-            width:  40px;
-            height: 40px;
-            border: 2px solid blue;
-            left: 800px;
+         #monster {
+            border: 1px solid red;
+            position: absolute;
+            width: 100px;
+            height: 500px;
+            right: 0px;
         }
-        
-        #pedra {
-            position: relative;
-            width:  40px;
-            height: 40px;
-            border: 2px solid blue;
-            align-self: end;
-            left: 800px;
-            top: 190px;
-        }
-
 
     </style>
 </head>
@@ -154,7 +146,7 @@
         <div id="alien">
             
         </div>
-        <div id="pedra">
+        <div id="monster">
             
         </div>
         <!-- obstaculos jogo -->
@@ -171,8 +163,6 @@
                 if (suvirNave.key === ' ' || suvirNave.key === 'ArrowUp') {
                     box.style.top = '100px';
                     box.style.transitionDuration = '.7s';
-                    cabeca.style.background = 'red';
-                    cabeca.style.transitionDuration = '.3s';
                     corpo.style.width = '27px'
                     corpo.style.transitionDuration = '.4s'
                     nave.style.rotate = '0deg';
@@ -182,40 +172,34 @@
         document.addEventListener('keyup', descerNave=> {
                    if (descerNave.key === ' ' || descerNave.key === 'ArrowUp') {
                      box.style.top = '260px';
-                     box.style.transitionDuration = '1s';
-                     cabeca.style.background = 'lightblue';
-                     cabeca.style.transitionDuration = '.3s';
+                     box.style.transitionDuration = '.8s';
                      corpo.style.transitionDuration = '.4s';
-                     corpo.style.width = '30px';
-                     nave.style.rotate = '0deg';
-                     nave.style.transitionDuration = '.5s';  
+                     corpo.style.width = '30px'; 
                  }   
-
             })
 
         //movimento esquerda direita
-         document.addEventListener('keydown', movimentarNave=> {
-                   if (movimentarNave.key == 'd' || movimentarNave.key === 'ArrowRight') {
-                     box.style.left = '260px';
-                     box.style.transitionDuration = '1s'; 
-                   }
-                   if(movimentarNave.key == 'a' || movimentarNave.key === 'ArrowLeft') {
-                    box.style.left = '20px';
-                    box.style.transitionDuration = '1s';
-                   }
+        document.addEventListener('keydown', movimentarNave=> {
+            const boxLeft = Number(box.style.left);
+            if (movimentarNave.key == 'd' || movimentarNave.key === 'ArrowRight') {
+                box.style.left = '300px';
+                box.style.transitionDuration = '.8s'; 
+            }
+            if(movimentarNave.key == 'a' || movimentarNave.key === 'ArrowLeft') {
+                box.style.left = '60px';
+                box.style.transitionDuration = '.8s';
+                }
             })
 
              //animar nave
                 const animarNave = function () {
                     nave.style.rotate = '-10deg'
-                    nave.style.transitionDuration = '.3s'
-                    cabeca.style.color = 'red'
+                    nave.style.transitionDuration = '.2s'
                 }
                 //revete animação
                 const reverterAnimacao = function () {
                     nave.style.rotate = '0deg'
                     nave.style.transitionDuration = '.1s'
-                    cabeca.style.background = 'lightblue'
                 }
 
 
@@ -227,28 +211,10 @@
                 }, 400);
 
                 // OBSTACULOS DO GAME
-
                 const pedra = document.querySelector("#pedra")
                 const nave = document.querySelector("#nave")
 
-                let pedraInterval // constiável para armazenar o intervalo de atualização da pedra
-
-                    function iniciarJogo() {
-                        pedraInterval = setInterval(() => {
-
-                            const positionNave = parseFloat(nave.style.left);
-                            const positionPedra = parseFloat(pedra.style.left);
-
-                            positionPedra = pedra.style.left.replace(/[^0-9]/g, '') - 5 + 'px'
-                            pedra.style.transitionDuration = '3s'
-
-                            if (positionPedra <= positionNave ) {
-                                alert('fim do jogo')
-                            }
-                        }, 2000) // intervalo de atualização de 60 frames por segundo
-                    }
-
-                    iniciarJogo()
+                
 
 
     </script>

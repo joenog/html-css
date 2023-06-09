@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando valores numeros e textos</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-size: 1.5em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        input {
+            font-size: 1.5em;
+            border: 5px solid rgba(255, 255, 255, 0);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manipulando valores</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <div>
+                Digite algo:
+                <input type="text" name="entrada" id="entrada">
+                <hr>
+            </div>
+            
+            <div>
+                <input type="text" name="texto" id="letras" disabled>
+                <input type="text" name="numero" id="numeros" disabled>
+            </div>
+            
+            <input type="reset" id="limpar" value="Limpar">
+        </form>
+
+    </main>
+
+    <script>
+        // seleciono formulari no HTML
+        let frm = document.querySelector('form');
+        
+        frm.addEventListener('keyup', e=> { // adicionei um evento de teclado keyup
+            //selecionei caixa de digitacao
+            const entrada = frm.entrada.value;
+            frm.entrada.value = ''; //limpar caixa 
+
+            if (isNaN(entrada)) {
+                // se a entrada n for numero
+                frm.letras.value += entrada;
+            }
+            if (!isNaN(entrada)) {
+                // se a entrada for numero
+                frm.numeros.value += Number(entrada);
+            }  
+            
+        })
+        // evento para limpar campos preenchidos
+        frm.addEventListener('reset', e => {
+            frm.letras.value = '';
+            frm.numeros.value = '';
+            })
+
+    </script>
+</body>
+</html>

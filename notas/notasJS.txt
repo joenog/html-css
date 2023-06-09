@@ -1403,7 +1403,7 @@ keypress: acionado quando uma tecla é pressionada e uma letra ou símbolo é ex
 keyup: acionado quando uma tecla é solta após ser pressionada.
 Além disso, há outros eventos relacionados ao teclado, como:
 input: acionado quando o valor de um elemento de formulário é alterado.
-focus: acionado quando um elemento de formulário recebe o foco.
+focus: acionado quando um elemento de formulário recebe o foco (é clicado).
 blur: acionado quando um elemento de formulário perde o foco.
 
 [EVENTOS DE JANELA]
@@ -1427,6 +1427,21 @@ blur - acionado quando um elemento de formulário perde o foco.
 input - acionado quando um usuário insere texto em um elemento de formulário.
 invalid - acionado quando um elemento de formulário é inválido (por exemplo, quando
 o usuário não preencheu um campo obrigatório).
+_______________________________________________________________________
+
+{}[DOM] document object modelos
+
+[dom - uma API multiplataforma que permite acesso aos elementos HTML -tipo uma copia fiel do HTML]
+O DOM (Document Object Model) é uma interface de programação para documentos HTML e XML.
+É uma representação estruturada do documento, onde cada elemento do documento é tratado
+como um objeto dentro da árvore DOM.
+    O DOM permite que os programadores acessem, modifiquem e manipulem os elementos de um 
+documento HTML ou XML usando linguagens de programação, como JavaScript. Ele fornece métodos
+e propriedades para interagir com os elementos da página, permitindo a criação dinâmica 
+de conteúdo, alterações de estilo, manipulação de eventos, entre outras ações.
+
+
+
 
 
 _______________________________________________________________________

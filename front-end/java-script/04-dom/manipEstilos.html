@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Estilos das paginas</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font-size: 1.2em;
+        }
+
+        header h1{
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        main {
+            width: 600px;
+            margin: auto;
+        }
+
+       .btn {
+        width: 150px;
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        background-color: rgb(211, 207, 231);
+        margin: auto;
+       } 
+
+        #box {
+            width:  400px;
+            height:  400px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manipulando Estilo com CSS</h1>
+    </header>
+
+    <main>
+
+        <button class="btn">Verde</button>
+        <button class="btn">Azul</button>
+        <button class="btn">Preto</button>
+        <div id="box">
+
+        </div>
+
+    </main>
+
+    <script>
+        // seleciono botoes por className e a box por query
+        const btn = document.getElementsByClassName('btn');
+        const box = document.querySelector('#box');
+        // crio constante com funcao de atributos que serao modificados
+        const changeBox = (color, border, transition)=> {
+            box.style.background = color; // cor receber atributo cor
+            box.style.borderRadius = border; /// borda recebe atributo borda
+            box.style.transition = transition;
+        }
+        // indico os botoes adicionando um evento click e uma funcao que modifica os atributos da funcao anterior
+        btn[0].addEventListener('click', ()=> changeBox('green', '60px', '1s')) 
+        btn[1].addEventListener('click', ()=> changeBox('blue', '120px', '1s'))
+        btn[2].addEventListener('click', ()=> changeBox('black', '180px', '1s'))
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario interativo</title>
+
+    <style>
+        input{
+            background-color: rgba(128, 128, 128, 0.26);
+            border:  1px solid white;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.2em;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Formulario interativo</h1>
+    </header>
+
+    <main>
+        <form action="">
+            EMAIL:
+            <input type="text" name="email" id="email"> 
+            <input type="submit" value="Enviar">     
+        </form>
+ 
+
+    </main>
+
+    <script>
+
+     const frm = document.querySelector('form'); //const para selecionar o formulario
+     
+     frm.addEventListener('submit', e => {  // ouvidor com evento aos clicar em submit
+
+        const email = frm.email;
+        e.preventDefault();
+
+            if (email.value.length == '') {
+                alert('preencha antes de enviar');
+            } else {
+                alert('enviado com sucesso')
+            }
+        })
+        
+        frm.addEventListener('input', ()=> {
+            const email = frm.email;
+
+            email.style.backgroundColor = 'lightyellow'
+            email.style.border = '1px solid grey'
+
+            if(email.value.length <= 4  || email.value.length >= 30){
+                email.style.backgroundColor = 'lightpink';
+            } 
+            else if (email.value.length > 4) {
+                email.style.backgroundColor = 'lightgreen';
+                email.style.transitionDuration = '.4s';
+            }
+        })
+
+    </script>
+</body>
+</html>
