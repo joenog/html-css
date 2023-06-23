@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar pares entre numeros</title>
+</head>
+<body>
+    <header>
+        <h1>Mostrar pares entre numeros</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <div>
+                <input type="number" name="num" id="num">
+            </div>
+            <input type="submit" value="Pares">
+
+        </form>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+
+        const frm = document.querySelector('form');
+        
+        frm.addEventListener('submit', e=> {
+            e.preventDefault();
+            let res = document.querySelector('#res');
+            let num = Number(frm.num.value);
+            const resp = [];
+
+            while (num > 1) {
+                if (num % 2 == 0) {
+                    resp.push(num);
+                }
+                num--;
+            }
+            res.innerHTML = `Os numeros pares são ${resp.join(', ')}.`
+        })
+
+    </script>
+</body>
+</html>

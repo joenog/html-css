@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar pares entre numeros</title>
+</head>
+<body>
+    <header>
+        <h1>Mostrar pares entre numeros</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <div>
+                <input type="number" name="num" id="num">
+            </div>
+            <input type="submit" value="Pares">
+
+        </form>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+
+            let num;  //CRIO VAR VAZOA
+            do { //FAZ
+                num = Number(prompt("Digite o número final")); // INSIRA NUM FINAL
+                if (isNaN(num) || num === 0) { // SE O N FOR NUMERO OU FOR IGUAL 0 INFORMAR INVALIDEZ
+                    alert('[ERRO] Verifique os dados e tente novamente!');
+                }
+            } while (num === 0 || isNaN(num)); // REPETIR ENQUANTO FOR INVALIDO
+
+            let pares = `Pares entre 1 e ${num}:`; // LET PARES MOSTRAR RESPOSTA
+            for (let i = 2; i <= num; i += 2) { // FOR I ENQUANTO FOR MENOR Q O HUMER OFINAL ADICIONAR = 2
+                pares = pares + ' ' + i;
+                // pares recebe o inicio em string e concatena o I sendo icrementado em 2 unidades
+            }
+
+            alert(pares);
+
+    </script>
+</body>
+</html>

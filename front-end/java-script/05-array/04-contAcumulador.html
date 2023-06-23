@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores e Acumuladores</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        header {
+            margin: 30px;
+        }
+
+        main {
+            width: 500px; 
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #f5f4e7;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.158);
+        }
+
+        input {
+            border: 1px solid white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin: 10px;
+        }
+
+        input[type=submit] {
+            padding: 10px;
+            width: 400px;
+        }
+
+        #res1 {
+            background-color: white;
+            width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 10px;
+            height: 150px;
+        }
+        #res2 {
+            background-color: rgb(255, 173, 173);
+            width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 10px;
+            height: 50px;
+        }
+
+        .inp {
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contadores e Acumuladores</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <div class="inp">
+                Valor da Conta:
+                <input type="number" id="valor">
+            </div>
+            <input type="submit" value="Somar">
+            
+            <div id="res1">
+               
+            </div>
+            <div id="res2">
+               
+            </div>
+            
+
+        </form>
+
+    </main>
+
+    <script>
+
+        const frm = document.querySelector('form'); // OBTER ELEMENTOS DO FORM
+        let res1 = document.querySelector('#res1')
+        let res2 = document.querySelector('#res2')
+        let valorTotal = 0;
+        frm.addEventListener('submit', e=> {
+            e.preventDefault(); // EVITA O ENVIO DO FORM
+            let valConta = Number(frm.valor.value);
+            valorTotal += valConta; // VALOR TOTAL RECEBE ELE MESMO MAIS OS NOVOS VALORES DE CONTA
+            res1.innerHTML += `Conta: ${valConta.toFixed(2)} <br>` // RESP PARA ACUMULAR OS VALOR DAS CONTAS
+            res2.innerHTML = `TOTAL A PAGAR: ${valorTotal.toFixed(2)}` // RESPO PARA VALOR TOTAL DAS CONTAS
+            //LIMPEZA E FOCO NO CAMPO DA CONTA
+            frm.valor.value = '';
+            frm.valor.value = focus();
+        })
+
+    </script>
+</body>
+</html>

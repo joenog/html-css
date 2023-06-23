@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop - For</title>
+
+    <style>
+
+        main {
+            display: flex;
+            width: 700px;
+            margin: auto;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: rgba(135, 206, 250, 0.466);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        img {
+            margin: 40px;
+            height: 150px;
+            width: 150px;
+        }
+
+        #res {
+            margin: 40px;
+            background-color: rgba(255, 255, 255, 0.349);
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        input {
+            justify-content: flex-start;
+            border: 1px solid white;
+            border-radius: 40px;
+            font-size: 1.1em;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+            <h1>Loop - For - Programa tabuada</h1>
+        </header>
+        
+        <main>
+            
+            <img src="https://cdn6.aptoide.com/imgs/5/6/9/569da2ec0bbbfc7f167f925b7d0530d3_icon.png?w=128" alt="">
+        
+        <form action="">
+            <p>
+                <input type="number" name="num" id="num" max="9999" required>
+            </p>
+            <p>
+                <input type="submit" value="Diminuir">
+            </p>
+        </form>
+
+        <div id="res">
+            resposta...
+        </div>
+
+
+    </main>
+
+    <script>
+
+        const frm = document.querySelector('form');
+        const res = document.querySelector('#res');
+
+        frm.addEventListener('submit', e=> {
+            e.preventDefault();
+            let numeros = [];
+            let num = Number(frm.num.value);
+            for(let i = num; i >= 1; i--) {
+               numeros.push(i);
+            }
+            res.innerHTML = `${numeros.join(', ')}`
+        })
+
+
+    </script>
+
+
+</body>
+</html>

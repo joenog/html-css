@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade Estrada</title>
+
+        <style>
+            :root {
+                --cor1: #ade6d8;
+            }
+
+            * {
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        
+            header {
+                text-align: center;
+                padding: 50px;
+            }
+        
+            main {
+                width: 400px;
+                margin: auto;
+            }
+        
+            form {
+                background-color: var(--cor1);
+                border-radius: 20px;
+                padding: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        
+            #res {
+                background-color: var(--cor1);
+                border-radius: 20px;
+                padding: 20px;
+            }
+        
+            input {
+                border-radius: 10px;
+                padding: 10px;
+                border: .1px solid white;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Velocidade Estrada</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <p>
+                Valocidade Maxima:
+                <input type="number" name="vMax" id="vmax" required>
+            </p>
+            <p>
+                Valocidade atual:
+                <input type="number" name="veloPer" id="veloPer" required>
+            </p>
+
+            <p>
+                <input type="submit" value="Check Velocidade">
+            </p>
+        </form>
+
+        <div id="res">
+            Resposta...
+        </div>
+
+    </main>
+
+    <script>
+        
+        const frm = document.querySelector('form');
+
+        frm.addEventListener('submit', e=> {
+            e.preventDefault();
+            const vMax = Number(frm.vMax.value);
+            const veloPer = Number(frm.veloPer.value);
+            const res = document.querySelector('#res');
+
+            if(vMax === '' || veloPer === '' || isNaN(vMax) || isNaN(veloPer)) {
+                res.innerHTML = 'Preencha os campos corretamente'
+            }else{
+                const multaLeve = vMax * 0.20 + vMax;
+                const multaGrave = vMax * 0.50 + vMax;
+                const chamaPRF = vMax * 0.95 + vMax;
+                if(veloPer <= multaLeve) {
+                    res.textContent = `${veloPer}km/h -Não houve infração`
+                } else if(veloPer <= multaGrave) {
+                    res.textContent = `${ veloPer}km/h -Multa leve`;
+                } else if(veloPer <= chamaPRF) {
+                    res.textContent = `${ veloPer}km/h -Multa Grave`;
+                } else if(veloPer > chamaPRF) {
+                    res.textContent = `${veloPer}km/h -PRF acionada, verá o sol nascer quadrado!`;
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -925,7 +925,7 @@ while (c <= 5) {
 
 /* Mesmo cod. usando FOR */
 
-for (c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e incremento]
+for (let c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e incremento]
     console.log('Bom dia!')
 }
 
@@ -954,9 +954,31 @@ A instrução é executada. Para executar múltiplas declarações, use uma decl
 em bloco ({ ... }) para agrupá-las.
 
 A atualização da expressão incremento, se houver, executa, e retorna o controle para o passo 2.
+----------
+
+[] break: O comando break é usado para interromper imediatamente a execução do loop e sair dele.
+ Quando o break é encontrado, o programa pula para a próxima instrução após o loop. Isso é útil
+quando você deseja interromper o loop prematuramente com base em uma condição específica.
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)  [neste exemplo o loop irá até o 4]
+----------
+
+[] continue: O comando continue é usado pra pular a iteração atual do loop e avançar para a próx
+iteração. Quando o continue é encontrado, o programa retorna ao início do loop e verifica a próx
+iteração, ignorando as instruções restantes dentro do bloco de código para aquela iteração 
+específica. O continue é útil quando você deseja ignorar algumas iterações
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)    [nesse exemplo o loop ignorará o numero 3 e continuará iterando]
 ________________________________________________________________________
 
-}}15 [VARIAVEIS COMPOSTAS]
+
+}}15 ARRAY - [VARIAVEIS COMPOSTAS]
 
 - Variaveis simples só conseguem armazenar um valor por vez,( apenas um valor) EX:
 VAR n = 5  >>  VAR n = 20  ( o valor da var será  subistituido)
@@ -1004,7 +1026,7 @@ console.log(`O primeiro valor do vetor é ${num[0]}`)  -- O primeiro valor do ve
 console.log(num[1])  /* o segundo valor é 8 */  (5,8,2,6,7)
 
 /* metodo sort() */
-num.sort() /* colocará  os valores em oordem crescente*/  [2,5,6,7,8]
+num.sort() /* colocará  os valores em ordem crescente*/  [2,5,6,7,8]
 
 **} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO PD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
 
@@ -1030,9 +1052,12 @@ for(let pos in num) {  /* para cada posição dentro de NUM, mostrarei o NUM[pos
 console.log(`A posição/index do 6 é: ${num.indexOf(6)}`)
 ~~ A posição/index do 6 é: 1
 
-/*valor que não exita na variavel  > -1 */
+/*valor que não exita na variavel  > -1 */ retorna -1
 console.log(num.indexOf(55))
+
+Nos arrays posso adicionar numeros nomes e valores boleanos
 ________________________________________________________________________
+
 
 }}16 [FUNÇÕES]
 
@@ -1283,7 +1308,7 @@ saudar('Jon', cback = (nome, resposta) => console.log(nome, resposta))
 Este metodosp previne que seja enviado os dados inseridos no formulario e evita que o formulario
 seja recaregado e suma com os dados inseridos
 
------------
+_______________________________________________________________________
 
 [Matodos nativos pra manipular STRINGS]  (js24-fun-string)
 

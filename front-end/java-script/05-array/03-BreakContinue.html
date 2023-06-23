@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar pares entre numeros</title>
+</head>
+<body>
+    <header>
+        <h1>Mostrar pares entre numeros</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+
+            <div>
+                <h1>Digite um numero</h1> <br>
+                <input type="number" name="num" id="num">
+            </div>
+            <input type="submit" value="Pares">
+
+        </form>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        alert('Digite 0 para sair');
+        do {
+            const num = Number(prompt('Digite um numero! ')); // amamzena um num numa const mas pq ?
+            // posso usar uma const pq o loop recebera um numero e usará apenas ele
+            // caso inserção de outr numero sera feito numa nova inicializacao do loop
+            if (num == 0 || isNaN(num)) { // se digitar 0 ou letras
+                const sair = confirm('Quer sair? ');
+                if (sair) {
+                    break;
+                } else {
+                    continue;
+                }
+            }
+            if (num % 2 == 0) {
+                alert(`O dobre de ${num} = ${num*2}`)
+            } else {
+                alert(`O triplo de ${num} = ${num*3}`)
+            }
+        } while (true);
+        alert('valewww!');
+
+    </script>
+</body>
+</html>
