@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Multidimensional</title>
+</head>
+<body>
+    <header>
+        <h1>Array Multidimensional</h1>
+    </header>
+    <main>
+        
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        
+        let produtos = [];
+        produtos.mercado = ['arroz', 'feijão', 'lapis','borracha']
+        produtos.escolar = ['lapis','caneta','borracha','apontador','regua'];
+        //INSERIR ELEMENTOS NO FIM
+        produtos.escolar.push('CADENRO', 'CORRETIVO')
+        produtos.mercado.push('SABÃO', 'LAMPADA')
+
+        //INSERIR ELEMENTOS NO COMEÇO do array
+        produtos.escolar.unshift('ALOWWWKK')
+        produtos.mercado.unshift('AIN-zedamanda')
+        document.write(produtos['escolar'], produtos['mercado'])  
+        
+        //EXCLUIR ELEMENTOS NA ARRAY 
+        //POP escluit no fim - SHIFT excluir no inicio
+    
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            width: 400px;
+            height: 550px;
+            margin: auto;
+            border: 1px solid rgb(116, 116, 116);
+            background-color: rgb(117, 117, 117);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.101);
+            
+        }
+        
+        input {
+            position: relative;
+            margin: 12px 0px;
+            background-color: white;
+            border: 1px solid rgb(221, 220, 220);
+            padding: 10px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            color: rgb(70, 69, 69);
+        }
+        input:hover {
+            background-color: rgba(128, 128, 128, 0.205);
+            transition-duration: .3s;
+            color: black;
+        }
+        
+        #tarefas {
+            background-color: white;
+            border: 1px solid rgb(221, 220, 220);
+            width: 360px;
+            height: 460px;
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        #tarefas p {
+            font-size: 1.2em;
+            margin: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <main>
+        
+        <div id="tarefas">
+
+        </div>
+        
+        <input type="submit" id="btnMais" value=" + ">
+        <input type="submit" id="excluir" value="Excluir">
+    </main>
+
+    <script>
+        
+        const btnMais = document.getElementById('btnMais'); //seto btn mais
+        let tarefas = document.getElementById('tarefas'); // seto div tarefas
+
+        let lista = []; //  crio array vazia
+        btnMais.addEventListener('click', (e)=> { // ouvidor para clic e mais
+                let nomeTarefa = prompt("Digite o Nome da sua Tarefa"); //  abre-se prompt 
+                lista.push(nomeTarefa); //array vazia pucha string do promprt
+                tarefas.innerHTML = `${lista.join('<br>')}`; // e imprime 
+
+            })
+            const excluir = document.getElementById('excluir') // seto btn excluir
+            excluir.addEventListener('click', (e) => { // crio ouvidor de clicko no bnt 
+            lista.pop(); // array pop apaga o ultimo item do array
+            tarefas.innerHTML = `${lista.join('<br>')}`; // fica impresso os outros itens
+            })
+
+    </script>
+</body>
+</html>

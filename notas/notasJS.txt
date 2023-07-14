@@ -975,6 +975,19 @@ while i < 5:
     if i == 3:
         continue
     print(i)    [nesse exemplo o loop ignorará o numero 3 e continuará iterando]
+
+{[]} IMPORTANTE!
+   É importante salientar que os loops fazer processos repetitivos de varias checagem, e isso 
+pode exigir mais processamento e tornar o programa mais lento, sabendo disso é importante ao
+usa-ho fazer checagem para saidar do loop em execulçoes longas caso seja possivel, assim
+evitado repeticoes desnecessaris do loop, fznd programas mais ageis. (var sinalizadoras[flags])
+
+[FLAGS] Variáveis sinalizadoras, também conhecidas como flags, são variáveis booleanas, são
+utilizadas para sinalizar ou indicar o estado de algo num programa. Elas são geralmente usadas
+pra controlar o fluxo de execução, tomar decisões ou indicar a ocorrência de determinadas condições
+    As variáveis sinalizadoras são úteis em situações em que é necessário lembrar ou acompanhar
+o estado de algo. exemplo:, num programa de processamento de dados, uma [flag] pode ser usada para
+indicar se um determinado evento ocorreu, como a finalização de um loop ou a conclusão de uma tarefa.
 ________________________________________________________________________
 
 
@@ -1056,6 +1069,30 @@ console.log(`A posição/index do 6 é: ${num.indexOf(6)}`)
 console.log(num.indexOf(55))
 
 Nos arrays posso adicionar numeros nomes e valores boleanos
+--------
+
+[] ARRAYS MULTIDIMENSIONAIS 
+Os arrays multidimensionais no JavaScript fornecem recursos de manipulação de dados mais avançados
+como adicionar, remover ou modificar elementos. Além disso, vc pode realizar operações matemáticas
+e algoritmos nos elementos do array.
+
+{} simbolo para criar objetos
+[] simbolo para criar arrays
+
+- PARA INCLUIR ELEMENTOS NUMA ARRAY USO 
+produtos.push('arroz)
+produtos.mercado.push()
+
+- PARA INCLUIR NO INICIO USO
+produtos.unshift('arroz)
+
+
+-PARA EXCLUIR UM VALOR DO ARRAY USANDO POP()
+produtos.pop()
+
+'PARA ESCLUIR NO INICIO USO
+produtos.shift()
+
 ________________________________________________________________________
 
 

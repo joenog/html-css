@@ -37,6 +37,7 @@
         input[type=submit] {
             padding: 10px;
             width: 400px;
+            background-color: #ade6b5;
         }
 
         #res1, #res2 {
@@ -45,7 +46,10 @@
             margin: 10px auto;
             padding: 10px;
             border-radius: 10px;
-            height: 150px;
+        }
+
+        #res2 {
+            background-color: #f0808077;
         }
 
         .inp {
@@ -74,7 +78,7 @@
             </div>
             <div class="inp">
                 Valor da Conta:
-                <input type="number" id="valor">
+                <input type="number" id="valor" step="0.01" required>
             </div>
             <input type="submit" value="Somar">
             
@@ -91,30 +95,33 @@
     </main>
 
     <script>
-
-        const frm = document.querySelector('form'); // OBTEM ELEMENTOS DO FORMULARIO
-        let res1 = document.querySelector('#res1'); // LET PARA EXIBIR RESP
-        let res2 = document.querySelector('#res2');
-
-        let resp ='';// LET PARA MOSTRAR RESPOSTA AO USUARIO
-        let numConstas = 0; // LET PARA MOSTRAR NUNMERO DE CONTAS
-        let valorTotal = 0; // LET PARA ACUMULAR VALOR TOTAL DAS CONTAS
-        // OUVIDOR NO BOTAO SUBMIT
-        frm.addEventListener('submit', e=> {
-            e.preventDefault(); // ENVITA O ENVIO DO FORMULARIO
-
-            const nomeConta = frm.nome.value; // CONST NOME DAS CONSTAS
-            const valorConta = Number(frm.valor.value);  // CONST VALOR DA CONTS
-
-            numConstas++; // ADICIONA VALOR AO CONTADOR E ACUMULADOR
-            valTotal += valorConta; // VALOR TOTAL RECEBE ELE MESMO MAIS VALOR DA CONTA
-            resp += nomeConta; // RESP RECEBE ELA MESMA MAIS NOME DA CONSTA
-            res1.innerHTML = `${resp}`;
-            res2.innerHTML = `${numConstas} Conta - R$ ${valorTotal.toFixed(2)}`;
-
-            frm.nome.value = '';
-            frm.valor.value = '';
-            frm.nome.value = focus();
+        //VARS PARA OBTER FORM E RESPOSTAS
+        const frm = document.querySelector('form');
+        const res1 = document.querySelector('#res1');
+        const res2 = document.querySelector('#res2');
+        //VARS PARA RECEBER VALOR TOTAL E NUMERO DE CONTAS
+        let vaTotal = 0;
+        let qntContas = 0;
+        //OUVIDOR PARA BTN SUBMIT
+        frm.addEventListener('submit', (e) => {
+            //COMANDO PREVINE ENVIO DO FORM
+            e.preventDefault();
+            //LET PARA OBTER NOME E VALOR DAS CONTAS
+            const nomConta = frm.nome.value; 
+            const vaConta = Number(frm.valor.value);
+            //CONDICAO NAO PREENCHIMENTO
+            if (!vaConta) {
+                alert('Preencha os campos!')
+                return;
+            }
+                qntContas++; 
+                vaTotal += vaConta;
+                //EXIBIR RESPOSTAS
+                res1.innerHTML += `${qntContas}ª - ${nomConta} R$ ${vaConta.toFixed(2)} <br>`;
+                res2.innerHTML = `${qntContas} Conta(s) - R$ ${vaTotal.toFixed(2)}`;
+                // RESET E FOCO NO FORm
+                frm.reset();
+                frm.nome.focus();
         })
 
     </script>

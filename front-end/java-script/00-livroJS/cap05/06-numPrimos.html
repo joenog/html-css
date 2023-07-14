@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores e Acumuladores</title>
+
+    <style>
+        @charset 'UTF-8';
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        header {
+            margin: 30px;
+        }
+
+        main {
+            width: 500px; 
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #f5f4e7;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.158);
+        }
+
+        input {
+            border: 1px solid white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin: 10px;
+        }
+
+        input[type=submit] {
+            padding: 10px;
+            width: 400px;
+        }
+
+        #res1, #res2 {
+            background-color: white;
+            width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 10px;
+            height: 150px;
+        }
+
+        .inp {
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contadores e Acumuladores</h1>
+        <h2>Numeros primos</h2>
+    </header>
+
+    <main>
+
+        <form action="">
+            <div class="inp">
+                <label for="num">Numero:</label>
+                <input type="number" id="num" required min="1">
+            </div>
+            <input type="submit" value="Checar">
+            
+            <div id="res">
+               
+            </div>
+        </form>
+
+    </main>
+
+    <script>
+        // OBTER FORMULARIO E RESPOSTA
+        const frm = document.querySelector('form');
+        const res = document.querySelector('#res');
+        // OUVIDOR BTN SUBMIT
+        frm.addEventListener('submit', (e) => {
+            //PREVINE O ENVIO DO FORM
+            e.preventDefault();
+            const num = parseInt(frm.num.value);
+            let numDivisores = 0;
+            //LOOP PARA PERCORRER O NUMERO DIGITADO
+            for (let i = 1; i <= num; i++) {
+                if(num % i === 0){ //SE RESTO DA DIVIS DO NUM PELO ITERADOR FOR 0, ESTE É UM DIVISOR DO NUM
+                    numDivisores++; //O NUMERO TOTAL DE DIVISIVEIS SERÁ ITERADO
+                    if (numDivisores === 3) {
+                        break; // otimiza o loop, ao encontrar 3 divisores encerra para melhorar processamento
+                    }
+            }
+        }   // SE O NUM HOUVER 2 DIVISORES ELE É PRIMO
+            if (numDivisores == 2) {
+                res.innerHTML = `${num} é primo! - QNT ${numDivisores}`; //SE HOUVER 2 DIVISORES ENCONTRADOR
+                return;
+            } //SE N HOUVER RESTO DA DIVISÃO IGUAL HÁ ZERO N HÁ DIVISORES N É PRIMO
+            res.innerHTML = `${num} não é primo -QNT ${numDivisores}`;
+        })
+
+    </script>
+</body>
+</html>
