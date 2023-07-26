@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Pesquisa</title>
+</head>
+<body>
+    <header>
+        <h1>Array Pesquisa</h1>
+    </header>
+    <main>
+
+        
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        let res = document.querySelector('#res');
+        let nome = prompt('Digite a pruta').toLocaleLowerCase();
+        let frutas = ['banana', 'maçã', 'morango', 'uva'];
+        
+        if (!frutas.includes(nome)) {
+            res.innerHTML = `Fruta não existe`; // procurar o nome do array
+        } else {
+            res.innerHTML = `Fruta existe está na posição ${frutas.indexOf(nome)}`; // procurar o nome do array
+
+        }
+    
+
+    </script>
+</body>
+</html>

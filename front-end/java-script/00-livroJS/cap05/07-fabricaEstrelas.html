@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrica de estrelas</title>
+
+    <style>
+        @charset 'UTF-8';
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        header {
+            margin: 30px;
+        }
+
+        main {
+            width: 600px; 
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #f5f4e7;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.158);
+        }
+
+        input {
+            border: 1px solid white;
+            border-radius: 10px;
+            font-size: 1.2em;
+            margin: 10px;
+        }
+
+        input[type=submit] {
+            padding: 10px;
+            width: 400px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fabrica de estrelas</h1>
+    </header>
+
+    <main>
+        <form action="">
+
+            <div>
+                <label for="num">Numero:</label>
+                <input type="number" id="num" required min="1">
+            </div>
+            <input type="submit" value="Checar">
+            
+            <div id="res">
+
+            </div>
+        </form>
+    </main>
+
+    <script>
+       const frm = document.querySelector('form');
+        frm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const num = Number(frm.num.value);
+            let res = document.querySelector('#res');
+            let estrelas = '';
+            for (let i = 1; i <= num; i++) {
+                if (i % 2 === 1) {
+                    estrelas = estrelas + '*'; // opção impar
+                } else {
+                    estrelas = estrelas + '-'; //opção par
+                }
+            }
+            res.innerHTML = `${estrelas}`;
+        })
+    </script>
+</body>
+</html>

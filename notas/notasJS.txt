@@ -1041,7 +1041,18 @@ console.log(num[1])  /* o segundo valor é 8 */  (5,8,2,6,7)
 /* metodo sort() */
 num.sort() /* colocará  os valores em ordem crescente*/  [2,5,6,7,8]
 
-**} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO PD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
+Ordenação numerocia sort Com função a-b para subtrair
+     let num = [5, 1, 13, 25 ,66 ,45];
+
+        res.innerHTML = `${num.sort(ordenar)}`
+
+        function ordenar(a, b) {
+            return a - b; // a - b percorre todo array subtraindo seus valores e hos reordenando
+            // se a - b for < 0 : então A é ordenado antes
+            // se a - b for > 0 : então b é ordenado depois
+        }
+
+**} ATENTE-SE, A ORDEM DAS LINHAS DE CODIGO POD INFLUENCIAR O REUSLTADO FINAL DO PROG.}
 
 } Mostrando VETORES sme formataçao - não é bonita pra um produto final
 

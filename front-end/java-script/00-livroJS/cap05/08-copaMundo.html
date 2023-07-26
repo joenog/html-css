@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do mundo</title>
+</head>
+<body>
+    <header>
+        <h1>Copa do mundo</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <input type="number" name="ano" id="ano">
+            <input type="submit" value="Ver" id="ver">
+            <div id="res">
+        </form>
+
+        </div>
+    </main>
+
+    <script>
+
+        const frm = document.querySelector("form");
+
+        frm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let res = document.querySelector("#res");
+            let ano = Number(frm.ano.value);
+
+            if (isNaN(ano) || ano === 1942 || ano === 1946) {
+                res.innerHTML = `${ano} não houve copa, guerra mundial!`
+            } else if (ano >= 1930 && ano % 4 == 2) {
+                res.innerHTML = `${ano} Sim houve copa!`
+            } else {
+                res.innerHTML = `${ano} Não houve copa!`
+            }
+        })
+
+    </script>
+</body>
+</html>

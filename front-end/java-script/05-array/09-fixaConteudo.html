@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixa Conteudo</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fixa Conteudo</h1>
+    </header>
+    <main>
+
+        <form action="">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome"> 
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Adicionar">
+                <button type="button" id="ordenar">Ordenar</button>
+            </div>
+        </form>
+         <br>
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+       
+        const frm = document.querySelector('form'); // obetenho intens form
+        let objetos = ['uva', 'maça']; // array com itens
+        const res = document.querySelector('#res'); // otenho var res
+        const nomeInput = document.getElementById('nome'); // obtenho o input nome puro
+        frm.addEventListener('submit', (e) => { // ouvidor para btn submit
+            e.preventDefault(); // previno o envio do formulario
+            const nome = frm.nome.value; // pucho diretamente o valor do input none
+
+            if (nome === '') { // verfiico se o vaor nome está vazio
+                res.innerHTML = `Preencha o campo`; // se etiver peço para ser preenchido
+            } else if (objetos.includes(nome)) {
+                    res.innerHTML += ` </br> Item já adicionado!`;
+                } else {
+                    objetos.push(nome); // se n estiver pucho para dentro do array
+                    res.innerHTML = `${objetos}`; // imprimo o  array com os itens
+                    nomeInput.value = ''; // pego input puro depois seu valor e o limpo   
+                }
+        });
+        //ORDENAR
+        const ordenar = document.querySelector('#ordenar'); // var obetendo o botão ordenar
+        ordenar.addEventListener('click', (e) => { // ouvidor botao ordenar
+            objetos.sort(); // organizar itens arrau
+            res.innerHTML = `${objetos.join(', ')}` // imprimir formatado os itens array
+        })
+    </script>
+</body>
+</html>
