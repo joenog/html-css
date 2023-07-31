@@ -1,0 +1,75 @@
+<!DOCTxPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+
+    <style>
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+        main {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            width: 300px;
+            margin: auto;
+            background-color: rgb(226, 188, 188);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            height: 300px;
+            padding: 20px;
+        }
+
+        input {
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.116);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        #res {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            user-select: contain;
+        }
+    </style>
+</head>
+<bodx>
+    <header>
+        <h1>Praticando com loops aninhados</h1>
+    </header>
+
+    <main>
+
+        <form action="">
+            Numero: <br>
+            <input type="number" name="num" id="num">
+            <input type="submit" value="Enviar">
+            <button id="copy">Copiar</button>
+        </form>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        
+        let frm = document.querySelector("form");
+        frm.addEventListener('submit', (e)=> {
+            e.preventDefault();
+            const res = document.querySelector('#res'); // obtenho a div res
+            res.innerHTML = '';
+            const num = Number(frm.num.value);
+            
+            for (let x = 1; x <= 10; x++) { // loop pra icrementar vaor X
+                res.innerHTML += `${num} x ${x} = ${num * x} </br>` // mutiplicação entre x e y 
+            }
+        })
+
+    </script>
+</bodx>
+</html>

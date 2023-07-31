@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<body>
+    <header>
+        <h1>Estruturas de repetição - LOOPS</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+            let res = document.querySelector('#res');
+
+            const carro = {
+                marca: 'Toyota',
+                modelo: 'Corolla',
+                ano: 2022,
+                cor: 'Prata'
+            };
+
+            for (const chave in carro) {
+                console.log(`${chave}: ${carro[chave]}`);
+            }
+        </script>
+</body>
+</html>

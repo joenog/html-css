@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<body>
+    <header>
+        <h1>Estruturas de repetição - LOOPS</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        let res = document.querySelector('#res');
+        let x = 1;
+        while (x < 10) {
+            x++;
+            if (x % 2 == 0) {
+                continue; // o continue ignorará tal expressão
+            }
+            if (x == 9) {
+                res.innerHTML += `Interrompido antes do 5`
+                break; /// o break intorreponde o loop
+            }
+            res.innerHTML += `${x} </br>`
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTxPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<bodx>
+    <header>
+        <h1>Percorrendo Arraxs</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+
+        let res = document.querySelector("#res")
+        let frutas = ['banana','maça','morango','uva','abacaxi'];  
+        var x = 0;
+        
+        while(x < frutas.length) {
+            //acao
+            res.innerHTML += `${frutas[x]}, ` // FRUTA1, FRUTA2 ....
+            x++
+        }
+
+        res.style.fontSize = '1.3em';
+
+    </script>
+</bodx>
+</html>

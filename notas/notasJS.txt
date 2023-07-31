@@ -846,11 +846,11 @@ _____________________________________________________________________________
 AS REPETIÇÕES SÃO COMANDOS REPETIDOS QUE EXECUTAMOS PARA QUE UMA DETEMRINADA TAREFA SEJA 
 CONLUIDA, [de um ponto A até um ponto B vou execultando tarefas sequenciamente]. No meio 
 dessa sequencia pode haver passos que eu não deva execultar porque nem tudo é sequencial
-az vezes tenho desvios ou outras possiblidades, com isso devemos usar 
+às vezes tenho desvios ou outras possiblidades, com isso devemos usar 
 as condiçoes que aprendemos anteriomente, seja simples ou compostas
 
 Existem várias formas diferentes de laços, mas eles essencialmente fazem a mesma coisa: repetir
-uma ação múltiplas vezes ( inclusive você poderá repetir 0 vezes). Os vários mecanismos diferentes
+uma ação múltiplas vezes (inclusive você poderá repetir 0 vezes). Os vários mecanismos diferentes
 de laços oferecem diferentes formas de determinar quando este irá começar ou terminar. Há várias
 situações em qé mais fácil resolver um prob. utilizando um determinado tipo de laço do que outros.
 
@@ -863,8 +863,13 @@ while_statement
 label_statement
 break_statement
 continue_statement
-for...in_statement
-for...of_statement
+
+for...in: O loop for...in é usado para iterar sobre as propriedades enumeráveis de um objeto. 
+Ele extrai as chaves do objeto em cada iteração
+
+for...of: O loop for...of é usado para iterar sobre elementos iteráveis, como arrays, strings,
+ objetos iteráveis (por exemplo, Set, Map). Ele extrai os valores dos elementos em cada iteração.
+------
 
 Os laços de repetição testa uma mesma condição varias vezes enquanto ela for verdadeira,
 se repete até que o valor da condição mude (images/while)   EX:
@@ -894,7 +899,8 @@ while (c <= 6) {
 ---------------------------
 }[DO WHILE] - ESTRUTURA DE REPETIÇÃO COM TESTE LÓGICO NO FINAL
 
-var d = 2 
+O loop será execultado ao menos uma ve no inicio mesmo se o teste de execução for falso
+var d = 1 
 do {
     console.log(`DO-WHILE ${d}`)
     d++
@@ -925,7 +931,7 @@ while (c <= 5) {
 
 /* Mesmo cod. usando FOR */
 
-for (let c=1; c<=5; c++) {    <---  [aqui tenho, inicialização calculo e incremento]
+for (let c=1; c <= 5; c++) {    <---  [aqui tenho, inicialização calculo e incremento]
     console.log('Bom dia!')
 }
 
@@ -1103,6 +1109,69 @@ produtos.pop()
 
 'PARA ESCLUIR NO INICIO USO
 produtos.shift()
+-----
+
+slice() é usado para extrair uma parte de um array, sem modificar o array original.
+Ele retorna uma cópia dos elementos selecionados num novo array. A sintaxe do método slice() é:
+}} array.slice(início, fim);
+
+O método splice() é usado para modificar o conteúdo de um array, adicionando ou removendo
+elementos. Ele pode alterar o array original, adicionando os elementos especificados ou
+removendo elementos com base nos índices fornecidos. 
+
+array.splice(índice, quantidade, elemento1, elemento2, ...);
+
+array: O array original que você deseja modificar.
+índice: Índice onde a modificação deve começar.
+quanti: Número de elementos a serem removidos a partir do índice. Se for 0, nenhum element será removido.
+-----------
+[]for...in 
+uma estrutura de loop em JavaScript usada para iterar sobre as propriedades enumeráveis de
+um objeto. Ele não é especificamente projetado para mostrar os elementos de um array, 
+mas sim para percorrer as chaves ou propriedades de um objeto.
+
+const pessoa = {
+  nome: 'João',
+  idade: 30,
+  profissao: 'Engenheiro'
+};
+
+for (const chave in pessoa) {
+  console.log(chave + ': ' + pessoa[chave]);
+}
+
+}SAIDA:
+nome: João
+idade: 30
+profissao: Engenheiro
+-----------
+}forEach 
+é um método disponível em arrays em JavaScript que permite iterar facilmente pelos elementos
+do array e executar uma determinada função para cada elemento. Ele é uma alternativa mais
+conveniente e legível ao loop for tradicional quando vc precisa percorrer os elementos dum array.
+
+A estrutura básica do forEach é a seguinte:
+const frutas = ['maçã', 'banana', 'laranja'];
+
+frutas.forEach(function(fruta) {
+  console.log(fruta);
+});
+
+O forEach é usado para executar uma função de callback em cada elemento do array. Essa função
+de callback pode realizar qualquer operação que você queira realizar com cada elemento. 
+Isso pode incluir exibição, cálculos, modificações nos elementos, atualização de valores 
+externos, envio de dados para um servidor, entre muitas outras possibilidades.
+}+FOREACH
+const numeros = [1, 2, 3, 4, 5];
+let soma = 0;
+
+numeros.forEach(function(numero) {
+  soma += numero;
+});
+
+console.log(soma); // Output: 15
+}//=O forEach so atual em array  com indices numeros e que se iniciam em 0
+caso contrario o array sera desconsiderao
 
 ________________________________________________________________________
 

@@ -1,0 +1,53 @@
+<!DOCTxPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<bodx>
+    <header>
+        <h1>ForEach - Posso colocar numa funmção</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+       
+        const clientes = ['maria', 'pedro', 'lucas', 'alicia', 'mario'];
+            //POSSO ADICIONA O FOREACH NUMA variavel
+            let f = function(valor, indice) { // FIZ UMA VAR E ADICIONE IA ELA UMA FANÇÃO DE FOREACH
+                document.write(valor + indice + ', ')
+            }
+            clientes.forEach(f) // CHAMEI O FOREACH NUM ARRAY PRE ESTBELECIDO COM A VARIAVIEL QUE FIZ ANTERIORMENTE
+            //COM ISSO POSSO USAR ESSE ATRIBUTO E MQUALQUER ARRAY
+
+
+        //SCRIPT ARQUIVO ANTERIOR 
+    
+       /* console.log(clientes) // valor nome dado ao indice, array = todos os intens na array
+        document.write(clientes.join(', ') + '<br/>  <br/> ')
+        clientes.forEach(function(valor, indice,array) { // apenas o 'valor' e obrigatorio, outros pode ser omitido
+        
+            // O forEach é usado para executar uma função de callback em cada elemento do array. Essa função de callback pode realizar qualquer operação que você queira realizar com cada elemento. Isso pode incluir exibição, cálculos, modificações nos elementos, atualização de valores externos, envio de dados para um servidor, entre muitas outras possibilidades.
+            console.log('Indice: ' + indice + ' Valor: ' + valor);
+            
+            if (valor == 'lucas')  {
+                array[indice] = 'Novo Clientes';
+            }
+            
+            console.log(clientes)
+            document.write(clientes.join(', ') + "<br/>");
+        })*/
+
+
+
+    </script>
+</bodx>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<body>
+    <header>
+        <h1>ForEach - Posso colocar numa funmção</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+       
+        //let res = document.querySelector("#res");
+        let clientes = ['maria', 'pedro', 'carlos', 'julia', 'maycon'];
+        let materiais = ['cola', 'lapis', 'caneta', 'carderno', 'apontador'];
+
+        let f = function (valor, indice) {
+            document.write(valor + indice + ', ')
+        }
+        // em cientes atribuo o forEach e nene chamo a funcão F que mostrar o valor e o indice dum array
+        clientes.forEach(f);
+        materiais.forEach(f);
+        // o forEach so atua em valores seguidos de 0, não precisa ser senquencial mas precisa iniciar em 0
+    
+
+    </script>
+</bodx>
+</html>

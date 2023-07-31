@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<body>
+    <header>
+        <h1>Praticando um Pouco</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        
+        const clientes = ['maria', 'paulo', 'pedro', 'alice', 'lucas', 'joana', 'vitoria'];
+
+        let imprimir = '';
+        for (let i = 0; i < clientes.length; i++) {
+            imprimir = clientes + ', ';
+        }
+        imprimir = imprimir.slice(0, -2);
+        document.write(imprimir);
+
+    </script>
+</bodx>
+</html>

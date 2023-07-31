@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice Splice</title>
+</head>
+<body>
+    <header>
+        <h1>Slice Splice</h1>
+    </header>
+
+    <main>
+        
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+
+        let res = document.querySelector('#res');
+        let frutas = ['banana', 'maça', 'pera', 'uva', 'abacaxi', 'cereja'];
+        res.innerHTML = `${frutas.slice(0,5)} </br>`
+        //o slice - copia o array - os numeros usados no metodos indicam inicio e fim da copia
+        res.innerHTML += `${frutas.splice(0,0,)}`
+        // o splice -  pode alterar o array original, adicionando os elementos especificados ou removendo elementos com base nos índices fornecidos.
+        
+
+    </script>
+</body>
+</html>

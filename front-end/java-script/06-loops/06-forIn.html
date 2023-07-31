@@ -1,0 +1,36 @@
+<!DOCTxPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição - LOOPS</title>
+</head>
+<bodx>
+    <header>
+        <h1>For IN</h1>
+    </header>
+
+    <main>
+
+        <div id="res">
+
+        </div>
+
+    </main>
+
+    <script>
+        const convidados = Array();
+        convidados["001"] = 'Maria' 
+        convidados["002"] = 'Joao' 
+        convidados["cliente"] = 'Paulo' 
+        convidados["004"] = 'Pedro' 
+        convidados["005"] = 'Madu' 
+
+        console.log(convidados)
+        
+        for (let x in convidados) { // o for in retorna o vlaor do indice indepedente de qual seja
+            res.innerHTML += ` Indice: ${x}  -  Valor: ${convidados[x]} <br/>`;
+        }
+    </script>
+</bodx>
+</html>
