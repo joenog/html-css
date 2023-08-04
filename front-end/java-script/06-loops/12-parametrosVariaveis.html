@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros Variaveis - Funcçoes JS</title>
+</head>
+<body>
+    <header>
+        <h1>Parametros Variaveis - Funcçoes JS</h1>
+    </header>
+
+    <main>
+
+
+    </main>
+
+</body>
+<script>
+
+    /* function soma() {
+         console.log(arguments) // MOSTRA NO CONSOLE OS ARGUMENTOS NA CHAMADA DA FUNCAO
+     }
+
+     soma(5, 7, 8.5);*/
+
+     /* 
+     Em JavaScript, parâmetros variáveis referem-se a uma funcionalidade que permite que uma função aceite um número variável de argumentos. Isso significa que uma função pode ser chamada com diferentes quantidades de argumentos, 
+     sem que seja necessário definir explicitamente todos os parâmetros na sua declaração.
+     
+     USO FOR IN - para iterar sobre chaves de 'obejtos'
+     USO FOR OF - para iterar sobre elementos iteraveis como arrays e strings
+     */
+
+    function soma(...num) { // funcion com parametros variaveis 
+        let result = 0; // varivel acumuladora
+        for (let i of num) { // i of num iterará sobre os parametros inseridos futuramente
+            result += i;  // let result acumuladora recebera os valores de num percorridos pelo iterador i
+        }
+        return result; // a funcion retornará a soma dos parametros no acumulador result
+    }
+    console.log(soma(5, 8.5, ' Texto')); // o console mostrará a soma dos numeros inseridos no parametro
+
+</script>
+</html>

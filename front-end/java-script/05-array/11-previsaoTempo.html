@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        #card  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 420px;
+            height: 460px;
+        }
+        
+        .itens {
+            background-color: white;
+            margin: 10px;
+            width: 380px;
+            height: 400px;
+            border-radius: 1.5rem;
+            box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.0152),
+            0px 5px 10px rgba(0, 0, 0, 0.171);
+        }
+
+        .itens h2 {
+            text-align: center;
+            padding: 1.3rem;
+            font-size: 1.3rem;
+            color: rgb(58, 58, 58);
+        }
+
+        .sub-itens {
+            border: 1px solid black;
+            border-radius: 0rem 0rem 1.5rem 1.5rem;
+            width: 380px;
+            height: 335px;
+        }
+
+        button {
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.199);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Previsão do Tempo</h1>
+    </header>
+
+    <main>
+        <div id="card">
+            <div class="itens">
+                <h2 class=".titulo">Teixeira de Freitas</h2>
+                <div class="sub-itens">
+                    <p class="temp">
+                        25º
+                    </p>
+                </div>
+            </div>
+            <button class="btn">
+                Dark Mode
+            </button>
+        </div>
+    </main>
+
+    <script>
+        //tema app
+        let btn = document.querySelector(".btn");
+        let itens = document.querySelector('.itens');
+        btn.addEventListener('click', (e)=> {
+
+            if (itens.style.background == 'white') {
+                itens.style.background = 'grey';
+            } else {
+                itens.style.background = 'white';
+            }
+        })
+
+    </script>
+</body>
+</html>

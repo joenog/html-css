@@ -1422,8 +1422,37 @@ saudar('Jon', cback = (nome, resposta) => console.log(nome, resposta))
 -------------
 
 [Metodo preventDefault()]
-Este metodosp previne que seja enviado os dados inseridos no formulario e evita que o formulario
-seja recaregado e suma com os dados inseridos
+
+O preventDefault() impede que o evento seja processado normalmente. Com isso, você pode controlar
+o que acontece quando o evento é acionado. Um exemplo comum de uso é quando você deseja validar 
+os dados dum formulário antes de enviá-lo para o server e evitar que ele seja enviado se houver erro.
+Este metodo  previne que seja enviado os dados inseridos no formulario e evita que
+o formulario seja recaregado e suma com os dados inseridos
+-------------
+
+[]{}FUNCOES COM PARAMETROS VARIAVEIS
+
+Parâmetros variáveis referem-se a uma funcionalidade que permite uma função aceite um número
+variável de argumentos. Isso significa que uma função pode ser chamada com diferentes quantid 
+de argumentos, sem que seja necessário defini'los explicitamente na sua declaração.
+
+-Parâmetros de rest (rest parameters):
+Os parâmetros de rest permitem que vo'c defina uma lista de argumentos variáveis em uma função
+usando o operador de três pontos  ...  antes do último parâmetro da função. Esses argumentos 
+variáveis são agrupados num array dentro da função.
+
+EX:--
+function somar(...nums) {
+  let total = 0;
+  for (let num of nums) {
+    total += num;
+  }
+  return total;
+}
+
+console.log(somar(1, 2, 3));     // Output: 6
+console.log(somar(10, 20, 30, 40, 50));    // Output: 150
+
 
 _______________________________________________________________________
 
@@ -1573,7 +1602,7 @@ _______________________________________________________________________
 
 {}[DOM] document object modelos
 
-[dom - uma API multiplataforma que permite acesso aos elementos HTML -tipo uma copia fiel do HTML]
+[dom - uma API multiplataforma que permite acesso aos elementos HTML -tipo copia fiel do HTML]
 O DOM (Document Object Model) é uma interface de programação para documentos HTML e XML.
 É uma representação estruturada do documento, onde cada elemento do documento é tratado
 como um objeto dentro da árvore DOM.
@@ -1582,8 +1611,50 @@ documento HTML ou XML usando linguagens de programação, como JavaScript. Ele f
 e propriedades para interagir com os elementos da página, permitindo a criação dinâmica 
 de conteúdo, alterações de estilo, manipulação de eventos, entre outras ações.
 
+_______________________________________________________________________
 
+[] TRY, CATCH, THROW, FINALLY - Trantando erros
 
+try {}: Bloco usado para envolver o código que pode gerar uma exceção ou erro.
+catch (){}: Bloco usado para capturar e tratar exceções q ocorrem dentro do bloco try.
+throw {} é usada para criar e lançar manualmente um objeto de exceção, que pode conter 
+informações detalhadas sobre o erro ou situação excepcional ocorrida, permitindo que 
+DEVs criem tratamentos personalizds para essas ocorrências. 'Normalmente Dentro do catch'
+finally {}: Bloco opcional que contém código executado sempre após o bloco try, 
+independentemente de exceções serem lançadas ou não.
+
+try {
+  // Código que pode gerar uma exceção
+  const result = 10 / 0; // Isso causará uma exceção de divisão por zero
+} catch (error) {
+  // Bloco para lidar com a exceção
+  console.error("Ocorreu um erro:", error.message);
+} finally {
+  // Bloco que será executado sempre, independentemente da exceção
+  console.log("Fim do bloco try-catch-finally.");
+}
+QUANDO USAR ?]
+A necessidade de usar try, catch e finally surge quando você deseja lidar com exceções
+de forma controlada e garantir que certas tarefas de limpeza ou encerramento sejam sempre
+executadas, independentemente de ocorrer uma exceção ou não.
+
+_______________________________________________________________________
+
+[]BOM - Browser Object Model - js
+
+O BOM é uma parte do JavaScript que fornece objetos e métodos para interagir com 
+o navegador web, permitindo que os desenvolvedores controlem e manipulem a janela do 
+navegador, o histórico, as informações da barra de status, os cookies e muito mais.
+
+Alguns dos objetos mais comuns no BOM incluem:
+
+]window: Representa a janela do navegador e é o objeto raiz do BOM.
+    }window.open() paremets = 'URL', 'name', 'size'
+     window.close()
+]document: Representa a página HTML carregada na janela e permite a manipulação do conteúdo.
+]navigator: Fornece informações sobre o navegador usado pelo usuário.
+]location: Permite interagir com a URL atual da página.
+]history: Da acesso ao histórico do navegador, permitindo navegação retroativa e progressiva.
 
 
 _______________________________________________________________________

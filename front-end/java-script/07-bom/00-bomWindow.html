@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - windows</title>
+
+    <style>
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+        main {
+            margin: auto;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOM- Windows</h1>
+    </header>
+
+    <main>
+
+        <button id="abrir">
+            Abrir Janela
+        </button>
+        <button id="fechar">
+            Fechar Janela
+        </button>
+
+
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+
+        const abrir = document.querySelector('#abrir');
+            let janela;
+        abrir.addEventListener('click', () => {
+            janela = window.open('https://www.google.com', 'Google', 'width= 300px, height= 400px')
+        })
+
+        const fechar = document.querySelector('#fechar');
+        fechar.addEventListener('click', () => {
+            janela.close()
+        })
+
+        let res = document.querySelector("#res")
+        res.innerHTML = '<br>' + (window.location.pathname) + '</br>';
+
+
+
+    </script>
+</body>
+</html>

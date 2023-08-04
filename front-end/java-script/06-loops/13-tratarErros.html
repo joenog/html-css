@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Erros</title>
+</head>
+<body>
+    <header>
+        <h1>Tratamento de Erros</h1>
+    </header>
+
+    <main>
+        
+        
+
+    </main>
+
+    <script>
+        var video = []; // array vazia
+        video[0] = []; // array 1 dentro do array video
+        video[0]['nome'] = 'Naruto'; // valores nome adicionado
+        video[0]['categoria'] = 'Anime'; // valor categoria adcionado a rray 1
+
+        video[1] = []; // array 1 dentro do array video
+        video[1]['nome'] = 'One Piece'; // valores nome adicionado
+        video[1]['categoria'] = 'Anime'; // valor categoria adcionado a rray 1
+
+        function getVideo(video) {
+
+            try {
+                console.log(video[5]['nome']); // casso haja erros no try o catche é responsavel ppegar esse erros
+                // o catch recebe o erro por parametro
+            }
+            catch (erro) {
+                console.log('CATCH - Agora sim podemos tratar esse erro!')
+                tratarErro(erro) // o parametro no cath armazena uma string do erro
+                throw new Error('Houve um erro, estamos trabalahndo nisso')
+            }
+            finally {
+                console.log('FINALLY - Sempre passa por aqui!')
+            }
+        }
+        function tratarErro(e) {
+            console.log(e)
+        }
+        getVideo(video);
+       
+    </script>
+</body>
+</html>
