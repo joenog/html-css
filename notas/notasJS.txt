@@ -1656,6 +1656,41 @@ Alguns dos objetos mais comuns no BOM incluem:
 ]location: Permite interagir com a URL atual da página.
 ]history: Da acesso ao histórico do navegador, permitindo navegação retroativa e progressiva.
 
+----------
+() window.screen 
+ é uma propriedade do objeto global window e fornece informações sobre a tela do dispositivo 
+ em que o navegador está sendo executado. Onde os elementos HTML são renderizados''
+ Essas informações podem ser úteis para ajustar a aparência e o comportamento do conteúdo 
+ do site ou aplicativo com base nas capacidades e dimensões da tela do usuário.
+
+Propriedades:
+
+]screen.width: Largura da tela do dispositivo em pixels.
+]screen.height: Altura da tela do dispositivo em pixels.
+]screen.availWidth: Largura disponível da tela em pixels, desconsiderando barras e elementos extras.
+]screen.availHeight: Altura disponível da tela em pixels, desconsiderando barras e elementos extras.
+]screen.colorDepth: Número de cores disponíveis na tela.
+]screen.pixelDepth: Número de bits usados para representar a cor de um pixel.
+-----------
+
+() window.location
+um objeto que representa a URL do navegador atual. Ele fornece acesso e controle sobre 
+a URL da página em que o script está sendo executado. 
+
+]window.location.href: A URL completa da página.
+]window.location.protocol: O protocolo utilizado (por exemplo, "http:", "https:").
+]window.location.host: O nome do host e o número da porta.
+]window.location.pathname: O caminho da URL após o nome do host.
+]window.location.search: Os parâmetros de consulta da URL (se houver algum).
+]window.location.hash: O fragmento ou âncora da URL (por exemplo, "#secao1").
+
+Além disso, o objeto window.location possui métodos que podem ser usados para redirecionar 
+o navegador para outra página ou recarregar a página atual, 
+como window.location.assign(), 
+window.location.replace() 
+window.location.reload().
+-----------
+
 
 _______________________________________________________________________
 

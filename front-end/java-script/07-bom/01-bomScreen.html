@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - screen</title>
+
+    <style>
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+        main {
+            margin: auto;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOM- screen</h1>
+    </header>
+
+    <main>
+
+       
+
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+
+        let res = document.querySelector('#res');
+
+        /*res.innerHTML = `width: ${window.screen.width} <br/>
+        height: ${window.screen.height} <br/>
+        width considerando os barra e elemntos extras: ${window.screen.availWidth} <br/>
+        height: considerando barra e elementos extras: ${window.screen.availHeight} <br/>
+        Numero de pixel usados para reprentar a cor dum pixel: ${window.screen.pixelDepth} <br/>
+        Numero de cores disponiveis na tela: ${window.screen.colorDepth} <br/>`*/
+
+        function attSize() { //funcion que atualiza size
+            let size = window.screen.width; // var par armazen largura da tela
+            res.innerHTML = `${size}` // res recebe largura da tela
+        }
+
+        attSize() //chama a funcao size
+        window.addEventListener('resize', attSize) // a janela recebe evento de atualização de redirecionamento que executara a funca oattsize
+
+    </script>
+</body>
+</html>

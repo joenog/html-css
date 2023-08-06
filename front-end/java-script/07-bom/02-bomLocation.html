@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - location</title>
+
+    <style>
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+        main {
+            margin: auto;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOM- location</h1>
+    </header>
+
+    <main>
+
+        <button id="btn">
+            Google
+        </button>
+
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+
+        let btn = document.querySelector('#btn');
+        let res = document.querySelector("#res")
+        btn.addEventListener('click', ()=> {
+            let link = prompt('Digite o site');
+            if(link) {
+                window.location.href = 'https://www.' +link;
+            }
+        })
+        
+    </script>
+</body>
+</html>
