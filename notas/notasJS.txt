@@ -1690,7 +1690,21 @@ como window.location.assign(),
 window.location.replace() 
 window.location.reload().
 -----------
+() setTimeout - setInterval
 
+]setTimeout: A função setTimeout é usada para atrasar a execução de um trecho de código
+por um certo período de tempo. Você fornece uma função que deseja executar e um tempo
+em milissegundos. Após o intervalo de tempo especificado, a função será executada uma vez.
+
+]setInterval: A função setInterval é usada para executar repetidamente uma função em 
+intervalos regulares. Você fornece uma função e um intervalo de tempo em milissegundos.
+
+let tempo = setTimeout(() => {
+                res.innerHTML += 'Guten tag!'
+           }, 5000)
+
+E atribuindo um desses setTimeout a uma vaqriavel podemos limpar o tempo depois dum 
+periodo adicionado a função    clearInterval(nome da varivel) ou clearTimeout;
 
 _______________________________________________________________________
 

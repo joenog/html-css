@@ -37,10 +37,10 @@
         let btn = document.querySelector('#btn');
         let res = document.querySelector("#res")
         btn.addEventListener('click', ()=> {
-            let link = prompt('Digite o site');
             if(link) {
-                window.location.href = 'https://www.' +link;
-            }
+                let link = prompt('Digite o site');
+                window.location.href = 'https://www.' +link + '.com';
+            } 
         })
         
     </script>

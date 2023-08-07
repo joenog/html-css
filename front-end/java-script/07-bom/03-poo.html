@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - location</title>
+
+    <style>
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+        main {
+            margin: auto;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BOM- location</h1>
+    </header>
+
+    <main>
+
+        <button id="btn">
+            Google
+        </button>
+
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+        // CLASSE DO CARRO
+        class Carro {
+            constructor(marca, modelo, ano) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.ano = ano;
+                this.ligado = false;
+            }
+            
+        //METODO PRA LIGAR O CARRO
+        ligar() {
+            if (!this.ligado) {
+                console.log( `${this.marca}, ${this.modelo}, ${this.ano}, Ligado`);
+            } else {
+                console.log('Carro ja está ligado');
+            }
+        }
+        //METODO DESLIGAR CARRO
+        desligar() {
+            if(this.ligado) {
+                console.log(`${this.marca}, ${this.modelo}, ${this.ano}, Desligado`);
+            } else {
+                console.log('Carro ja está desligado')
+            }
+        }  
+    }
+    //CRIANDO INSTANCIA DE CARRO
+    const meuCarro = new Carro('Toyota', 'Etions', 2022);
+    meuCarro.ligar('Meu carro');
+
+    const carroJon = new Carro('Citroen', 'C3', 2015);
+    carroJon.desligar();
+        
+    </script>
+</body>
+</html>

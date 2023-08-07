@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - timming</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+        main {
+            margin: auto;
+            width: 500px;
+        }
+
+        #res {
+            background-color: black;
+            color: lightblue;
+            border-radius: 20px;
+            font-size: 3em;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Aguarde</h1>
+    </header>
+
+    <main>
+
+
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+
+        const res = document.querySelector('#res'); // obtenho var res
+        let num = 5; // crio decrementador
+        const msg = setInterval(() => { // constante msn om settimeout 1s
+            res.innerHTML = `Valor: ${num--}` // durante 5s recebo o decremento da var num
+            if (num === 0) { // se num for igual a zero
+                res.innerHTML = 'O tempo acabou!' // res recebe msg o tempo acabou
+                clearInterval(msg); // o timeout recebe limpeza de time
+            }
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>
