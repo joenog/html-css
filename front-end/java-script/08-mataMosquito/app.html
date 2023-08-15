@@ -10,15 +10,20 @@
 <body onresize="ajustaTamanhoJogo()">
     
     <div class="vidas">
-        <img id="v1" src="img/coracao_cheio.png" alt="coracao">
-        <img id="v2" src="img/coracao_cheio.png" alt="coracao">
         <img id="v3" src="img/coracao_cheio.png" alt="coracao">
+        <img id="v2" src="img/coracao_cheio.png" alt="coracao">
+        <img id="v1" src="img/coracao_cheio.png" alt="coracao">
     </div>
 
     <div class="cronometro">
-        Tempo: 20
+        Tempo: <span id="cronometro"> </span>
     </div>
     
     <script src="jogo.js"></script>
+
+    <!-- AO ADICIONAR A VARIAVEL TEMPO NO HTML a leitura será logo q a pagina for carregada -->
+    <script>
+        document.getElementById('cronometro').innerHTML = tempo;
+    </script>
 </body>
 </html>
