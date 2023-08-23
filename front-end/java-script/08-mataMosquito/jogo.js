@@ -3,6 +3,22 @@ let height = 0;
 let width = 0;
 let vidas = 1;
 let tempo = 10;
+// VARIAVEL INICIAL PARA DEFINICAO O TEMPO QUE SERA APLICADO AO SETINTERASL
+var criarMosquitoTempo = 1500;
+
+var nivel = window.location.search;
+nivel = nivel.slice(1); // VARIAVEL PARA REMOÇÃO DO CARACTER DO SEARCH DO JAVASCIRPT
+//NO ESCRIPT REMOVO A INTERROGAÇÃO AO INICIOA PARA FAZER AS COMPARAÇÕES ABAISO COM IF ELSE
+if (nivel === 'normal') { /// CONDIÇÕES PARA MODIFICAR VALOR DOS MILISEGUNDOS DO SETINTTERVAL
+    var criarMosquitoTempo = 2000;
+} else if (nivel === 'dificil') {
+    var criarMosquitoTempo = 1500;
+    
+} else if (nivel === 'superHard') {
+    var criarMosquitoTempo = 1000;
+}
+
+
 //CRONOMETRO E 20s
 let cronometro = setInterval(() => {
     tempo--;
@@ -16,7 +32,7 @@ let cronometro = setInterval(() => {
         document.getElementById('cronometro').innerHTML = tempo;
     }
 
-}, 1000)
+}, 1000) // A CADA 1s A VIDA É DECREMENTADA
 
 function ajustaTamanhoJogo() {
     height = window.innerHeight; // var height recebe a height atual definida do window
@@ -55,12 +71,13 @@ function mosquitoRandom() {
     mosquito.onclick = function() {
         this.remove();
     }
-    document.body.appendChild(mosquito); // adiciono o mosquito.ing ao body html  
+    document.body.appendChild(mosquito); // ADICIONO A IMG- MSOQUITO AO BODY  
 }
 // INTERVAL PARA CRIAÇÃO DE MOSQUITOS
 const criaMosquito = setInterval(() => {
     mosquitoRandom();
-}, 2000);
+    //AQUI É APLICADA AVARIAVEL CRIARMOSQUITO TEMPO QUE DEFINE A VELOCIDADE DO MOSQUITO ANTES DE INICIAR O JOGO
+}, criarMosquitoTempo);
 
 //TAMANHO ALEATORIO DA MOSCA
 function tamanhoAleat() {
@@ -78,3 +95,5 @@ function ladoAleat() {
     let lado = Math.floor(Math.random() * 2);
     return lado === 0 ? 'ladoA' : 'ladoB';
 }
+
+//ADICIONAR BACKGROUNDS VARIAVEIS AO JOGO

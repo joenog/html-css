@@ -7,12 +7,16 @@
     margin: 0px;
 }
 
+html {
+    cursor: url('img/mata_mosca.png') 30 30, auto;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     background-image: url('img/bg.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .vidas {
@@ -33,7 +37,7 @@ body {
 .cronometro {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     font-size: 1.1em;
     position: absolute;
     bottom: 60px;
@@ -76,7 +80,7 @@ body {
 .mosquito0 {
     position: absolute;
     width: 40px;
-    animation: anima .4s 0s infinite;
+    animation: anima .5s 0s infinite;
     
 }
 .mosquito1 {

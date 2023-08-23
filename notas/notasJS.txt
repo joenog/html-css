@@ -1708,6 +1708,20 @@ periodo adicionado a função    clearInterval(nome da varivel) ou clearTimeout;
 
 _______________________________________________________________________
 
+[{ECAMA-SCRIPT}]
+
+A especificação do ECMAScript define as regras e funcionalidades da linguagem, incluindo 
+a sintaxe, tipos de dados, objetos, operadores e muito mais. As versões do ECMAScript são 
+numeradas, e cada nova versão traz melhorias, adições e correções à linguagem.
+O ECMAScript é a base para muitas linguagens de programação de alto nível usadas no 
+desenvolvimento web, como JavaScript. JavaScript é a implementação mais comum do ECMAScript
+e é amplamente utilizado tanto no lado do cliente (navegador) quanto no lado do servidor 
+(Node.js) para criar aplicações web interativas e dinâmicas.
+
+
+
+_______________________________________________________________________
+
 ][LÓGICA DE PROGRAMÇAO]
 
 Num algoritmo deve-se comsiderar todos os passos ate os mais simples
