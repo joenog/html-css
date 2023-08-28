@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Arrow</title>
+</head>
+<body>
+
+    <script>
+/*
+        quadrado = (x = 0) => x * x; // return implicito
+        document.write(`${quadrado(7)}`);*/
+/*
+        let parImpar = (x) => {
+            if (x % 2 == 0) {
+                return x + ' par'
+            } else {
+                return x + ' impar'
+
+            }
+        }*/
+
+/*
+        let parImpar = (x) => {
+            return x % 2 == 0? `${x} par` : `${x} impar`;
+        }
+        document.write(parImpar(8))*/
+
+
+        parImpar = (x) => x % 2 == 0? `${x} par` : `${x} impar`;
+        document.write(parImpar(2))
+    </script>
+</body>
+</html>

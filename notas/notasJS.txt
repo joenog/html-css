@@ -1362,6 +1362,19 @@ apenas uma expressão como corpo.
 4- const mfuncion = (a, b) =>      [Funcion com  mais de um paramt. precisa de ()]
 !!(As funcoes arrow não consegue fazer içamento
 
+Em resumo, ao utilizar arrow functions, é importante lembrar que o comportamento do this 
+é diferente em comparação com funções tradicionais. Em muitos casos, você pode evitar 
+confusões sobre o this ao usar funções tradicionais, especialmente quando você precisa 
+se referir ao objeto pai ou a um contexto específico.
+
+----------------------------------
+[]As arrow funcions podem ser plificadas ao maximo da seguinte forma
+quando há apenas um paremtro e apena um retunr: 
+
+quadrado = (x = 0) => x * x; // return implicito
+        document.write(`${quadrado(7)}`);
+---------------------------------
+
  ]]]]!EXEMPLO DE ATRIBUIÇAO DE FUNCION             
                       ↓argumento
  funcion criarPessoa(nome) => {
@@ -1484,7 +1497,7 @@ _______________________________________________________________________
 
 [Metodos nativos pra manipular DATAS]  (js27-fun-string)
 
-Para trabalhar com datas em JS temos de criar uma nova estancia
+Para trabalhar com datas em JS temos de criar uma nova instancia
 Em JavaScript, uma "instância" refere-se a um objeto específico criado a partir de uma classe
 ou construtor. O JavaScript é uma linguagem de programação orientada a objetos, onde os 
 objts são criados a partir de classes ou construtores, que são modelos pra a criação de objets.
@@ -1708,7 +1721,7 @@ periodo adicionado a função    clearInterval(nome da varivel) ou clearTimeout;
 
 _______________________________________________________________________
 
-[{ECAMA-SCRIPT}]
+[{ECAMA-SCRIPT}] ES6 
 
 A especificação do ECMAScript define as regras e funcionalidades da linguagem, incluindo 
 a sintaxe, tipos de dados, objetos, operadores e muito mais. As versões do ECMAScript são 
@@ -1717,6 +1730,130 @@ O ECMAScript é a base para muitas linguagens de programação de alto nível us
 desenvolvimento web, como JavaScript. JavaScript é a implementação mais comum do ECMAScript
 e é amplamente utilizado tanto no lado do cliente (navegador) quanto no lado do servidor 
 (Node.js) para criar aplicações web interativas e dinâmicas.
+
+[]  Operadores de declaração de variáveis Var e let
+
+Entendendo como funciona o escopo dos codigos
+
+O escopo no JavaScript se refere à visibilidade e acessibilidade de variáveis, funções e outros
+identificadores em diferentes partes do código. O escopo controla onde uma variável ou função 
+pode ser referenciada e modificada, evitando conflitos e garantindo a integridade do código.
+
+-Escopo Global: Variáveis definidas fora de funções são acessíveis em todo o código.
+-Escopo de Função: Variáveis declaradas dentro de uma função só são visíveis dentro dela.
+-Escopo de Bloco: Variáveis definidas com let ou const só são acessíveis dentro do bloco 
+de código onde foram criadas.
+
+EX:
+let globalVar = 10;  //- Escopo global
+
+function exampleFunction() {
+    let localVar = 20;  // Escopo local da função
+
+    if (true) {
+        let blockVar = 30;  // Escopo de bloco
+        console.log(blockVar);  // Será impresso: 30
+    }
+
+[]VAR - eleve qualquer declaração 
+ao contrário das declarações de variáveis let e const, a declaração de variável var não possui
+escopo de bloco. Isso significa que, quando você declara uma variável com var dentro de um bloco 
+(como dentro de um if, for ou qualquer outro bloco), essa variável será elevada (hoisting) 
+para o escopo da função ou escopo global em que essa declaração está contida.
+
+[]Então criando uma VAR dentro dum escopo de bloco esta será acessivel no escopo global
+e consequentemente tambem poderá ser acessada dentro de escopso de função
+
+[]Sabendo disso caso crie um VAR dentro de um bloco dentro de uma função esta VAR só ficará
+acessivel no escopo de função e não no global
+
+[] O LET diferente do VAR e usado para presever privar uma varivel onde ela foi criada, 
+impedido que seja acessada noutras partes do codigo
+
+[]Sobre posição de valor das variaveis
+Caso crie uma varivel global onde um valor X ----> VAR icon = XX
+Então dentro de um escopo de bloco faça a mesma var com um valor diferent ----> VAR icon = YY
+A VAR do escopo de bloco será içada para fora fazendo comq a VAR icon valha --> YY em todo codigo
+ //se usar o VAR a variavel do block será içada para fora sobreponde outra com mesmo nome
+            //caso use let no escopo de bloco está será preservada apenas para o bloco
+            //Com isso e prevferivel usar sempre let para preservas as varivaveis em seus blocks
+
+() Uso da contante no Script- para deixar variaveis sempre inauteraveis fazendo com que
+o codifo fique mais confiavel e seguro
+Como boa pratica é bom declarar const com caracter maiuculo ---> const MAX_VALUE = 1.14
+
+[]   // posso atribuir valores aos parametros da função 
+    // caso o parametro posteriormente n seja inserido ele terá um valor pre-definido
+
+        function histo(nome = '(Nome não inserido)', idade = '(Idade não inserida)') {
+
+            document.write(`Oi meu nome é ${nome} eu tenho ${idade}`)
+        }
+
+        histo('Jon', '24 anos');
+        // posso definiir os parametros da chamada da funcao como (undefined) com isso
+        o parametro mostrar o nome atribuindo ateriormente a funcão
+_______________________________________________________________________
+
+[] OO - Orientação A Objetos
+
+Orientação a objetos é um paradigma de programação utilizado no desenvolvimento de 
+software. Ele se baseia no conceito de "objetos", que são unidades independentes 
+que encapsulam dados e comportamentos relacionados.
+
+[]Pilares da orientação a objetos
+
+-Abstração
+Consiste em conhecer as coisas do mundo real e trazehas para nosso sistema
+Significa abstrair, criar os objetos do mundos real de forma simplificada dando valor ao 
+que é importante para o projeto especifico. Mesmo quando o projeto a ser criado traga algo que 
+não é fisico, pdemos usar nosso connheciment pra abtrair daquilo o que poder ser imaginariamente 
+tangivel. Com isso somente os aspectos mais relevantes são considerantes na resoluçao de problemas
+
+-Emcapsulamento
+Significa emcapsular dados(atributos) metodos(funcoes) que operam sobre esses dados em uma 
+unica unidade chamada classe, esse escapsulamento projete os dados duma classe permitindo 
+que só sejam acessados a partir da chamada da classe, pomovendo maior segurança.
+
+-Herança
+Esta permite que uma classe herde atritubutos de outra se colocando no lugar de subclasse. 
+E a classe da qual ela erda é chamada de super classe. A herança facilita e reutilizacao de codigo
+
+-Polimorfismo
+Este permite que objetos de diferentes classe sejam tratados como objetos duma mesma classe, 
+simplificando a orientaçã ode objetos variados. Isso é feito a partir da criaçã ode objetos 
+com a mesma assinatura e (nome e parametros) em classe diferentes mas com implementaçã oespecifica 
+para cada classe.
+
+
+Os principais conceitos da programação orientada a objetos são:
+
+]Classe: Uma classe é um modelo ou uma "receita" para criar objetos. Ela define os 
+atributos (dados) e métodos (ações/comportamentos) que os objetos desse tipo podem ter.
+
+]Objeto: Um objeto é uma instância duma classe. Ele representa uma entidade do mundo real
+ou um conceito abstrato e contém dados específicos e métodos que podem ser executados nesses dados.
+
+]Encapsulamento: Esse conceito envolve o empacotamento de dados (atributos) e métodos que operam
+nesses dados em uma única unidade chamada objeto. O encapsulamento ajuda a proteger os dados 
+internos de uma classe, permitindo que apenas os métodos definidos nessa classe possam acessá-los.
+
+]Polimorfismo: O polimorfismo permite que objetos de diferentes classes sejam tratados de maneira
+ uniforme por meio de interfaces comuns. Isso significa que diferentes classes podem implementar 
+ métodos com o mesmo nome, mas com comportamentos específicos para cada classe.
+
+]Método: Um método é uma função associada a uma classe que define uma ação que os objetos dessa 
+classe podem realizar.
+
+---A programação orientada a objetos tem como objetivo principal facilitar o desenvolvimento 
+de software, tornando-o mais modular, reutilizável e compreensível
+
+[] Em JavaScript, um construtor é uma função especial que é usada para criar e inicializar
+objetos. É uma parte fundamental da programação orientada a objetos em JavaScript. 
+Usar construtores ajuda a criar objetos com estruturas consistentes e permite reutilizar 
+o mesmo código para criar múltiplas instâncias do mesmo tipo de objeto. 
+
+_______________________________________________________________________
 
 
 

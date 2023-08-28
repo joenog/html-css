@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion defalt</title>
+</head>
+<body>
+    
+
+    <script>
+        // posso atribuir valores aos parametros da função 
+        // caso o parametro posteriormente n seja inserido ele terá um valor pre-definido
+
+        function histo(nome = '(Nome não inserido)', idade = '(Idade não inserida)') {
+
+            document.write(`Oi meu nome é ${nome} eu tenho ${idade}`)
+        }
+
+        histo('Jon', '24 anos');
+    </script>
+</body>
+</html>

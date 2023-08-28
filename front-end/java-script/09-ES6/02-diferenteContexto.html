@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contexto dos escopos diferentes comportamentos</title>
+</head>
+<body>
+    <header>
+        <h1>Contexto dos escopos diferentes comportamentos</h1>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script>
+
+        var serie = 'The flash'
+
+        {
+            var serie = 'This is Us'
+            //se usar o VAR a variavel do block será içada para fora sobreponde outra com mesmo nome
+            //caso use let no escopo de bloco está será preservada apenas para o bloco
+            //Com isso e prevferivel usar sempre let para preservas as varivaveis em seus blocks
+            console.log(serie)
+           }
+        
+        console.log(serie)
+    </script>
+</body>
+</html>

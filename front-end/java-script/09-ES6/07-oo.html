@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Orientada a Objetos</title>
+</head>
+<body>
+    <header>
+        <h1>Programação Orientada a Objetos - OO</h1>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script>
+        /*let a = 5;
+        let b = 5;
+        let operador = 'divi';
+
+        function calcular (a, b, operador)   {
+            if(operador === 'mult') {
+                return a * b;
+            }
+            else if (operador === 'divi') {
+                return a / b;
+            }
+
+        }
+        document.write(calcular(a, b, operador))*/
+
+        class calculadora {
+            constructor() {
+                this.a = prompt('Digite um numero');
+                this.b = prompt('Digite outro numero');
+                this.operador = 'mult';
+            }
+
+            calcular() { // metodos calcular
+                if (this.operador = 'mult') {
+                    return this.a * this.b;
+                }
+            }
+        }
+        calculadora = new calculadora() // variavel armazena uma nova estancia do objeto
+        document.write(calculadora.calcular()) // imprimo o objeto com o metodo alcular
+    </script>
+</body>
+</html>

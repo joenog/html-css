@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Abstração</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Abstração</h1>
+    </header>
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quidem harum dicta tempora rerum, natus, maxime, perspiciatis nostrum excepturi velit nulla. Sint temporibus doloremque tenetur numquam rerum porro cupiditate exercitationem.</p>
+    </main>
+
+    <script>
+        //CRIANDO A ABSTRAÇÃO DO OBEJTO
+        // class representa o modelo do objeto
+        class ContaBancaria {
+            // contruir atributos dentro do obejto
+            constructor() {
+                // o this conecta os atributos ao contexto do objeto/ uma VAR emcapsulada dentro do bjeto
+                this.agencia = 1075;
+                this.numConta =  8351125;
+                this.saldo = 50;
+                this.limite = 450;
+            }
+
+            // acçoes conhecidas dentro de um obejto como METODOS
+            depositar(valorDeposito) {
+                this.saldo += valorDeposito;
+            }
+            sacar(valorSaque) {
+                this.Saque -= valorSaque;
+            }
+            consultarSaldo(mostrarSaldo) {
+                return this.saldo;
+            }
+        }
+        //CRIANDO A ENTIDE // O new significa na pratica que quero transformar o model o em objeto
+        // instancia de um obejto
+        ContaBancaria_Jon = new ContaBancaria();
+        ContaBancaria_Mary = new ContaBancaria();
+
+        console.log(ContaBancaria_Jon.consultarSaldo());
+        ContaBancaria_Jon.depositar(200);
+        console.log(ContaBancaria_Jon.consultarSaldo());
+        console.log(ContaBancaria_Mary.consultarSaldo());
+        
+        
+
+    </script>
+</body>
+</html>

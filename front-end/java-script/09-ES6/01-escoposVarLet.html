@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopos Global funcion e bloco</title>
+</head>
+<body>
+    <header>
+        <h1>Escopso dentro do javascript</h1>
+        <p> Organize seu codigo para que funcione corretamente e seja mais seguro!</p>
+    </header>
+
+    <main>
+        
+    </main>
+
+    <script>
+        var serie = 'Friends'; // ESCOPO DE BLOCO AS FUNÇÕES PODER SE ELEVADAS PARA TODAS AS POSIÇOES
+        console.log('escopo global --- ' + serie)
+        function contador() { // ESCOPODE FUNÇÃO PDOE IÇAR VARIVEIS MAS NÃO PODE 
+            //MAS AS VARIVEIS DECLARADAS DENTRO DELA SÃO PODEM SER EXRAIDASS
+            //mas só pode distribuir variveis para blocos dentro de si mesma
+            let serie = 'Flash'
+            console.log('escopode funcao---- ' + serie)
+
+            if (serie) {
+                console.log('escopo de bloco dentro da função ----' + serie);
+            }
+        }
+        contador()
+
+        if (serie) {
+            console.log('escopo de bloco --- fora da funcao ' + serie)
+            //AS VARIVEIS DO ESCOPO DE BLOCO SÓ PODEM SRR ACESSADAS DENTRO DELA MESMA
+            // USANDO A NOMENCLATUDO VAR POSSO ELEVAR VARIVEIS DO ESCOPO DE BLOCO PARA FUNÇÕES E ESCOPOS GLOBAIS
+        }
+    </script>
+</body>
+</html>
