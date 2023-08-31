@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Abstração</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Reflexao da abstraçã o entidades</h1>
+    </header>
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quidem harum dicta tempora rerum, natus, maxime, perspiciatis nostrum excepturi velit nulla. Sint temporibus doloremque tenetur numquam rerum porro cupiditate exercitationem.</p>
+    </main>
+
+    <script>
+      /*
+          let Cadeiras = [ // array Cadeiras criado
+            { //01
+                pernas: 4,
+                giratoria: false,
+                cor : 'azul',
+            },
+            { //02
+                pernas: 1,
+                giratoria: true,
+                cor: 'vermelha',
+            },
+            { //02
+                pernas: 1,
+                giratoria: true,
+                cor: 'rosa',
+            }
+          ];
+
+          function adicionarCadeira(pernas, giratoria, cor) { // função para adicionar nova cadeira com atributod
+            let novaCadeira = { // let nova cadeira recebe array vazia com itens que recebe os atributos fa funcao
+                pernas: pernas,
+                giratoria: giratoria,
+                cor: cor
+            };
+            Cadeiras.push(novaCadeira); // let uniiversal Cadeiras puxa a nova cadeira criada
+          }
+
+          adicionarCadeira(4, false, 'verde'); // chamo funcao adiciona os atributos da nova cadeira
+          adicionarCadeira(1, true, 'roxa');
+
+          function girarCadeira() {
+            for (let i = 0; i < Cadeiras.length; i++) {
+
+                if (Cadeiras[i].giratoria === true) {
+                    console.log(`${[i]} ${Cadeiras[i].cor} É giratoria`)
+                } else {
+                    console.log(`${[i]} ${Cadeiras[i].cor} Não gira!`)
+                }
+            }
+          }
+          girarCadeira();*/
+
+          //PARADIMA ORIENTADO A OBEJTOS
+          class Cadeira {
+            constructor(pernas, giratoria, cor) { // dentro do contrtur uso this
+                this.pernas = pernas;
+                this.giratoria = giratoria;
+                this.cor = cor;
+            }
+
+            girarCadeira() {
+                if (this.giratoria === true) {
+                    console.log(` Girou`)
+                } else {
+                    console.log(` Não gir`)    
+                }
+            }
+          };
+
+          //CLASS SOFÁ - COR, LUGARES = 3, RECLINAVEL = TRUE
+
+          class Sofas {
+            constructor(lugares, reclinavel, cor) {
+                this.lugares = lugares,
+                this.reclinavel = reclinavel,
+                this.cor = cor
+            };
+            
+            quantLugares() {
+                console.log(this.lugares)
+                console.log(this.cor)
+            };
+
+            sofaReclinavel() {
+                if (this.reclinavel === true) {
+                    console.log('Sófa reclinavel');
+                } else {
+                    console.log('Não reclinavel');
+                }
+            }
+
+          }
+
+          sofaMaria = new Sofas(5, true, 'verde')
+          sofaMaria.sofaReclinavel()
+          sofaMaria.quantLugares()
+          
+          let sofas = [];
+          sofas.push(new Sofas(3, true, 'preto'));
+          sofaMaria = new Sofas(4, true, 'rosa');
+
+          let cadeiras = [];
+
+          cadeiras.push(new Cadeira(4, true, 'rosa'))
+          cadeiras.push(new Cadeira(1, false, 'rosa'))
+          console.log(cadeiras);
+
+          // com a orientaçã oa objetos posso adicionar novos comando e atributos diretamento no objeto
+
+
+    </script>
+</body>
+</html>

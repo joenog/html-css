@@ -1855,7 +1855,42 @@ o mesmo código para criar múltiplas instâncias do mesmo tipo de objeto.
 
 _______________________________________________________________________
 
+[] Reflexão sobre abstração a ENTIDADE 
 
+Ao refletirmos sobre projetos e seus respectivos objetos para criar uma palicação devemos
+abstrair deles o que realemnte é importante para empresa e assim aplicar na construçã oda aplicação
+
+-- Paradigma procedural
+O termo "procedural" refere-se a um método ou abordagem que envolve a execução sequencial 
+de passos ou procedimentos para atingir um determinado objetivo ou resultado. 
+-- O paradigma orientado a objetos (POO) 
+Um estilo de programação que se baseia na concepção e organização de software em torno de 
+"objetos", que são representações de entidades do mundo real ou abstrações conceituais. 
+O paradigma orientado a objetos é uma abordagem poderosa que visa modelar problemas 
+complexos de maneira mais intuitiva e modular,
+
+---Atributos:
+Atributos, também conhecidos como campos ou propriedades, são as características dos objetos.
+---Métodos:
+Métodos são as funções associadas a uma classe que definem o comportamento do objeto. 
+
+[] Emcapsulamento de Objetos 
+O encapsulamento é um dos princípios fundamentais da programação orientada a objetos (POO). 
+Ele se refere à prática de esconder os detalhes internos de um objeto e fornecer uma interface 
+controlada para interagir com esse objeto. Isso significa que os detalhes internos do 
+funcionamento do objeto, como seus atributos e métodos, não devem ser acessíveis diretamente 
+fora da classe em que o objeto foi definido.
+
+Como não é possivel usar o metodos PRIVATE em javascript um  _ this._canalAtivo = 5, no atributo
+do construtor() indicando assim que aquele atributo é privado, e tambem imperdir que este seja
+acessado diretamento
+
+()Os getters e setters [PseudoVariaveis]
+em JavaScript são métodos especiais que permitem controlar o acesso e a modificação de 
+propriedades de um objeto. Eles fornecem uma maneira de implementar a lógica personalizada 
+para obter (get) e definir (set) valores de propriedades, em vez de acessá-los diretamente. 
+Isso é especialmente útil quando você deseja realizar validações, cálculos ou aplicar lógica 
+adicional ao acessar ou atribuir valores.
 
 _______________________________________________________________________
 

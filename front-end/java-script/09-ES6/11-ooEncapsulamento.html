@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Abstração</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Pilar do encapsulamento</h1>
+    </header>
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quidem harum dicta tempora rerum, natus, maxime, perspiciatis nostrum excepturi velit nulla. Sint temporibus doloremque tenetur numquam rerum porro cupiditate exercitationem.</p>
+    </main>
+
+    <script>
+      
+        class TV {
+            constructor() {
+                this._canais = [2, 4, 5, 7 ,10];
+                this._canalAtivo = 5;
+                this.volume = 5;
+            };
+            // para disponiblizar um atributo crio um get onde nele posso adicionar codicional para axibição
+            // tornando este atributo do construtuor algo privado
+            get canalAtivo() {
+                return this._canalAtivo;
+            };
+            //encapsulamento
+            set canalAtivo(canal) {
+                const haCanal = this._canais.includes(canal) // lista de canais
+                if(haCanal) {// se na checagem de canal tiver canal e o res for diferent de -1
+                    this._canalAtivo = canal; // o novo valor de canal poderá ser passado
+                    console.log('Sintonizando canal') // o canal estára na lista e será sintonizado
+                } else {
+                    // se o res for igual -1 o canal n será modificado e o console retornara a mensagem
+                    console.log('Canal indisponivel');
+                };
+            };
+        };
+
+        let tv = new TV(); // nova instancia da tv
+        tv.canalAtivo = 10; // mudar canal recebe 10 vê se há na lista de cnaais 
+        console.log(tv.canalAtivo); // imprimo se ha o canal
+
+    </script>
+</body>
+</html>

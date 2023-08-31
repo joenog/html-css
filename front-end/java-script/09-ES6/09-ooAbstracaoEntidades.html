@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Abstração</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Reflexao da abstraçã o entidades</h1>
+    </header>
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quidem harum dicta tempora rerum, natus, maxime, perspiciatis nostrum excepturi velit nulla. Sint temporibus doloremque tenetur numquam rerum porro cupiditate exercitationem.</p>
+    </main>
+
+    <script>
+       //um software de maarcenaria
+       // cadeira e sofá
+
+       // ao crar um objeto devo abstrair as informções desse ovjeto do mundo real
+       
+       
+       //paradigma procedural
+        // cadeira
+       /* let pernas = 4;
+        let giratoria = false;
+        let cor = 'azul';
+        // essas variaveis dentro do sitema procedural reperesentm uma cadeira do mundo real.
+
+        //array de caderia 
+        const cadeiras = [
+            {
+                pernas: 4,
+                giratoria: false,
+                cor: 'azul'
+            },
+            {
+                pernas: 1,
+                giratoria: true,
+                cor: 'vermelha'
+            },
+        ];
+
+        function GirarCadeira() {
+            if (cadeiras[1].giratoria === true) {
+                console.log('girou')
+            } else {
+                console.log('Cadeira não giratoria')
+            }
+        }
+        // função para adicionar nova cadeira
+        function adicionarCadeiras(pernas, giratoria, cor) { // função e parametros requeridos
+            let novaCadeira = { // objeto que especifica como sera a cadeira
+                    pernas: pernas,
+                    giratoria: giratoria,
+                    cor: cor
+                }
+            cadeiras.push(novaCadeira) // puxxo  anova cadeira criada para array cadeiras
+        }
+
+        adicionarCadeiras(4, false, 'verde')
+        console.log(cadeiras)*/
+
+
+        //OO
+        // paradigma de orientação a objetos
+
+        //obejeto cadeira
+        class Cadeiras {
+            constructor(pernas, giratoria, cor) { 
+                //atributos do objeto       // ato de abstrari, representar em cod. objetos do mundo real
+                this.pernas = pernas;
+                this.giratoria = giratoria;
+                this.cor = cor; 
+            }
+            // funçãp
+            girarCadeira() {
+                if (this.giratoria === true)  {
+                    console.log('Giratoria');
+                } else {
+                    console.log('Cadeira nao gira')
+                }
+            }
+
+            tipoCadeira() {
+                if (this.cor === 'branca') {
+                    console.log('cadeira Branca para eventos');
+                } else {
+                    console.log('cadeira para festas!')
+                }
+            }
+        }
+
+        const infoCadeira = [];
+
+        infoCadeira.push(new Cadeiras(4, false, 'azul'));
+        infoCadeira.push(new Cadeiras(1, true, 'roxa'));
+        infoCadeira.push(new Cadeiras(4, false, 'branca'))
+
+        infoCadeira[2].tipoCadeira();
+
+    </script>
+</body>
+</html>
