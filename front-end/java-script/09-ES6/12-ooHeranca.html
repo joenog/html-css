@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Herança</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Pilar do encapsulamento</h1>
+    </header>
+
+    <main>
+        <p>Há erança consiste na reutilização de codigo algo que simplifica os condigos facilita na hora da manutenção</p>
+    </main>
+
+    <script>
+        class Animal {
+            constructor() {
+                this.cor = '';
+                this.tamanho = null;
+                this.peso = null; // novo atributo adicionado no objeto pai
+                // este podera ser utilizado pelos outros objetos filhos, os atributos cairao como cascata
+            }
+
+            dormir() {
+                console.log('Está dormindo')
+            }
+        }
+
+        class Cachorro extends Animal { // exntendo os parametros da superclasse Animal
+            constructor() {
+                super() // adiciono super no construturo
+                this.orelhas = 'Grandes e caidas';
+            }
+
+            correr() {
+                console.log('Está corrento');
+            }
+            rosnar() {
+                console.log('Está rosnando');
+            } 
+        }
+
+        class Passaro extends Animal {
+            constructor() {
+                super()
+                this.bico = 'curto';
+            }
+
+            voar() {
+                console.log('Passaro voar');
+            }
+        }
+
+        class Papagaio extends Passaro {
+            //propriedades do objetos ficam dentro do contrutuor
+            constructor() {
+                super()
+                this.sabefalar =  true; // prpriedades
+            }
+            //metodos do obejtos são funcoes criadas forado contruturo
+            falar() { // metodos
+                console.log('Está falando');
+            }
+        }
+
+        let cachorro = new Cachorro();
+        let passaro = new Passaro();
+        let papagaio = new Papagaio();
+        
+        console.log(papagaio.falar())
+        console.log(papagaio.dormir())
+        console.log(papagaio.voar())
+        console.log(papagaio)
+    </script>
+      
+</html>

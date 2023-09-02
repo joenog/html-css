@@ -1885,12 +1885,43 @@ Como não é possivel usar o metodos PRIVATE em javascript um  _ this._canalAtiv
 do construtor() indicando assim que aquele atributo é privado, e tambem imperdir que este seja
 acessado diretamento
 
+--------
+{{}ATRIBUTOS ACESSORES - nos permiter ter acesso aos itens da nossa class (GET- SET)
+
 ()Os getters e setters [PseudoVariaveis]
 em JavaScript são métodos especiais que permitem controlar o acesso e a modificação de 
 propriedades de um objeto. Eles fornecem uma maneira de implementar a lógica personalizada 
 para obter (get) e definir (set) valores de propriedades, em vez de acessá-los diretamente. 
 Isso é especialmente útil quando você deseja realizar validações, cálculos ou aplicar lógica 
 adicional ao acessar ou atribuir valores.
+Basicamanete o GET disponibilita o acesso dos parametros do OBJETO
+E o SET possibilita a modificação dos objetos, eles são definitos dentro do obejto
+para que as modificaçoes possam ser feitas fora do obejto.
+
+-IMPORTANTE - Durante a criação dum projeto é sempre importante ler a analisa o codigo
+para que se possivel ele possa ser refatorado e simplificado!
+
+
+[] Erança de Objetos
+
+O princípio da herança na POO é um conceito que permite criar novas classes baseadas em classes 
+já existentes. Ele promove a reutilização de código, a organização eficiente e a hierarquia de 
+classes, tornando o código mais modular e fácil de manter.
+Na herança, uma classe chamada "subclasse" pode herdar características (métodos e propriedades) 
+de uma classe chamada "classe pai" ou "superclasse".
+
+Crio um objeto pais animal com caracteristicas em comuns de animais
+depois faço as classes de animais separadamente, depois Herdo a elas os atributos
+da classe animal, assim reutilizando e evitando a repetição de codigo  EX:( extends + Nome da classe)
+Na classe filha do animal criado usso nome (extends + nome da classe pai)
+
+class Passaro extends Animal {
+            constructor() {
+                this.bico = 'curto';
+            }
+
+Tambem adiciono o metodo super() Às classes filhas para conclir a Herança
+O comando super() é usado para chamar o construtor da superclasse, ou seja, a classe pai.
 
 _______________________________________________________________________
 

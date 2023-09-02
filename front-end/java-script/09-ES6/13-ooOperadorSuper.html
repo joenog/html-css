@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Operador Super()</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Pilar do encapsulamento</h1>
+    </header>
+
+    <main>
+        <p>O comando super()  serve para lincar a classe filha a classe pai</p>
+    </main>
+
+    <script>
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso; // novo atributo adicionado no objeto pai
+                // este podera ser utilizado pelos outros objetos filhos, os atributos cairao como cascata
+            }
+
+            dormir() {
+                console.log('Está dormindo')
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {
+                super(cor, tamanho, peso)
+                this.bico = bico;
+            }
+
+            voar() {
+                console.log('Passaro voar');
+            }
+        }
+
+        class Papagaio extends Passaro {
+            //propriedades do objetos ficam dentro do contrutuor
+            constructor(sabefalar, cor, tamanho, peso) {
+                super('medio', cor, tamanho, peso)
+                this.sabefalar =  sabefalar; // prpriedades
+            }
+            //metodos do obejtos são funcoes criadas forado contruturo
+            falar() { // metodos
+                console.log('Está falando');
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'roxo', 600, 1200);
+        console.log(papagaio);
+
+    </script>
+      
+</html>
