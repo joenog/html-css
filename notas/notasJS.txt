@@ -1923,6 +1923,12 @@ class Passaro extends Animal {
 Tambem adiciono o metodo super() Às classes filhas para conclir a Herança
 O comando super() é usado para chamar o construtor da superclasse, ou seja, a classe pai.
 
+[] Polimorfismo
+Connsiste na utilização de metodos de classe Herdadas mas com proposito diferente
+Polimorfismo permite que um objeto assuma diferentes formas. Em outras palavras, é a capacidade
+de um objeto ser tratado como um objeto de outro tipo. Isso permite que o mesmo código seja 
+usado para tratar objetos de diferentes tipos,
+
 _______________________________________________________________________
 
 ][LÓGICA DE PROGRAMÇAO]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos - Herança</title>
+</head>
+<body>
+    <header>
+        <h1>Plares da Orientação a objetos - Pilar do encapsulamento</h1>
+    </header>
+
+    <main>
+        <p>Há erança consiste na reutilização de codigo algo que simplifica os condigos facilita na hora da manutenção</p>
+    </main>
+
+    <script>
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso; // novo atributo adicionado no objeto pai
+            }
+
+            dormir() { /* RECEBE meto dormir */
+                console.log('Está dormindo')
+            }
+
+            acordar() {
+                console.log("Acordou")
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {/* aqui parametros q poderã oser passador pra outras estancias */
+                super(cor, tamanho, peso) /* aqui são parametros puxados da SUPERCLASSE */
+                this.bico = bico; // novo atributo excluiso da classe passaro
+            }
+
+            voar() { /* metodo excusivo da classe passaro exclui outros animais */
+                console.log('Passaro voou');
+            }
+        }
+
+        class Papagaio extends Passaro {
+            //propriedades do objetos ficam dentro do contrutuor
+            constructor(sabefalar, bico, cor, tamanho, peso) { /* parametros de saida para o obeto */
+                super(bico, cor, tamanho, peso) /* propriedade Herdadas da classe passaro */
+                this.sabefalar = sabefalar; /* parametros esclusivo da classe papagaio, ,exclui outros passaro */
+            }
+            //metodos do obejtos são funcoes criadas forado contruturo
+            falar() { // metodos
+                console.log('Está falando');
+            }
+        }
+        
+        class Avestrus extends Passaro {
+            constructor(sabefalar, bico, cor, tamanho, peso) {
+                super(sabefalar, bico, cor, tamanho, peso)
+                this.sabefalar = sabefalar; /* parametros esclusivo da classe papagaio, ,exclui outros passaro */
+            }
+
+            enterrarCabeca() {
+                console.log('Enterrou a cabeça')
+            }
+
+            voar() { /* herdo caracteristia de passaro mas sobreponho oq n se adequa a esse passaro especifico*/
+                console.log('Não sabe voar'); // metodo sobreescrito de passaros
+            }
+        } 
+
+        /* na nova instancia pode ser insireto todas oas atributos derramado pela cascata anterior */
+        let papagaio = new Papagaio(true, 'curto', 'verde', 50, 260);
+        console.log(papagaio);
+        papagaio.voar();
+
+        let avestrus = new Avestrus( 'curto', 'preto', 250, 15000, false);
+        avestrus.voar()
+        console.log(avestrus);
+
+    </script>
+      
+</html>

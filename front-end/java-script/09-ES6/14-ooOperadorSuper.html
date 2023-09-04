@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Plares da Orientação a objetos</h1>
+        <h1>Plares da Orientação a objetos - Pilar do encapsulamento</h1>
     </header>
 
     <main>
@@ -15,103 +15,44 @@
     </main>
 
     <script>
-        class Pessoa {
-            constructor(nome, idade, peso, altura) {
-                this._nome = nome;
-                this._idade = idade;
-                this._peso = peso;
-                this._altura = altura;
-                this._imc = this._peso / (this._altura ** 2);
-                Pessoa.totalPessoas += 1; // contador de novas pessoas criadas 
-            }
-            static totalPessoas = 0;
-            /* ITATIC é um atribuot que pertence a classe em si e não às suas instancias */
-
-            calcularImc() {
-                return Number(this.imc).toFixed(2);
-            }
-            /* Classifica IMC */
-            classificaImc() {
-                let valorImc = this.imc;
-                let classificacao = '';
-
-                if(this._imc < 18.5) {
-                    classificacao = 'Abaixo do peso';
-                }else if (this._imc <= 24.9) {
-                    classificacao = 'Peso normal'
-                }else if (this._imc <= 29.9) {
-                    classificacao = 'Acima do peso'
-                }else if (this._imc <= 34.9) {
-                    classificacao = 'Grau de obesidade 1';
-                }else if (this._imc <= 39.9) {
-                    classificacao = 'Graude de obeside 2';
-                }else if (this._imc >= 40) {
-                    classificacao = 'Grau de obesidade 3';
-                } else {
-                    classificacao = 'Peso invalido';
-                }
-                return classificacao;
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso; // novo atributo adicionado no objeto pai
+                // este podera ser utilizado pelos outros objetos filhos, os atributos cairao como cascata
             }
 
-            get nome() {
-                return this._nome;
+            dormir() {
+                console.log('Está dormindo')
             }
-
-            get idade() {
-                return this._idade;
-            }
-
-            get peso() {
-                return this._peso;
-            }
-
-            get altura() {
-                return this._altura;
-            }
-
-            get imc() {
-                return this._imc;
-            }
-
-            set nome(novoNome) {
-                return this._nome = novoNome;
-            }
-
-            set idade(novaIdade) {
-                return this._idade = novaIdade;
-            }
-
-            set peso(novoPeso) {
-                return this._peso = novoPeso;
-            }
-
-            set altura(novaAltura) {
-                return this._altura = novaAltura;
-            }
-            /* NAO É PREICSO DE UM SET PARA O IMC */
         }
-        /* Aqui abaixo vai a impressao dos atributos da classe */
-        pessoa1 = new Pessoa('Maria', 45, 95.6, 1.75); /*  QUATRO INSTACIAAS DE PESSOAS */
-        pessoa2 = new Pessoa('Ana', 29, 68.6, 1.65);
-        pessoa3 = new Pessoa('Lua', 56, 58.6, 1.45);
-        pessoa4 = new Pessoa('Igor', 35, 88.6, 1.85);
-        pessoa4 = new Pessoa('Luca', 25, 78.6, 1.55);
-        
-        console.log('Classificação IMC: ' + pessoa1.nome + ' / '+ pessoa1.imc + '/ ' + pessoa1.classificaImc())
-        console.log(pessoa1.calcularImc())
 
-        /*console.log(Pessoa.totalPessoas)
-        console.log('NOME:' + pessoa1.nome);
-        console.log('IDADE:' + pessoa1.idade);
-        console.log('PESO:' + pessoa1.peso);
-        
-        pessoa1.nome = 'Joana';
-        pessoa1.idade = 88;
-        pessoa1.peso = 99.6;
-        console.log('NOME:' + pessoa1.nome);
-        console.log('IDADE:' + pessoa1.idade);
-        console.log('PESO:' + pessoa1.peso);*/
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {
+                super(cor, tamanho, peso)
+                this.bico = bico;
+            }
 
+            voar() {
+                console.log('Passaro voar');
+            }
+        }
+
+        class Papagaio extends Passaro {
+            //propriedades do objetos ficam dentro do contrutuor
+            constructor(sabefalar, cor, tamanho, peso) {
+                super('medio', cor, tamanho, peso)
+                this.sabefalar =  sabefalar; // prpriedades
+            }
+            //metodos do obejtos são funcoes criadas forado contruturo
+            falar() { // metodos
+                console.log('Está falando');
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'roxo', 600, 1200);
+        console.log(papagaio);
 
     </script>
       

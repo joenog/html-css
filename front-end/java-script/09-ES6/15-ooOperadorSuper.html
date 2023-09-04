@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plares da Orientação a objetos - Operador Super()</title>
+    <title>Plares da Orientação a objetos - Herança</title>
 </head>
 <body>
     <header>
@@ -11,7 +11,7 @@
     </header>
 
     <main>
-        <p>O comando super()  serve para lincar a classe filha a classe pai</p>
+        <p>Há erança consiste na reutilização de codigo algo que simplifica os condigos facilita na hora da manutenção</p>
     </main>
 
     <script>
@@ -20,38 +20,37 @@
                 this.cor = cor;
                 this.tamanho = tamanho;
                 this.peso = peso; // novo atributo adicionado no objeto pai
-                // este podera ser utilizado pelos outros objetos filhos, os atributos cairao como cascata
             }
 
-            dormir() {
+            dormir() { /* RECEBE meto dormir */
                 console.log('Está dormindo')
             }
         }
 
         class Passaro extends Animal {
-            constructor(bico, cor, tamanho, peso) {
-                super(cor, tamanho, peso)
+            constructor(bico, cor, tamanho, peso) { /*  aqui tenho atributo pco para passar para outro */
+                super(cor, tamanho, peso) /*  os atributos são puxado pelo super */
                 this.bico = bico;
             }
 
             voar() {
-                console.log('Passaro voar');
+                console.log('Passaro voou');
             }
         }
 
         class Papagaio extends Passaro {
             //propriedades do objetos ficam dentro do contrutuor
-            constructor(sabefalar, cor, tamanho, peso) {
-                super('medio', cor, tamanho, peso)
-                this.sabefalar =  sabefalar; // prpriedades
+            constructor(sabefalar, bico, cor, tamanho, peso) {
+                super(bico, cor, tamanho, peso)                    /* prpriedades  */
+                this.sabefalar = sabefalar; // - recebe o proprio parametro que será especificado na new instancia
             }
             //metodos do obejtos são funcoes criadas forado contruturo
             falar() { // metodos
                 console.log('Está falando');
             }
         }
-
-        let papagaio = new Papagaio(true, 'roxo', 600, 1200);
+        /* na nova instancia pode ser insireto todas oas atributos derramado pela cascata anterior */
+        let papagaio = new Papagaio(true, 'curto', 'verde', 50, 260);
         console.log(papagaio);
 
     </script>
