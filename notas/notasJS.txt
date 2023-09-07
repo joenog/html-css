@@ -1931,6 +1931,37 @@ usado para tratar objetos de diferentes tipos,
 
 _______________________________________________________________________
 
+[] OBJETOS Literias em javascipt
+
+Objetos literais, também conhecidos como objetos de notação literal ou objetos JSON 
+(JavaScript Object Notation), são uma estrutura de dados fundamental em JavaScript para 
+armazenar e organizar informações. Eles permitem que você crie coleções de pares de chave-valor, 
+onde cada chave é uma string (ou símbolo) que identifica um valor associado. 
+
+O obejtos literal ele é descrito dentro do codigo.
+Obejtos literais sao cirados tambem quando não há necessidade em criar uma CLASSE de objetos que abraja
+varias possibilidades para heranças futuras, objetos literais são objetos descritos, e dentro deles
+posso amarzenas strings, vaores, funcoes, array e até outros objetos liteiras
+()Contextos em que objetos literais são usados em JavaScript
+
+Armazenamento de Dados: Usados para organizar e armazenar informações de maneira estruturada.
+
+Configuração: Configuram opções e parâmetros em bibliotecas e funções.
+
+JSON (JavaScript Object Notation): Usados para representar dados em formato de texto para troca de info.
+
+Definição de Métodos: Permitem incluir funções como valores de propriedade em objetos.
+
+Módulos e Namespace: Usados para criar namespaces e módulos, evitando conflitos de nomes.
+
+Protótipos e Herança: Podem servir como protótipos para criar objetos derivados por herança.
+
+{{{{IMPORTANTE}}}}
+Atuação sobre objetos, ao referecia um objeto em mais de uma variavel essa serão apenas acoras
+dum mesmo objetos, as modificações feitas atraves desssas variveis afetação o objeto nativo em si.
+
+_______________________________________________________________________
+
 ][LÓGICA DE PROGRAMÇAO]
 
 Num algoritmo deve-se comsiderar todos os passos ate os mais simples

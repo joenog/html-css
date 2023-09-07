@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos</title>
+</head>
+<body>
+    <header>
+        <h1>Praticando Orientação a objetos</h1>
+    </header>
+
+    <main>
+        <p>Há erança consiste na reutilização de codigo algo que simplifica os condigos facilita na hora da manutenção</p>
+    </main>
+
+    <script>
+
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso;
+            }
+
+            dormir() {
+                console.log('Domingo agora....')
+            }
+            comer() {
+                console.log('Comendo agora....')
+            }
+        }
+
+        class Aves extends Animal {
+            constructor(bico, cor, tamanho, peso) {
+                super(cor, tamanho, peso)
+                this.bico = bico;
+            }
+
+            voar() {
+                console.log('Voando agora....')
+            }
+
+            ciscar() {
+                console.log('Ciscando agora....')
+            }
+        }
+
+        class Pinguin extends Aves {
+            constructor(bico, cor, tamanho, peso, cabeca) { /// atributo adicionado ao fim
+                super(bico, cor, tamanho, peso);
+                this.cabeca = cabeca; // ao adicionar um novo atributo a classa essa deve ser especificada no fim 
+            }
+
+            voar() {
+                console.log('Este animal n pode voar....')
+            }
+            ciscar() {
+                console.log('Este animal n pode ciscar....')
+            }
+
+            mergulhar() {
+                console.log('Megulhou agora....')
+            }
+        }
+
+
+        animal = new Animal('verde', 50, 250);
+        console.log(animal);
+        animal.dormir();
+        
+        papagaio = new Aves('curto', 'verde', 25, 260);
+        console.log(papagaio);
+        papagaio.dormir();
+        papagaio.voar();
+
+        pinguin = new Pinguin('curto', 'preto e branco', 60, 800, 'pequena');
+        console.log(pinguin)
+        pinguin.voar();
+        pinguin.ciscar();
+        pinguin.mergulhar();
+
+    </script>
+      
+</html>

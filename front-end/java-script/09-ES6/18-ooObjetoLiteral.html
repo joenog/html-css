@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plares da Orientação a objetos</title>
+</head>
+<body>
+    <header>
+        <h1>Praticando Orientação a objetos - Objetos Literais JS</h1>
+    </header>
+
+    <main>
+        <p>Há erança consiste na reutilização de codigo algo que simplifica os condigos facilita na hora da manutenção</p>
+    </main>
+
+    <script>
+        class Produto {
+            constructor (descricao, preco) {
+                this.descricao = descricao;
+                this.preco = preco;
+            }
+
+            verDescricao() {
+                console.log(`${this.descricao} Por apenas ${this.preco}`)
+            }
+        }
+
+        arroz = new Produto('Arroz basmati', 3.50 + '$');
+        arroz.verDescricao()
+
+        let produto = { /*  obejto literal */
+            descricao: 'Notebook',
+            preco: 2500.00,
+            verDescricao: function() {
+                console.log(`${this.descricao} Por apenas ${this.preco.toFixed(2)}`)
+            }
+        }
+        produto.verDescricao()
+        
+       
+    </script>
+      
+</html>
