@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa COnsultorio ondontológico</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header {
+            text-align: center;
+            margin: 50px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            display: block;
+            margin-top: 20px;
+            border: 1px solid grey;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: lightgoldenrodyellow;
+        }
+        
+        form {
+            background-color: rgb(207, 207, 207);
+            border-radius: 20px;
+            margin: 1px solid grey;
+            padding: 20px;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 20px;
+            margin: 5px;
+        } input[type='submit']:hover {
+            background-color: lightgreen;
+        }
+
+        pre {
+            background-color: lightgoldenrodyellow;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programa Consultorio ondontológico</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <p>Paciente
+            <input type="text" id="inPaciente" required autofocus>
+            <input type="submit" value="Adicionar"> <br>
+            <input type="button" value="Urgencia" id="btnUrgencia">
+            <input type="button" value="Antender" id="btnAtender">
+            </p>
+        </form>
+
+        <h3>
+            Em Atendimento:
+            <span> </span>
+        </h3>
+        <pre></pre>
+    </main>
+
+    <script src="05-script.js"></script>
+</body>
+</html>

@@ -1960,6 +1960,19 @@ Protótipos e Herança: Podem servir como protótipos para criar objetos derivad
 Atuação sobre objetos, ao referecia um objeto em mais de uma variavel essa serão apenas acoras
 dum mesmo objetos, as modificações feitas atraves desssas variveis afetação o objeto nativo em si.
 
+[[Relembrando]]
+O atributo do encapsulamento permite atributos e metodos seja publico protegidos ou privados.
+
+Em javascript os atributos e metodos são definidos como privados ou publicos a partir de um
+padrão que é seguido pelos programadores dessa linguagem, há um consenço em nomear
+_______________________________________________________________________
+
+}}[FUNÇÕES FACTORY]
+
+As funções factory em JavaScript são funções que retornam um objeto. Elas são chamadas de 
+“factory” (fábrica) porque geram objetos. Em JavaScript, qualquer função pode retornar um 
+objeto. Quando isso acontece sem o uso do new, é uma função factory  [[[[[[
+
 _______________________________________________________________________
 
 ][LÓGICA DE PROGRAMÇAO]
