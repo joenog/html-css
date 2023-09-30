@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerte o numero</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header {
+            text-align: center;
+            margin: 40px;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            border: 1px solid rgba(128, 128, 128, 0.315);
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgb(196, 207, 255);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.100),
+            5px -5px 5px rgba(255, 195, 195, 0.100),
+            -5px 5px 5px rgba(136, 154, 255, 0.100);
+        }
+
+        input {
+            border: 1px solid transparent;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+        } input[type=submit]:hover {
+            background-color: rgb(151, 125, 175);
+        }
+
+        section {
+            border: 1px solid rgba(255, 255, 255, 0.377);
+            margin: 5px 0px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        
+        #dica, #erros, #chances, #res {
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acerte o numero</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <div>
+                <label for="num">Numero:</label>
+                <input type="number" name="num" id="num" required autofocus>
+                <input type="submit" value="Apostar">
+            </div>
+            
+            <section>
+                <p>Erros:</p>
+                <div id="erros"></div>
+                <p>Chances:</p>
+                <div id="chances"></div>
+            </section>
+
+            <section>
+                <div id="dica">
+                    <p>Dica: Numeros de 1 a 100</p>
+                </div>
+            </section>
+
+            <section>
+                <p>Resutado:</p>
+                <div id="res">
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <script src="07-acerteNumero.js"></script>
+</body>
+</html>

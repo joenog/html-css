@@ -1971,7 +1971,143 @@ _______________________________________________________________________
 
 As funções factory em JavaScript são funções que retornam um objeto. Elas são chamadas de 
 “factory” (fábrica) porque geram objetos. Em JavaScript, qualquer função pode retornar um 
-objeto. Quando isso acontece sem o uso do new, é uma função factory  [[[[[[
+objeto. Quando isso acontece sem o uso do new, é uma função factory  
+_______________________________________________________________________
+
+}} [REST/SPREAD]
+
+Em JavaScript, ... é chamado de operador de propagação (spread operator) e é usado 
+principalmente para fazer cópias superficiais (shallow copies) de objetos e arrays, 
+bem como para combinar múltiplos objetos e arrays em um único objeto ou array.
+
+--Copiando arrays:
+const originalArray = [1, 2, 3];
+const copyArray = [...originalArray];
+
+console.log(copyArray); // [1, 2, 3]
+----------------
+
+--Combinando arrays:
+const array1 = [1, 2];
+const array2 = [3, 4];
+const combinedArray = [...array1, ...array2];
+
+console.log(combinedArray); // [1, 2, 3, 4]
+----------------
+
+---Copiando objetos:
+const originalObject = { name: "Alice", age: 30 };
+const copyObject = { ...originalObject };
+
+console.log(copyObject); // { name: "Alice", age: 30 }
+----------------
+
+Combinando objetos:
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const combinedObject = { ...obj1, ...obj2 };
+
+console.log(combinedObject); // { a: 1, b: 3, c: 4 }
+
+[EM RESUMO VOCÊ PODE USAR O... REST/SPREAD PARA CRIAR COPIAS SUPERFICIAIS DE OBJETOS E ARRAYS]
+
+{RESUMO REST-SPREAD}
+Coletar argumentos individuais de uma função em um array. Isso é comumente chamado de "rest".
+
+Portanto, você pode usar o spread para desmontar um array e passar seus elementos como argumentos
+separados para uma função, enquanto o rest é usado para coletar argumentos individuais em uma
+função e armazená-los em um array. Ambos os usos são úteis em diferentes contextos.
+----------
+
+[REDUCE] usando reduce em javascript
+
+
+function calcNum(divisor, ...args) {
+    // REDUCE USADO PARA SOMAR TODOS OS NUMEROS DE UM ARRAY - DEVINA CONTADOR INICIADO EM 0
+    const soma = args.reduce((acumulador, valor) => acumulador + valor, 0);
+    const media = soma / divisor;
+    return console.log(media.toFixed(2));
+}
+
+calcNum(3,6,6,6.65);
+
+_______________________________________________________________________
+
+}[["DESTRUTURING Assignment" - A atribuição por desestruturação,  ]]
+
+A atribuição por desestruturação, "Destructuring Assignment" em inglês, é uma característica
+poderosa do JavaScript que permite extrair valores de objetos e arrays e atribui'os a variáveis 
+de forma mais concisa e conveniente. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 _______________________________________________________________________
 
