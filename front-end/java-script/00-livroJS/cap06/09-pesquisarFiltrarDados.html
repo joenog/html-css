@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerte o numero</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header {
+            text-align: center;
+            margin: 40px;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            border: 1px solid rgba(128, 128, 128, 0.315);
+            padding: 20px;
+            border-radius: 20px;
+            background-color: rgb(196, 207, 255);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.100),
+            5px -5px 5px rgba(255, 195, 195, 0.100),
+            -5px 5px 5px rgba(136, 154, 255, 0.100);
+        }
+
+        input, button {
+            border: 1px solid transparent;
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+        } input[type=submit]:hover {
+            background-color: rgb(151, 125, 175);
+        }
+         button:hover {
+            background-color: rgb(151, 125, 175);
+        }
+        
+        .italico, #outChances, #outErros {
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding: 5px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            margin: 10px;
+        }
+
+  
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acerte o numero</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <div>
+                <label for="num">Numero:</label>
+                <input type="number" name="num" id="inNumero" required autofocusv min="1" max="100">
+                <input type="submit" value="Apostar" id="btSubmit">
+                <button type="button" id="btNovo" class="oculta">Jogar Novamente</button>
+            </div>
+            
+            <h3>Erros: <span id="outErros">0</span></h3>
+            <h3>Chances: <span id="outChances">6</span></h3>
+            <h3 id="outDica" class="italico">Dica: É um numeroentre 1 e 100</h3>
+        </form>
+    </main>
+
+    <script src="09-pesquisarFiltrarDados.js"></script>
+</body>
+</html>

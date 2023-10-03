@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas a pagar</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header {
+            text-align: center;
+            margin: 40px;
+        }
+
+        h3 {
+            margin: 20px;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            padding: 20px;
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+
+        input, #res, #alerta {
+            min-width: 300px;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 1px solid grey;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contas a pagar</h1>
+    </header>
+
+    <main>
+        <h3>Insira o valor da contas e receba a soma:</h3>
+
+        <form action="">
+            <div>
+                <label for="inNome">Nome:</label>
+                <input type="text" id="inNome" required autofocus>
+            </div>
+            <div>
+                <label for="inValor">Valor:</label>
+                <input type="number" id="inValor" required>
+            </div>
+            <input type="submit" value="Somar">
+        </form>
+
+        <div id="res">
+            
+        </div>
+
+        <div id="alerta">
+
+        </div>
+    </main>
+
+    <script>
+        const frm = document.querySelector('form');
+        let res = document.querySelector('#res');
+        const contas = []; // INICIO ARRAY VAZIA PARA ARMAZENAR VALROES
+
+        frm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // PEGO NOME E VALOR INSERIODS NO FORMULARIO
+            const nome = frm.inNome.value;
+            const valor = Number(frm.inValor.value);
+            // OBJETO LITERAL PARA CONTA
+            const conta = {
+                nome: nome,
+                valor: valor
+            }
+            // ARRAY CONTAS VAI PUCHAR PARAMETROS ATRIUIDOS AOS OBJETOS CONTA
+            contas.push(conta);
+            // LIMPAR CNTEUDO DA DIV
+            res.innerHTML = '';
+            //ITERAR SOBRE AS CONTAS
+            contas.forEach((contas, index) => {  //Isso inicia um loop que percorre cada elemento no array
+                res.innerHTML += `CONTA: (${index + 1}) ${contas.nome} - ${contas.valor} </br>`
+            });
+
+            // ARRAY NO CONSOLE
+            console.log(contas);
+        });
+    </script>
+</body>
+</html>

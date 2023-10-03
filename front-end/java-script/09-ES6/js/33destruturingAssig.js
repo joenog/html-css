@@ -16,7 +16,6 @@ console.log(a, b, c, d, e);
 Parâmetros padrão, ou "default parameters" em inglês, são valores que você pode definir para os parâmetros de uma função no JavaScript */
 
 
-
 let coisas = [['Abacaxi', 'Pera', 'Uva', 'Mamão'], ['josé', 'maria', 'pedro']];
 // aqui criei um arrai coisas que contem 2 arrays com frutas e nomes
 let [[, , , fru3], [, n1]] = coisas;

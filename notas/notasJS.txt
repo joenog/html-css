@@ -2024,13 +2024,20 @@ função e armazená-los em um array. Ambos os usos são úteis em diferentes co
 
 
 function calcNum(divisor, ...args) {
-    // REDUCE USADO PARA SOMAR TODOS OS NUMEROS DE UM ARRAY - DEVINA CONTADOR INICIADO EM 0
+    // REDUCE USADO PARA SOMAR TODOS OS NUMEROS DE UM ARRAY - DEFINA CONTADOR INICIADO EM 0
     const soma = args.reduce((acumulador, valor) => acumulador + valor, 0);
     const media = soma / divisor;
     return console.log(media.toFixed(2));
 }
 
 calcNum(3,6,6,6.65);
+
+----
+{DIFERENÇA DOS METODOS .map e .forEach}
+Resumindo, a principal diferença entre .map() e .forEach() é que o .map() cria um novo array 
+com os resultados das operações aplicadas a cada elemento, enquanto o .forEach() é usado apenas 
+para realizar operações em cada elemento e não cria um novo array. Portanto, a escolha entre eles 
+depende do que você deseja fazer com os elementos do array: 
 
 _______________________________________________________________________
 
