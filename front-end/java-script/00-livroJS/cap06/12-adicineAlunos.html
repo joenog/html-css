@@ -16,6 +16,55 @@
             text-align: center;
             margin: 40px;
         }
+        main {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            flex-direction: column;
+            margin: auto;
+            max-width: 300px;
+        }
+        
+        form {
+            padding: 20px ;
+            border: 1px solid rgba(128, 128, 128, 0.178);
+            border-radius: 20px;
+        }
+
+        input, #res, #total {
+            padding: 10px;
+            border-radius: 20px;
+            margin: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.137);
+            color: gray;
+        }
+        #res {
+            display: none;
+        }
+        
+        .alertaOn {
+            text-align: center;
+            display: block;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 20px;
+            color: White;
+            border: 1px solid #80808031;
+            background-color: rgb(219, 121, 2);
+        }
+        .alertaOff {
+            display: none;
+        }
+
+        button {
+            padding: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.226);
+            border-radius: 20px;
+        } button:hover, input[type=submit]:hover {
+            background-color: rgb(57, 104, 104);
+            color: white;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -24,11 +73,24 @@
     </header>
 
     <main> 
+        <form action="">
+            <div>
+                <label for="inNome">Nome: </label>
+                <input type="text" name="inNome" id="inNome" required autofocus placeholder="João Carlos">
+            </div>
+            <div>
+                <label for="inIdade">Idade: </label>
+                <input type="number" name="inIdade" id="inIdade" required placeholder="16">
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
 
-
+        <div id="total" class="">Qntd. Alunos: </div>
+        <button id="btnMostrar">Mostrar</button>
+        <div id="res">Alunos cadastrados:</div>
+        <div id="alerta" class=""></div>
 
     </main>
-
     <script src="12-adicioneAluno.js"></script>
 </body>
 </html>

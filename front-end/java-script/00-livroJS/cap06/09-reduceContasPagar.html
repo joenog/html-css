@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contas a pagar</title>
-
+    <!-- STYLE -->
     <style>
         * {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -18,13 +18,6 @@
             margin: 40px;
         }
 
-        h3 {
-            margin: 20px;
-            border: 1px solid grey;
-            border-radius: 20px;
-            padding: 20px;
-        }
-
         main {
             display: flex;
             flex-direction: column;
@@ -33,19 +26,42 @@
 
         form {
             padding: 20px;
-            border: 1px solid grey;
             border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(65, 31, 255, 0.100),
+            -2px -2px 5px rgba(0, 0, 0, 0.100);
         }
 
-        input, #res, #alerta {
+        input {
+            font-size: 1.1em;
+            margin: 8px;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.164);
+            min-width: 300px;
+        } input[type=submit] {
+            margin-left: 8%;
+        }
+
+         #res, #total {
             min-width: 300px;
             padding: 15px;
-            margin: 5px;
+            margin: 8px;
             border-radius: 20px;
-            border: 1px solid grey;
+            box-shadow: 2px 2px 5px rgba(65, 31, 255, 0.100),
+            -2px -2px 5px rgba(0, 0, 0, 0.100);
+        }
+        
+        #alerta {
+            min-width: 300px;
+            padding: 15px;
+            margin: 8px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
         }
 
     </style>
+
 </head>
 <body>
     <header>
@@ -53,32 +69,29 @@
     </header>
 
     <main>
-        <h3>Insira o valor da contas e receba a soma:</h3>
-
         <form action="">
             <div>
                 <label for="inNome">Nome:</label>
-                <input type="text" id="inNome" required autofocus>
+                <input type="text" id="inNome" required autofocus placeholder="Energia, Telefone ...">
             </div>
             <div>
                 <label for="inValor">Valor:</label>
-                <input type="number" id="inValor" required>
+                <input type="number" id="inValor" required step="0.01">
             </div>
             <input type="submit" value="Somar">
         </form>
 
-        <div id="res">
-            
-        </div>
+        <div id="total"> Total:  </div>
+        <div id="res"> Contas adicionadas:  </div> 
+        <div id="alerta">  </div>
 
-        <div id="alerta">
-
-        </div>
     </main>
 
     <script>
         const frm = document.querySelector('form');
-        let res = document.querySelector('#res');
+        const res = document.querySelector('#res');
+        const alerta = document.querySelector('#alerta');
+        const total = document.querySelector('#total');
         const contas = []; // INICIO ARRAY VAZIA PARA ARMAZENAR VALROES
 
         frm.addEventListener('submit', (e) => {
@@ -86,22 +99,32 @@
             // PEGO NOME E VALOR INSERIODS NO FORMULARIO
             const nome = frm.inNome.value;
             const valor = Number(frm.inValor.value);
-            // OBJETO LITERAL PARA CONTA
+            // OBJETO LITERAL - PARA CONTA
             const conta = {
                 nome: nome,
                 valor: valor
+            };
+            //CONTA EXISTENTE
+            const contaAdicionada = contas.find(c => c.nome === conta.nome);
+            //MENSAGEM DE CONTA ADICIONADA
+            if (contaAdicionada) {
+                alerta.innerText = `Conta já adicionada...`
+                alerta.style.background = '#e2511891'
+                setTimeout(() => {
+                    alerta.innerText = '';
+                    alerta.style.background = 'white'
+                }, 4000);
+            } else {
+                contas.push(conta); // CASO N ESTEJA O ARRAY CONTA PUXA A NOVA ACONTA ADICIONADA
+                res.innerText = ''; // O OUTPUT RES EH LIMPADO 
+                //ITERAR SOBRE AS CONTAS PARA IMPRIMIR
+                contas.forEach((item, index) => {  //Isso inicia um loop que percorre cada elemento no array
+                res.innerText += `Conta: (${index + 1}) ${item.nome} - ${item.valor} \n`
+                });
             }
-            // ARRAY CONTAS VAI PUCHAR PARAMETROS ATRIUIDOS AOS OBJETOS CONTA
-            contas.push(conta);
-            // LIMPAR CNTEUDO DA DIV
-            res.innerHTML = '';
-            //ITERAR SOBRE AS CONTAS
-            contas.forEach((contas, index) => {  //Isso inicia um loop que percorre cada elemento no array
-                res.innerHTML += `CONTA: (${index + 1}) ${contas.nome} - ${contas.valor} </br>`
-            });
-
-            // ARRAY NO CONSOLE
-            console.log(contas);
+            //ACUMULADOR VAlORES DAS CONTAS
+            let totalContas = contas.reduce((acumulador, conta) => {return acumulador + conta.valor}, 0);
+            total.innerText = `Total: ${totalContas.toFixed(2)}`;
         });
     </script>
 </body>
