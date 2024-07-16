@@ -2046,6 +2046,43 @@ _______________________________________________________________________
 A atribuição por desestruturação, "Destructuring Assignment" em inglês, é uma característica
 poderosa do JavaScript que permite extrair valores de objetos e arrays e atribui'os a variáveis 
 de forma mais concisa e conveniente. 
+EX: 
+/*
+let frutas = ['Abacaxi', 'Pera', 'Uva', 'Mamão'];
+
+let [a, b, ,c] = frutas; //Desestruturei o array frutas, atribuindo seus valores às variáveis a e b.
+// posso ignorar a impressão de alguns vaorees do array simplismente não atribuindo variaveis ao valor
+console.log(a, b, c);
+ */
+let frutas = ['Abacaxi', 'Pera', 'Uva', 'Mamão'];
+
+let [a, b, c, d, e = 'Banana'] = frutas; //Desestruturei o array, atribuindo valres às variáveis a e b.
+// na desestruturação posso atribuir um valor inexiste da array
+console.log(a, b, c, d, e);
+-----
+
+let coisas = [['Abacaxi', 'Pera', 'Uva', 'Mamão'], ['josé', 'maria', 'pedro']];
+// aqui criei um arrai coisas que contem 2 arrays com frutas e nomes
+let [[, , , fru3], [, n1]] = coisas;
+// aqui desestruturo o array coisas nele ignoro o primeiro array dentro do array coisas 
+e no segundo array ignoro a chave 0 e recupero o valor contido na chave 1
+console.log(n1)
+console.log(fru3);
+
+------------
+[[COMPISÇÃO DE OBJETOS]]
+-COMPOSIÇÃO - QUAND OCRIAMOS OBJETOS DENTRO DE OBJETOS
+-A composição em programação ocorre quando objetos são criados dentro de outros objetos. 
+- "É um" é usado quando há apenas um objeto, enquanto
+- "há um" é usado quando um objeto está contido dentro de outro objeto.
+let produto = {
+    nome: 'Notebook',
+    preço: 1900,
+    detalhes: {
+        marca: 'abc',
+        modelo: 'xyz'
+    } // ATRIBUBI OBJETOS A ATRIBUTOS DE OUTROS OBEJETOS
+};
 
 
 
